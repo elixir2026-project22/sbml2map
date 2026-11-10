@@ -1,11 +1,8 @@
 # sbml2map
 
-Development continues under the name **sbml2map** from 2026-11-11.
-Use `python sbml2map.py`; `sbml2escher.py` remains a compatibility entry point.
-Previously generated maps retain their historical names.
-Development repository: [elixir2026-project22/sbml2map](https://github.com/elixir2026-project22/sbml2map).
-The pre-rename public package is preserved in the workspace as
-`snapshots/sbml2escher-2026-11-11.tar.gz`, with a per-file manifest and SHA-256 checksum.
+sbml2map draws metabolic maps from SBML models. It can export Escher maps,
+SVG images, and SBML files with compound and reaction positions and connecting lines.
+To export SBML with positions, use `--export-sbml-layout`.
 
 The structural Escher view paints red above orange above gray and offsets coincident routes of different reactions.
 Biological nodes and primary backbone centerlines stay fixed; same-reaction trunks remain bundled.
