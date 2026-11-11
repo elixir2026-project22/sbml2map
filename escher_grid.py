@@ -10,7 +10,7 @@ import re
 
 import numpy as np
 
-from parallel_routing import separate_parallel
+from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset
 
 from highlighting import HIGHLIGHT_COLOR, read_selection, grid_elements, catalog, inject_controls
 
@@ -187,7 +187,7 @@ def attach_coenzymes(nodes, xy, radius=.45, grid_shape=None):
             xy[key] = position.tolist()
 
 
-def render(output, nodes, edges, xy, records, selection, model_id, backbones=None, program_name='sbml2map', sampling_report=None, highlights=None, source_model=None):
+def render(output, nodes, edges, xy, records, selection, model_id, backbones=None, program_name='sbml2map', sampling_report=None, highlights=None, source_model=None, route_offset=.3):
     highlights = highlights or dict(metabolites=[], reactions=[])
     elements = grid_elements(nodes, edges)
     if source_model is None:
@@ -245,6 +245,7 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             backbone=frozenset((edge['source'],edge['target'])) in backbone_pairs))
     original_route_length=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
     parallel_report=separate_parallel(display_paths,obstacles=xy.values())
+    parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=xy.values(),route_offset=route_offset)
     parallel_report['original_route_length']=original_route_length
     parallel_report['display_route_length']=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
     dump(output/'parallel_routing.json',parallel_report)
@@ -470,6 +471,7 @@ def run(args):
         from export_sbml_layout import validate_export_request
         validate_export_request(args.model,getattr(args,'sbml_layout_id','sbml2map_layout'))
     validate_sampling_options(args)
+    route_offset=validate_route_offset(getattr(args,'route_offset',.3))
     output = args.output_dir
     output.mkdir(parents=True, exist_ok=True)
     model = load_model(args.model)
@@ -626,7 +628,7 @@ def run(args):
                                       'Flux median ranked display projection. Inorganic participants hidden. Sampling uses the full original model.')
         orange_pairs = ({frozenset((edges[i]['source'],edges[i]['target']))
                          for i in connectors['edge_indices']} if connectors else None)
-        separate_routes(data,major_reactions,orange_pairs)
+        separate_routes(data,major_reactions,orange_pairs,route_offset=route_offset)
         escher_check = validate_map(data, projected, nodes, xy)
         reaction_data = None if no_sampling else {r['reaction_id']: r['median'] * data[0]['metadata']['reactions'][r['reaction_id']]['coefficient_multiplier']
                          for r in records if r['selected']}
@@ -697,6 +699,7 @@ def run(args):
         report['boundary_placeholder_metabolites'] = placeholders
         report['validation']['no_boundary_placeholder_nodes'] = True
         report['limitations'].append('CellDesigner source/sink placeholders are omitted only in the display; original stoichiometry and sampling constraints are unchanged.')
+    report['route_offset_grid'] = route_offset
     report['program_name'] = program_name
     if strategy:
         report['extraction_status'] = strategy.extraction['status']
@@ -720,7 +723,7 @@ def run(args):
     data[0].setdefault('metadata', {})['highlights'] = highlights
     dump(output / 'escher_map.json', data)
     dump(output / 'report.json', report)
-    render(output, nodes, edges, xy, records, selection, model['id'], backbones, program_name, sampling_report, highlights, model)
+    render(output, nodes, edges, xy, records, selection, model['id'], backbones, program_name, sampling_report, highlights, model, route_offset=route_offset)
     if getattr(args,'export_sbml_layout',False):
         from export_sbml_layout import export_sbml_layout
         layout_report=export_sbml_layout(args.model,output,layout_id=getattr(args,'sbml_layout_id','sbml2map_layout'))
@@ -730,6 +733,13 @@ def run(args):
     print(json.dumps(dict(output=str(output.resolve()), selection=selection, sampling_passed=sampling_report.get('mixing_checks_passed'),
                           placement=placement, total_orthogonal_edge_length=length), indent=2), flush=True)
     return report
+
+
+def validate_route_offset_arg(value):
+    try:
+        return validate_route_offset(float(value))
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(str(exc)) from exc
 
 
 def parser():
@@ -745,6 +755,7 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
+    p.add_argument('--route-offset', type=validate_route_offset_arg, default=.3, help='Whole-segment U-shaped node avoidance offset in grid units (default: 0.3; 0 disables node avoidance)')
     p.add_argument('--zero-tolerance', type=float, default=1e-7)
     p.add_argument('--orange-flux-weight', type=float, default=1, help='Penalty for low-flux orange routes (default: 1; 0: length only; larger values favor higher-flux reactions more; ignored without sampling)')
     p.add_argument('--require-sampling', action='store_true', help='Fail instead of falling back to a structural drawing if sampling is unavailable')

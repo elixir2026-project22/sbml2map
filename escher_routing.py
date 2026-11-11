@@ -4,7 +4,7 @@ import hashlib
 import json
 import math
 
-from parallel_routing import separate_parallel
+from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset
 
 
 def _simplify(points):
@@ -24,7 +24,7 @@ def _simplify(points):
     return out
 
 
-def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
+def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,route_offset=None):
     """Use small deterministic lanes, red before orange before gray.
 
     A reaction's same-color shared trunks stay bundled. Short terminal stubs
@@ -32,6 +32,9 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
     for simulation views, with no structural priority.
     """
     header,body=data;meta=header['metadata']
+    route_offset=meta.get('route_offset_grid',.3) if route_offset is None else route_offset
+    validate_route_offset(route_offset)
+    meta['route_offset_grid']=route_offset
     if meta.get('routing')!='orthogonal':return data
     major=set(major_reactions);orange=set(connector_pairs or ())
     sources=meta['source_node_ids'];old_nodes=body['nodes']
@@ -113,6 +116,9 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
     parallel_report = separate_parallel(
         routes, grid=meta['coordinate_transform']['scale'],
         obstacles=[(old_nodes[key]['x'],old_nodes[key]['y']) for key in sources]) if enabled else None
+    node_report = avoid_nodes(routes, grid=meta['coordinate_transform']['scale'],
+        obstacles=[(old_nodes[key]['x'],old_nodes[key]['y']) for key in sources],
+        route_offset=route_offset) if enabled else None
     map_nodes={key:old_nodes[key] for key in sources}
     node_number=max(map(int,sources))+1
     segment_number=max(map(int,body['reactions']))+1
@@ -130,12 +136,14 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
+    meta['overlap_routing']=dict(node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
                                 shifted_legs=sum(bool(l['offset']) for l in legs),
                                 max_offset=max((abs(l['offset']) for l in legs),default=0),
                                 priority=['red','orange','gray'],shared_same_reaction_trunks=True,
                                 max_offset_by_priority={name:max((abs(l['offset']) for l in legs if l['route']['priority']==priority),default=0) for name,priority in [('red',2),('orange',1),('gray',0)]},
-                                primary_backbone_max_offset=max((abs(l['offset']) for l in legs if l['route']['backbone']),default=0))
+                                primary_backbone_nodes_fixed=True,
+                                primary_backbone_max_offset=max(max((abs(l['offset']) for l in legs if l['route']['backbone']),default=0),
+                                    (node_report or {}).get('backbone_max_offset_grid',0)*meta['coordinate_transform']['scale']))
     if enabled:
         signature=[base_id,[(r['rid'],r['mid'],r['priority'],r['points']) for r in routes]]
         header['map_id']=hashlib.sha256(json.dumps(signature,sort_keys=True).encode()).hexdigest()[:24]

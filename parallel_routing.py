@@ -132,3 +132,103 @@ def separate_parallel(paths, grid=1.0, obstacles=(), clearance=.3, min_overlap=1
                 shifted_segments=shifted,unresolved=unresolved,
                 max_offset_grid=max((abs(x['offset'])/grid for x in entries),default=0),
                 fixed_endpoints=True,shared_same_reaction_trunks=True)
+
+
+def validate_route_offset(value):
+    """A display displacement in grid units; zero disables node avoidance."""
+    if not math.isfinite(value) or value < 0:
+        raise ValueError('route-offset must be finite and nonnegative')
+    return value
+
+
+def _u_detour(leg, offset):
+    """Exactly two right-angle bends at the original segment endpoints."""
+    a,b=leg['a'],leg['b']
+    if abs(offset)<EPS:return [a,b]
+    side=1-leg['axis'];p=list(a);q=list(b)
+    p[side]+=offset;q[side]+=offset
+    return [a,tuple(p),tuple(q),b]
+
+
+def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
+    """Offset a whole red/orange segment when it crosses an unrelated node.
+
+    Biological endpoints stay fixed, including on primary backbones. Bends are
+    display geometry only. Same-reaction overlapping trunks move together. Only
+    the requested positive/negative displacement is tried, never a larger one.
+    """
+    validate_route_offset(route_offset)
+    report=dict(route_offset_grid=route_offset,enabled=route_offset>0,
+                shifted_segments=0,unresolved=[],shape='three sides of a rectangle',
+                fixed_endpoints=True,shared_same_reaction_trunks=True,
+                backbone_shifted_segments=0,max_offset_grid=0,backbone_max_offset_grid=0)
+    if route_offset==0:return report
+    amount=route_offset*grid;radius=.12*grid
+    if not math.isfinite(amount):
+        raise ValueError('route-offset is too large for the drawing scale')
+    obstacles=sorted(set(tuple(p) for p in obstacles))
+    entries=[];buckets=defaultdict(list)
+    for index,path in enumerate(paths):
+        endpoints={tuple(path['points'][0]),tuple(path['points'][-1])}
+        for part,leg in enumerate(_legs(path['points'])):
+            leg.update(path=index,part=part,rid=path['rid'],priority=path['priority'],
+                       endpoints=endpoints,backbone=bool(path.get('backbone')),points=[leg['a'],leg['b']])
+            entries.append(leg)
+            if leg['priority']>0:
+                buckets[(leg['rid'],leg['priority'],leg['axis'],round(leg['level']/grid,8))].append(leg)
+    groups=[]
+    for key,legs in sorted(buckets.items()):
+        group=[];end=-math.inf
+        for leg in sorted(legs,key=lambda x:(x['lo'],x['hi'],x['path'],x['part'])):
+            if group and leg['lo']>end+EPS:
+                groups.append(group);group=[]
+            group.append(leg);end=max(end,leg['hi'])
+        if group:groups.append(group)
+    groups.sort(key=lambda g:(-g[0]['priority'],g[0]['rid'],g[0]['axis'],g[0]['level'],min(x['lo'] for x in g)))
+    def hits(leg,points):
+        return [node for node in obstacles if node not in leg['endpoints'] and
+                any(_distance(node,part)<radius-EPS for part in _legs(points))]
+    def interference(group,offset):
+        crossings=0
+        for leg in group:
+            for segment in _legs(_u_detour(leg,offset)):
+                for other in entries:
+                    if leg['rid']==other['rid']:continue
+                    for current in _legs(other['points']):
+                        if segment['axis']==current['axis']:
+                            length=_overlap(segment,current);distance=abs(segment['level']-current['level'])
+                            # Avoid new coincident paths and long close red/orange lanes.
+                            if length>EPS and distance<EPS:return None
+                            if other['priority']>0 and length>=grid-EPS and distance<.3*grid-EPS:return None
+                        else:
+                            h,v=(segment,current) if segment['axis']==0 else (current,segment)
+                            if h['lo']+EPS<v['level']<h['hi']-EPS and v['lo']+EPS<h['level']<v['hi']-EPS:
+                                crossings+=1
+        return crossings
+    for group in groups:
+        collisions=[(leg,hits(leg,leg['points'])) for leg in group]
+        if not any(nodes for _,nodes in collisions):continue
+        candidates=[]
+        for offset in (amount,-amount):
+            if any(hits(leg,_u_detour(leg,offset)) for leg in group):continue
+            score=interference(group,offset)
+            if score is not None:candidates.append((score,offset<0,offset))
+        if candidates:
+            offset=min(candidates)[-1]
+            for leg in group:leg['points']=_u_detour(leg,offset)
+            report['shifted_segments']+=len(group)
+            backbone_count=sum(leg['backbone'] for leg in group)
+            report['backbone_shifted_segments']+=backbone_count
+            report['max_offset_grid']=route_offset
+            if backbone_count:report['backbone_max_offset_grid']=route_offset
+        else:
+            report['unresolved'].append(dict(reaction_id=group[0]['rid'],axis=group[0]['axis'],
+                level=group[0]['level'],reason='both requested U-shaped lanes are obstructed',
+                nodes=[list(node) for node in sorted({node for _,nodes in collisions for node in nodes})]))
+    by_path=defaultdict(list)
+    for leg in entries:by_path[leg['path']].append(leg)
+    for index,path in enumerate(paths):
+        points=[]
+        for leg in by_path[index]:points.extend(leg['points'] if not points else leg['points'][1:])
+        if points:path['points']=points
+    return report

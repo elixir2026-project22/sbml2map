@@ -49,8 +49,16 @@ Run `python3 prepare_github_pages.py` before publishing to check this policy.
 
 Highlighted segments from different reactions that run in parallel for at least
 one grid unit and are less than 0.3 grid units apart receive rectangular detours.
-Nodes and primary backbone centerlines stay fixed; same-reaction trunks remain
-bundled. SVG diagnostics are in each viewer folder’s `parallel_routing.json`;
+Nodes stay fixed; primary backbone centerlines stay fixed for parallel-lane
+separation and can detour around unrelated nodes. Same-reaction trunks remain bundled. SVG diagnostics are in each viewer folder’s `parallel_routing.json`;
 Escher diagnostics are in `escher_map.json` under `overlap_routing.parallel_detours`.
 Blocked lanes remain in place and are recorded. Display detours add length;
 reported optimization costs still describe the original routes.
+
+
+Node avoidance shifts a whole straight segment as three rectangle sides with
+exactly two bends, including on red primary pathways. The displacement is
+`--route-offset` in grid units (default `0.3`; `0` disables node avoidance).
+Diagnostics are under `node_detours` in the SVG report and under
+`overlap_routing.node_detours` in Escher map metadata. Both requested sides
+are checked; obstructed cases remain unchanged and are recorded.

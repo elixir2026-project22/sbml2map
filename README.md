@@ -5,7 +5,8 @@ SVG images, and SBML files with compound and reaction positions and connecting l
 To export SBML with positions, use `--export-sbml-layout`.
 
 The structural Escher view paints red above orange above gray and offsets coincident routes of different reactions.
-Biological nodes and primary backbone centerlines stay fixed; same-reaction trunks remain bundled.
+Biological nodes stay fixed; same-reaction trunks remain bundled. Primary backbone
+centerlines stay fixed during parallel-lane separation, but may detour around unrelated nodes.
 Parallel red/orange segments from different reactions that run together for at
 least one grid unit are separated by approximately 0.3 grid units using rectangular
 detours in both SVG and Escher structural views. Node collisions are avoided;
@@ -527,3 +528,27 @@ orange edge costs `length * (1 + weight * (1 - q))`. Shared edges count once.
 normalization values and reaction coefficients separately. Sampling-free runs
 use the original unweighted objective. Routing, heuristic moves, MILP and
 incumbent comparisons use the same objective; global optimality is not assumed.
+
+
+## Avoid nodes with whole-segment rectangular detours
+
+In structural SVG and Escher views, red/orange segments that cross an unrelated
+metabolite or reaction node can move sideways as three sides of a rectangle.
+Two bends connect the original segment endpoints to the shifted full segment;
+node positions, reaction participants and flux values stay unchanged. This also
+applies to primary pathway lines. Both the long side and the two short sides
+must be free of unrelated nodes. If both sides are obstructed, the original
+segment is retained and the reason is recorded.
+
+```bash
+python sbml2map.py --model models/e_coli_core.xml --no-sampling \
+  --route-offset 0.3 --output-dir results/runs/e_coli_core_node_detours
+```
+
+`--route-offset` specifies the displacement from the original line in grid units
+(default `0.3`). Use `0.5` for a wider detour or `0` to disable node avoidance.
+Negative or non-finite values are rejected. Existing parallel-lane separation
+is independent and remains at 0.3 grid units. The setting and unresolved cases
+are saved under `node_detours` in `parallel_routing.json` for SVG and
+`overlap_routing.node_detours` in Escher map metadata. This is display routing;
+layout objectives still use the original routes.
