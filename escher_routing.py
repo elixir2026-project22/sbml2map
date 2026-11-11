@@ -4,6 +4,8 @@ import hashlib
 import json
 import math
 
+from parallel_routing import separate_parallel
+
 
 def _simplify(points):
     out=[]
@@ -108,6 +110,9 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
             vertical=previous if previous['axis']==1 else following
             joints.append((vertical['level']+vertical['offset'],horizontal['level']+horizontal['offset']))
         route['points']=_simplify([start,a,shifted_a,*joints,shifted_z,z,end])
+    parallel_report = separate_parallel(
+        routes, grid=meta['coordinate_transform']['scale'],
+        obstacles=[(old_nodes[key]['x'],old_nodes[key]['y']) for key in sources]) if enabled else None
     map_nodes={key:old_nodes[key] for key in sources}
     node_number=max(map(int,sources))+1
     segment_number=max(map(int,body['reactions']))+1
@@ -125,7 +130,7 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True):
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
+    meta['overlap_routing']=dict(parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
                                 shifted_legs=sum(bool(l['offset']) for l in legs),
                                 max_offset=max((abs(l['offset']) for l in legs),default=0),
                                 priority=['red','orange','gray'],shared_same_reaction_trunks=True,

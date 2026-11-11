@@ -1,0 +1,99 @@
+{
+  "clearance_grid": 0.3,
+  "min_parallel_length_grid": 1.0,
+  "shifted_segments": 21,
+  "unresolved": [
+    {
+      "reaction_id": "GLCptspp",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "ENO",
+        "FBA",
+        "GAPD"
+      ]
+    },
+    {
+      "reaction_id": "PFK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "PGI",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "PGK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "PGM",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "PYK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "TPI",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "FBA",
+        "GLCptspp"
+      ]
+    },
+    {
+      "reaction_id": "FUMt2_2pp",
+      "axis": 0,
+      "level": 1.0,
+      "reason": "no free lane within 1.2 grids",
+      "conflicting_reactions": [
+        "AKGDH",
+        "SUCDi",
+        "SUCOAS"
+      ]
+    },
+    {
+      "reaction_id": "SUCCt1pp",
+      "axis": 0,
+      "level": 1.0,
+      "reason": "no free lane within 1.2 grids",
+      "conflicting_reactions": [
+        "FUMt2_2pp",
+        "SUCOAS"
+      ]
+    }
+  ],
+  "max_offset_grid": 0.7000000000000002,
+  "fixed_endpoints": true,
+  "shared_same_reaction_trunks": true,
+  "original_route_length": 9616.25,
+  "display_route_length": 9630.45
+}

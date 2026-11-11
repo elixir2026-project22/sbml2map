@@ -158,6 +158,13 @@ def validate_map(data, model, source_nodes, source_xy, schema_path=SCHEMA, sourc
     except ImportError as exc:
         raise RuntimeError('jsonschema is required: use a Python with jsonschema or install requirements-escher.txt') from exc
     Draft4Validator(json.loads(schema_path.read_text())).validate(data)
+    report = validate_map_geometry(data, model, source_nodes, source_xy, source_metadata)
+    report['schema_valid'] = True
+    return report
+
+
+def validate_map_geometry(data, model, source_nodes, source_xy, source_metadata=None):
+    """Verify identity, chemistry and connected orthogonal paths independently of schema."""
     if len(data) != 2:
         raise ValueError('An Escher map must have exactly two items')
     header, body = data
@@ -289,7 +296,7 @@ def validate_map(data, model, source_nodes, source_xy, schema_path=SCHEMA, sourc
     for key, node in source_nodes.items():
         if node['kind'] == 'currency' and counts[key] != 1:
             raise ValueError('Currency copy must have one segment')
-    return dict(schema_valid=True, metadata_embedded='metadata' in header,
+    return dict(schema_valid=None, metadata_embedded='metadata' in header,
                 reaction_ids_preserved=True, stoichiometry_preserved=True,
                 coordinate_transform_verified=True, segment_endpoints_verified=True,
                 nodes=len(map_nodes), source_nodes=len(source_nodes), routing_nodes=len(routing_ids),
@@ -441,7 +448,8 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
 def write_pathway_preview(path, data, major_reactions=(), connector_pairs=None,
                           model=None, elements=(), initial_highlights=None, records=()):
     """Start with pathway structure; disable fixed colors when reaction data loads."""
-    if data[0]['metadata'].get('routing')=='orthogonal' and not data[0]['metadata'].get('overlap_routing',{}).get('enabled'):
+    if data[0]['metadata'].get('routing')=='orthogonal' and (not data[0]['metadata'].get('overlap_routing',{}).get('enabled') or
+            'parallel_detours' not in data[0]['metadata'].get('overlap_routing',{})):
         data = separate_routes(copy.deepcopy(data),major_reactions,connector_pairs)
     configure_label_display(data, major_reactions)
     configure_reaction_coverage(data, records)

@@ -6,6 +6,11 @@ To export SBML with positions, use `--export-sbml-layout`.
 
 The structural Escher view paints red above orange above gray and offsets coincident routes of different reactions.
 Biological nodes and primary backbone centerlines stay fixed; same-reaction trunks remain bundled.
+Parallel red/orange segments from different reactions that run together for at
+least one grid unit are separated by approximately 0.3 grid units using rectangular
+detours in both SVG and Escher structural views. Node collisions are avoided;
+unresolved routes are recorded in `parallel_routing.json` (SVG) and map metadata
+(Escher). Display detours add length without changing the original layout objective.
 FBA uses the original neutral orthogonal routes without structural priority.
 
 `sbml2map.py` draws metabolic networks with nodes on a grid.

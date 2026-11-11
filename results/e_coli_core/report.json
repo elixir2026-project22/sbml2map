@@ -1524,18 +1524,18 @@
       "incidence_edges": 237
     },
     "escher": {
-      "schema_valid": true,
+      "schema_valid": null,
       "metadata_embedded": true,
       "reaction_ids_preserved": true,
       "stoichiometry_preserved": true,
       "coordinate_transform_verified": true,
       "segment_endpoints_verified": true,
-      "nodes": 629,
+      "nodes": 649,
       "source_nodes": 206,
-      "routing_nodes": 423,
+      "routing_nodes": 443,
       "orthogonal_segments_verified": true,
       "reactions": 76,
-      "segments": 660,
+      "segments": 680,
       "primary_metabolites": 46,
       "secondary_metabolites": 84,
       "currency_copy_counts": {
@@ -1554,7 +1554,9 @@
         "FORt"
       ],
       "blocked_reactions": [],
-      "missing_gene_rule_count": 0
+      "missing_gene_rule_count": 0,
+      "schema_validation": "not rerun; geometry and browser verified",
+      "browser_validation": "Firefox: loaded without errors; segments orthogonal; filters available"
     },
     "glucose_is_top_left_compound": true,
     "perimeter_exclusive_to_exchanges": true,
@@ -1768,6 +1770,15 @@
     }
   },
   "escher_overlap_routing": {
+    "parallel_detours": {
+      "clearance_grid": 0.3,
+      "min_parallel_length_grid": 1.0,
+      "shifted_segments": 5,
+      "unresolved": [],
+      "max_offset_grid": 0.35999999999999976,
+      "fixed_endpoints": true,
+      "shared_same_reaction_trunks": true
+    },
     "enabled": true,
     "base_map_id": "8470a9ede15412b70d94a151",
     "lane_spacing": 10.799999999999999,
@@ -1785,5 +1796,103 @@
       "gray": 37.8
     },
     "primary_backbone_max_offset": 0.0
+  },
+  "display_parallel_routing": {
+    "svg": {
+      "clearance_grid": 0.3,
+      "min_parallel_length_grid": 1.0,
+      "shifted_segments": 4,
+      "unresolved": [
+        {
+          "reaction_id": "GLCpts",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "ENO",
+            "FBA",
+            "GAPD"
+          ]
+        },
+        {
+          "reaction_id": "PFK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PGI",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PGK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PGM",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PYK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "TPI",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "FBA",
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "LDH_D",
+          "axis": 0,
+          "level": 5.0,
+          "reason": "no free lane within 1.2 grids",
+          "conflicting_reactions": [
+            "PDH"
+          ]
+        }
+      ],
+      "max_offset_grid": 0.3000000000000007,
+      "fixed_endpoints": true,
+      "shared_same_reaction_trunks": true,
+      "original_route_length": 982.8,
+      "display_route_length": 985.2
+    },
+    "escher": {
+      "clearance_grid": 0.3,
+      "min_parallel_length_grid": 1.0,
+      "shifted_segments": 5,
+      "unresolved": [],
+      "max_offset_grid": 0.35999999999999976,
+      "fixed_endpoints": true,
+      "shared_same_reaction_trunks": true
+    }
   }
 }

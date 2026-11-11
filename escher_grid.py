@@ -10,6 +10,8 @@ import re
 
 import numpy as np
 
+from parallel_routing import separate_parallel
+
 from highlighting import HIGHLIGHT_COLOR, read_selection, grid_elements, catalog, inject_controls
 
 from flux_sampling2 import sample_fluxes, sampling_constraints
@@ -225,6 +227,27 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     # Defer autoscaling until all artists exist; scatter otherwise rescans
     # previous collections for every added node on genome-scale maps.
     ax.set_autoscale_on(False)
+    backbone_pairs=set()
+    for route in (backbones or {}).get('routes', []):
+        for step in route.get('steps', []):
+            for mid in (step['source'],step['target']):
+                backbone_pairs.add(frozenset(('rxn:'+step['reaction_id'],'met:'+mid)))
+    display_paths=[]
+    for j, edge in enumerate(edges):
+        rid=edge['reaction_id']
+        a,b=tuple(xy[edge['source']]),tuple(xy[edge['target']])
+        reverse=edge['direction']=='reverse' if structural else stats[rid]['median']<0
+        if reverse:a,b=b,a
+        elbow=(b[0],a[1])
+        points=[a]+([elbow] if elbow!=a and elbow!=b else [])+[b]
+        display_paths.append(dict(rid=rid,points=points,
+            priority=2 if stats[rid].get('is_major_pathway',False) else 1 if j in orange_edges else 0,
+            backbone=frozenset((edge['source'],edge['target'])) in backbone_pairs))
+    original_route_length=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
+    parallel_report=separate_parallel(display_paths,obstacles=xy.values())
+    parallel_report['original_route_length']=original_route_length
+    parallel_report['display_route_length']=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
+    dump(output/'parallel_routing.json',parallel_report)
     for j, edge in enumerate(edges):
         rid = edge['reaction_id']
         a, b = np.array(xy[edge['source']]), np.array(xy[edge['target']])
@@ -235,13 +258,13 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         orange = j in orange_edges
         color = RED if major else ORANGE if orange else '#cbd3d8' if connectors or structural else cmap(norm(stats[rid]['priority']))
         coenzyme = nodes[edge['source']]['kind'] == 'currency' or nodes[edge['target']]['kind'] == 'currency'
-        elbow = np.array([b[0], a[1]])
-        path, = ax.plot([a[0], elbow[0], b[0]], [a[1], elbow[1], b[1]],
+        points=np.array(display_paths[j]['points'])
+        path, = ax.plot(points[:,0], points[:,1],
                         color=color, lw=.7 if coenzyme else 2.3 if major or orange else 1.0,
                         alpha=.95 if major or orange else .35 if connectors else .65 if coenzyme else .55,
                         zorder=2 if major or orange else 1)
         path.set_gid(f'edge-{j}')
-        direction = b - elbow if np.linalg.norm(b - elbow) > 1e-10 else b - a
+        direction = points[-1]-points[-2]
         length = np.linalg.norm(direction)
         if length and (not structural or edge['direction'] != 'blocked'):
             start = b - direction / length * min(.25, length * .6)
@@ -250,7 +273,7 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             if structural:
                 arrow.arrow_patch.set_gid(f'arrow-{j}')
         if structural and edge['direction'] == 'reversible':
-            initial = elbow - a if np.linalg.norm(elbow - a) > 1e-10 else b - a
+            initial = points[1]-points[0]
             initial_length = np.linalg.norm(initial)
             if initial_length:
                 start = a + initial / initial_length * min(.25, initial_length * .6)
@@ -291,8 +314,8 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         connector_label += (f'Flux-weighted orange cost = {connectors["total_cost"]:.4g}; '
                             f'low-flux penalty strength = {connectors["flux_costs"]["flux_weight"]:g}.\n')
     fig.text(.02, .018, f'Red: glucose exchange / glycolysis / {oxidation_label} / TCA. Gray nodes: local coenzymes.\n' + connector_label +
-             ('Orthogonal branches: L1 length. Connectivity and bounds do not establish steady-state activity.' if structural else
-              'Orthogonal branches: L1 length. Median describes the sampled feasible space, not a measured flux.'), fontsize=9)
+             ('Layout objective uses original L1 routes; display detours add length. Connectivity and bounds do not establish steady-state activity.' if structural else
+              'Layout objective uses original L1 routes; display detours add length. Median describes the sampled feasible space, not a measured flux.'), fontsize=9)
     # Keep the original SVG for reversible browser highlighting.
     import io
     original_svg = io.StringIO() if any(highlights.values()) else None

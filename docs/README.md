@@ -44,3 +44,13 @@ User selections are highlighted in purple to distinguish them from low flux.
 
 iCH360 publication excludes SBML/XML model files and links to them.
 Run `python3 prepare_github_pages.py` before publishing to check this policy.
+
+## Parallel red/orange routes
+
+Highlighted segments from different reactions that run in parallel for at least
+one grid unit and are less than 0.3 grid units apart receive rectangular detours.
+Nodes and primary backbone centerlines stay fixed; same-reaction trunks remain
+bundled. SVG diagnostics are in each viewer folder’s `parallel_routing.json`;
+Escher diagnostics are in `escher_map.json` under `overlap_routing.parallel_detours`.
+Blocked lanes remain in place and are recorded. Display detours add length;
+reported optimization costs still describe the original routes.

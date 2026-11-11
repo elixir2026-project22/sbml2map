@@ -1,0 +1,87 @@
+{
+  "clearance_grid": 0.3,
+  "min_parallel_length_grid": 1.0,
+  "shifted_segments": 4,
+  "unresolved": [
+    {
+      "reaction_id": "GLCpts",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "ENO",
+        "FBA",
+        "GAPD"
+      ]
+    },
+    {
+      "reaction_id": "PFK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "PGI",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "PGK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "PGM",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "PYK",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "TPI",
+      "axis": 1,
+      "level": 1.0,
+      "reason": "fixed backbone",
+      "conflicting_reactions": [
+        "FBA",
+        "GLCpts"
+      ]
+    },
+    {
+      "reaction_id": "LDH_D",
+      "axis": 0,
+      "level": 5.0,
+      "reason": "no free lane within 1.2 grids",
+      "conflicting_reactions": [
+        "PDH"
+      ]
+    }
+  ],
+  "max_offset_grid": 0.3000000000000007,
+  "fixed_endpoints": true,
+  "shared_same_reaction_trunks": true,
+  "original_route_length": 982.8,
+  "display_route_length": 985.2
+}
