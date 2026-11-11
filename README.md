@@ -534,11 +534,16 @@ incumbent comparisons use the same objective; global optimality is not assumed.
 
 In structural SVG and Escher views, red/orange segments that cross an unrelated
 metabolite or reaction node can move sideways as three sides of a rectangle.
-Two bends connect the original segment endpoints to the shifted full segment;
+The direct U uses two bends to connect the segment endpoints to the shifted line;
 node positions, reaction participants and flux values stay unchanged. This also
 applies to primary pathway lines. Both the long side and the two short sides
-must be free of unrelated nodes. If both sides are obstructed, the original
-segment is retained and the reason is recorded.
+must be free of unrelated nodes. If a direct U is obstructed, the line first
+steps approximately 0.15 grid units along the original direction at one endpoint,
+then turns twice to reach the offset lane. Both endpoints can use this fallback.
+On short segments, the step is capped at one quarter of the segment length.
+Existing short coincident endpoint stems may remain, without increasing their
+overlap; new coincident paths are rejected. If every candidate is obstructed,
+the original segment is retained and the reason is recorded.
 
 ```bash
 python sbml2map.py --model models/e_coli_core.xml --no-sampling \
@@ -552,3 +557,8 @@ is independent and remains at 0.3 grid units. The setting and unresolved cases
 are saved under `node_detours` in `parallel_routing.json` for SVG and
 `overlap_routing.node_detours` in Escher map metadata. This is display routing;
 layout objectives still use the original routes.
+
+Accepted node detours record the chosen side and endpoint steps in `detours`.
+`endpoint_step_fallback_segments` counts segments that needed this fallback.
+For E. coli core, the saved SVG and Escher routes from `for_e` to `EX_for_e`
+now avoid `succ_c` with the default 0.3-grid displacement.

@@ -2206,12 +2206,12 @@
       "stoichiometry_preserved": true,
       "coordinate_transform_verified": true,
       "segment_endpoints_verified": true,
-      "nodes": 4282,
+      "nodes": 4320,
       "source_nodes": 921,
-      "routing_nodes": 3361,
+      "routing_nodes": 3399,
       "orthogonal_segments_verified": true,
       "reactions": 326,
-      "segments": 4434,
+      "segments": 4472,
       "primary_metabolites": 250,
       "secondary_metabolites": 345,
       "currency_copy_counts": {
@@ -2753,13 +2753,13 @@
       "node_detours": {
         "route_offset_grid": 0.3,
         "enabled": true,
-        "shifted_segments": 5,
+        "shifted_segments": 42,
         "unresolved": [
           {
             "reaction_id": "AKGDH",
             "axis": 1,
             "level": 9.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -2771,7 +2771,7 @@
             "reaction_id": "CS",
             "axis": 0,
             "level": 5.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 5.0,
@@ -2783,7 +2783,7 @@
             "reaction_id": "CS",
             "axis": 0,
             "level": 6.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 5.449827493308394,
@@ -2795,7 +2795,7 @@
             "reaction_id": "CS",
             "axis": 1,
             "level": 5.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 5.0,
@@ -2807,7 +2807,7 @@
             "reaction_id": "GLCptspp",
             "axis": 1,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -2887,7 +2887,7 @@
             "reaction_id": "PDH",
             "axis": 0,
             "level": 5.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.4498274933083937,
@@ -2896,214 +2896,14 @@
             ]
           },
           {
-            "reaction_id": "SUCDi",
-            "axis": 0,
-            "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                4.550172506691606,
-                0.9998274933083939
-              ],
-              [
-                5.449827493308394,
-                1.0001725066916063
-              ]
-            ]
-          },
-          {
             "reaction_id": "SUCOAS",
             "axis": 0,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 7.449827493308394,
                 1.0001725066916063
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACALD",
-            "axis": 1,
-            "level": 3.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                3.0,
-                6.0
-              ],
-              [
-                3.0,
-                7.0
-              ],
-              [
-                3.0,
-                8.0
-              ],
-              [
-                3.0,
-                10.0
-              ],
-              [
-                3.0,
-                11.0
-              ],
-              [
-                3.0,
-                12.0
-              ],
-              [
-                3.0,
-                13.0
-              ],
-              [
-                3.0,
-                14.0
-              ],
-              [
-                3.0,
-                17.0
-              ],
-              [
-                3.0,
-                19.0
-              ],
-              [
-                3.0,
-                20.0
-              ],
-              [
-                3.0,
-                21.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACALDtex",
-            "axis": 1,
-            "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                11.0,
-                25.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACALDtpp",
-            "axis": 0,
-            "level": 22.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                4.0,
-                22.0
-              ],
-              [
-                5.0,
-                22.0
-              ],
-              [
-                6.0,
-                22.0
-              ],
-              [
-                6.550172506691606,
-                21.999827493308395
-              ],
-              [
-                7.0,
-                22.0
-              ],
-              [
-                7.449827493308394,
-                22.000172506691605
-              ],
-              [
-                9.550172506691606,
-                21.999827493308395
-              ],
-              [
-                10.0,
-                22.0
-              ],
-              [
-                10.449827493308394,
-                22.000172506691605
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACALDtpp",
-            "axis": 1,
-            "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                11.0,
-                23.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACt2rpp",
-            "axis": 0,
-            "level": 17.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                12.550172506691606,
-                16.999827493308395
-              ],
-              [
-                13.0,
-                17.0
-              ],
-              [
-                13.449827493308394,
-                17.000172506691605
-              ],
-              [
-                15.0,
-                17.0
-              ],
-              [
-                17.0,
-                17.0
-              ],
-              [
-                17.550172506691606,
-                16.999827493308395
-              ],
-              [
-                18.0,
-                17.0
-              ],
-              [
-                18.449827493308394,
-                17.000172506691605
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ACtex",
-            "axis": 0,
-            "level": 17.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                21.0,
-                17.0
-              ],
-              [
-                22.0,
-                17.0
-              ],
-              [
-                23.0,
-                17.0
               ]
             ]
           },
@@ -3111,7 +2911,7 @@
             "reaction_id": "AKGt2rpp",
             "axis": 0,
             "level": 3.92,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -3123,7 +2923,7 @@
             "reaction_id": "AKGt2rpp",
             "axis": 0,
             "level": 4.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -3139,7 +2939,7 @@
             "reaction_id": "AKGt2rpp",
             "axis": 1,
             "level": 9.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -3148,34 +2948,10 @@
             ]
           },
           {
-            "reaction_id": "AKGtex",
-            "axis": 0,
-            "level": 3.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                12.0,
-                3.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "ALCD2x",
-            "axis": 0,
-            "level": 23.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                3.4498274933083937,
-                23.000172506691605
-              ]
-            ]
-          },
-          {
             "reaction_id": "Biomass",
             "axis": 0,
             "level": 17.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -3223,7 +2999,7 @@
             "reaction_id": "Biomass",
             "axis": 0,
             "level": 18.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -3247,7 +3023,7 @@
             "reaction_id": "Biomass",
             "axis": 1,
             "level": 10.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.916153456620346,
@@ -3287,7 +3063,7 @@
             "reaction_id": "Biomass",
             "axis": 1,
             "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -3299,7 +3075,7 @@
             "reaction_id": "D_LACtex",
             "axis": 0,
             "level": 5.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 16.0,
@@ -3319,7 +3095,7 @@
             "reaction_id": "D_LACtex",
             "axis": 1,
             "level": 16.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 16.0,
@@ -3328,22 +3104,10 @@
             ]
           },
           {
-            "reaction_id": "EX_acald_e",
-            "axis": 1,
-            "level": 10.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                10.0,
-                27.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "EX_akg_e",
             "axis": 0,
             "level": 3.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 13.550172506691606,
@@ -3359,7 +3123,7 @@
             "reaction_id": "EX_akg_e",
             "axis": 1,
             "level": 14.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 14.0,
@@ -3376,122 +3140,10 @@
             ]
           },
           {
-            "reaction_id": "EX_for_e",
-            "axis": 0,
-            "level": 13.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                1.0,
-                13.0
-              ],
-              [
-                2.0,
-                13.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_fru_e",
-            "axis": 0,
-            "level": 20.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                0.5501725066916061,
-                19.999827493308395
-              ],
-              [
-                1.0,
-                20.0
-              ],
-              [
-                1.4498274933083939,
-                20.000172506691605
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_glcn_e",
-            "axis": 1,
-            "level": 6.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                6.0,
-                27.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_gln__L_e",
-            "axis": 0,
-            "level": 14.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                0.5501725066916061,
-                13.999827493308393
-              ],
-              [
-                1.0,
-                14.0
-              ],
-              [
-                1.4498274933083939,
-                14.000172506691607
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_glu__L_e",
-            "axis": 1,
-            "level": 16.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                15.999827493308393,
-                27.449827493308394
-              ],
-              [
-                16.0,
-                24.0
-              ],
-              [
-                16.0,
-                25.0
-              ],
-              [
-                16.0,
-                26.0
-              ],
-              [
-                16.0,
-                27.0
-              ],
-              [
-                16.000172506691605,
-                26.550172506691606
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_glyc__R_e",
-            "axis": 1,
-            "level": 6.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                6.0,
-                1.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "EX_lac__D_e",
             "axis": 0,
             "level": 5.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 20.0,
@@ -3503,7 +3155,7 @@
             "reaction_id": "EX_lac__D_e",
             "axis": 1,
             "level": 20.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 20.0,
@@ -3528,34 +3180,10 @@
             ]
           },
           {
-            "reaction_id": "EX_mal__L_e",
-            "axis": 1,
-            "level": 19.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                19.0,
-                1.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "EX_rib__D_e",
-            "axis": 0,
-            "level": 7.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                1.0,
-                7.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "FORt2pp",
             "axis": 0,
             "level": 16.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 6.550172506691606,
@@ -3583,7 +3211,7 @@
             "reaction_id": "FORt2pp",
             "axis": 1,
             "level": 8.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 8.0,
@@ -3595,7 +3223,7 @@
             "reaction_id": "FORtex",
             "axis": 0,
             "level": 13.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 5.550172506691606,
@@ -3611,7 +3239,7 @@
             "reaction_id": "FORtex",
             "axis": 1,
             "level": 6.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 6.0,
@@ -3631,7 +3259,7 @@
             "reaction_id": "FRUpts2pp",
             "axis": 0,
             "level": 19.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -3643,7 +3271,7 @@
             "reaction_id": "FRUpts2pp",
             "axis": 0,
             "level": 19.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -3655,7 +3283,7 @@
             "reaction_id": "FRUpts2pp",
             "axis": 1,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -3667,7 +3295,7 @@
             "reaction_id": "FRUtex",
             "axis": 0,
             "level": 18.92,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -3679,7 +3307,7 @@
             "reaction_id": "FRUtex",
             "axis": 0,
             "level": 19.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -3691,7 +3319,7 @@
             "reaction_id": "FRUtex",
             "axis": 0,
             "level": 19.92,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 3.0,
@@ -3703,7 +3331,7 @@
             "reaction_id": "FRUtex",
             "axis": 0,
             "level": 20.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 3.0,
@@ -3715,7 +3343,7 @@
             "reaction_id": "FRUtex",
             "axis": 1,
             "level": 2.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -3727,7 +3355,7 @@
             "reaction_id": "FRUtex",
             "axis": 1,
             "level": 3.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 3.0,
@@ -3739,7 +3367,7 @@
             "reaction_id": "FUMt2_2pp",
             "axis": 0,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 4.550172506691606,
@@ -3800,38 +3428,10 @@
             ]
           },
           {
-            "reaction_id": "FUMtex",
-            "axis": 0,
-            "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                17.0,
-                1.0
-              ],
-              [
-                17.550172506691606,
-                0.9998274933083939
-              ],
-              [
-                18.0,
-                1.0
-              ],
-              [
-                18.449827493308394,
-                1.0001725066916063
-              ],
-              [
-                19.0,
-                1.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "G3PT",
             "axis": 0,
             "level": 20.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 12.0,
@@ -3859,7 +3459,7 @@
             "reaction_id": "G3PT",
             "axis": 1,
             "level": 15.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 15.0,
@@ -3875,7 +3475,7 @@
             "reaction_id": "GLCNtex",
             "axis": 0,
             "level": 25.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 8.0,
@@ -3887,7 +3487,7 @@
             "reaction_id": "GLCNtex",
             "axis": 0,
             "level": 26.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 7.0,
@@ -3899,7 +3499,7 @@
             "reaction_id": "GLCNtex",
             "axis": 1,
             "level": 7.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 7.0,
@@ -3911,7 +3511,7 @@
             "reaction_id": "GLCNtex",
             "axis": 1,
             "level": 8.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 8.0,
@@ -3920,46 +3520,10 @@
             ]
           },
           {
-            "reaction_id": "GLNabcpp",
-            "axis": 0,
-            "level": 14.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                6.0,
-                14.0
-              ],
-              [
-                7.550172506691606,
-                13.999827493308393
-              ],
-              [
-                8.449827493308394,
-                14.000172506691607
-              ],
-              [
-                9.0,
-                14.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "GLNtex",
-            "axis": 0,
-            "level": 14.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                3.0,
-                14.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "GLUt2rpp",
             "axis": 0,
             "level": 19.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -3979,7 +3543,7 @@
             "reaction_id": "GLUt2rpp",
             "axis": 1,
             "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -3991,7 +3555,7 @@
             "reaction_id": "GLUtex",
             "axis": 0,
             "level": 21.92,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 15.0,
@@ -4003,7 +3567,7 @@
             "reaction_id": "GLUtex",
             "axis": 0,
             "level": 22.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 15.0,
@@ -4019,7 +3583,7 @@
             "reaction_id": "GLUtex",
             "axis": 1,
             "level": 15.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 15.0,
@@ -4028,22 +3592,10 @@
             ]
           },
           {
-            "reaction_id": "GLYCAt2rpp",
-            "axis": 1,
-            "level": 6.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                6.0,
-                6.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "GLYCK2",
             "axis": 0,
             "level": 7.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 4.0,
@@ -4071,7 +3623,7 @@
             "reaction_id": "GLYCK2",
             "axis": 0,
             "level": 8.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4103,7 +3655,7 @@
             "reaction_id": "GLYCK2",
             "axis": 0,
             "level": 8.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4115,7 +3667,7 @@
             "reaction_id": "GLYCK2",
             "axis": 1,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4127,7 +3679,7 @@
             "reaction_id": "GLYCK2",
             "axis": 1,
             "level": 4.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 4.0,
@@ -4138,20 +3690,8 @@
           {
             "reaction_id": "GNK",
             "axis": 0,
-            "level": 23.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                10.550172506691606,
-                22.999827493308395
-              ]
-            ]
-          },
-          {
-            "reaction_id": "GNK",
-            "axis": 0,
             "level": 23.92,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -4163,7 +3703,7 @@
             "reaction_id": "GNK",
             "axis": 0,
             "level": 24.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -4175,7 +3715,7 @@
             "reaction_id": "GNK",
             "axis": 1,
             "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 11.0,
@@ -4187,7 +3727,7 @@
             "reaction_id": "MALtex",
             "axis": 0,
             "level": 2.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 12.0,
@@ -4231,7 +3771,7 @@
             "reaction_id": "MALtex",
             "axis": 1,
             "level": 12.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 12.0,
@@ -4240,22 +3780,10 @@
             ]
           },
           {
-            "reaction_id": "RBK",
-            "axis": 0,
-            "level": 10.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                2.550172506691606,
-                9.999827493308393
-              ]
-            ]
-          },
-          {
             "reaction_id": "RIBtex",
             "axis": 0,
             "level": 7.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -4267,7 +3795,7 @@
             "reaction_id": "RIBtex",
             "axis": 1,
             "level": 2.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -4279,7 +3807,7 @@
             "reaction_id": "SUCCt1pp",
             "axis": 0,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 7.0,
@@ -4289,25 +3817,9 @@
           },
           {
             "reaction_id": "SUCCt1pp",
-            "axis": 0,
-            "level": 2.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                8.0,
-                2.0
-              ],
-              [
-                9.0,
-                2.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "SUCCt1pp",
             "axis": 1,
             "level": 7.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 7.0,
@@ -4319,7 +3831,7 @@
             "reaction_id": "TKT1",
             "axis": 0,
             "level": 10.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -4331,7 +3843,7 @@
             "reaction_id": "TKT1",
             "axis": 0,
             "level": 11.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4343,7 +3855,7 @@
             "reaction_id": "TKT1",
             "axis": 0,
             "level": 11.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4355,7 +3867,7 @@
             "reaction_id": "TKT1",
             "axis": 1,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 1.0,
@@ -4367,7 +3879,7 @@
             "reaction_id": "TKT1",
             "axis": 1,
             "level": 2.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -4379,7 +3891,7 @@
             "reaction_id": "TKT1",
             "axis": 1,
             "level": 2.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 2.0,
@@ -4388,42 +3900,10 @@
             ]
           },
           {
-            "reaction_id": "XYLK",
-            "axis": 0,
-            "level": 9.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                5.449827493308394,
-                9.000172506691607
-              ]
-            ]
-          },
-          {
-            "reaction_id": "XYLt2pp",
-            "axis": 1,
-            "level": 8.0,
-            "reason": "both requested U-shaped lanes are obstructed",
-            "nodes": [
-              [
-                8.0,
-                3.0
-              ],
-              [
-                8.0,
-                6.0
-              ],
-              [
-                8.0,
-                7.0
-              ]
-            ]
-          },
-          {
             "reaction_id": "XYLtex",
             "axis": 0,
             "level": 1.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -4435,7 +3915,7 @@
             "reaction_id": "XYLtex",
             "axis": 0,
             "level": 1.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -4447,7 +3927,7 @@
             "reaction_id": "XYLtex",
             "axis": 1,
             "level": 9.0,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -4459,7 +3939,7 @@
             "reaction_id": "XYLtex",
             "axis": 1,
             "level": 9.08,
-            "reason": "both requested U-shaped lanes are obstructed",
+            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
                 9.0,
@@ -4468,15 +3948,289 @@
             ]
           }
         ],
-        "shape": "three sides of a rectangle",
+        "shape": "rectangle with optional endpoint steps",
+        "endpoint_step_grid": 0.15,
+        "endpoint_step_fallback_segments": 37,
+        "detours": [
+          {
+            "reaction_id": "FBA",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": false,
+            "inset_end": false,
+            "segments": 3,
+            "existing_endpoint_stem_overlaps": 0
+          },
+          {
+            "reaction_id": "SUCDi",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 3,
+            "existing_endpoint_stem_overlaps": 23
+          },
+          {
+            "reaction_id": "ACALD",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 21
+          },
+          {
+            "reaction_id": "ACALDtex",
+            "axis": 1,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 10
+          },
+          {
+            "reaction_id": "ACALDtpp",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 10
+          },
+          {
+            "reaction_id": "ACALDtpp",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 19
+          },
+          {
+            "reaction_id": "ACt2rpp",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 21
+          },
+          {
+            "reaction_id": "ACtex",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 15
+          },
+          {
+            "reaction_id": "AKGtex",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 22
+          },
+          {
+            "reaction_id": "ALCD2x",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 10
+          },
+          {
+            "reaction_id": "EX_acald_e",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 4
+          },
+          {
+            "reaction_id": "EX_etoh_e",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": false,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 0
+          },
+          {
+            "reaction_id": "EX_for_e",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 3
+          },
+          {
+            "reaction_id": "EX_fru_e",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 0
+          },
+          {
+            "reaction_id": "EX_glcn_e",
+            "axis": 1,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 2
+          },
+          {
+            "reaction_id": "EX_gln__L_e",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 1
+          },
+          {
+            "reaction_id": "EX_glu__L_e",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 5
+          },
+          {
+            "reaction_id": "EX_glyc__R_e",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 6
+          },
+          {
+            "reaction_id": "EX_mal__L_e",
+            "axis": 1,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 2
+          },
+          {
+            "reaction_id": "EX_rib__D_e",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 5
+          },
+          {
+            "reaction_id": "FUMtex",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 15
+          },
+          {
+            "reaction_id": "GLNabcpp",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 39
+          },
+          {
+            "reaction_id": "GLNtex",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 17
+          },
+          {
+            "reaction_id": "GLYCAt2rpp",
+            "axis": 1,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 26
+          },
+          {
+            "reaction_id": "GNK",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 30
+          },
+          {
+            "reaction_id": "PYRt2rpp",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": false,
+            "inset_end": false,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 0
+          },
+          {
+            "reaction_id": "RBK",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 5
+          },
+          {
+            "reaction_id": "SUCCt1pp",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": false,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 8
+          },
+          {
+            "reaction_id": "XYLK",
+            "axis": 0,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 4
+          },
+          {
+            "reaction_id": "XYLt2pp",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 19
+          }
+        ],
         "fixed_endpoints": true,
         "shared_same_reaction_trunks": true,
-        "backbone_shifted_segments": 2,
+        "backbone_shifted_segments": 4,
         "max_offset_grid": 0.3,
         "backbone_max_offset_grid": 0.3
       },
       "original_route_length": 9616.25,
-      "display_route_length": 9633.45
+      "display_route_length": 9655.65
     },
     "escher": {
       "clearance_grid": 0.3,
@@ -4504,13 +4258,13 @@
     "node_detours": {
       "route_offset_grid": 0.3,
       "enabled": true,
-      "shifted_segments": 14,
+      "shifted_segments": 27,
       "unresolved": [
         {
           "reaction_id": "AKGDH",
           "axis": 1,
           "level": 1700,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1700,
@@ -4522,7 +4276,7 @@
           "reaction_id": "CS",
           "axis": 0,
           "level": 4040,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1060.968948795511,
@@ -4534,7 +4288,7 @@
           "reaction_id": "CS",
           "axis": 0,
           "level": 4220,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               980,
@@ -4546,7 +4300,7 @@
           "reaction_id": "CS",
           "axis": 1,
           "level": 980,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               980,
@@ -4558,7 +4312,7 @@
           "reaction_id": "PDH",
           "axis": 0,
           "level": 4220,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               520.9689487955109,
@@ -4567,26 +4321,10 @@
           ]
         },
         {
-          "reaction_id": "SUCDi",
-          "axis": 0,
-          "level": 4940,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              899.031051204489,
-              4940.031051204489
-            ],
-            [
-              1060.968948795511,
-              4939.968948795511
-            ]
-          ]
-        },
-        {
           "reaction_id": "SUCOAS",
           "axis": 0,
           "level": 4940,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1420.9689487955109,
@@ -4595,66 +4333,10 @@
           ]
         },
         {
-          "reaction_id": "ACALD",
-          "axis": 1,
-          "level": 620,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              620,
-              1340
-            ],
-            [
-              620,
-              1520
-            ],
-            [
-              620,
-              1700
-            ],
-            [
-              620,
-              2060
-            ],
-            [
-              620,
-              2600
-            ],
-            [
-              620,
-              2780
-            ],
-            [
-              620,
-              2960
-            ],
-            [
-              620,
-              3140
-            ],
-            [
-              620,
-              3320
-            ],
-            [
-              620,
-              3680
-            ],
-            [
-              620,
-              3860
-            ],
-            [
-              620,
-              4040
-            ]
-          ]
-        },
-        {
           "reaction_id": "ACALDtex",
           "axis": 1,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -4664,53 +4346,9 @@
         },
         {
           "reaction_id": "ACALDtpp",
-          "axis": 0,
-          "level": 1160,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              800,
-              1160
-            ],
-            [
-              980,
-              1160
-            ],
-            [
-              1160,
-              1160
-            ],
-            [
-              1259.0310512044891,
-              1160.031051204489
-            ],
-            [
-              1340,
-              1160
-            ],
-            [
-              1420.9689487955109,
-              1159.968948795511
-            ],
-            [
-              1799.0310512044891,
-              1160.031051204489
-            ],
-            [
-              1880,
-              1160
-            ],
-            [
-              1960.9689487955109,
-              1159.968948795511
-            ]
-          ]
-        },
-        {
-          "reaction_id": "ACALDtpp",
           "axis": 1,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -4722,7 +4360,7 @@
           "reaction_id": "ACt2rpp",
           "axis": 0,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2339.031051204489,
@@ -4762,7 +4400,7 @@
           "reaction_id": "ACtex",
           "axis": 0,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               3860,
@@ -4782,7 +4420,7 @@
           "reaction_id": "AKGt2rpp",
           "axis": 0,
           "level": 4410.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1700,
@@ -4798,7 +4436,7 @@
           "reaction_id": "AKGt2rpp",
           "axis": 1,
           "level": 1710.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1700,
@@ -4810,7 +4448,7 @@
           "reaction_id": "Biomass",
           "axis": 0,
           "level": 1880,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1700,
@@ -4834,7 +4472,7 @@
           "reaction_id": "Biomass",
           "axis": 0,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -4882,7 +4520,7 @@
           "reaction_id": "Biomass",
           "axis": 1,
           "level": 1880,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1864.9076221916623,
@@ -4922,7 +4560,7 @@
           "reaction_id": "Biomass",
           "axis": 1,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -4934,7 +4572,7 @@
           "reaction_id": "D_LACtex",
           "axis": 0,
           "level": 4220,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2960,
@@ -4954,7 +4592,7 @@
           "reaction_id": "D_LACtex",
           "axis": 1,
           "level": 2960,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2960,
@@ -4966,7 +4604,7 @@
           "reaction_id": "EX_akg_e",
           "axis": 0,
           "level": 4580,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2519.031051204489,
@@ -4982,7 +4620,7 @@
           "reaction_id": "EX_akg_e",
           "axis": 1,
           "level": 2600,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2600,
@@ -4999,58 +4637,10 @@
           ]
         },
         {
-          "reaction_id": "EX_for_e",
-          "axis": 0,
-          "level": 2780,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              260,
-              2780
-            ],
-            [
-              440,
-              2780
-            ]
-          ]
-        },
-        {
-          "reaction_id": "EX_glu__L_e",
-          "axis": 1,
-          "level": 2960,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              2959.9689487955106,
-              179.03105120448907
-            ],
-            [
-              2960,
-              260
-            ],
-            [
-              2960,
-              440
-            ],
-            [
-              2960,
-              620
-            ],
-            [
-              2960,
-              800
-            ],
-            [
-              2960.031051204489,
-              340.9689487955109
-            ]
-          ]
-        },
-        {
           "reaction_id": "EX_lac__D_e",
           "axis": 0,
           "level": 4220,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               3680,
@@ -5062,7 +4652,7 @@
           "reaction_id": "EX_lac__D_e",
           "axis": 1,
           "level": 3680,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               3680,
@@ -5090,7 +4680,7 @@
           "reaction_id": "EX_mal__L_e",
           "axis": 1,
           "level": 3500,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               3500,
@@ -5102,7 +4692,7 @@
           "reaction_id": "FORt2pp",
           "axis": 0,
           "level": 2240,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1259.0310512044891,
@@ -5130,7 +4720,7 @@
           "reaction_id": "FORt2pp",
           "axis": 1,
           "level": 1520,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1520,
@@ -5142,7 +4732,7 @@
           "reaction_id": "FORtex",
           "axis": 0,
           "level": 2780,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1079.031051204489,
@@ -5158,7 +4748,7 @@
           "reaction_id": "FORtex",
           "axis": 1,
           "level": 1160,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1160,
@@ -5178,7 +4768,7 @@
           "reaction_id": "FRUpts2pp",
           "axis": 0,
           "level": 1685.6,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5190,7 +4780,7 @@
           "reaction_id": "FRUpts2pp",
           "axis": 0,
           "level": 1700,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5202,7 +4792,7 @@
           "reaction_id": "FRUpts2pp",
           "axis": 1,
           "level": 270.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5214,7 +4804,7 @@
           "reaction_id": "FRUtex",
           "axis": 0,
           "level": 1520.0,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               620,
@@ -5226,7 +4816,7 @@
           "reaction_id": "FRUtex",
           "axis": 0,
           "level": 1700,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5238,7 +4828,7 @@
           "reaction_id": "FRUtex",
           "axis": 1,
           "level": 450.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5250,7 +4840,7 @@
           "reaction_id": "FRUtex",
           "axis": 1,
           "level": 630.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               620,
@@ -5261,20 +4851,8 @@
         {
           "reaction_id": "FUMt2_2pp",
           "axis": 0,
-          "level": 4940,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              2780,
-              4940
-            ]
-          ]
-        },
-        {
-          "reaction_id": "FUMt2_2pp",
-          "axis": 0,
           "level": 4950.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               899.031051204489,
@@ -5331,38 +4909,10 @@
           ]
         },
         {
-          "reaction_id": "FUMtex",
-          "axis": 0,
-          "level": 4940,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              3140,
-              4940
-            ],
-            [
-              3239.031051204489,
-              4940.031051204489
-            ],
-            [
-              3320,
-              4940
-            ],
-            [
-              3400.968948795511,
-              4939.968948795511
-            ],
-            [
-              3500,
-              4940
-            ]
-          ]
-        },
-        {
           "reaction_id": "G3PT",
           "axis": 0,
           "level": 1520,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2240,
@@ -5390,7 +4940,7 @@
           "reaction_id": "G3PT",
           "axis": 1,
           "level": 2780,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2780,
@@ -5406,7 +4956,7 @@
           "reaction_id": "GLCNtex",
           "axis": 0,
           "level": 440,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1340,
@@ -5418,7 +4968,7 @@
           "reaction_id": "GLCNtex",
           "axis": 0,
           "level": 620,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1520,
@@ -5430,7 +4980,7 @@
           "reaction_id": "GLCNtex",
           "axis": 1,
           "level": 1340,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1340,
@@ -5442,7 +4992,7 @@
           "reaction_id": "GLCNtex",
           "axis": 1,
           "level": 1520,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1520,
@@ -5454,7 +5004,7 @@
           "reaction_id": "GLNabcpp",
           "axis": 0,
           "level": 2600,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1160,
@@ -5478,7 +5028,7 @@
           "reaction_id": "GLNtex",
           "axis": 0,
           "level": 2600,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               620,
@@ -5490,7 +5040,7 @@
           "reaction_id": "GLUt2rpp",
           "axis": 0,
           "level": 1700,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -5510,7 +5060,7 @@
           "reaction_id": "GLUt2rpp",
           "axis": 1,
           "level": 2060,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -5522,7 +5072,7 @@
           "reaction_id": "GLUtex",
           "axis": 0,
           "level": 1160,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2780,
@@ -5538,7 +5088,7 @@
           "reaction_id": "GLUtex",
           "axis": 0,
           "level": 1174.4,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2780,
@@ -5550,7 +5100,7 @@
           "reaction_id": "GLUtex",
           "axis": 1,
           "level": 2790.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2780,
@@ -5562,7 +5112,7 @@
           "reaction_id": "GLYCAt2rpp",
           "axis": 1,
           "level": 1160,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1160,
@@ -5574,7 +5124,7 @@
           "reaction_id": "GLYCK2",
           "axis": 0,
           "level": 3680,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5606,7 +5156,7 @@
           "reaction_id": "GLYCK2",
           "axis": 0,
           "level": 3860,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               800,
@@ -5634,7 +5184,7 @@
           "reaction_id": "GLYCK2",
           "axis": 1,
           "level": 270.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5646,7 +5196,7 @@
           "reaction_id": "GLYCK2",
           "axis": 1,
           "level": 800,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               800,
@@ -5658,7 +5208,7 @@
           "reaction_id": "GND",
           "axis": 1,
           "level": 1890.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1880,
@@ -5674,7 +5224,7 @@
           "reaction_id": "GNK",
           "axis": 0,
           "level": 800.0,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -5686,7 +5236,7 @@
           "reaction_id": "GNK",
           "axis": 0,
           "level": 980,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1979.0310512044891,
@@ -5698,7 +5248,7 @@
           "reaction_id": "GNK",
           "axis": 1,
           "level": 2070.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2060,
@@ -5710,7 +5260,7 @@
           "reaction_id": "LDH_D",
           "axis": 0,
           "level": 4220,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1420.9689487955109,
@@ -5746,7 +5296,7 @@
           "reaction_id": "MALt2_2pp",
           "axis": 0,
           "level": 4580,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               980,
@@ -5766,7 +5316,7 @@
           "reaction_id": "MALtex",
           "axis": 0,
           "level": 4760,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2240,
@@ -5810,7 +5360,7 @@
           "reaction_id": "MALtex",
           "axis": 1,
           "level": 2240,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               2240,
@@ -5819,22 +5369,10 @@
           ]
         },
         {
-          "reaction_id": "RBK",
-          "axis": 0,
-          "level": 3320,
-          "reason": "both requested U-shaped lanes are obstructed",
-          "nodes": [
-            [
-              539.0310512044891,
-              3320.031051204489
-            ]
-          ]
-        },
-        {
           "reaction_id": "RIBtex",
           "axis": 0,
           "level": 3860,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5846,7 +5384,7 @@
           "reaction_id": "RIBtex",
           "axis": 1,
           "level": 440,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5858,7 +5396,7 @@
           "reaction_id": "SUCCt1pp",
           "axis": 0,
           "level": 4929.2,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1340,
@@ -5870,7 +5408,7 @@
           "reaction_id": "SUCCt1pp",
           "axis": 1,
           "level": 1350.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1340,
@@ -5882,7 +5420,7 @@
           "reaction_id": "TKT1",
           "axis": 0,
           "level": 3125.6,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5894,7 +5432,7 @@
           "reaction_id": "TKT1",
           "axis": 0,
           "level": 3140,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5906,7 +5444,7 @@
           "reaction_id": "TKT1",
           "axis": 0,
           "level": 3330.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5918,7 +5456,7 @@
           "reaction_id": "TKT1",
           "axis": 1,
           "level": 270.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               260,
@@ -5930,7 +5468,7 @@
           "reaction_id": "TKT1",
           "axis": 1,
           "level": 440,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5942,7 +5480,7 @@
           "reaction_id": "TKT1",
           "axis": 1,
           "level": 454.4,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               440,
@@ -5954,7 +5492,7 @@
           "reaction_id": "XYLt2pp",
           "axis": 1,
           "level": 1520,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1520,
@@ -5974,7 +5512,7 @@
           "reaction_id": "XYLtex",
           "axis": 1,
           "level": 1710.8,
-          "reason": "both requested U-shaped lanes are obstructed",
+          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
           "nodes": [
             [
               1700,
@@ -5983,12 +5521,214 @@
           ]
         }
       ],
-      "shape": "three sides of a rectangle",
+      "shape": "rectangle with optional endpoint steps",
+      "endpoint_step_grid": 0.15,
+      "endpoint_step_fallback_segments": 12,
+      "detours": [
+        {
+          "reaction_id": "SUCDi",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": true,
+          "segments": 3,
+          "existing_endpoint_stem_overlaps": 3
+        },
+        {
+          "reaction_id": "ACALD",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": true,
+          "segments": 2,
+          "existing_endpoint_stem_overlaps": 2
+        },
+        {
+          "reaction_id": "ACALDtpp",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": true,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "AKGtex",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "ALCD2x",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_acald_e",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_etoh_e",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_for_e",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_fru_e",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_glcn_e",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_gln__L_e",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_glu__L_e",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": true,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_glyc__R_e",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "EX_rib__D_e",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "FUMt2_2pp",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": true,
+          "inset_end": false,
+          "segments": 2,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "FUMtex",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": true,
+          "inset_end": false,
+          "segments": 2,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "MALt2_2pp",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "PYRt2rpp",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "RBK",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": true,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "SUCCt1pp",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "SUCCtex",
+          "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "XYLK",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        }
+      ],
       "fixed_endpoints": true,
       "shared_same_reaction_trunks": true,
-      "backbone_shifted_segments": 0,
+      "backbone_shifted_segments": 2,
       "max_offset_grid": 0.3,
-      "backbone_max_offset_grid": 0
+      "backbone_max_offset_grid": 0.3
     },
     "parallel_detours": {
       "clearance_grid": 0.3,
@@ -6028,7 +5768,7 @@
       "gray": 70.19999999999999
     },
     "primary_backbone_nodes_fixed": true,
-    "primary_backbone_max_offset": 0.0
+    "primary_backbone_max_offset": 54.0
   },
   "route_offset_grid": 0.3
 }

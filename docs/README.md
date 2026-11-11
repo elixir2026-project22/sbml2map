@@ -57,8 +57,14 @@ reported optimization costs still describe the original routes.
 
 
 Node avoidance shifts a whole straight segment as three rectangle sides with
-exactly two bends, including on red primary pathways. The displacement is
+two bends by default, including on red primary pathways. The displacement is
 `--route-offset` in grid units (default `0.3`; `0` disables node avoidance).
 Diagnostics are under `node_detours` in the SVG report and under
 `overlap_routing.node_detours` in Escher map metadata. Both requested sides
 are checked; obstructed cases remain unchanged and are recorded.
+
+If the direct U is obstructed, a 0.15-grid step near either or both endpoints
+allows two right-angle turns into the offset lane. Existing short endpoint
+stems may remain coincident without increasing their overlap. The chosen shape
+is recorded in `detours`; `endpoint_step_fallback_segments` counts its uses.
+The E. coli core `for_e`–`EX_for_e` branch now clears `succ_c` in both viewers.

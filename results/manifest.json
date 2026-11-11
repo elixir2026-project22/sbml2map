@@ -64,7 +64,8 @@
         "escher_priority_layers_and_connected_offset_routes_verified": true,
         "sbml_layout_preserves_original_model_and_fba": true,
         "parallel_detours_geometry_and_browser_verified": true,
-        "whole_segment_node_avoidance_verified": true
+        "whole_segment_node_avoidance_verified": true,
+        "formate_branch_clears_succinate_with_endpoint_step": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -89,16 +90,16 @@
           "sha256": "92da2931394b1adb05c409055f492da6bbe10bea8c02b0e25b89142fabe21c65"
         },
         "escher_map.json": {
-          "bytes": 814074,
-          "sha256": "482efc5362810aa4727078436e738ce977d02c4396c34463aa6dfa2378abac23"
+          "bytes": 819608,
+          "sha256": "1f37f57e5706c1a82564dce0f44ac29ce7cfaa32a7402e773baed2d897832f2d"
         },
         "escher_map_metadata.json": {
           "bytes": 377480,
           "sha256": "66299642fb71f1cc2efe99bcb5f9d45a06aeb4629df2130749b713935b58abbd"
         },
         "escher_preview.html": {
-          "bytes": 1433412,
-          "sha256": "1ada992dc09b9a1d33c580dace96a2aec58bb80394c4b1865a3e88a585f698cd"
+          "bytes": 1438716,
+          "sha256": "547bea606b8a9734fa4ccd032e54661a2af72f566456bdc7b59ca1f7b4e9b126"
         },
         "exchange_connectors.json": {
           "bytes": 3333,
@@ -117,16 +118,16 @@
           "sha256": "9029ff788c311540c11480c7a7ab34cddc9a32234a2222f873632872c5175c3d"
         },
         "index.html": {
-          "bytes": 589336,
-          "sha256": "f0ee9af09a63db720f66f54b1fd9d9a57c96e38711605c9c571ef4403ab306a8"
+          "bytes": 590716,
+          "sha256": "c3a9fb7a32dcddc3f5ba96c4e940ad09cae41c9998aeb51aaba63d14f6f25149"
         },
         "layout.png": {
-          "bytes": 492288,
-          "sha256": "4faf45fd517a74062efa01807d094b2e083825a42902e90506c16652797765ea"
+          "bytes": 493905,
+          "sha256": "89abc1f02fdb5c785b2d85a5fd9045ac0fa2dac30a8fcac6dc11ead297f0a57a"
         },
         "layout.svg": {
-          "bytes": 438216,
-          "sha256": "38caa03d6fc91fb256f2eebf27dbece913cd3611b6a2600260f1b6817be16ffa"
+          "bytes": 439596,
+          "sha256": "dc31ed5bbe6993fdf785f78a906344a1aabe14e9a13828b8b0b0e2cf1ad803a2"
         },
         "major_backbones.json": {
           "bytes": 19735,
@@ -137,12 +138,12 @@
           "sha256": "1c454fac51bf90a6ac632537db3802bfef701506ab01ba11d5b516ef35570a63"
         },
         "orange_routes.png": {
-          "bytes": 325348,
-          "sha256": "399efa2123d7ee53fcce2adcb74af6198cfed2bc129074ece4257604d2ee0daa"
+          "bytes": 327131,
+          "sha256": "64b46c90ce2e3aa78124b529c2b22d12b66b235aa62182028cd41e4d5860483f"
         },
         "orange_routes.svg": {
-          "bytes": 259696,
-          "sha256": "a0cd6f1d4d59af625e1cf9142a7445a31f308cf02a6f33f8980de4115294902e"
+          "bytes": 261076,
+          "sha256": "08306a6556ced3ddd6b69492b68a955aa2345f2322467042d5b85003ee7a51ff"
         },
         "pathway_extraction.json": {
           "bytes": 202310,
@@ -157,8 +158,8 @@
           "sha256": "7e1e18a9d69d2f6bcccf3e15811c173b5831f9d0d840ce983ee2eae181c207cd"
         },
         "report.json": {
-          "bytes": 61231,
-          "sha256": "8c3d2a2dd4ae769e54e7bf2ee428410fdd4047c02a7b987ad25468e3487afd77"
+          "bytes": 60987,
+          "sha256": "b32dc969aacf22f3a372bfa6d8fcec7c53d5deaac43024e55fda0c1bf52c3669"
         },
         "run.log": {
           "bytes": 7810,
@@ -201,8 +202,8 @@
           "sha256": "a3a86098e099f60f0adbf8c3302c206106b3ce82655ad5dc82c2b03d2c058cd8"
         },
         "parallel_routing.json": {
-          "bytes": 11071,
-          "sha256": "829305e6a1cef51387816470f4f2df2b51332cec0ebbc0986113d76209412072"
+          "bytes": 10047,
+          "sha256": "1833c633eb90948a4b6cc92dfbbb1f23c6263a21bdb3952e154115730964f1a0"
         }
       },
       "program_name": "sbml2escher",
@@ -219,10 +220,10 @@
         "highlighting.py": "99efc02d908ffb1d58ae227b236a4781ae68efc51139c61e38df0ab6de3959ab",
         "highlight_controls.js": "f6a2b483095bea5b9246511aa641332e4c48adcb420b4811349c5c530fe33348",
         "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
-        "export_escher.py": "5555baed09ce0bd11a4ba340625aaafd5ae28c2c1e4df16ec734fe41494fd614",
+        "export_escher.py": "d6171a5f01edfb3a1efbdb6e2837e3aef7f8fa552545ee1282172ae048025a77",
         "escher_routing.py": "66c2ef99cecc0a2bdf73e94fe4b92f9b6495038b1c573ad6f375256ccea98e3e",
         "escher_layers.js": "6c8bfdec85bab4e5e81f00090ba2fce3e2640072a7a062248bc59cb903cd0f46",
-        "parallel_routing.py": "57dd855a4d9af06f0574af9ef64947354ffba27b70c9701f50a57e9d9d830294",
+        "parallel_routing.py": "bceda916862ea46bc3fb802576b3a89bf0a625b05fd95cab3e70b40f3c2ff914",
         "sbml2map.py": "735f64300a8b943813ea809778972b86b13794fff59d4147f1567e8a9d148219"
       },
       "tca_orientation": "clockwise",
@@ -249,12 +250,12 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 655,
+        "nodes": 667,
         "source_nodes": 206,
-        "routing_nodes": 449,
+        "routing_nodes": 461,
         "orthogonal_segments_verified": true,
         "reactions": 76,
-        "segments": 686,
+        "segments": 698,
         "primary_metabolites": 46,
         "secondary_metabolites": 84,
         "currency_copy_counts": {
@@ -283,13 +284,13 @@
         "node_detours": {
           "route_offset_grid": 0.3,
           "enabled": true,
-          "shifted_segments": 3,
+          "shifted_segments": 7,
           "unresolved": [
             {
               "reaction_id": "CS",
               "axis": 0,
               "level": 3680.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1060.968948795511,
@@ -301,7 +302,7 @@
               "reaction_id": "GAPD",
               "axis": 0,
               "level": 2239.9689487955106,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   359.0310512044891,
@@ -313,7 +314,7 @@
               "reaction_id": "MDH",
               "axis": 0,
               "level": 4040.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   700.9689487955109,
@@ -325,7 +326,7 @@
               "reaction_id": "MDH",
               "axis": 1,
               "level": 719.031051204489,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   700.9689487955109,
@@ -337,7 +338,7 @@
               "reaction_id": "PDH",
               "axis": 0,
               "level": 3860.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   520.9689487955109,
@@ -349,7 +350,7 @@
               "reaction_id": "PYK",
               "axis": 0,
               "level": 3679.968948795511,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   359.0310512044891,
@@ -361,7 +362,7 @@
               "reaction_id": "SUCDi",
               "axis": 0,
               "level": 4580.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   899.031051204489,
@@ -377,7 +378,7 @@
               "reaction_id": "SUCOAS",
               "axis": 0,
               "level": 4580.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1420.9689487955109,
@@ -389,7 +390,7 @@
               "reaction_id": "ACALD",
               "axis": 0,
               "level": 3320.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   620.0,
@@ -405,7 +406,7 @@
               "reaction_id": "ACALD",
               "axis": 1,
               "level": 620.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   620.0,
@@ -421,7 +422,7 @@
               "reaction_id": "ACALDt",
               "axis": 0,
               "level": 3140.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1340.0,
@@ -437,7 +438,7 @@
               "reaction_id": "ACALDt",
               "axis": 1,
               "level": 1340.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1340.0,
@@ -449,7 +450,7 @@
               "reaction_id": "ACt2r",
               "axis": 0,
               "level": 1880.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   620.0,
@@ -461,7 +462,7 @@
               "reaction_id": "ACt2r",
               "axis": 1,
               "level": 620.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   620.0,
@@ -470,22 +471,10 @@
               ]
             },
             {
-              "reaction_id": "ALCD2x",
-              "axis": 0,
-              "level": 3140.0,
-              "reason": "both requested U-shaped lanes are obstructed",
-              "nodes": [
-                [
-                  1240.9689487955109,
-                  3139.968948795511
-                ]
-              ]
-            },
-            {
               "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
               "axis": 1,
               "level": 620.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   604.9076221916624,
@@ -494,34 +483,10 @@
               ]
             },
             {
-              "reaction_id": "EX_ac_e",
-              "axis": 0,
-              "level": 1880.0,
-              "reason": "both requested U-shaped lanes are obstructed",
-              "nodes": [
-                [
-                  260.0,
-                  1880.0
-                ]
-              ]
-            },
-            {
-              "reaction_id": "EX_for_e",
-              "axis": 1,
-              "level": 1160.0,
-              "reason": "both requested U-shaped lanes are obstructed",
-              "nodes": [
-                [
-                  1160.0,
-                  4580.0
-                ]
-              ]
-            },
-            {
               "reaction_id": "EX_glu__L_e",
               "axis": 0,
               "level": 3140.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   80.0,
@@ -537,7 +502,7 @@
               "reaction_id": "EX_glu__L_e",
               "axis": 1,
               "level": 80.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   80.0,
@@ -546,22 +511,10 @@
               ]
             },
             {
-              "reaction_id": "FORt",
-              "axis": 1,
-              "level": 980.0,
-              "reason": "both requested U-shaped lanes are obstructed",
-              "nodes": [
-                [
-                  980.0,
-                  4220.0
-                ]
-              ]
-            },
-            {
               "reaction_id": "LDH_D",
               "axis": 0,
               "level": 3500.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   440.0,
@@ -573,7 +526,7 @@
               "reaction_id": "LDH_D",
               "axis": 0,
               "level": 3690.8,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   260.0,
@@ -593,7 +546,7 @@
               "reaction_id": "LDH_D",
               "axis": 1,
               "level": 270.8,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   260.0,
@@ -605,7 +558,7 @@
               "reaction_id": "LDH_D",
               "axis": 1,
               "level": 440.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   440.0,
@@ -617,7 +570,7 @@
               "reaction_id": "SUCCt2_2",
               "axis": 0,
               "level": 4400.0,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1160.0,
@@ -629,7 +582,7 @@
               "reaction_id": "SUCCt2_2",
               "axis": 1,
               "level": 1170.8,
-              "reason": "both requested U-shaped lanes are obstructed",
+              "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
               "nodes": [
                 [
                   1160.0,
@@ -638,7 +591,74 @@
               ]
             }
           ],
-          "shape": "three sides of a rectangle",
+          "shape": "rectangle with optional endpoint steps",
+          "endpoint_step_grid": 0.15,
+          "endpoint_step_fallback_segments": 4,
+          "detours": [
+            {
+              "reaction_id": "ACKr",
+              "axis": 0,
+              "offset_grid": 0.3,
+              "inset_start": false,
+              "inset_end": false,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "ALCD2x",
+              "axis": 0,
+              "offset_grid": 0.3,
+              "inset_start": false,
+              "inset_end": true,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "EX_ac_e",
+              "axis": 0,
+              "offset_grid": -0.3,
+              "inset_start": false,
+              "inset_end": true,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "EX_for_e",
+              "axis": 1,
+              "offset_grid": -0.3,
+              "inset_start": false,
+              "inset_end": true,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "FORt",
+              "axis": 1,
+              "offset_grid": 0.3,
+              "inset_start": false,
+              "inset_end": true,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "PFL",
+              "axis": 0,
+              "offset_grid": 0.3,
+              "inset_start": false,
+              "inset_end": false,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            },
+            {
+              "reaction_id": "PTAr",
+              "axis": 1,
+              "offset_grid": 0.3,
+              "inset_start": false,
+              "inset_end": false,
+              "segments": 1,
+              "existing_endpoint_stem_overlaps": 0
+            }
+          ],
           "fixed_endpoints": true,
           "shared_same_reaction_trunks": true,
           "backbone_shifted_segments": 0,

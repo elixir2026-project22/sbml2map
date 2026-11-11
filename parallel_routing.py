@@ -150,16 +150,35 @@ def _u_detour(leg, offset):
     return [a,tuple(p),tuple(q),b]
 
 
+
+def _node_detour(leg, offset, grid, inset_start=False, inset_end=False):
+    """Step along an endpoint before taking two right-angle turns, if needed."""
+    if not inset_start and not inset_end:return _u_detour(leg,offset)
+    axis=leg['axis'];side=1-axis;a,b=leg['a'],leg['b']
+    setback=min(.15*grid,(leg['hi']-leg['lo'])/4)
+    sign=1 if b[axis]>a[axis] else -1
+    start,end=list(a),list(b)
+    if inset_start:start[axis]+=sign*setback
+    if inset_end:end[axis]-=sign*setback
+    shifted_start,shifted_end=list(start),list(end)
+    shifted_start[side]+=offset;shifted_end[side]+=offset
+    return ([a]+([tuple(start)] if inset_start else [])+
+            [tuple(shifted_start),tuple(shifted_end)]+
+            ([tuple(end)] if inset_end else [])+[b])
+
+
 def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
     """Offset a whole red/orange segment when it crosses an unrelated node.
 
     Biological endpoints stay fixed, including on primary backbones. Bends are
     display geometry only. Same-reaction overlapping trunks move together. Only
     the requested positive/negative displacement is tried, never a larger one.
+    If a direct U is blocked, a 0.15-grid step is tried at either or both ends.
     """
     validate_route_offset(route_offset)
     report=dict(route_offset_grid=route_offset,enabled=route_offset>0,
-                shifted_segments=0,unresolved=[],shape='three sides of a rectangle',
+                shifted_segments=0,unresolved=[],shape='rectangle with optional endpoint steps',
+                endpoint_step_grid=.15,endpoint_step_fallback_segments=0,detours=[],
                 fixed_endpoints=True,shared_same_reaction_trunks=True,
                 backbone_shifted_segments=0,max_offset_grid=0,backbone_max_offset_grid=0)
     if route_offset==0:return report
@@ -188,34 +207,53 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
     def hits(leg,points):
         return [node for node in obstacles if node not in leg['endpoints'] and
                 any(_distance(node,part)<radius-EPS for part in _legs(points))]
-    def interference(group,offset):
-        crossings=0
-        for leg in group:
-            for segment in _legs(_u_detour(leg,offset)):
+    def retained_endpoint_stem(leg,segment,current,length):
+        # A step may keep an already coincident short stem at a biological
+        # endpoint. It must not add overlap or preserve a long shared path.
+        if segment['axis']!=leg['axis'] or abs(segment['level']-leg['level'])>EPS:return False
+        if length>.15*grid+EPS or length>_overlap(leg,current)+EPS:return False
+        return any(_distance(point,segment)<EPS and _distance(point,current)<EPS and
+                   (point==leg['a'] or point==leg['b']) for point in leg['endpoints'])
+    def interference(group,shapes):
+        crossings=0;retained=0
+        for leg,points in zip(group,shapes):
+            for segment in _legs(points):
                 for other in entries:
                     if leg['rid']==other['rid']:continue
                     for current in _legs(other['points']):
                         if segment['axis']==current['axis']:
                             length=_overlap(segment,current);distance=abs(segment['level']-current['level'])
                             # Avoid new coincident paths and long close red/orange lanes.
-                            if length>EPS and distance<EPS:return None
+                            if length>EPS and distance<EPS:
+                                if retained_endpoint_stem(leg,segment,current,length):retained+=1
+                                else:return None
                             if other['priority']>0 and length>=grid-EPS and distance<.3*grid-EPS:return None
                         else:
                             h,v=(segment,current) if segment['axis']==0 else (current,segment)
                             if h['lo']+EPS<v['level']<h['hi']-EPS and v['lo']+EPS<h['level']<v['hi']-EPS:
                                 crossings+=1
-        return crossings
+        return crossings,retained
     for group in groups:
         collisions=[(leg,hits(leg,leg['points'])) for leg in group]
         if not any(nodes for _,nodes in collisions):continue
         candidates=[]
-        for offset in (amount,-amount):
-            if any(hits(leg,_u_detour(leg,offset)) for leg in group):continue
-            score=interference(group,offset)
-            if score is not None:candidates.append((score,offset<0,offset))
+        # Preserve the simple U when possible. Add steps at one end, then both.
+        for variants in [[(False,False)],[(True,False),(False,True)],[(True,True)]]:
+            for mode,(inset_start,inset_end) in enumerate(variants):
+                for offset in (amount,-amount):
+                    shapes=[_node_detour(leg,offset,grid,inset_start,inset_end) for leg in group]
+                    if any(hits(leg,points) for leg,points in zip(group,shapes)):continue
+                    score=interference(group,shapes)
+                    if score is not None:
+                        candidates.append((score,mode,offset<0,offset,inset_start,inset_end,shapes))
+            if candidates:break
         if candidates:
-            offset=min(candidates)[-1]
-            for leg in group:leg['points']=_u_detour(leg,offset)
+            score,_,_,offset,inset_start,inset_end,shapes=min(candidates,key=lambda c:c[:3])
+            for leg,points in zip(group,shapes):leg['points']=points
+            if inset_start or inset_end:report['endpoint_step_fallback_segments']+=len(group)
+            report['detours'].append(dict(reaction_id=group[0]['rid'],axis=group[0]['axis'],
+                offset_grid=offset/grid,inset_start=inset_start,inset_end=inset_end,
+                segments=len(group),existing_endpoint_stem_overlaps=score[1]))
             report['shifted_segments']+=len(group)
             backbone_count=sum(leg['backbone'] for leg in group)
             report['backbone_shifted_segments']+=backbone_count
@@ -223,7 +261,7 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
             if backbone_count:report['backbone_max_offset_grid']=route_offset
         else:
             report['unresolved'].append(dict(reaction_id=group[0]['rid'],axis=group[0]['axis'],
-                level=group[0]['level'],reason='both requested U-shaped lanes are obstructed',
+                level=group[0]['level'],reason='requested U-shaped lanes and endpoint-step fallbacks are obstructed',
                 nodes=[list(node) for node in sorted({node for _,nodes in collisions for node in nodes})]))
     by_path=defaultdict(list)
     for leg in entries:by_path[leg['path']].append(leg)

@@ -1,4 +1,4 @@
-"""Node avoidance uses exactly three rectangle sides and configurable offsets."""
+"""Node avoidance prefers a direct U, with checked endpoint-step fallbacks."""
 import contextlib
 import copy
 import io
@@ -51,7 +51,7 @@ class NodeRoutingTests(unittest.TestCase):
 
     def test_both_connector_legs_are_checked(self):
         p=path();before=copy.deepcopy(p)
-        report=avoid_nodes([p],obstacles=[(1,0),(0,.15),(0,-.15)])
+        report=avoid_nodes([p],obstacles=[(1,0),(0,.15),(0,-.15),(.15,.15),(.15,-.15)])
         self.assertEqual(p,before)
         self.assertEqual(report['shifted_segments'],0)
         self.assertEqual(len(report['unresolved']),1)
@@ -120,3 +120,79 @@ class EscherNodeRoutingTests(unittest.TestCase):
                 separate_routes(data,enabled=False)
                 self.assertIsNone(data[0]['metadata']['overlap_routing']['node_detours'])
                 self.assertTrue(validate_map_geometry(data,model,nodes,xy)['orthogonal_segments_verified'])
+
+
+class EndpointStepTests(unittest.TestCase):
+    def test_formate_configuration_in_both_directions_and_rotations(self):
+        for vertical in (False,True):
+            for reverse in (False,True):
+                with self.subTest(vertical=vertical,reverse=reverse):
+                    transform=lambda p:(p[1],p[0]) if vertical else p
+                    target=dict(rid='EX_for_e',priority=1,points=[(6,2),(6,0)])
+                    if reverse:target['points'].reverse()
+                    others=[dict(rid='FORt',priority=1,points=[(5,2),(6,2)]),
+                            dict(rid='SUCCt2_2',priority=1,points=[(8,2),(6,2)])]
+                    for p in [target,*others]:p['points']=[transform(x) for x in p['points']]
+                    before=copy.deepcopy(target)
+                    report=avoid_nodes([target,*others],obstacles=[transform(p) for p in [(6,1),(6,2),(6,0),(5,2),(8,2)]])
+                    self.assertFalse(report['unresolved'])
+                    self.assertEqual(report['endpoint_step_fallback_segments'],1)
+                    self.assertEqual(len(target['points']),5)
+                    self.assertEqual(target['points'][0],before['points'][0])
+                    self.assertEqual(target['points'][-1],before['points'][-1])
+                    self.assertEqual(len(list(_legs(target['points']))),4)
+                    self.assertTrue(any(abs(x[0 if vertical else 1]-(2-.15))<1e-6 for x in target['points']))
+
+    def test_both_endpoints_can_step_when_both_connectors_are_blocked(self):
+        p=path()
+        others=[dict(rid='left',priority=0,points=[(0,-1),(0,1)]),
+                dict(rid='right',priority=0,points=[(3,-1),(3,1)])]
+        report=avoid_nodes([p,*others],obstacles=[(1,0)])
+        self.assertEqual(len(p['points']),6)
+        self.assertEqual(report['endpoint_step_fallback_segments'],1)
+        detail=report['detours'][0]
+        self.assertTrue(detail['inset_start'] and detail['inset_end'])
+        self.assertAlmostEqual(p['points'][1][0],.15)
+        self.assertAlmostEqual(p['points'][-2][0],2.85)
+
+    def test_fallback_still_checks_new_connector_nodes_and_offset(self):
+        p=path()
+        others=[dict(rid='near',priority=0,points=[(0,-1),(0,1)])]
+        report=avoid_nodes([p,*others],obstacles=[(1,0),(.15,.3)],route_offset=.3)
+        self.assertEqual(report['endpoint_step_fallback_segments'],1)
+        self.assertAlmostEqual(p['points'][2][1],-.3)
+        self.assertAlmostEqual(abs(report['detours'][0]['offset_grid']),.3)
+
+
+class FormateArtifactRegressionTests(unittest.TestCase):
+    def test_saved_escher_and_svg_formate_branch_clear_succinate(self):
+        import csv
+        import json
+        import re
+        from pathlib import Path
+        import xml.etree.ElementTree as ET
+        from parallel_routing import _distance
+        folder=Path(__file__).resolve().parent/'results/e_coli_core'
+        data=json.loads((folder/'escher_map.json').read_text())
+        nodes=data[1]['nodes'];scale=data[0]['metadata']['coordinate_transform']['scale']
+        succ=next(n for n in nodes.values() if n.get('bigg_id')=='succ_c' and n.get('node_is_primary'))
+        reaction=next(r for r in data[1]['reactions'].values() if r['bigg_id']=='EX_for_e')
+        for segment in reaction['segments'].values():
+            points=[tuple(nodes[segment[k]][axis] for axis in ('x','y')) for k in ('from_node_id','to_node_id')]
+            for leg in _legs(points):self.assertGreaterEqual(_distance((succ['x'],succ['y']),leg),.29*scale)
+        with (folder/'coordinates.csv').open() as f:coords=list(csv.DictReader(f))
+        with (folder/'edges.csv').open() as f:edges=list(csv.DictReader(f))
+        svg=ET.parse(folder/'layout.svg')
+        def position(mid):
+            index=next(i for i,c in enumerate(coords) if c['id']=='met:'+mid)
+            node=svg.find(f'.//*[@id="node-{index}"]')
+            use=node.find('.//{*}use')
+            return float(use.get('x')),float(use.get('y'))
+        succ_pos=position('succ_c');for_pos=position('for_e')
+        step=abs(succ_pos[1]-for_pos[1])
+        index=next(i for i,e in enumerate(edges) if e['reaction_id']=='EX_for_e')
+        d=svg.find(f'.//*[@id="edge-{index}"]').find('.//{*}path').get('d')
+        numbers=list(map(float,re.findall(r'[-+]?(?:\d*\.)?\d+(?:[eE][-+]?\d+)?',d)))
+        points=list(zip(numbers[::2],numbers[1::2]))
+        self.assertGreaterEqual(len(points),5)
+        for leg in _legs(points):self.assertGreaterEqual(_distance(succ_pos,leg),.29*step)
