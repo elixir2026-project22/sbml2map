@@ -4,6 +4,8 @@ import hashlib
 import json
 import math
 
+from routing_simplification import POLICY,simplify_important,yield_gray
+
 from red_route_layout import plan_from_metadata,spacing_report
 
 from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
@@ -141,6 +143,11 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
     node_report = avoid_nodes(routes, grid=meta['coordinate_transform']['scale'],
         obstacles=obstacles,
         route_offset=route_offset) if enabled else None
+    requested_red_spacing=red_plan['requested_spacing_grid'] if red_plan and red_plan.get('enabled') else .3
+    simplify_report=simplify_important(routes,grid=meta['coordinate_transform']['scale'],obstacles=obstacles,
+        route_offset=route_offset,red_spacing=requested_red_spacing) if enabled else None
+    gray_report=yield_gray(routes,grid=meta['coordinate_transform']['scale'],obstacles=obstacles,
+        route_offset=route_offset) if enabled else None
     red_check=spacing_report(routes,red_plan['requested_spacing_grid'],meta['coordinate_transform']['scale']) if red_plan else None
     if red_plan and red_plan.get('enabled') and red_plan.get('verified') and not red_check['verified']:
         raise RuntimeError('Preallocated red spacing changed during Escher rendering')
@@ -161,7 +168,8 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(red_layout_signature=(red_plan or {}).get('signature'),red_parallel_spacing=red_check,
+    meta['overlap_routing']=dict(routing_preference=POLICY,important_simplification=simplify_report,gray_yield=gray_report,
+                                red_layout_signature=(red_plan or {}).get('signature'),red_parallel_spacing=red_check,
                                 trunk_grouping='positive_length_overlap',
                                 node_obstacle_policy='red_orange_structural_nodes',obstacle_node_ids=obstacle_keys,
                                 node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,

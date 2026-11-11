@@ -68,7 +68,8 @@
         "formate_branch_clears_succinate_with_endpoint_step": true,
         "only_structural_red_orange_nodes_are_obstacles": true,
         "glucose_uptake_branch_stays_straight_in_both_viewers": true,
-        "layout_stage_red_parallel_spacing_verified_in_both_viewers": true
+        "layout_stage_red_parallel_spacing_verified_in_both_viewers": true,
+        "acetate_uses_two_bends_and_gray_pgl_yields": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -93,16 +94,16 @@
           "sha256": "92da2931394b1adb05c409055f492da6bbe10bea8c02b0e25b89142fabe21c65"
         },
         "escher_map.json": {
-          "bytes": 849344,
-          "sha256": "85c15f40bab6f30bf39afff189b3786f4b99f584980afeaab2852aacaee1b593"
+          "bytes": 839997,
+          "sha256": "9c64649926d8a26ccb3f97046a47190a8b92cc7afafee67e2f7dc2281b3ee525"
         },
         "escher_map_metadata.json": {
           "bytes": 377480,
           "sha256": "66299642fb71f1cc2efe99bcb5f9d45a06aeb4629df2130749b713935b58abbd"
         },
         "escher_preview.html": {
-          "bytes": 1448814,
-          "sha256": "959c7abc29880dbb294177777ae1f019ec0a6ffda9b5cfdff0d9f1f6570d9b17"
+          "bytes": 1440643,
+          "sha256": "e3dbd235c09d9a813af1ecbad35b77f7a0d7a27ef86e0972c530c210fd5fda50"
         },
         "exchange_connectors.json": {
           "bytes": 3333,
@@ -121,16 +122,16 @@
           "sha256": "9029ff788c311540c11480c7a7ab34cddc9a32234a2222f873632872c5175c3d"
         },
         "index.html": {
-          "bytes": 588267,
-          "sha256": "d8f33e2c35b364c364722ce78d0725a7b681370f8b28470533b5e051feb77393"
+          "bytes": 588274,
+          "sha256": "980a5cc034691c4bcd68eb81b74ce68ddd317aea4c20232ee9d041dbad20d4e4"
         },
         "layout.png": {
-          "bytes": 497761,
-          "sha256": "4a9caf4fe912a784d4dd7022b8c8cb8898598afdd8da51a865c2a366b38fbe7b"
+          "bytes": 501971,
+          "sha256": "5a292cd242b2b518c72c8cc8aa4c6ca5b194c6a7ec76aea9494d74f467b400ab"
         },
         "layout.svg": {
-          "bytes": 437147,
-          "sha256": "8fead974bb1e1e406b7bc03064232c8990f266d3a43dd42fff7cbd56e5ccdc6f"
+          "bytes": 437154,
+          "sha256": "e5a2f63a39af31c4e81baed479a3012ea6ebcd3defc0e83b13fc99954d46587d"
         },
         "major_backbones.json": {
           "bytes": 44580,
@@ -141,12 +142,12 @@
           "sha256": "1c454fac51bf90a6ac632537db3802bfef701506ab01ba11d5b516ef35570a63"
         },
         "orange_routes.png": {
-          "bytes": 329939,
-          "sha256": "94d460b3931ec2bd20ef5ac9ed04beda0db289e1a0320ea2a2ffce978d9df938"
+          "bytes": 329733,
+          "sha256": "113e4ecf30938c68a382e1c0ebad568cbdf47e1d58bb6471e164f9ab23afb239"
         },
         "orange_routes.svg": {
-          "bytes": 259978,
-          "sha256": "60531aaae8003028de9d158194e58bfa4ed8e0e9eda4e32fded2dc5ad378f2d4"
+          "bytes": 259730,
+          "sha256": "ed9d9aef2da2ef0c33b2979b001acf58d9907eef25001ba61158ef429a9014cf"
         },
         "pathway_extraction.json": {
           "bytes": 202310,
@@ -161,8 +162,8 @@
           "sha256": "7e1e18a9d69d2f6bcccf3e15811c173b5831f9d0d840ce983ee2eae181c207cd"
         },
         "report.json": {
-          "bytes": 92700,
-          "sha256": "9280d6b6ab194685ea17029d5fb4b06539cfc7d42c8972b6b90cc0129ba4a6d1"
+          "bytes": 105040,
+          "sha256": "1296d8809d3ebfebd4f5cadf4f0e3131e2b6e8001afaaa8d9bfe1e4025f1ceb9"
         },
         "run.log": {
           "bytes": 7810,
@@ -205,8 +206,8 @@
           "sha256": "a3a86098e099f60f0adbf8c3302c206106b3ce82655ad5dc82c2b03d2c058cd8"
         },
         "parallel_routing.json": {
-          "bytes": 14086,
-          "sha256": "6788186e82b201b1f9fe0224b3f9415db527978a74d53e0dc23c486973eb2998"
+          "bytes": 20276,
+          "sha256": "fb5544d8457fe985c7d3cbc0d534c54aad15bcb086f8a382e6e81a46443c20d2"
         }
       },
       "program_name": "sbml2escher",
@@ -215,7 +216,7 @@
       "recalculated_at_utc": "2026-11-10T08:44:57.454660+00:00",
       "source_files_sha256": {
         "sbml2escher.py": "2d17e97c6556986dbab2fe7c0bb527d7d41d776623ac3498b5dd10ab7e88d812",
-        "escher_grid.py": "de7a561e0751d2862588e3517e312183c55f211283a7e8da018017e53d50d3e7",
+        "escher_grid.py": "dcd067191b2572f6a62ae4096c87526f198a918d5a7fc490cefc4e799e53754b",
         "grid_layout2.py": "3ec3e68bd26a8d804c69f1c8bb215b4ad244920a158f942fcb249fe40e6e7af9",
         "bacterial_pathways.py": "64ac1c4a0919e1fe6680b44681f74c462fd5145c3beae14253fe8d81563165f1",
         "flux_sampling2.py": "b49d4afbd4e523c37b0dabec2884948f17d19f0809ebba27b47a41a1b1373b4c",
@@ -223,12 +224,13 @@
         "highlighting.py": "99efc02d908ffb1d58ae227b236a4781ae68efc51139c61e38df0ab6de3959ab",
         "highlight_controls.js": "f6a2b483095bea5b9246511aa641332e4c48adcb420b4811349c5c530fe33348",
         "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
-        "export_escher.py": "86867bbb9d73205252c161568d1fefba16efffed951f7775339dfbcd2dec13da",
-        "escher_routing.py": "b4576ea9db15b415c9852edcd8d60d434cc4e48ee6d86b4bb371bf39d3038435",
+        "export_escher.py": "40f3d4c2c02187f766bd40a8751b70faa9d47128c62b6a19d9fe5ba0f4ea6fe8",
+        "escher_routing.py": "408a3f2611f4df0d7835d6b02b75010628bc49db70390dd539b2a3a6e8464476",
         "escher_layers.js": "6c8bfdec85bab4e5e81f00090ba2fce3e2640072a7a062248bc59cb903cd0f46",
-        "parallel_routing.py": "bb22c309f4e60b9eafab5f86de236847d8544f5ab7a369d3b5ff22df49f5b1fd",
+        "parallel_routing.py": "aaa798492c0cdacd005cc8ece78e478b6f91d7ded5908c567a52c530531b8636",
         "sbml2map.py": "f2c4f002bfe015c522f6710e4ea31b54646a5c15ba4500b730cd635d41d5fbe6",
-        "red_route_layout.py": "e45676712ad26edc4b9cb413451e88f527581aefd2ebf0a15d5713eb14a96e29"
+        "red_route_layout.py": "e45676712ad26edc4b9cb413451e88f527581aefd2ebf0a15d5713eb14a96e29",
+        "routing_simplification.py": "ab887da0513fb5293710a30be74766723254ec928dabf8200ff6af75f59400c6"
       },
       "tca_orientation": "clockwise",
       "fba": {
@@ -254,12 +256,12 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 645,
+        "nodes": 602,
         "source_nodes": 206,
-        "routing_nodes": 439,
+        "routing_nodes": 396,
         "orthogonal_segments_verified": true,
         "reactions": 76,
-        "segments": 676,
+        "segments": 633,
         "primary_metabolites": 46,
         "secondary_metabolites": 84,
         "currency_copy_counts": {
@@ -285,6 +287,216 @@
       "escher_initial_flux_data_loaded": false,
       "escher_data_overlay_disables_pathway_colors": true,
       "escher_overlap_routing": {
+        "routing_preference": "important_bends_then_length_gray_yields",
+        "important_simplification": {
+          "policy": "important_bends_then_length_gray_yields",
+          "changed_paths": 11,
+          "removed_bends": 16,
+          "details": [
+            {
+              "reaction_id": "ACALD",
+              "bends_before": 1,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "ACALD",
+              "bends_before": 0,
+              "bends_after": 3
+            },
+            {
+              "reaction_id": "ACALDt",
+              "bends_before": 1,
+              "bends_after": 1
+            },
+            {
+              "reaction_id": "ACt2r",
+              "bends_before": 1,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "D_LACt2",
+              "bends_before": 4,
+              "bends_after": 0
+            },
+            {
+              "reaction_id": "ETOHt2r",
+              "bends_before": 4,
+              "bends_after": 0
+            },
+            {
+              "reaction_id": "EX_glu__L_e",
+              "bends_before": 1,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "EX_lac__D_e",
+              "bends_before": 8,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "PFL",
+              "bends_before": 4,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "PTAr",
+              "bends_before": 8,
+              "bends_after": 3
+            },
+            {
+              "reaction_id": "SUCCt2_2",
+              "bends_before": 3,
+              "bends_after": 2
+            }
+          ],
+          "unresolved": [
+            {
+              "reaction_id": "LDH_D",
+              "reason": "No simpler feasible important route"
+            }
+          ]
+        },
+        "gray_yield": {
+          "changed_paths": 10,
+          "details": [
+            {
+              "reaction_id": "FBP",
+              "bends_before": 5,
+              "bends_after": 1
+            },
+            {
+              "reaction_id": "FORt2",
+              "bends_before": 3,
+              "bends_after": 1
+            },
+            {
+              "reaction_id": "GLUDy",
+              "bends_before": 3,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "GLUN",
+              "bends_before": 5,
+              "bends_after": 1
+            },
+            {
+              "reaction_id": "MALS",
+              "bends_before": 5,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "PGL",
+              "bends_before": 3,
+              "bends_after": 1
+            },
+            {
+              "reaction_id": "PPCK",
+              "bends_before": 3,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "PPS",
+              "bends_before": 5,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "TKT1",
+              "bends_before": 3,
+              "bends_after": 2
+            },
+            {
+              "reaction_id": "TKT1",
+              "bends_before": 5,
+              "bends_after": 2
+            }
+          ],
+          "unresolved": [
+            {
+              "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "FRD7",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "FRD7",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "GLUSy",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "GND",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "GND",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "GND",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "ICL",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "MALS",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "ME1",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "ME2",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "PFL",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "PPC",
+              "reason": "No free gray route found"
+            },
+            {
+              "reaction_id": "PPS",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "SUCCt3",
+              "reason": "No free gray route found"
+            },
+            {
+              "reaction_id": "TKT1",
+              "reason": "No free gray route found"
+            },
+            {
+              "reaction_id": "TKT2",
+              "reason": "Shared gray trunk retained"
+            },
+            {
+              "reaction_id": "TKT2",
+              "reason": "Shared gray trunk retained"
+            }
+          ]
+        },
         "red_layout_signature": "35f6293f0bbba6043e7472fd",
         "red_parallel_spacing": {
           "requested_spacing_grid": 1,
@@ -522,14 +734,14 @@
           ],
           "shape": "rectangle with optional endpoint steps",
           "endpoint_step_grid": 0.15,
-          "endpoint_step_fallback_segments": 2,
+          "endpoint_step_fallback_segments": 1,
           "detours": [
             {
               "reaction_id": "EX_ac_e",
               "axis": 0,
-              "offset_grid": -0.3,
+              "offset_grid": 0.3,
               "inset_start": false,
-              "inset_end": true,
+              "inset_end": false,
               "segments": 1,
               "existing_endpoint_stem_overlaps": 0
             },

@@ -88,3 +88,11 @@ Escher share these paths. Fixed node positions remain unchanged; outer routing
 channels may expand the drawing grid. Actual spacing and unresolved constraints
 are recorded under `red_parallel_spacing`; layout planning and its elapsed time
 are under `red_parallel_layout`. This option is independent of `--route-offset`.
+
+
+Important red/orange routes now prefer fewer bends, then shorter length, among
+feasible candidates. Gray lines yield instead of forcing extra important bends.
+The E. coli core `EX_ac_e`–`ac_e` route is a simple two-bend U in both viewers;
+the gray PGL route moves aside. Reports record simplification and unresolved
+gray conflicts under `important_simplification` and `gray_yield`. Preallocated
+one-grid red channels and protected-node avoidance remain in effect.

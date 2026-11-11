@@ -10,6 +10,8 @@ import re
 
 import numpy as np
 
+from routing_simplification import POLICY,simplify_important,yield_gray
+
 from red_route_layout import validate_red_spacing,plan_red_routes,spacing_report
 
 from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
@@ -262,6 +264,12 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
                 path.update(points=points,routing_locked=True)
     parallel_report=separate_parallel(display_paths,obstacles=obstacles)
     parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=obstacles,route_offset=route_offset)
+    parallel_report['routing_preference']=POLICY
+    requested_red_spacing=red_plan['requested_spacing_grid'] if red_plan and red_plan.get('enabled') else .3
+    parallel_report['important_simplification']=simplify_important(display_paths,obstacles=obstacles,
+        route_offset=route_offset,red_spacing=requested_red_spacing)
+    parallel_report['gray_yield']=yield_gray(display_paths,obstacles=obstacles,route_offset=route_offset)
+
     if red_plan:
         parallel_report['red_parallel_layout']={k:v for k,v in red_plan.items() if k not in ('routes','allocations')}
         parallel_report['red_parallel_spacing']=spacing_report(display_paths,red_plan['requested_spacing_grid'])

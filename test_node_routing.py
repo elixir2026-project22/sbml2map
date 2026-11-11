@@ -146,8 +146,8 @@ class EndpointStepTests(unittest.TestCase):
 
     def test_both_endpoints_can_step_when_both_connectors_are_blocked(self):
         p=path()
-        others=[dict(rid='left',priority=0,points=[(0,-1),(0,1)]),
-                dict(rid='right',priority=0,points=[(3,-1),(3,1)])]
+        others=[dict(rid='left',priority=1,points=[(0,-1),(0,1)]),
+                dict(rid='right',priority=1,points=[(3,-1),(3,1)])]
         report=avoid_nodes([p,*others],obstacles=[(1,0)])
         self.assertEqual(len(p['points']),6)
         self.assertEqual(report['endpoint_step_fallback_segments'],1)
@@ -158,7 +158,7 @@ class EndpointStepTests(unittest.TestCase):
 
     def test_fallback_still_checks_new_connector_nodes_and_offset(self):
         p=path()
-        others=[dict(rid='near',priority=0,points=[(0,-1),(0,1)])]
+        others=[dict(rid='near',priority=1,points=[(0,-1),(0,1)])]
         report=avoid_nodes([p,*others],obstacles=[(1,0),(.15,.3)],route_offset=.3)
         self.assertEqual(report['endpoint_step_fallback_segments'],1)
         self.assertAlmostEqual(p['points'][2][1],-.3)

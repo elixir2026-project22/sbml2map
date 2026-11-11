@@ -11,7 +11,7 @@
     "trunk_grouping": "positive_length_overlap",
     "route_offset_grid": 0.3,
     "enabled": true,
-    "shifted_segments": 17,
+    "shifted_segments": 21,
     "unresolved": [
       {
         "reaction_id": "AKGt2rpp",
@@ -52,18 +52,6 @@
       {
         "reaction_id": "Biomass",
         "axis": 0,
-        "level": 17.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            8.0,
-            17.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "Biomass",
-        "axis": 0,
         "level": 18.0,
         "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
         "nodes": [
@@ -82,30 +70,6 @@
           [
             11.0,
             18.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "EX_akg_e",
-        "axis": 1,
-        "level": 14.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            14.0,
-            1.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "EX_lac__D_e",
-        "axis": 1,
-        "level": 20.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            20.0,
-            1.0
           ]
         ]
       },
@@ -254,18 +218,6 @@
           [
             11.0,
             24.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "MALtex",
-        "axis": 0,
-        "level": 2.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            13.0,
-            2.0
           ]
         ]
       },
@@ -440,76 +392,94 @@
     ],
     "shape": "rectangle with optional endpoint steps",
     "endpoint_step_grid": 0.15,
-    "endpoint_step_fallback_segments": 17,
+    "endpoint_step_fallback_segments": 6,
     "detours": [
       {
         "reaction_id": "ACALD",
         "axis": 1,
         "offset_grid": -0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": true,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 12
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "ACALD",
         "axis": 1,
         "offset_grid": -0.3,
-        "inset_start": true,
-        "inset_end": true,
+        "inset_start": false,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 9
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "ACALDtpp",
         "axis": 0,
-        "offset_grid": 0.3,
-        "inset_start": true,
-        "inset_end": true,
+        "offset_grid": -0.3,
+        "inset_start": false,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 10
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "ACALDtpp",
         "axis": 1,
         "offset_grid": -0.3,
         "inset_start": true,
-        "inset_end": true,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 19
+        "existing_endpoint_stem_overlaps": 1
       },
       {
         "reaction_id": "AKGtex",
         "axis": 0,
         "offset_grid": -0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": true,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 22
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
+        "reaction_id": "Biomass",
+        "axis": 0,
+        "offset_grid": 0.3,
+        "inset_start": false,
+        "inset_end": false,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "Biomass",
         "axis": 1,
         "offset_grid": 0.3,
         "inset_start": true,
-        "inset_end": true,
+        "inset_end": false,
         "segments": 2,
-        "existing_endpoint_stem_overlaps": 31
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
+        "reaction_id": "EX_akg_e",
+        "axis": 1,
+        "offset_grid": 0.3,
+        "inset_start": false,
+        "inset_end": false,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "EX_for_e",
         "axis": 0,
-        "offset_grid": -0.3,
-        "inset_start": true,
+        "offset_grid": 0.3,
+        "inset_start": false,
         "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 3
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "EX_fru_e",
         "axis": 0,
         "offset_grid": 0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": false,
         "segments": 1,
         "existing_endpoint_stem_overlaps": 0
@@ -518,46 +488,55 @@
         "reaction_id": "EX_gln__L_e",
         "axis": 0,
         "offset_grid": 0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 1
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "EX_glu__L_e",
         "axis": 1,
         "offset_grid": -0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 5
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "EX_glyc__R_e",
         "axis": 1,
         "offset_grid": -0.3,
-        "inset_start": true,
+        "inset_start": false,
         "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 6
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
+        "reaction_id": "EX_lac__D_e",
+        "axis": 1,
+        "offset_grid": 0.3,
+        "inset_start": false,
+        "inset_end": false,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "GLYCAt2rpp",
         "axis": 1,
         "offset_grid": 0.3,
-        "inset_start": true,
-        "inset_end": true,
+        "inset_start": false,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 12
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "LDH_D",
         "axis": 0,
         "offset_grid": -0.3,
-        "inset_start": true,
-        "inset_end": true,
+        "inset_start": false,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 25
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "MALt2_2pp",
@@ -566,25 +545,34 @@
         "inset_start": false,
         "inset_end": true,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 4
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
+        "reaction_id": "MALtex",
+        "axis": 0,
+        "offset_grid": 0.3,
+        "inset_start": false,
+        "inset_end": false,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "SUCCt1pp",
         "axis": 0,
         "offset_grid": -0.3,
         "inset_start": false,
-        "inset_end": true,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 8
+        "existing_endpoint_stem_overlaps": 0
       },
       {
         "reaction_id": "XYLt2pp",
         "axis": 1,
         "offset_grid": 0.3,
-        "inset_start": true,
-        "inset_end": true,
+        "inset_start": false,
+        "inset_end": false,
         "segments": 1,
-        "existing_endpoint_stem_overlaps": 10
+        "existing_endpoint_stem_overlaps": 0
       }
     ],
     "fixed_endpoints": true,
@@ -592,6 +580,1734 @@
     "backbone_shifted_segments": 0,
     "max_offset_grid": 0.3,
     "backbone_max_offset_grid": 0
+  },
+  "routing_preference": "important_bends_then_length_gray_yields",
+  "important_simplification": {
+    "policy": "important_bends_then_length_gray_yields",
+    "changed_paths": 28,
+    "removed_bends": 51,
+    "details": [
+      {
+        "reaction_id": "MDH",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "PGK",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "SUCOAS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AKGt2rpp",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "D_LACtex",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "EX_akg_e",
+        "bends_before": 2,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EX_lac__D_e",
+        "bends_before": 2,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EX_rib__D_e",
+        "bends_before": 4,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "FORt2pp",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "FRUpts2pp",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "FRUtex",
+        "bends_before": 5,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "FRUtex",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "FUMt2_2pp",
+        "bends_before": 4,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "G3PT",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GLCNtex",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GLUt2rpp",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GLUtex",
+        "bends_before": 5,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GLYCtex",
+        "bends_before": 4,
+        "bends_after": 0
+      },
+      {
+        "reaction_id": "GND",
+        "bends_before": 4,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GNK",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "MALt2_2pp",
+        "bends_before": 4,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "MALtex",
+        "bends_before": 3,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "RBK",
+        "bends_before": 4,
+        "bends_after": 0
+      },
+      {
+        "reaction_id": "SUCCtex",
+        "bends_before": 4,
+        "bends_after": 0
+      },
+      {
+        "reaction_id": "TKT1",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TKT1",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "XYLtex",
+        "bends_before": 5,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "XYLtex",
+        "bends_before": 4,
+        "bends_after": 0
+      }
+    ],
+    "unresolved": [
+      {
+        "reaction_id": "GLYCK2",
+        "reason": "No simpler feasible important route"
+      }
+    ]
+  },
+  "gray_yield": {
+    "changed_paths": 127,
+    "details": [
+      {
+        "reaction_id": "3HAD100",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3HAD120",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD120",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD121",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD140",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3HAD141",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD141",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD160",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3HAD180",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD180",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD181",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD181",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3HAD40",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3HAD60",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD60",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3HAD80",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR121",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "3OAR161",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR180",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR181",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR181",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR40",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR60",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAR60",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAS100",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAS140",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "3OAS141",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ACGK",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ACKr",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ACOATA",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ADSL1r",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ADSL2r",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AGPR",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AGPR",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AICART",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AICART",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "AIRC2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AIRC2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "AIRC3",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ARGSL",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ARGSL",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ARGSS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ASAD",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ASPTA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ASPTA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ATPS4rpp",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "BPNT",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DAPDC",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DDPA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DHAD2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DHORD5",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DHORTS",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "DHQS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DUTPDP",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "DUTPDP",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EAR100x",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EAR121x",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EAR121y",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "EAR140x",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "EAR140y",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "EAR161x",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "EAR161x",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "EAR60x",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "FORtppi",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "FRUpts2pp",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "G5SADs",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GARFT",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GARFT",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GHMT2r",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GLNS",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GLU5K",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "GLUDy",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GLUSy",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GLYK",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "GRXR",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "HISTD",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "HISTD",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "HSK",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ILETA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ILETA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "IMPC",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "IPPMIa",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "IPPMIb",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "IPPS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "MCOATA",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "MCOATA",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "ME2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "METS",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "MTHFD",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "NDPK5",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "NDPK6",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "NDPK8",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "OCBT",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "OMPDC",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "ORPT",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PAPSR",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "PGL",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PHETA1",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PHETA1",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PPC",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PPCK",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "PPS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PRAIi",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "PRAMPC",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PRASCSi",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PRATPP",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PRATPP",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PRMICI",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PSCVT",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "PSP_L",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PTAr",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "RNDR3",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "RNDR4",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "RPE",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "SERAT",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "SHKK",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "SUCCt2_2pp",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "T2DECAI",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TALA",
+        "bends_before": 0,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "THRD_L",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "THRS",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TKT1",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TKT2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TRDR",
+        "bends_before": 1,
+        "bends_after": 1
+      },
+      {
+        "reaction_id": "TRPS2",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "TRPS3",
+        "bends_before": 1,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "VALTA",
+        "bends_before": 1,
+        "bends_after": 2
+      }
+    ],
+    "unresolved": [
+      {
+        "reaction_id": "3HAD160",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3HAD80",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAR100",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAR120",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAR121",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAR140",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAR140",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAR140",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS100",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS100",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS120",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAS121",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS121",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS121",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS121",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS140",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS140",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS141",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAS141",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS141",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS160",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS160",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS160",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS160",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS161",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "3OAS161",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS180",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS180",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS181",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS181",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS181",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS60",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS80",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "3OAS80",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACCOAC",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACGS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACGS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACHBS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACLS",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "ACOATA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACOATA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACODA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACOTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACOTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACOTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ACOTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ADSL1r",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "ADSL2r",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "ADSS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ALATA_L",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ALATA_L",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ALATA_L",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ALATA_L",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ANS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ANS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ARGSS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASAD",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASNS1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASNS1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASNS1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASNS2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASPK",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ASPTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ATPPRT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "Biomass",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "CBPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "CTPS2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "CTPS2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "CYSS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "CYSTL",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "DDPA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "DHAD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "DHDPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "DTMPK",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR120x",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR120y",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "EAR141x",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR141y",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR160x",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "EAR160y",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR180y",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR181x",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR60y",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "EAR80x",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR80x",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "EAR80y",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "FBP",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "FBP",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "FORtppi",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "FRD2",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "FRD2",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "FRD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "FRD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "FRUpts2pp",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "G3PD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "G3PD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "G3PD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "G3PD2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "G6PDH2r",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GARFT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLNS",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "GLNS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLU5K",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUDy",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUN",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUN",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUPRT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUPRT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUPRT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUSy",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUSy",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLUSy",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GLYK",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GMPS2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "GTHOr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSDy",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSST",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSST",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSST",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSTPT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "HSTPT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ICL",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IG3PS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IG3PS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IG3PS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IGPDH",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ILETA",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "IPMD",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IPPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "IPPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KARA1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS14",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS14",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS14",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS14",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS15",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS15",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "KAS15",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "LEUTAi",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "LEUTAi",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "LEUTAi",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "MALS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "MALS",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "ME1",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "ME1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ME2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "MTHFC",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "NDPK5",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "NDPK6",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "NDPK7",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "NDPK8",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "ORPT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "P5CR",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "P5CR",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PFL",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PFL",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PFL",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PGCD",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PGL",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PHETA1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PPC",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PPCK",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PPND",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRAGSr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRAGSr",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PRAGSr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRAIS",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PRAMPC",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRFGS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRFGS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PRMICI",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "PRPPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSCVT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSCVT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSERT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSERT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSERT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PSP_L",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PTAr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "RNDR1",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "RNDR1b",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "RPE",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "RPI",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SDPDS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SDPTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SDPTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SERAT",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SHK3Dr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SHK3Dr",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SHSL1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SHSL1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SHSL1",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "SUCCt2_2pp",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "TALA",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "TALA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "THDPS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "THRS",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "TKT2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TKT2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TMDS",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TRPS2",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TRPS3",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TRPS3",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TYRTA",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "TYRTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "VALTA",
+        "reason": "No free gray route found"
+      },
+      {
+        "reaction_id": "VALTA",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "VPAMTr",
+        "reason": "Shared gray trunk retained"
+      }
+    ]
   },
   "red_parallel_layout": {
     "enabled": true,
@@ -1880,5 +3596,5 @@
     "copy:Biomass:utp_c": 0
   },
   "original_route_length": 9616.25,
-  "display_route_length": 9658.45
+  "display_route_length": 9656.95
 }

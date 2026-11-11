@@ -15,6 +15,7 @@ import re
 from reaction_network import build_network, reaction_direction, validate_network
 from escher_routing import separate_routes
 from red_route_layout import plan_from_metadata
+from routing_simplification import POLICY
 
 BASE = Path(__file__).resolve().parent
 SCHEMA = BASE / 'vendor/escher/map-schema-1-0-0.json'
@@ -452,7 +453,8 @@ def write_pathway_preview(path, data, major_reactions=(), connector_pairs=None,
     if data[0]['metadata'].get('routing')=='orthogonal' and (not data[0]['metadata'].get('overlap_routing',{}).get('enabled') or
             data[0]['metadata'].get('overlap_routing',{}).get('node_obstacle_policy')!='red_orange_structural_nodes' or
             data[0]['metadata'].get('overlap_routing',{}).get('trunk_grouping')!='positive_length_overlap' or
-            data[0]['metadata'].get('overlap_routing',{}).get('red_layout_signature')!=(plan_from_metadata(data[0]['metadata']) or {}).get('signature')):
+            data[0]['metadata'].get('overlap_routing',{}).get('red_layout_signature')!=(plan_from_metadata(data[0]['metadata']) or {}).get('signature') or
+            data[0]['metadata'].get('overlap_routing',{}).get('routing_preference')!=POLICY):
         data = separate_routes(copy.deepcopy(data),major_reactions,connector_pairs)
     configure_label_display(data, major_reactions)
     configure_reaction_coverage(data, records)

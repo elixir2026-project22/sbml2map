@@ -233,11 +233,16 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
         return any(_distance(point,segment)<EPS and _distance(point,current)<EPS and
                    (point==leg['a'] or point==leg['b']) for point in leg['endpoints'])
     def interference(group,shapes):
-        crossings=0;retained=0
+        crossings=0;retained=0;gray_penalty=0
         for leg,points in zip(group,shapes):
             for segment in _legs(points):
                 for other in entries:
                     if leg['rid']==other['rid']:continue
+                    if other['priority']==0:
+                        for current in _legs(other['points']):
+                            if segment['axis']==current['axis'] and abs(segment['level']-current['level'])<EPS:
+                                gray_penalty+=max(0,_overlap(segment,current))/grid
+                        continue
                     for current in _legs(other['points']):
                         if segment['axis']==current['axis']:
                             length=_overlap(segment,current);distance=abs(segment['level']-current['level'])
@@ -250,7 +255,7 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
                             h,v=(segment,current) if segment['axis']==0 else (current,segment)
                             if h['lo']+EPS<v['level']<h['hi']-EPS and v['lo']+EPS<h['level']<v['hi']-EPS:
                                 crossings+=1
-        return crossings,retained
+        return crossings,retained,gray_penalty
     for group in groups:
         collisions=[(leg,hits(leg,leg['points'])) for leg in group]
         if not any(nodes for _,nodes in collisions):continue

@@ -2953,12 +2953,12 @@
       "stoichiometry_preserved": true,
       "coordinate_transform_verified": true,
       "segment_endpoints_verified": true,
-      "nodes": 645,
+      "nodes": 602,
       "source_nodes": 206,
-      "routing_nodes": 439,
+      "routing_nodes": 396,
       "orthogonal_segments_verified": true,
       "reactions": 76,
-      "segments": 676,
+      "segments": 633,
       "primary_metabolites": 46,
       "secondary_metabolites": 84,
       "currency_copy_counts": {
@@ -3193,6 +3193,216 @@
     }
   },
   "escher_overlap_routing": {
+    "routing_preference": "important_bends_then_length_gray_yields",
+    "important_simplification": {
+      "policy": "important_bends_then_length_gray_yields",
+      "changed_paths": 11,
+      "removed_bends": 16,
+      "details": [
+        {
+          "reaction_id": "ACALD",
+          "bends_before": 1,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "ACALD",
+          "bends_before": 0,
+          "bends_after": 3
+        },
+        {
+          "reaction_id": "ACALDt",
+          "bends_before": 1,
+          "bends_after": 1
+        },
+        {
+          "reaction_id": "ACt2r",
+          "bends_before": 1,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "D_LACt2",
+          "bends_before": 4,
+          "bends_after": 0
+        },
+        {
+          "reaction_id": "ETOHt2r",
+          "bends_before": 4,
+          "bends_after": 0
+        },
+        {
+          "reaction_id": "EX_glu__L_e",
+          "bends_before": 1,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "EX_lac__D_e",
+          "bends_before": 8,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "PFL",
+          "bends_before": 4,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "PTAr",
+          "bends_before": 8,
+          "bends_after": 3
+        },
+        {
+          "reaction_id": "SUCCt2_2",
+          "bends_before": 3,
+          "bends_after": 2
+        }
+      ],
+      "unresolved": [
+        {
+          "reaction_id": "LDH_D",
+          "reason": "No simpler feasible important route"
+        }
+      ]
+    },
+    "gray_yield": {
+      "changed_paths": 10,
+      "details": [
+        {
+          "reaction_id": "FBP",
+          "bends_before": 5,
+          "bends_after": 1
+        },
+        {
+          "reaction_id": "FORt2",
+          "bends_before": 3,
+          "bends_after": 1
+        },
+        {
+          "reaction_id": "GLUDy",
+          "bends_before": 3,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "GLUN",
+          "bends_before": 5,
+          "bends_after": 1
+        },
+        {
+          "reaction_id": "MALS",
+          "bends_before": 5,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "PGL",
+          "bends_before": 3,
+          "bends_after": 1
+        },
+        {
+          "reaction_id": "PPCK",
+          "bends_before": 3,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "PPS",
+          "bends_before": 5,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "TKT1",
+          "bends_before": 3,
+          "bends_after": 2
+        },
+        {
+          "reaction_id": "TKT1",
+          "bends_before": 5,
+          "bends_after": 2
+        }
+      ],
+      "unresolved": [
+        {
+          "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "FRD7",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "FRD7",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "GLUSy",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "GND",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "GND",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "GND",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "ICL",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "MALS",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "ME1",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "ME2",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "PFL",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "PPC",
+          "reason": "No free gray route found"
+        },
+        {
+          "reaction_id": "PPS",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "SUCCt3",
+          "reason": "No free gray route found"
+        },
+        {
+          "reaction_id": "TKT1",
+          "reason": "No free gray route found"
+        },
+        {
+          "reaction_id": "TKT2",
+          "reason": "Shared gray trunk retained"
+        },
+        {
+          "reaction_id": "TKT2",
+          "reason": "Shared gray trunk retained"
+        }
+      ]
+    },
     "red_layout_signature": "35f6293f0bbba6043e7472fd",
     "red_parallel_spacing": {
       "requested_spacing_grid": 1,
@@ -3430,14 +3640,14 @@
       ],
       "shape": "rectangle with optional endpoint steps",
       "endpoint_step_grid": 0.15,
-      "endpoint_step_fallback_segments": 2,
+      "endpoint_step_fallback_segments": 1,
       "detours": [
         {
           "reaction_id": "EX_ac_e",
           "axis": 0,
-          "offset_grid": -0.3,
+          "offset_grid": 0.3,
           "inset_start": false,
-          "inset_end": true,
+          "inset_end": false,
           "segments": 1,
           "existing_endpoint_stem_overlaps": 0
         },
@@ -3674,16 +3884,16 @@
         ],
         "shape": "rectangle with optional endpoint steps",
         "endpoint_step_grid": 0.15,
-        "endpoint_step_fallback_segments": 3,
+        "endpoint_step_fallback_segments": 1,
         "detours": [
           {
             "reaction_id": "EX_ac_e",
             "axis": 0,
             "offset_grid": 0.3,
-            "inset_start": true,
+            "inset_start": false,
             "inset_end": false,
             "segments": 1,
-            "existing_endpoint_stem_overlaps": 1
+            "existing_endpoint_stem_overlaps": 0
           },
           {
             "reaction_id": "EX_for_e",
@@ -3692,14 +3902,14 @@
             "inset_start": true,
             "inset_end": false,
             "segments": 1,
-            "existing_endpoint_stem_overlaps": 4
+            "existing_endpoint_stem_overlaps": 1
           },
           {
             "reaction_id": "PFL",
             "axis": 0,
             "offset_grid": 0.3,
             "inset_start": false,
-            "inset_end": true,
+            "inset_end": false,
             "segments": 1,
             "existing_endpoint_stem_overlaps": 0
           }
@@ -3709,6 +3919,276 @@
         "backbone_shifted_segments": 0,
         "max_offset_grid": 0.3,
         "backbone_max_offset_grid": 0
+      },
+      "routing_preference": "important_bends_then_length_gray_yields",
+      "important_simplification": {
+        "policy": "important_bends_then_length_gray_yields",
+        "changed_paths": 6,
+        "removed_bends": 7,
+        "details": [
+          {
+            "reaction_id": "PFK",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "ACt2r",
+            "bends_before": 5,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "EX_glu__L_e",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "EX_lac__D_e",
+            "bends_before": 4,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "LDH_D",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "SUCCt2_2",
+            "bends_before": 5,
+            "bends_after": 2
+          }
+        ],
+        "unresolved": [
+          {
+            "reaction_id": "ACALD",
+            "reason": "No simpler feasible important route"
+          },
+          {
+            "reaction_id": "LDH_D",
+            "reason": "No simpler feasible important route"
+          }
+        ]
+      },
+      "gray_yield": {
+        "changed_paths": 15,
+        "details": [
+          {
+            "reaction_id": "FBP",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "GLUDy",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "GLUN",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "MALS",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "ME1",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "ME2",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "PGL",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "PPCK",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "PPS",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "RPI",
+            "bends_before": 1,
+            "bends_after": 1
+          },
+          {
+            "reaction_id": "TALA",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "TKT1",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "TKT1",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "TKT1",
+            "bends_before": 1,
+            "bends_after": 2
+          },
+          {
+            "reaction_id": "TKT2",
+            "bends_before": 1,
+            "bends_after": 2
+          }
+        ],
+        "unresolved": [
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "FRD7",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "FRD7",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "G6PDH2r",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "GLUSy",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "GLUSy",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "GND",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "GND",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "GND",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "ICL",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "ICL",
+            "reason": "No free gray route found"
+          },
+          {
+            "reaction_id": "ICL",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "MALS",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "ME1",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "ME2",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "PFL",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "PPC",
+            "reason": "No free gray route found"
+          },
+          {
+            "reaction_id": "PPCK",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "PPS",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "RPE",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "RPE",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "SUCCt3",
+            "reason": "No free gray route found"
+          },
+          {
+            "reaction_id": "SUCCt3",
+            "reason": "No free gray route found"
+          },
+          {
+            "reaction_id": "TKT1",
+            "reason": "No free gray route found"
+          },
+          {
+            "reaction_id": "TKT2",
+            "reason": "Shared gray trunk retained"
+          },
+          {
+            "reaction_id": "TKT2",
+            "reason": "Shared gray trunk retained"
+          }
+        ]
       },
       "red_parallel_layout": {
         "enabled": true,
@@ -4120,7 +4600,7 @@
         "copy:PDH:nadh_c": 0
       },
       "original_route_length": 982.8,
-      "display_route_length": 1007.9
+      "display_route_length": 1007.3
     },
     "escher": {
       "trunk_grouping": "positive_length_overlap",

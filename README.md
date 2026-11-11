@@ -604,3 +604,19 @@ Unresolved assignments are reported, never marked as satisfying the condition.
 Verified red channels are kept fixed by subsequent display routing. Reports
 record the requested spacing, minimum actual spacing, violations, elapsed time
 and selected channels under `red_parallel_layout` / `red_parallel_spacing`.
+
+
+## Prefer simple important routes; let gray paths yield
+
+Structural red/orange routing selects feasible candidates by bend count first,
+then path length, then crossings/interference. Protected red/orange nodes and
+verified red/red channel spacing remain constraints. Gray coincidences cannot
+force extra bends on an important path: conflicting gray paths are rerouted
+separately while important geometry stays fixed. Shared reaction trunks remain
+bundled. Candidates include straight, L/Z/U and endpoint-step forms; unresolved
+gray paths are recorded rather than changing important routes to accommodate
+them. Preallocated red channels are preserved.
+
+The saved E. coli core `EX_ac_e`–`ac_e` branch uses a two-bend U. The conflicting
+gray PGL route yields. Diagnostics are `important_simplification` and `gray_yield`
+in SVG reports and Escher `overlap_routing` metadata.
