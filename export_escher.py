@@ -400,10 +400,12 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
         first = min(min(active), maximum * 0.02) if active else maximum * 0.02
         options = dict(reaction_data=reaction_data, reaction_styles=['color', 'size', 'text', 'abs'],
                        reaction_scale=[dict(type='value', value=0, color='#b8b8b8', size=1),
-                                       dict(type='value', value=first, color='#ffffb2' if fba_report else '#e6ab02', size=3),
-                                       dict(type='value', value=maximum * 0.1, color='#fecc5c' if fba_report else '#ff7f00', size=5),
-                                       dict(type='value', value=maximum * 0.5, color='#f03b20' if fba_report else '#e31a1c', size=9),
-                                       dict(type='value', value=maximum, color='#bd0026' if fba_report else '#9e0142', size=14)])
+                                       dict(type='value', value=first, color='#2166ac' if fba_report else '#e6ab02', size=3),
+                                       dict(type='value', value=maximum * 0.1, color='#67a9cf' if fba_report else '#ff7f00', size=5),
+                                       dict(type='value', value=maximum * 0.5, color='#fdae61' if fba_report else '#e31a1c', size=9),
+                                       dict(type='value', value=maximum, color='#d73027' if fba_report else '#9e0142', size=14)])
+        if fba_report:
+            options['reaction_scale'].insert(3, dict(type='value', value=maximum * 0.25, color='#ffffbf', size=7))
         page = page.replace('enable_editing:true,', json.dumps(options, allow_nan=False)[1:-1] + ',enable_editing:true,')
         page = page.replace('Escher layout', 'FBA flux in Escher')
         summary = ('Line width and color show absolute flux. Labels show signed values. '
@@ -411,7 +413,7 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
                    f'Scale: 0 to {maximum:.4g}. Arrows show the calculated flow direction. '
                    'Arrows on zero-flux reactions show allowed directions, not flow.')
         if fba_report:
-            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from pale yellow through orange to dark red. Fixed pathway colors are not applied.')
+            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from blue through light blue, yellow, and orange to red. Fixed pathway colors are not applied.')
             summary += (f' Biomass reaction: {fba_report["objective_value"]:.6f} h⁻¹. '
                         'This is one optimal solution that maximizes growth within the SBML bounds.')
         if fba_report:

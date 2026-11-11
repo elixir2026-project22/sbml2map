@@ -38,8 +38,9 @@ without flux sampling. No new model files or source/display model snapshots
 are included. `prepare_github_pages.py` refreshes E. coli core and preserves
 this separately published iCH360 directory.
 
-FBA color and width show absolute flux: gray at zero, then pale yellow, orange,
-red, and dark red as flux increases. Labels retain signed values.
+FBA color and width show absolute flux: gray at zero, then blue, light blue,
+yellow, orange, and red as flux increases. Labels retain signed values.
+User selections are highlighted in purple to distinguish them from low flux.
 
 iCH360 publication excludes SBML/XML model files and links to them.
 Run `python3 prepare_github_pages.py` before publishing to check this policy.

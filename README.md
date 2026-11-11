@@ -282,7 +282,7 @@ The initial Escher view has no reaction flux data loaded: sampled values, flux
 widths, and the flux color scale are hidden. Arrows show model-permitted
 directions; red and orange describe the pathway structure. Loading reaction
 data automatically disables those fixed pathway colors, and clearing the data
-restores them. FBA pages start with simulation values and a pale-yellow-to-dark-red
+restores them. FBA pages start with simulation values and a blue-to-red
 absolute flux scale (gray for zero), with fixed pathway colors off.
 
 Escher connections are exported as horizontal and vertical segments. Diagonal
@@ -290,7 +290,7 @@ incidences receive an intermediate `multimarker` at the corner; already aligned
 connections remain one segment. These routing nodes do not add compounds or
 reactions. Original node coordinates, stoichiometry, bounds, and flux values are
 preserved. Arrowheads stay on terminal metabolite segments, and pathway colors
-and blue reaction highlights apply to both parts of a routed connection.
+and purple reaction highlights apply to both parts of a routed connection.
 Moving nodes manually in Escher does not automatically reroute them.
 
 To show a biomass-maximizing FBA solution on the saved E. coli core layout:
@@ -307,19 +307,19 @@ contains sign-adjusted values for the 76 displayed reactions.
 The bundled result has a biomass objective of approximately 0.873922 h⁻¹.
 This is one optimal FBA solution; other optimal flux distributions may exist.
 
-Both HTML views include a blue-highlight panel. Choose compounds or reactions,
+Both HTML views include a purple-highlight panel. Choose compounds or reactions,
 search by ID or name, and click a result to select it. You can also add exact
 model IDs in bulk, separated by commas or newlines. Compound selection colors
 all displayed copies; reaction selection colors its lines, arrows, labels, and
-grid-view reaction node. Blue overrides pathway colors. Clear selections to
+grid-view reaction node. Purple overrides pathway colors. Clear selections to
 restore the original palette.
 
-In `index.html`, **Always show blue targets** overrides the display filters for
+In `index.html`, **Always show purple targets** overrides the display filters for
 selected objects and shows the compounds connected to selected reactions in
 their own colors. Objects omitted when the map was generated cannot be added;
 their status is shown in the panel. Selection does not change layout or fluxes.
 Save/load selections as JSON, or save the currently displayed SVG. Browser
-changes do not update PNG files. To generate blue highlights in PNG, SVG, and
+changes do not update PNG files. To generate purple highlights in PNG, SVG, and
 the initial HTML selection, run:
 
 ```bash

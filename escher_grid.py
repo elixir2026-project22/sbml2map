@@ -10,7 +10,7 @@ import re
 
 import numpy as np
 
-from highlighting import BLUE, read_selection, grid_elements, catalog, inject_controls
+from highlighting import HIGHLIGHT_COLOR, read_selection, grid_elements, catalog, inject_controls
 
 from flux_sampling2 import sample_fluxes, sampling_constraints
 from annotation_context import hidden_metabolite
@@ -303,13 +303,13 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         if artist.get_gid() not in selected_gids:
             continue
         if hasattr(artist, 'set_color'):
-            artist.set_color(BLUE)
+            artist.set_color(HIGHLIGHT_COLOR)
         if getattr(artist, 'arrow_patch', None) is not None:
-            artist.arrow_patch.set_color(BLUE)
+            artist.arrow_patch.set_color(HIGHLIGHT_COLOR)
         if hasattr(artist, 'set_alpha'):
             artist.set_alpha(1)
     if any(highlights.values()):
-        fig.text(.02, .005, 'Blue: user selection', color=BLUE, fontsize=9)
+        fig.text(.02, .005, 'Purple: user selection', color=HIGHLIGHT_COLOR, fontsize=9)
     fig.savefig(output / 'layout.png', dpi=180, bbox_inches='tight')
     fig.savefig(output / 'layout.svg', bbox_inches='tight')
     if connectors:

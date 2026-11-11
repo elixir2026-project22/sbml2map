@@ -44,19 +44,19 @@ class DisplayModeTests(unittest.TestCase):
             self.assertNotIn('reaction_data',builder_options(page))
             self.assertIn("callback_manager.set('update_data.pathway_colors'",page)
 
-    def test_fba_uses_flux_only_red_scale_without_pathway_css(self):
+    def test_fba_uses_flux_only_blue_to_red_scale_without_pathway_css(self):
         with tempfile.TemporaryDirectory() as directory:
             path=Path(directory)/'escher_fba.html'
             write_preview(path,self.fixture(),{'in':-5.0,'out':5.0},{'objective_value':5.0})
             page=path.read_text();options=builder_options(page)
             self.assertEqual(options['reaction_data'],{'in':-5.0,'out':5.0})
             colors=[x['color'] for x in options['reaction_scale']]
-            self.assertEqual(colors,['#b8b8b8','#ffffb2','#fecc5c','#f03b20','#bd0026'])
+            self.assertEqual(colors,['#b8b8b8','#2166ac','#67a9cf','#ffffbf','#fdae61','#d73027'])
             self.assertNotIn('<style id="major-pathway-colors">',page)
             self.assertIn('Fixed pathway colors are not applied.',page)
             self.assertIn('abs', options['reaction_styles'])
             self.assertIn('id="fba-color-legend"', page)
-            self.assertIn('dark red', page)
+            self.assertIn('from blue through light blue, yellow, and orange to red', page)
 
     def test_saved_e_coli_views_have_distinct_initial_modes(self):
         root=Path(__file__).resolve().parent;folder=root/'results/e_coli_core'
