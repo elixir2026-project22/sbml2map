@@ -10,6 +10,8 @@ import re
 
 import numpy as np
 
+from red_route_layout import validate_red_spacing,plan_red_routes,spacing_report
+
 from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
 
 from highlighting import HIGHLIGHT_COLOR, read_selection, grid_elements, catalog, inject_controls
@@ -249,8 +251,26 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             priority=2 if stats[rid].get('is_major_pathway',False) else 1 if j in orange_edges else 0,
             backbone=frozenset((edge['source'],edge['target'])) in backbone_pairs))
     original_route_length=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
+    red_plan=(backbones or {}).get('red_parallel_layout')
+    if red_plan and red_plan.get('enabled') and red_plan.get('verified'):
+        planned={(r['rid'],r['mid']):r for r in red_plan['routes']}
+        for edge,path in zip(edges,display_paths):
+            route=planned.get((edge['reaction_id'],edge['metabolite_id']))
+            if route:
+                points=[tuple(p) for p in route['points']]
+                if path['points'][0]!=points[0]:points.reverse()
+                path.update(points=points,routing_locked=True)
     parallel_report=separate_parallel(display_paths,obstacles=obstacles)
     parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=obstacles,route_offset=route_offset)
+    if red_plan:
+        parallel_report['red_parallel_layout']={k:v for k,v in red_plan.items() if k not in ('routes','allocations')}
+        parallel_report['red_parallel_spacing']=spacing_report(display_paths,red_plan['requested_spacing_grid'])
+        if red_plan.get('enabled') and red_plan.get('verified') and not parallel_report['red_parallel_spacing']['verified']:
+            raise RuntimeError('Preallocated red spacing changed during SVG rendering')
+    route_points=[p for path in display_paths for p in path['points']]
+    if route_points:
+        ax.set_xticks(np.arange(math.floor(min(p[0] for p in route_points)),math.ceil(max(p[0] for p in route_points))+1))
+        ax.set_yticks(np.arange(math.floor(min(p[1] for p in route_points)),math.ceil(max(p[1] for p in route_points))+1))
     parallel_report['node_obstacle_policy']='red_orange_structural_nodes'
     parallel_report['obstacle_node_ids']=obstacle_keys
     parallel_report['structural_node_priorities']=node_priorities
@@ -480,6 +500,7 @@ def run(args):
         validate_export_request(args.model,getattr(args,'sbml_layout_id','sbml2map_layout'))
     validate_sampling_options(args)
     route_offset=validate_route_offset(getattr(args,'route_offset',.3))
+    red_spacing=validate_red_spacing(getattr(args,'red_parallel_spacing',1.0))
     output = args.output_dir
     output.mkdir(parents=True, exist_ok=True)
     model = load_model(args.model)
@@ -556,7 +577,20 @@ def run(args):
     flux_costs['requested_flux_weight'] = getattr(args, 'orange_flux_weight', 1)
     reaction_weights = flux_costs['reaction_weights']
     connectors = connector_plan(nodes, edges, roots, exchange_nodes, major_reactions, allow_disconnected=no_sampling, reaction_weights=reaction_weights) if strategy and selected else None
+    record_map={record['reaction_id']:record for record in records}
+    backbone_pairs={frozenset(('rxn:'+step['reaction_id'],'met:'+mid))
+        for route in backbones.get('routes',[]) for step in route.get('steps',[])
+        for mid in (step['source'],step['target'])}
+    red_edges=[dict(rid=e['reaction_id'],mid=e['metabolite_id'],source=e['source'],target=e['target'],
+        reverse=(e['direction']=='reverse' if no_sampling else record_map[e['reaction_id']]['median']<0),
+        backbone=frozenset((e['source'],e['target'])) in backbone_pairs)
+        for e in edges if e['reaction_id'] in major_reactions and e['source'] in grid_ids and e['target'] in grid_ids]
+    major_mids={mid for route in routes for mid in route['metabolite_ids']}
+    def routing_obstacles(plan):
+        orange_pairs={frozenset((edges[i]['source'],edges[i]['target'])) for i in (plan or {}).get('edge_indices',[])}
+        return sorted(key for key,rank in structural_node_priorities(nodes,major_reactions,major_mids,orange_pairs).items() if rank and key in grid_ids)
     history = []
+    red_planning_seconds=0.0
     best = None
     previous_xy = None
     for iteration in range(2 if connectors else 1):
@@ -564,7 +598,9 @@ def run(args):
         objective_weights = [reaction_weights.get(edges[i]['reaction_id'], 1) for i in connectors['edge_indices']] if connectors else None
         candidate_xy, candidate_placement = optimize_grid(grid_ids, objective_pairs, args.grid_cols, args.grid_rows, args.time_limit, args.seed + iteration,
                                       top_left_node=glucose_node, boundary_nodes=exchange_nodes, fixed_offsets=fixed_offsets,
-                                      initial_positions=previous_xy, edge_weights=objective_weights, **grid_options)
+                                      initial_positions=previous_xy, edge_weights=objective_weights, red_edges=red_edges,
+                                      red_parallel_spacing=red_spacing,red_obstacle_node_ids=routing_obstacles(connectors), **grid_options)
+        red_planning_seconds+=candidate_placement.get('red_parallel_layout',{}).get('elapsed_seconds',0)
         if not connectors:
             xy, placement = candidate_xy, candidate_placement
             break
@@ -573,16 +609,23 @@ def run(args):
         if connector_cost(candidate_plan, edges, candidate_xy) > before_reroute:
             candidate_plan = connectors
         value = connector_cost(candidate_plan, edges, candidate_xy)
-        history.append(dict(iteration=iteration+1, before_reroute=before_reroute, orange_cost=value,
+        candidate_red=candidate_placement.get('red_parallel_layout')
+        if red_edges and (candidate_red is None or candidate_red.get('obstacle_node_ids')!=routing_obstacles(candidate_plan)):
+            candidate_red=plan_red_routes(candidate_xy,red_edges,red_spacing,routing_obstacles(candidate_plan),
+                time_limit=min(3,max(.05,args.time_limit)),use_milp=not bool(getattr(args,'max_milp_nodes',None) and len(grid_ids)>args.max_milp_nodes))
+            candidate_placement['red_parallel_layout']=candidate_red
+            red_planning_seconds+=candidate_red.get('elapsed_seconds',0)
+        red_valid=not red_spacing or not red_edges or bool(candidate_red and candidate_red.get('verified'))
+        history.append(dict(iteration=iteration+1, red_spacing_verified=red_valid, before_reroute=before_reroute, orange_cost=value,
                             orange_length=connector_length(candidate_plan, edges, candidate_xy),
                             optimized_fixed_network_cost=candidate_placement['objective'],
                             optimized_fixed_network_length=connector_length(connectors, edges, candidate_xy)))
-        if best is None or value < best[0]:
-            best = (value, candidate_xy, candidate_placement, candidate_plan)
+        if best is None or (not red_valid,value)<(not best[4],best[0]):
+            best = (value, candidate_xy, candidate_placement, candidate_plan,red_valid)
         connectors = candidate_plan
         previous_xy = candidate_xy
     if connectors:
-        value, xy, placement, connectors = best
+        value, xy, placement, connectors, _ = best
         connectors.update(total_length=connector_length(connectors, edges, xy), total_cost=value,
                           flux_costs=flux_costs, shared_coenzyme_ids=sorted(shared), optimization_history=history)
         backbones['exchange_connectors'] = connectors
@@ -593,6 +636,15 @@ def run(args):
         # Fixed-forest MILP bounds cannot certify the joint routing problem.
         placement['fixed_network_lower_bound'] = placement.pop('global_lower_bound', None)
         placement.pop('relative_gap', None)
+    red_plan=placement.pop('red_parallel_layout',None)
+    if red_edges and (red_plan is None or red_plan.get('obstacle_node_ids')!=routing_obstacles(connectors)):
+        red_plan=plan_red_routes(xy,red_edges,red_spacing,routing_obstacles(connectors),
+            time_limit=min(3,max(.05,args.time_limit)),use_milp=not bool(getattr(args,'max_milp_nodes',None) and len(grid_ids)>args.max_milp_nodes))
+        red_planning_seconds+=red_plan.get('elapsed_seconds',0)
+    placement['red_parallel_layout_total_seconds']=red_planning_seconds
+    if red_plan:
+        backbones['red_parallel_layout']=red_plan
+        placement['red_parallel_layout']={k:v for k,v in red_plan.items() if k not in ('routes','allocations')}
     cols, rows = placement['grid_cols'], placement['grid_rows']
     attach_coenzymes(nodes, xy, grid_shape=(cols, rows))
     backbone_validation = validate_backbones(backbones, xy, rows)
@@ -707,6 +759,7 @@ def run(args):
         report['boundary_placeholder_metabolites'] = placeholders
         report['validation']['no_boundary_placeholder_nodes'] = True
         report['limitations'].append('CellDesigner source/sink placeholders are omitted only in the display; original stoichiometry and sampling constraints are unchanged.')
+    report['red_parallel_spacing_grid'] = red_spacing
     report['route_offset_grid'] = route_offset
     report['program_name'] = program_name
     if strategy:
@@ -743,6 +796,11 @@ def run(args):
     return report
 
 
+def validate_red_spacing_arg(value):
+    try:return validate_red_spacing(float(value))
+    except ValueError as exc:raise argparse.ArgumentTypeError(str(exc)) from exc
+
+
 def validate_route_offset_arg(value):
     try:
         return validate_route_offset(float(value))
@@ -763,6 +821,7 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
+    p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')
     p.add_argument('--route-offset', type=validate_route_offset_arg, default=.3, help='Whole-segment U-shaped node avoidance offset in grid units (default: 0.3; 0 disables node avoidance)')
     p.add_argument('--zero-tolerance', type=float, default=1e-7)
     p.add_argument('--orange-flux-weight', type=float, default=1, help='Penalty for low-flux orange routes (default: 1; 0: length only; larger values favor higher-flux reactions more; ignored without sampling)')

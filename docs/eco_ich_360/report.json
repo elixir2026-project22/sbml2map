@@ -804,7 +804,196 @@
     },
     "distinct_grid_points_verified": true,
     "fixed_network_solver_objective": 291,
-    "fixed_network_lower_bound": 120.0
+    "fixed_network_lower_bound": 120.0,
+    "red_parallel_layout": {
+      "enabled": true,
+      "requested_spacing_grid": 1,
+      "min_parallel_length_grid": 1,
+      "stage": "grid layout routing-channel allocation",
+      "obstacle_node_ids": [
+        "met:13dpg_c",
+        "met:2pg_c",
+        "met:3pg_c",
+        "met:6pgc_c",
+        "met:ac_c",
+        "met:ac_e",
+        "met:ac_p",
+        "met:acald_c",
+        "met:acald_e",
+        "met:acald_p",
+        "met:accoa_c",
+        "met:acon_C_c",
+        "met:akg_c",
+        "met:akg_e",
+        "met:akg_p",
+        "met:cit_c",
+        "met:dhap_c",
+        "met:etoh_c",
+        "met:etoh_e",
+        "met:etoh_p",
+        "met:f6p_c",
+        "met:fdp_c",
+        "met:for_c",
+        "met:for_e",
+        "met:for_p",
+        "met:fru_e",
+        "met:fru_p",
+        "met:fum_c",
+        "met:fum_e",
+        "met:fum_p",
+        "met:g3p_c",
+        "met:g6p_c",
+        "met:glc__D_e",
+        "met:glc__D_p",
+        "met:glcn_c",
+        "met:glcn_e",
+        "met:glcn_p",
+        "met:gln__L_c",
+        "met:gln__L_e",
+        "met:gln__L_p",
+        "met:glu__L_c",
+        "met:glu__L_e",
+        "met:glu__L_p",
+        "met:glyc3p_c",
+        "met:glyc__R_c",
+        "met:glyc__R_e",
+        "met:glyc__R_p",
+        "met:glyc_c",
+        "met:glyc_e",
+        "met:glyc_p",
+        "met:icit_c",
+        "met:lac__D_c",
+        "met:lac__D_e",
+        "met:lac__D_p",
+        "met:mal__L_c",
+        "met:mal__L_e",
+        "met:mal__L_p",
+        "met:oaa_c",
+        "met:pep_c",
+        "met:pyr_c",
+        "met:pyr_e",
+        "met:pyr_p",
+        "met:r5p_c",
+        "met:rib__D_c",
+        "met:rib__D_e",
+        "met:rib__D_p",
+        "met:ru5p__D_c",
+        "met:succ_c",
+        "met:succ_e",
+        "met:succ_p",
+        "met:succoa_c",
+        "met:xu5p__D_c",
+        "met:xyl__D_c",
+        "met:xyl__D_e",
+        "met:xyl__D_p",
+        "met:xylu__D_c",
+        "rxn:ACALD",
+        "rxn:ACALDtex",
+        "rxn:ACALDtpp",
+        "rxn:ACONTa",
+        "rxn:ACONTb",
+        "rxn:ACt2rpp",
+        "rxn:ACtex",
+        "rxn:AKGDH",
+        "rxn:AKGt2rpp",
+        "rxn:AKGtex",
+        "rxn:ALCD2x",
+        "rxn:Biomass",
+        "rxn:CS",
+        "rxn:D_LACt2pp",
+        "rxn:D_LACtex",
+        "rxn:ENO",
+        "rxn:ETOHtex",
+        "rxn:ETOHtrpp",
+        "rxn:EX_ac_e",
+        "rxn:EX_acald_e",
+        "rxn:EX_akg_e",
+        "rxn:EX_etoh_e",
+        "rxn:EX_for_e",
+        "rxn:EX_fru_e",
+        "rxn:EX_fum_e",
+        "rxn:EX_glc__D_e",
+        "rxn:EX_glcn_e",
+        "rxn:EX_gln__L_e",
+        "rxn:EX_glu__L_e",
+        "rxn:EX_glyc__R_e",
+        "rxn:EX_glyc_e",
+        "rxn:EX_lac__D_e",
+        "rxn:EX_mal__L_e",
+        "rxn:EX_pyr_e",
+        "rxn:EX_rib__D_e",
+        "rxn:EX_succ_e",
+        "rxn:EX_xyl__D_e",
+        "rxn:FBA",
+        "rxn:FORt2pp",
+        "rxn:FORtex",
+        "rxn:FRUpts2pp",
+        "rxn:FRUtex",
+        "rxn:FUM",
+        "rxn:FUMt2_2pp",
+        "rxn:FUMtex",
+        "rxn:G3PT",
+        "rxn:GAPD",
+        "rxn:GLCNt2rpp",
+        "rxn:GLCNtex",
+        "rxn:GLCptspp",
+        "rxn:GLCtex_copy1",
+        "rxn:GLNabcpp",
+        "rxn:GLNtex",
+        "rxn:GLUt2rpp",
+        "rxn:GLUtex",
+        "rxn:GLYCAt2rpp",
+        "rxn:GLYCAtex",
+        "rxn:GLYCK2",
+        "rxn:GLYCtex",
+        "rxn:GLYCtpp",
+        "rxn:GND",
+        "rxn:GNK",
+        "rxn:ICDHyr",
+        "rxn:LDH_D",
+        "rxn:MALt2_2pp",
+        "rxn:MALtex",
+        "rxn:MDH",
+        "rxn:PDH",
+        "rxn:PFK",
+        "rxn:PGI",
+        "rxn:PGK",
+        "rxn:PGM",
+        "rxn:PYK",
+        "rxn:PYRt2rpp",
+        "rxn:PYRtex",
+        "rxn:RBK",
+        "rxn:RIBabcpp",
+        "rxn:RIBtex",
+        "rxn:SUCCt1pp",
+        "rxn:SUCCtex",
+        "rxn:SUCDi",
+        "rxn:SUCOAS",
+        "rxn:TKT1",
+        "rxn:TPI",
+        "rxn:XYLI1",
+        "rxn:XYLK",
+        "rxn:XYLt2pp",
+        "rxn:XYLtex"
+      ],
+      "unresolved": [],
+      "nodes_moved": false,
+      "global_optimality_proven": false,
+      "minimum_parallel_gap_grid": 1.0,
+      "parallel_pairs": 78,
+      "violations": [],
+      "verified": true,
+      "method": "Constraint-checked greedy routing channels",
+      "elapsed_seconds": 0.8084027849836275,
+      "signature": "043e4a609cc73f46c8578385",
+      "routing_envelope": {
+        "x_min": -1.0,
+        "x_max": 11.0,
+        "y_min": 1.0,
+        "y_max": 28.0
+      }
+    },
+    "red_parallel_layout_total_seconds": 0.8084027849836275
   },
   "major_backbones": {
     "routes": [
@@ -2090,6 +2279,1474 @@
           "verified": true
         }
       ]
+    },
+    "red_parallel_layout": {
+      "enabled": true,
+      "requested_spacing_grid": 1,
+      "min_parallel_length_grid": 1,
+      "stage": "grid layout routing-channel allocation",
+      "obstacle_node_ids": [
+        "met:13dpg_c",
+        "met:2pg_c",
+        "met:3pg_c",
+        "met:6pgc_c",
+        "met:ac_c",
+        "met:ac_e",
+        "met:ac_p",
+        "met:acald_c",
+        "met:acald_e",
+        "met:acald_p",
+        "met:accoa_c",
+        "met:acon_C_c",
+        "met:akg_c",
+        "met:akg_e",
+        "met:akg_p",
+        "met:cit_c",
+        "met:dhap_c",
+        "met:etoh_c",
+        "met:etoh_e",
+        "met:etoh_p",
+        "met:f6p_c",
+        "met:fdp_c",
+        "met:for_c",
+        "met:for_e",
+        "met:for_p",
+        "met:fru_e",
+        "met:fru_p",
+        "met:fum_c",
+        "met:fum_e",
+        "met:fum_p",
+        "met:g3p_c",
+        "met:g6p_c",
+        "met:glc__D_e",
+        "met:glc__D_p",
+        "met:glcn_c",
+        "met:glcn_e",
+        "met:glcn_p",
+        "met:gln__L_c",
+        "met:gln__L_e",
+        "met:gln__L_p",
+        "met:glu__L_c",
+        "met:glu__L_e",
+        "met:glu__L_p",
+        "met:glyc3p_c",
+        "met:glyc__R_c",
+        "met:glyc__R_e",
+        "met:glyc__R_p",
+        "met:glyc_c",
+        "met:glyc_e",
+        "met:glyc_p",
+        "met:icit_c",
+        "met:lac__D_c",
+        "met:lac__D_e",
+        "met:lac__D_p",
+        "met:mal__L_c",
+        "met:mal__L_e",
+        "met:mal__L_p",
+        "met:oaa_c",
+        "met:pep_c",
+        "met:pyr_c",
+        "met:pyr_e",
+        "met:pyr_p",
+        "met:r5p_c",
+        "met:rib__D_c",
+        "met:rib__D_e",
+        "met:rib__D_p",
+        "met:ru5p__D_c",
+        "met:succ_c",
+        "met:succ_e",
+        "met:succ_p",
+        "met:succoa_c",
+        "met:xu5p__D_c",
+        "met:xyl__D_c",
+        "met:xyl__D_e",
+        "met:xyl__D_p",
+        "met:xylu__D_c",
+        "rxn:ACALD",
+        "rxn:ACALDtex",
+        "rxn:ACALDtpp",
+        "rxn:ACONTa",
+        "rxn:ACONTb",
+        "rxn:ACt2rpp",
+        "rxn:ACtex",
+        "rxn:AKGDH",
+        "rxn:AKGt2rpp",
+        "rxn:AKGtex",
+        "rxn:ALCD2x",
+        "rxn:Biomass",
+        "rxn:CS",
+        "rxn:D_LACt2pp",
+        "rxn:D_LACtex",
+        "rxn:ENO",
+        "rxn:ETOHtex",
+        "rxn:ETOHtrpp",
+        "rxn:EX_ac_e",
+        "rxn:EX_acald_e",
+        "rxn:EX_akg_e",
+        "rxn:EX_etoh_e",
+        "rxn:EX_for_e",
+        "rxn:EX_fru_e",
+        "rxn:EX_fum_e",
+        "rxn:EX_glc__D_e",
+        "rxn:EX_glcn_e",
+        "rxn:EX_gln__L_e",
+        "rxn:EX_glu__L_e",
+        "rxn:EX_glyc__R_e",
+        "rxn:EX_glyc_e",
+        "rxn:EX_lac__D_e",
+        "rxn:EX_mal__L_e",
+        "rxn:EX_pyr_e",
+        "rxn:EX_rib__D_e",
+        "rxn:EX_succ_e",
+        "rxn:EX_xyl__D_e",
+        "rxn:FBA",
+        "rxn:FORt2pp",
+        "rxn:FORtex",
+        "rxn:FRUpts2pp",
+        "rxn:FRUtex",
+        "rxn:FUM",
+        "rxn:FUMt2_2pp",
+        "rxn:FUMtex",
+        "rxn:G3PT",
+        "rxn:GAPD",
+        "rxn:GLCNt2rpp",
+        "rxn:GLCNtex",
+        "rxn:GLCptspp",
+        "rxn:GLCtex_copy1",
+        "rxn:GLNabcpp",
+        "rxn:GLNtex",
+        "rxn:GLUt2rpp",
+        "rxn:GLUtex",
+        "rxn:GLYCAt2rpp",
+        "rxn:GLYCAtex",
+        "rxn:GLYCK2",
+        "rxn:GLYCtex",
+        "rxn:GLYCtpp",
+        "rxn:GND",
+        "rxn:GNK",
+        "rxn:ICDHyr",
+        "rxn:LDH_D",
+        "rxn:MALt2_2pp",
+        "rxn:MALtex",
+        "rxn:MDH",
+        "rxn:PDH",
+        "rxn:PFK",
+        "rxn:PGI",
+        "rxn:PGK",
+        "rxn:PGM",
+        "rxn:PYK",
+        "rxn:PYRt2rpp",
+        "rxn:PYRtex",
+        "rxn:RBK",
+        "rxn:RIBabcpp",
+        "rxn:RIBtex",
+        "rxn:SUCCt1pp",
+        "rxn:SUCCtex",
+        "rxn:SUCDi",
+        "rxn:SUCOAS",
+        "rxn:TKT1",
+        "rxn:TPI",
+        "rxn:XYLI1",
+        "rxn:XYLK",
+        "rxn:XYLt2pp",
+        "rxn:XYLtex"
+      ],
+      "routes": [
+        {
+          "rid": "ACONTa",
+          "mid": "acon_C_c",
+          "source": "rxn:ACONTa",
+          "target": "met:acon_C_c",
+          "points": [
+            [
+              7.0,
+              6.0
+            ],
+            [
+              8.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ACONTa",
+          "mid": "cit_c",
+          "source": "met:cit_c",
+          "target": "rxn:ACONTa",
+          "points": [
+            [
+              6.0,
+              6.0
+            ],
+            [
+              7.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ACONTb",
+          "mid": "acon_C_c",
+          "source": "met:acon_C_c",
+          "target": "rxn:ACONTb",
+          "points": [
+            [
+              8.0,
+              6.0
+            ],
+            [
+              9.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ACONTb",
+          "mid": "icit_c",
+          "source": "rxn:ACONTb",
+          "target": "met:icit_c",
+          "points": [
+            [
+              9.0,
+              6.0
+            ],
+            [
+              9.0,
+              5.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "AKGDH",
+          "mid": "akg_c",
+          "source": "met:akg_c",
+          "target": "rxn:AKGDH",
+          "points": [
+            [
+              9.0,
+              3.0
+            ],
+            [
+              9.0,
+              2.85
+            ],
+            [
+              11.0,
+              2.85
+            ],
+            [
+              11.0,
+              1.15
+            ],
+            [
+              9.0,
+              1.15
+            ],
+            [
+              9.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "AKGDH",
+          "mid": "succoa_c",
+          "source": "rxn:AKGDH",
+          "target": "met:succoa_c",
+          "points": [
+            [
+              9.0,
+              1.0
+            ],
+            [
+              8.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "CS",
+          "mid": "accoa_c",
+          "source": "met:accoa_c",
+          "target": "rxn:CS",
+          "points": [
+            [
+              3.0,
+              5.0
+            ],
+            [
+              5.0,
+              5.0
+            ],
+            [
+              5.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "CS",
+          "mid": "cit_c",
+          "source": "rxn:CS",
+          "target": "met:cit_c",
+          "points": [
+            [
+              5.0,
+              6.0
+            ],
+            [
+              6.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "CS",
+          "mid": "oaa_c",
+          "source": "met:oaa_c",
+          "target": "rxn:CS",
+          "points": [
+            [
+              4.0,
+              6.0
+            ],
+            [
+              5.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ENO",
+          "mid": "2pg_c",
+          "source": "met:2pg_c",
+          "target": "rxn:ENO",
+          "points": [
+            [
+              1.0,
+              9.0
+            ],
+            [
+              1.0,
+              8.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ENO",
+          "mid": "pep_c",
+          "source": "rxn:ENO",
+          "target": "met:pep_c",
+          "points": [
+            [
+              1.0,
+              8.0
+            ],
+            [
+              1.0,
+              7.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "EX_glc__D_e",
+          "mid": "glc__D_e",
+          "source": "met:glc__D_e",
+          "target": "rxn:EX_glc__D_e",
+          "points": [
+            [
+              1.0,
+              27.0
+            ],
+            [
+              1.0,
+              28.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "FBA",
+          "mid": "dhap_c",
+          "source": "rxn:FBA",
+          "target": "met:dhap_c",
+          "points": [
+            [
+              1.0,
+              18.0
+            ],
+            [
+              0.0,
+              18.0
+            ],
+            [
+              0.0,
+              17.0
+            ],
+            [
+              1.0,
+              17.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "FBA",
+          "mid": "fdp_c",
+          "source": "met:fdp_c",
+          "target": "rxn:FBA",
+          "points": [
+            [
+              1.0,
+              19.0
+            ],
+            [
+              1.0,
+              18.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "FBA",
+          "mid": "g3p_c",
+          "source": "rxn:FBA",
+          "target": "met:g3p_c",
+          "points": [
+            [
+              1.0,
+              18.0
+            ],
+            [
+              0.0,
+              18.0
+            ],
+            [
+              0.0,
+              15.0
+            ],
+            [
+              1.0,
+              15.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "FUM",
+          "mid": "fum_c",
+          "source": "met:fum_c",
+          "target": "rxn:FUM",
+          "points": [
+            [
+              4.0,
+              1.0
+            ],
+            [
+              4.0,
+              2.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "FUM",
+          "mid": "mal__L_c",
+          "source": "rxn:FUM",
+          "target": "met:mal__L_c",
+          "points": [
+            [
+              4.0,
+              2.0
+            ],
+            [
+              4.0,
+              3.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GAPD",
+          "mid": "13dpg_c",
+          "source": "rxn:GAPD",
+          "target": "met:13dpg_c",
+          "points": [
+            [
+              1.0,
+              14.0
+            ],
+            [
+              1.0,
+              13.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GAPD",
+          "mid": "g3p_c",
+          "source": "met:g3p_c",
+          "target": "rxn:GAPD",
+          "points": [
+            [
+              1.0,
+              15.0
+            ],
+            [
+              1.0,
+              14.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCptspp",
+          "mid": "g6p_c",
+          "source": "rxn:GLCptspp",
+          "target": "met:g6p_c",
+          "points": [
+            [
+              1.0,
+              24.0
+            ],
+            [
+              1.0,
+              23.85
+            ],
+            [
+              -1.0,
+              23.85
+            ],
+            [
+              -1.0,
+              23.0
+            ],
+            [
+              1.0,
+              23.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCptspp",
+          "mid": "glc__D_p",
+          "source": "met:glc__D_p",
+          "target": "rxn:GLCptspp",
+          "points": [
+            [
+              1.0,
+              25.0
+            ],
+            [
+              1.0,
+              24.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCptspp",
+          "mid": "pep_c",
+          "source": "met:pep_c",
+          "target": "rxn:GLCptspp",
+          "points": [
+            [
+              1.0,
+              7.0
+            ],
+            [
+              1.0,
+              7.15
+            ],
+            [
+              -1.0,
+              7.15
+            ],
+            [
+              -1.0,
+              24.0
+            ],
+            [
+              1.0,
+              24.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCptspp",
+          "mid": "pyr_c",
+          "source": "rxn:GLCptspp",
+          "target": "met:pyr_c",
+          "points": [
+            [
+              1.0,
+              24.0
+            ],
+            [
+              1.0,
+              23.85
+            ],
+            [
+              -1.0,
+              23.85
+            ],
+            [
+              -1.0,
+              5.0
+            ],
+            [
+              1.0,
+              5.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCtex_copy1",
+          "mid": "glc__D_e",
+          "source": "met:glc__D_e",
+          "target": "rxn:GLCtex_copy1",
+          "points": [
+            [
+              1.0,
+              27.0
+            ],
+            [
+              1.0,
+              26.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "GLCtex_copy1",
+          "mid": "glc__D_p",
+          "source": "rxn:GLCtex_copy1",
+          "target": "met:glc__D_p",
+          "points": [
+            [
+              1.0,
+              26.0
+            ],
+            [
+              1.0,
+              25.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ICDHyr",
+          "mid": "akg_c",
+          "source": "rxn:ICDHyr",
+          "target": "met:akg_c",
+          "points": [
+            [
+              9.0,
+              4.0
+            ],
+            [
+              9.0,
+              3.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "ICDHyr",
+          "mid": "icit_c",
+          "source": "met:icit_c",
+          "target": "rxn:ICDHyr",
+          "points": [
+            [
+              9.0,
+              5.0
+            ],
+            [
+              9.0,
+              4.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "MDH",
+          "mid": "mal__L_c",
+          "source": "met:mal__L_c",
+          "target": "rxn:MDH",
+          "points": [
+            [
+              4.0,
+              3.0
+            ],
+            [
+              4.0,
+              4.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "MDH",
+          "mid": "oaa_c",
+          "source": "rxn:MDH",
+          "target": "met:oaa_c",
+          "points": [
+            [
+              4.0,
+              4.0
+            ],
+            [
+              4.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PDH",
+          "mid": "accoa_c",
+          "source": "rxn:PDH",
+          "target": "met:accoa_c",
+          "points": [
+            [
+              2.0,
+              5.0
+            ],
+            [
+              3.0,
+              5.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PDH",
+          "mid": "pyr_c",
+          "source": "met:pyr_c",
+          "target": "rxn:PDH",
+          "points": [
+            [
+              1.0,
+              5.0
+            ],
+            [
+              2.0,
+              5.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PFK",
+          "mid": "f6p_c",
+          "source": "met:f6p_c",
+          "target": "rxn:PFK",
+          "points": [
+            [
+              1.0,
+              21.0
+            ],
+            [
+              1.0,
+              20.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PFK",
+          "mid": "fdp_c",
+          "source": "rxn:PFK",
+          "target": "met:fdp_c",
+          "points": [
+            [
+              1.0,
+              20.0
+            ],
+            [
+              1.0,
+              19.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGI",
+          "mid": "f6p_c",
+          "source": "rxn:PGI",
+          "target": "met:f6p_c",
+          "points": [
+            [
+              1.0,
+              22.0
+            ],
+            [
+              1.0,
+              21.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGI",
+          "mid": "g6p_c",
+          "source": "met:g6p_c",
+          "target": "rxn:PGI",
+          "points": [
+            [
+              1.0,
+              23.0
+            ],
+            [
+              1.0,
+              22.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGK",
+          "mid": "13dpg_c",
+          "source": "rxn:PGK",
+          "target": "met:13dpg_c",
+          "points": [
+            [
+              1.0,
+              12.0
+            ],
+            [
+              1.0,
+              13.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGK",
+          "mid": "3pg_c",
+          "source": "met:3pg_c",
+          "target": "rxn:PGK",
+          "points": [
+            [
+              1.0,
+              11.0
+            ],
+            [
+              1.0,
+              12.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGM",
+          "mid": "2pg_c",
+          "source": "met:2pg_c",
+          "target": "rxn:PGM",
+          "points": [
+            [
+              1.0,
+              9.0
+            ],
+            [
+              1.0,
+              10.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PGM",
+          "mid": "3pg_c",
+          "source": "rxn:PGM",
+          "target": "met:3pg_c",
+          "points": [
+            [
+              1.0,
+              10.0
+            ],
+            [
+              1.0,
+              11.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PYK",
+          "mid": "pep_c",
+          "source": "met:pep_c",
+          "target": "rxn:PYK",
+          "points": [
+            [
+              1.0,
+              7.0
+            ],
+            [
+              1.0,
+              6.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "PYK",
+          "mid": "pyr_c",
+          "source": "rxn:PYK",
+          "target": "met:pyr_c",
+          "points": [
+            [
+              1.0,
+              6.0
+            ],
+            [
+              1.0,
+              5.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "SUCDi",
+          "mid": "fum_c",
+          "source": "rxn:SUCDi",
+          "target": "met:fum_c",
+          "points": [
+            [
+              5.0,
+              1.0
+            ],
+            [
+              4.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "SUCDi",
+          "mid": "succ_c",
+          "source": "met:succ_c",
+          "target": "rxn:SUCDi",
+          "points": [
+            [
+              6.0,
+              1.0
+            ],
+            [
+              5.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "SUCOAS",
+          "mid": "succ_c",
+          "source": "met:succ_c",
+          "target": "rxn:SUCOAS",
+          "points": [
+            [
+              6.0,
+              1.0
+            ],
+            [
+              7.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "SUCOAS",
+          "mid": "succoa_c",
+          "source": "rxn:SUCOAS",
+          "target": "met:succoa_c",
+          "points": [
+            [
+              7.0,
+              1.0
+            ],
+            [
+              8.0,
+              1.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "TPI",
+          "mid": "dhap_c",
+          "source": "met:dhap_c",
+          "target": "rxn:TPI",
+          "points": [
+            [
+              1.0,
+              17.0
+            ],
+            [
+              1.0,
+              16.0
+            ]
+          ],
+          "priority": 2
+        },
+        {
+          "rid": "TPI",
+          "mid": "g3p_c",
+          "source": "rxn:TPI",
+          "target": "met:g3p_c",
+          "points": [
+            [
+              1.0,
+              16.0
+            ],
+            [
+              1.0,
+              15.0
+            ]
+          ],
+          "priority": 2
+        }
+      ],
+      "allocations": [
+        {
+          "rid": "GLCptspp",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": -1.0,
+          "offset": -2,
+          "inset_start": true,
+          "inset_end": false
+        },
+        {
+          "rid": "FBA",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 0.0,
+          "offset": -1,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "AKGDH",
+          "axis": 1,
+          "original_level": 9.0,
+          "lane_level": 11.0,
+          "offset": 2,
+          "inset_start": true,
+          "inset_end": true
+        },
+        {
+          "rid": "MDH",
+          "axis": 1,
+          "original_level": 4.0,
+          "lane_level": 4.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ACONTa",
+          "axis": 0,
+          "original_level": 6.0,
+          "lane_level": 6.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ACONTa",
+          "axis": 0,
+          "original_level": 6.0,
+          "lane_level": 6.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ACONTb",
+          "axis": 0,
+          "original_level": 6.0,
+          "lane_level": 6.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ACONTb",
+          "axis": 1,
+          "original_level": 9.0,
+          "lane_level": 9.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "AKGDH",
+          "axis": 0,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "CS",
+          "axis": 0,
+          "original_level": 6.0,
+          "lane_level": 6.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "CS",
+          "axis": 0,
+          "original_level": 6.0,
+          "lane_level": 6.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ENO",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ENO",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "FBA",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "FUM",
+          "axis": 1,
+          "original_level": 4.0,
+          "lane_level": 4.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "FUM",
+          "axis": 1,
+          "original_level": 4.0,
+          "lane_level": 4.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "GAPD",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "GAPD",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "GLCptspp",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "GLCtex_copy1",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "GLCtex_copy1",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ICDHyr",
+          "axis": 1,
+          "original_level": 9.0,
+          "lane_level": 9.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "ICDHyr",
+          "axis": 1,
+          "original_level": 9.0,
+          "lane_level": 9.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "MDH",
+          "axis": 1,
+          "original_level": 4.0,
+          "lane_level": 4.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PDH",
+          "axis": 0,
+          "original_level": 5.0,
+          "lane_level": 5.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PDH",
+          "axis": 0,
+          "original_level": 5.0,
+          "lane_level": 5.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PFK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PFK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGI",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGI",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGM",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PGM",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PYK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "PYK",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "SUCDi",
+          "axis": 0,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "SUCDi",
+          "axis": 0,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "SUCOAS",
+          "axis": 0,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "SUCOAS",
+          "axis": 0,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "TPI",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "TPI",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "CS",
+          "axis": 0,
+          "original_level": 5.0,
+          "lane_level": 5.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "CS",
+          "axis": 1,
+          "original_level": 5.0,
+          "lane_level": 5.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        },
+        {
+          "rid": "EX_glc__D_e",
+          "axis": 1,
+          "original_level": 1.0,
+          "lane_level": 1.0,
+          "offset": 0,
+          "inset_start": false,
+          "inset_end": false
+        }
+      ],
+      "unresolved": [],
+      "nodes_moved": false,
+      "global_optimality_proven": false,
+      "minimum_parallel_gap_grid": 1.0,
+      "parallel_pairs": 78,
+      "violations": [],
+      "verified": true,
+      "method": "Constraint-checked greedy routing channels",
+      "elapsed_seconds": 0.8084027849836275,
+      "signature": "043e4a609cc73f46c8578385",
+      "routing_envelope": {
+        "x_min": -1.0,
+        "x_max": 11.0,
+        "y_min": 1.0,
+        "y_max": 28.0
+      }
     }
   },
   "source_reactions": 349,
@@ -2206,12 +3863,12 @@
       "stoichiometry_preserved": true,
       "coordinate_transform_verified": true,
       "segment_endpoints_verified": true,
-      "nodes": 4298,
+      "nodes": 4295,
       "source_nodes": 921,
-      "routing_nodes": 3377,
+      "routing_nodes": 3374,
       "orthogonal_segments_verified": true,
       "reactions": 326,
-      "segments": 4450,
+      "segments": 4447,
       "primary_metabolites": 250,
       "secondary_metabolites": 345,
       "currency_copy_counts": {
@@ -2658,231 +4315,17 @@
       "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
-      "shifted_segments": 19,
-      "unresolved": [
-        {
-          "reaction_id": "GLCptspp",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "ENO",
-            "FBA",
-            "GAPD"
-          ]
-        },
-        {
-          "reaction_id": "PFK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PFK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGI",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGI",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGM",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PGM",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PYK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "PYK",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "TPI",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "FBA",
-            "GLCptspp"
-          ]
-        },
-        {
-          "reaction_id": "TPI",
-          "axis": 1,
-          "level": 1.0,
-          "reason": "fixed backbone",
-          "conflicting_reactions": [
-            "FBA",
-            "GLCptspp"
-          ]
-        }
-      ],
-      "max_offset_grid": 0.3000000000000007,
+      "shifted_segments": 20,
+      "unresolved": [],
+      "max_offset_grid": 0.44999999999999996,
       "fixed_endpoints": true,
       "shared_same_reaction_trunks": true,
       "node_detours": {
         "trunk_grouping": "positive_length_overlap",
         "route_offset_grid": 0.3,
         "enabled": true,
-        "shifted_segments": 20,
+        "shifted_segments": 17,
         "unresolved": [
-          {
-            "reaction_id": "AKGDH",
-            "axis": 1,
-            "level": 9.0,
-            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-            "nodes": [
-              [
-                9.0,
-                2.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "GLCptspp",
-            "axis": 1,
-            "level": 1.0,
-            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-            "nodes": [
-              [
-                1.0,
-                6.0
-              ],
-              [
-                1.0,
-                7.0
-              ],
-              [
-                1.0,
-                8.0
-              ],
-              [
-                1.0,
-                9.0
-              ],
-              [
-                1.0,
-                10.0
-              ],
-              [
-                1.0,
-                11.0
-              ],
-              [
-                1.0,
-                12.0
-              ],
-              [
-                1.0,
-                13.0
-              ],
-              [
-                1.0,
-                14.0
-              ],
-              [
-                1.0,
-                15.0
-              ],
-              [
-                1.0,
-                16.0
-              ],
-              [
-                1.0,
-                17.0
-              ],
-              [
-                1.0,
-                18.0
-              ],
-              [
-                1.0,
-                19.0
-              ],
-              [
-                1.0,
-                20.0
-              ],
-              [
-                1.0,
-                21.0
-              ],
-              [
-                1.0,
-                22.0
-              ],
-              [
-                1.0,
-                23.0
-              ]
-            ]
-          },
           {
             "reaction_id": "AKGt2rpp",
             "axis": 0,
@@ -3285,8 +4728,8 @@
           },
           {
             "reaction_id": "XYLtex",
-            "axis": 0,
-            "level": 1.08,
+            "axis": 1,
+            "level": 9.0,
             "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
@@ -3298,7 +4741,7 @@
           {
             "reaction_id": "XYLtex",
             "axis": 1,
-            "level": 9.0,
+            "level": 9.08,
             "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
             "nodes": [
               [
@@ -3310,17 +4753,8 @@
         ],
         "shape": "rectangle with optional endpoint steps",
         "endpoint_step_grid": 0.15,
-        "endpoint_step_fallback_segments": 18,
+        "endpoint_step_fallback_segments": 17,
         "detours": [
-          {
-            "reaction_id": "FBA",
-            "axis": 1,
-            "offset_grid": -0.3,
-            "inset_start": false,
-            "inset_end": false,
-            "segments": 2,
-            "existing_endpoint_stem_overlaps": 0
-          },
           {
             "reaction_id": "ACALD",
             "axis": 1,
@@ -3360,7 +4794,7 @@
           {
             "reaction_id": "AKGtex",
             "axis": 0,
-            "offset_grid": 0.3,
+            "offset_grid": -0.3,
             "inset_start": true,
             "inset_end": true,
             "segments": 1,
@@ -3421,15 +4855,6 @@
             "existing_endpoint_stem_overlaps": 6
           },
           {
-            "reaction_id": "EX_rib__D_e",
-            "axis": 0,
-            "offset_grid": -0.3,
-            "inset_start": true,
-            "inset_end": false,
-            "segments": 1,
-            "existing_endpoint_stem_overlaps": 5
-          },
-          {
             "reaction_id": "GLYCAt2rpp",
             "axis": 1,
             "offset_grid": 0.3,
@@ -3477,9 +4902,205 @@
         ],
         "fixed_endpoints": true,
         "shared_same_reaction_trunks": true,
-        "backbone_shifted_segments": 1,
+        "backbone_shifted_segments": 0,
         "max_offset_grid": 0.3,
-        "backbone_max_offset_grid": 0.3
+        "backbone_max_offset_grid": 0
+      },
+      "red_parallel_layout": {
+        "enabled": true,
+        "requested_spacing_grid": 1,
+        "min_parallel_length_grid": 1,
+        "stage": "grid layout routing-channel allocation",
+        "obstacle_node_ids": [
+          "met:13dpg_c",
+          "met:2pg_c",
+          "met:3pg_c",
+          "met:6pgc_c",
+          "met:ac_c",
+          "met:ac_e",
+          "met:ac_p",
+          "met:acald_c",
+          "met:acald_e",
+          "met:acald_p",
+          "met:accoa_c",
+          "met:acon_C_c",
+          "met:akg_c",
+          "met:akg_e",
+          "met:akg_p",
+          "met:cit_c",
+          "met:dhap_c",
+          "met:etoh_c",
+          "met:etoh_e",
+          "met:etoh_p",
+          "met:f6p_c",
+          "met:fdp_c",
+          "met:for_c",
+          "met:for_e",
+          "met:for_p",
+          "met:fru_e",
+          "met:fru_p",
+          "met:fum_c",
+          "met:fum_e",
+          "met:fum_p",
+          "met:g3p_c",
+          "met:g6p_c",
+          "met:glc__D_e",
+          "met:glc__D_p",
+          "met:glcn_c",
+          "met:glcn_e",
+          "met:glcn_p",
+          "met:gln__L_c",
+          "met:gln__L_e",
+          "met:gln__L_p",
+          "met:glu__L_c",
+          "met:glu__L_e",
+          "met:glu__L_p",
+          "met:glyc3p_c",
+          "met:glyc__R_c",
+          "met:glyc__R_e",
+          "met:glyc__R_p",
+          "met:glyc_c",
+          "met:glyc_e",
+          "met:glyc_p",
+          "met:icit_c",
+          "met:lac__D_c",
+          "met:lac__D_e",
+          "met:lac__D_p",
+          "met:mal__L_c",
+          "met:mal__L_e",
+          "met:mal__L_p",
+          "met:oaa_c",
+          "met:pep_c",
+          "met:pyr_c",
+          "met:pyr_e",
+          "met:pyr_p",
+          "met:r5p_c",
+          "met:rib__D_c",
+          "met:rib__D_e",
+          "met:rib__D_p",
+          "met:ru5p__D_c",
+          "met:succ_c",
+          "met:succ_e",
+          "met:succ_p",
+          "met:succoa_c",
+          "met:xu5p__D_c",
+          "met:xyl__D_c",
+          "met:xyl__D_e",
+          "met:xyl__D_p",
+          "met:xylu__D_c",
+          "rxn:ACALD",
+          "rxn:ACALDtex",
+          "rxn:ACALDtpp",
+          "rxn:ACONTa",
+          "rxn:ACONTb",
+          "rxn:ACt2rpp",
+          "rxn:ACtex",
+          "rxn:AKGDH",
+          "rxn:AKGt2rpp",
+          "rxn:AKGtex",
+          "rxn:ALCD2x",
+          "rxn:Biomass",
+          "rxn:CS",
+          "rxn:D_LACt2pp",
+          "rxn:D_LACtex",
+          "rxn:ENO",
+          "rxn:ETOHtex",
+          "rxn:ETOHtrpp",
+          "rxn:EX_ac_e",
+          "rxn:EX_acald_e",
+          "rxn:EX_akg_e",
+          "rxn:EX_etoh_e",
+          "rxn:EX_for_e",
+          "rxn:EX_fru_e",
+          "rxn:EX_fum_e",
+          "rxn:EX_glc__D_e",
+          "rxn:EX_glcn_e",
+          "rxn:EX_gln__L_e",
+          "rxn:EX_glu__L_e",
+          "rxn:EX_glyc__R_e",
+          "rxn:EX_glyc_e",
+          "rxn:EX_lac__D_e",
+          "rxn:EX_mal__L_e",
+          "rxn:EX_pyr_e",
+          "rxn:EX_rib__D_e",
+          "rxn:EX_succ_e",
+          "rxn:EX_xyl__D_e",
+          "rxn:FBA",
+          "rxn:FORt2pp",
+          "rxn:FORtex",
+          "rxn:FRUpts2pp",
+          "rxn:FRUtex",
+          "rxn:FUM",
+          "rxn:FUMt2_2pp",
+          "rxn:FUMtex",
+          "rxn:G3PT",
+          "rxn:GAPD",
+          "rxn:GLCNt2rpp",
+          "rxn:GLCNtex",
+          "rxn:GLCptspp",
+          "rxn:GLCtex_copy1",
+          "rxn:GLNabcpp",
+          "rxn:GLNtex",
+          "rxn:GLUt2rpp",
+          "rxn:GLUtex",
+          "rxn:GLYCAt2rpp",
+          "rxn:GLYCAtex",
+          "rxn:GLYCK2",
+          "rxn:GLYCtex",
+          "rxn:GLYCtpp",
+          "rxn:GND",
+          "rxn:GNK",
+          "rxn:ICDHyr",
+          "rxn:LDH_D",
+          "rxn:MALt2_2pp",
+          "rxn:MALtex",
+          "rxn:MDH",
+          "rxn:PDH",
+          "rxn:PFK",
+          "rxn:PGI",
+          "rxn:PGK",
+          "rxn:PGM",
+          "rxn:PYK",
+          "rxn:PYRt2rpp",
+          "rxn:PYRtex",
+          "rxn:RBK",
+          "rxn:RIBabcpp",
+          "rxn:RIBtex",
+          "rxn:SUCCt1pp",
+          "rxn:SUCCtex",
+          "rxn:SUCDi",
+          "rxn:SUCOAS",
+          "rxn:TKT1",
+          "rxn:TPI",
+          "rxn:XYLI1",
+          "rxn:XYLK",
+          "rxn:XYLt2pp",
+          "rxn:XYLtex"
+        ],
+        "unresolved": [],
+        "nodes_moved": false,
+        "global_optimality_proven": false,
+        "minimum_parallel_gap_grid": 1.0,
+        "parallel_pairs": 78,
+        "violations": [],
+        "verified": true,
+        "method": "Constraint-checked greedy routing channels",
+        "elapsed_seconds": 0.8084027849836275,
+        "signature": "043e4a609cc73f46c8578385",
+        "routing_envelope": {
+          "x_min": -1.0,
+          "x_max": 11.0,
+          "y_min": 1.0,
+          "y_max": 28.0
+        }
+      },
+      "red_parallel_spacing": {
+        "requested_spacing_grid": 1,
+        "min_parallel_length_grid": 1,
+        "minimum_parallel_gap_grid": 1.0,
+        "parallel_pairs": 78,
+        "violations": [],
+        "verified": true
       },
       "node_obstacle_policy": "red_orange_structural_nodes",
       "obstacle_node_ids": [
@@ -4572,13 +6193,13 @@
         "copy:Biomass:utp_c": 0
       },
       "original_route_length": 9616.25,
-      "display_route_length": 9639.65
+      "display_route_length": 9658.45
     },
     "escher": {
       "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
-      "shifted_segments": 10,
+      "shifted_segments": 9,
       "unresolved": [],
       "max_offset_grid": 0.23999999999999994,
       "fixed_endpoints": true,
@@ -4586,6 +6207,15 @@
     }
   },
   "escher_overlap_routing": {
+    "red_layout_signature": "043e4a609cc73f46c8578385",
+    "red_parallel_spacing": {
+      "requested_spacing_grid": 1,
+      "min_parallel_length_grid": 1,
+      "minimum_parallel_gap_grid": 1.0,
+      "parallel_pairs": 78,
+      "violations": [],
+      "verified": true
+    },
     "trunk_grouping": "positive_length_overlap",
     "node_obstacle_policy": "red_orange_structural_nodes",
     "obstacle_node_ids": [
@@ -4758,20 +6388,8 @@
       "trunk_grouping": "positive_length_overlap",
       "route_offset_grid": 0.3,
       "enabled": true,
-      "shifted_segments": 18,
+      "shifted_segments": 16,
       "unresolved": [
-        {
-          "reaction_id": "AKGDH",
-          "axis": 1,
-          "level": 1700,
-          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-          "nodes": [
-            [
-              1700,
-              4760
-            ]
-          ]
-        },
         {
           "reaction_id": "ACALDtpp",
           "axis": 1,
@@ -5159,7 +6777,7 @@
         {
           "reaction_id": "AKGtex",
           "axis": 0,
-          "offset_grid": 0.3,
+          "offset_grid": -0.3,
           "inset_start": false,
           "inset_end": false,
           "segments": 1,
@@ -5229,26 +6847,8 @@
           "existing_endpoint_stem_overlaps": 0
         },
         {
-          "reaction_id": "EX_rib__D_e",
-          "axis": 0,
-          "offset_grid": 0.3,
-          "inset_start": false,
-          "inset_end": false,
-          "segments": 1,
-          "existing_endpoint_stem_overlaps": 0
-        },
-        {
           "reaction_id": "GND",
           "axis": 1,
-          "offset_grid": 0.3,
-          "inset_start": false,
-          "inset_end": false,
-          "segments": 1,
-          "existing_endpoint_stem_overlaps": 0
-        },
-        {
-          "reaction_id": "MALt2_2pp",
-          "axis": 0,
           "offset_grid": 0.3,
           "inset_start": false,
           "inset_end": false,
@@ -5302,7 +6902,7 @@
       "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
-      "shifted_segments": 10,
+      "shifted_segments": 9,
       "unresolved": [],
       "max_offset_grid": 0.23999999999999994,
       "fixed_endpoints": true,
@@ -5327,5 +6927,6 @@
     "primary_backbone_nodes_fixed": true,
     "primary_backbone_max_offset": 0.0
   },
-  "route_offset_grid": 0.3
+  "route_offset_grid": 0.3,
+  "red_parallel_spacing_grid": 1
 }

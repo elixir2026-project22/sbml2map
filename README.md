@@ -571,3 +571,36 @@ Shared trunks are grouped only when their collinear intervals overlap with
 positive length. Sharing an endpoint alone does not bundle branches. This keeps
 collision-free short branches straight, including `glc__D_e`–`GLCpts` in the
 saved E. coli core SVG; long branches still detour when needed.
+
+
+## Reserve red parallel channels during layout
+
+`--red-parallel-spacing` sets the minimum centerline spacing for red segments
+of different reactions that run in parallel for at least one grid unit. The
+default is `1.0`; use `0` to disable this layout condition. Same-reaction shared
+trunks and endpoint-only contacts are excluded. Negative/non-finite values fail.
+
+```bash
+python sbml2map.py --model models/e_coli_core.xml --no-sampling \
+  --red-parallel-spacing 1 --route-offset 0.3 \
+  --output-dir results/runs/e_coli_core_red_spacing
+```
+
+The grid layout stage reserves compatible routing channels before rendering;
+SVG and Escher consume the same planned red paths. Fixed biological node
+positions are preserved. When fixed endpoints cannot be separated by moving
+nodes, routing channels can extend the drawing grid; `routing_envelope` records
+this expansion. The layout objective remains the original node-incidence cost;
+channel displacement is optimized separately, without a joint global-optimality
+claim. Both MILP-based and heuristic grid layouts use the same geometric checks.
+A bounded greedy allocation is tried first; the MILP path can use a bounded
+finite-candidate solver if necessary. Each channel-allocation search has a budget of at most 3 seconds (or the smaller
+layout time limit), plus final geometry validation. Candidate grid layouts can
+invoke this allocation more than once; the placement report records the total
+additional time as `red_parallel_layout_total_seconds`.
+Unresolved assignments are reported, never marked as satisfying the condition.
+
+`--route-offset` still controls ordinary red/orange node-avoidance detours.
+Verified red channels are kept fixed by subsequent display routing. Reports
+record the requested spacing, minimum actual spacing, violations, elapsed time
+and selected channels under `red_parallel_layout` / `red_parallel_spacing`.

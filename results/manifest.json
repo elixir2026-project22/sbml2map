@@ -67,7 +67,8 @@
         "whole_segment_node_avoidance_verified": true,
         "formate_branch_clears_succinate_with_endpoint_step": true,
         "only_structural_red_orange_nodes_are_obstacles": true,
-        "glucose_uptake_branch_stays_straight_in_both_viewers": true
+        "glucose_uptake_branch_stays_straight_in_both_viewers": true,
+        "layout_stage_red_parallel_spacing_verified_in_both_viewers": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -92,16 +93,16 @@
           "sha256": "92da2931394b1adb05c409055f492da6bbe10bea8c02b0e25b89142fabe21c65"
         },
         "escher_map.json": {
-          "bytes": 817865,
-          "sha256": "9097015b8037f9f0c3552d81edf0114a0a9fc8820d6d751cef923c923c2982fa"
+          "bytes": 849344,
+          "sha256": "85c15f40bab6f30bf39afff189b3786f4b99f584980afeaab2852aacaee1b593"
         },
         "escher_map_metadata.json": {
           "bytes": 377480,
           "sha256": "66299642fb71f1cc2efe99bcb5f9d45a06aeb4629df2130749b713935b58abbd"
         },
         "escher_preview.html": {
-          "bytes": 1437609,
-          "sha256": "0292baa010ad00a5b45b526df6ca22958e90cb3a688c6396910c27a3ad1d12b8"
+          "bytes": 1448814,
+          "sha256": "959c7abc29880dbb294177777ae1f019ec0a6ffda9b5cfdff0d9f1f6570d9b17"
         },
         "exchange_connectors.json": {
           "bytes": 3333,
@@ -120,32 +121,32 @@
           "sha256": "9029ff788c311540c11480c7a7ab34cddc9a32234a2222f873632872c5175c3d"
         },
         "index.html": {
-          "bytes": 589831,
-          "sha256": "d2c538a857fc0a4d17f1100690514124ba14c7e9270e90f9dfbaa2b8ded3f15e"
+          "bytes": 588267,
+          "sha256": "d8f33e2c35b364c364722ce78d0725a7b681370f8b28470533b5e051feb77393"
         },
         "layout.png": {
-          "bytes": 493663,
-          "sha256": "6b5e2e87a67a4252f260f4e49e9e56316535547cc2359868caead1ea25c040bd"
+          "bytes": 497761,
+          "sha256": "4a9caf4fe912a784d4dd7022b8c8cb8898598afdd8da51a865c2a366b38fbe7b"
         },
         "layout.svg": {
-          "bytes": 438711,
-          "sha256": "7d84935ad177994b3d65692453b32f7bf0477b34cf75b658872dd0e64cc65f1a"
+          "bytes": 437147,
+          "sha256": "8fead974bb1e1e406b7bc03064232c8990f266d3a43dd42fff7cbd56e5ccdc6f"
         },
         "major_backbones.json": {
-          "bytes": 19735,
-          "sha256": "317ff605f7cf103b9c87582e834e911918067df32ee1c23776ff6163f77514ef"
+          "bytes": 44580,
+          "sha256": "326e0f2965f4a8e9326da18e6d56d025c38ee88d2b48b4ffec96a8802953f661"
         },
         "metabolite_classification.json": {
           "bytes": 13105,
           "sha256": "1c454fac51bf90a6ac632537db3802bfef701506ab01ba11d5b516ef35570a63"
         },
         "orange_routes.png": {
-          "bytes": 326683,
-          "sha256": "0d31b48e3b9d7bc507b53234fed2c9c4f63bfd58871e40a4dc6158849e06bf52"
+          "bytes": 329939,
+          "sha256": "94d460b3931ec2bd20ef5ac9ed04beda0db289e1a0320ea2a2ffce978d9df938"
         },
         "orange_routes.svg": {
-          "bytes": 260191,
-          "sha256": "15542a3905be788fa94a47fc0390861342b6ce3cddf5e369b2de39df7935bdbf"
+          "bytes": 259978,
+          "sha256": "60531aaae8003028de9d158194e58bfa4ed8e0e9eda4e32fded2dc5ad378f2d4"
         },
         "pathway_extraction.json": {
           "bytes": 202310,
@@ -160,8 +161,8 @@
           "sha256": "7e1e18a9d69d2f6bcccf3e15811c173b5831f9d0d840ce983ee2eae181c207cd"
         },
         "report.json": {
-          "bytes": 62594,
-          "sha256": "4029d2e6fce95bb842ed352767ddfb584362719b31fcd48b78b65e18fee6ce15"
+          "bytes": 92700,
+          "sha256": "9280d6b6ab194685ea17029d5fb4b06539cfc7d42c8972b6b90cc0129ba4a6d1"
         },
         "run.log": {
           "bytes": 7810,
@@ -204,8 +205,8 @@
           "sha256": "a3a86098e099f60f0adbf8c3302c206106b3ce82655ad5dc82c2b03d2c058cd8"
         },
         "parallel_routing.json": {
-          "bytes": 14269,
-          "sha256": "b54f0ec45020afba8620356769d55a5baeb252b5d87003e3e2eb0ced146e2d75"
+          "bytes": 14086,
+          "sha256": "6788186e82b201b1f9fe0224b3f9415db527978a74d53e0dc23c486973eb2998"
         }
       },
       "program_name": "sbml2escher",
@@ -214,19 +215,20 @@
       "recalculated_at_utc": "2026-11-10T08:44:57.454660+00:00",
       "source_files_sha256": {
         "sbml2escher.py": "2d17e97c6556986dbab2fe7c0bb527d7d41d776623ac3498b5dd10ab7e88d812",
-        "escher_grid.py": "9facb09010de38959a965cd686b3dabe14783a4ec38e9eb414a48cb164b351d6",
-        "grid_layout2.py": "c7aeb4f14b0b113bb081280cc6a8abb5fe1191dfae924111a0805c6b7a85f5e9",
+        "escher_grid.py": "de7a561e0751d2862588e3517e312183c55f211283a7e8da018017e53d50d3e7",
+        "grid_layout2.py": "3ec3e68bd26a8d804c69f1c8bb215b4ad244920a158f942fcb249fe40e6e7af9",
         "bacterial_pathways.py": "64ac1c4a0919e1fe6680b44681f74c462fd5145c3beae14253fe8d81563165f1",
         "flux_sampling2.py": "b49d4afbd4e523c37b0dabec2884948f17d19f0809ebba27b47a41a1b1373b4c",
         "data/bacteria/central_reference.json": "f924f3fc28bbeef00e6ee8593acbc9e9c76f4e764333aee3dc460bc4e8a64380",
         "highlighting.py": "99efc02d908ffb1d58ae227b236a4781ae68efc51139c61e38df0ab6de3959ab",
         "highlight_controls.js": "f6a2b483095bea5b9246511aa641332e4c48adcb420b4811349c5c530fe33348",
         "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
-        "export_escher.py": "5dc1778a84ab96eca2657012da7cb2c796b781510d77ea1dabcd340c310bded1",
-        "escher_routing.py": "047fa4079870c185ae893c1dc09521941760b7533fd99fec692046978ab22fe5",
+        "export_escher.py": "86867bbb9d73205252c161568d1fefba16efffed951f7775339dfbcd2dec13da",
+        "escher_routing.py": "b4576ea9db15b415c9852edcd8d60d434cc4e48ee6d86b4bb371bf39d3038435",
         "escher_layers.js": "6c8bfdec85bab4e5e81f00090ba2fce3e2640072a7a062248bc59cb903cd0f46",
-        "parallel_routing.py": "e666c973c65d3577c6accc5d3ba15865f05f7fbd8f59114d021b630a34b756f4",
-        "sbml2map.py": "735f64300a8b943813ea809778972b86b13794fff59d4147f1567e8a9d148219"
+        "parallel_routing.py": "bb22c309f4e60b9eafab5f86de236847d8544f5ab7a369d3b5ff22df49f5b1fd",
+        "sbml2map.py": "f2c4f002bfe015c522f6710e4ea31b54646a5c15ba4500b730cd635d41d5fbe6",
+        "red_route_layout.py": "e45676712ad26edc4b9cb413451e88f527581aefd2ebf0a15d5713eb14a96e29"
       },
       "tca_orientation": "clockwise",
       "fba": {
@@ -252,12 +254,12 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 657,
+        "nodes": 645,
         "source_nodes": 206,
-        "routing_nodes": 451,
+        "routing_nodes": 439,
         "orthogonal_segments_verified": true,
         "reactions": 76,
-        "segments": 688,
+        "segments": 676,
         "primary_metabolites": 46,
         "secondary_metabolites": 84,
         "currency_copy_counts": {
@@ -283,6 +285,15 @@
       "escher_initial_flux_data_loaded": false,
       "escher_data_overlay_disables_pathway_colors": true,
       "escher_overlap_routing": {
+        "red_layout_signature": "35f6293f0bbba6043e7472fd",
+        "red_parallel_spacing": {
+          "requested_spacing_grid": 1,
+          "min_parallel_length_grid": 1,
+          "minimum_parallel_gap_grid": 1.0,
+          "parallel_pairs": 62,
+          "violations": [],
+          "verified": true
+        },
         "trunk_grouping": "positive_length_overlap",
         "node_obstacle_policy": "red_orange_structural_nodes",
         "obstacle_node_ids": [
@@ -551,7 +562,7 @@
           "trunk_grouping": "positive_length_overlap",
           "clearance_grid": 0.3,
           "min_parallel_length_grid": 1.0,
-          "shifted_segments": 5,
+          "shifted_segments": 2,
           "unresolved": [],
           "max_offset_grid": 0.24000000000000024,
           "fixed_endpoints": true,
@@ -600,7 +611,15 @@
           "unchanged": true
         }
       },
-      "route_offset_grid": 0.3
+      "route_offset_grid": 0.3,
+      "red_parallel_layout": {
+        "requested_spacing_grid": 1,
+        "min_parallel_length_grid": 1,
+        "minimum_parallel_gap_grid": 1.0,
+        "parallel_pairs": 62,
+        "violations": [],
+        "verified": true
+      }
     },
     {
       "name": "iML1515",

@@ -4,6 +4,8 @@ import hashlib
 import json
 import math
 
+from red_route_layout import plan_from_metadata,spacing_report
+
 from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
 
 
@@ -122,12 +124,26 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
             vertical=previous if previous['axis']==1 else following
             joints.append((vertical['level']+vertical['offset'],horizontal['level']+horizontal['offset']))
         route['points']=_simplify([start,a,shifted_a,*joints,shifted_z,z,end])
+    red_plan=plan_from_metadata(meta) if enabled else None
+    if red_plan and red_plan.get('enabled') and red_plan.get('verified'):
+        planned={(r['rid'],r['mid']):r for r in red_plan['routes']}
+        transform=meta['coordinate_transform'];scale=transform['scale']
+        for route in routes:
+            reserved=planned.get((route['rid'],route['mid']))
+            if reserved:
+                points=[(scale*(x-transform['x_min'])+transform['padding'],
+                         scale*(transform['y_max']-y)+transform['padding']) for x,y in reserved['points']]
+                if reserved['source']!=sources[route['marker']]:points.reverse()
+                route.update(points=points,routing_locked=True)
     parallel_report = separate_parallel(
         routes, grid=meta['coordinate_transform']['scale'],
         obstacles=obstacles) if enabled else None
     node_report = avoid_nodes(routes, grid=meta['coordinate_transform']['scale'],
         obstacles=obstacles,
         route_offset=route_offset) if enabled else None
+    red_check=spacing_report(routes,red_plan['requested_spacing_grid'],meta['coordinate_transform']['scale']) if red_plan else None
+    if red_plan and red_plan.get('enabled') and red_plan.get('verified') and not red_check['verified']:
+        raise RuntimeError('Preallocated red spacing changed during Escher rendering')
     map_nodes={key:old_nodes[key] for key in sources}
     node_number=max(map(int,sources))+1
     segment_number=max(map(int,body['reactions']))+1
@@ -145,7 +161,8 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(trunk_grouping='positive_length_overlap',
+    meta['overlap_routing']=dict(red_layout_signature=(red_plan or {}).get('signature'),red_parallel_spacing=red_check,
+                                trunk_grouping='positive_length_overlap',
                                 node_obstacle_policy='red_orange_structural_nodes',obstacle_node_ids=obstacle_keys,
                                 node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
                                 shifted_legs=sum(bool(l['offset']) for l in legs),

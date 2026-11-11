@@ -80,3 +80,11 @@ and protected source node IDs are recorded as `node_obstacle_policy` and
 Shared trunks require positive-length overlap. Branches that only touch at an
 endpoint are routed separately, keeping the E. coli core `glc__D_e`–`GLCpts`
 branch straight while colliding long branches can detour.
+
+
+Red/red runs of at least one grid unit now reserve channels during grid layout,
+with `--red-parallel-spacing 1` by default (`0` disables the condition). SVG and
+Escher share these paths. Fixed node positions remain unchanged; outer routing
+channels may expand the drawing grid. Actual spacing and unresolved constraints
+are recorded under `red_parallel_spacing`; layout planning and its elapsed time
+are under `red_parallel_layout`. This option is independent of `--route-offset`.

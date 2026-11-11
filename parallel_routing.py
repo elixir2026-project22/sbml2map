@@ -74,7 +74,7 @@ def separate_parallel(paths, grid=1.0, obstacles=(), clearance=.3, min_overlap=1
     for index, path in enumerate(paths):
         for part, leg in enumerate(_legs(path['points'])):
             leg.update(path=index, part=part, rid=path['rid'], priority=path['priority'],
-                       fixed=bool(path.get('backbone')), offset=0.0)
+                       fixed=bool(path.get('backbone') or path.get('routing_locked')), offset=0.0)
             entries.append(leg)
             if leg['priority'] > 0:
                 buckets[(leg['rid'], leg['priority'], leg['axis'], round(leg['level']/grid, 8))].append(leg)
@@ -208,7 +208,7 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
         endpoints={tuple(path['points'][0]),tuple(path['points'][-1])}
         for part,leg in enumerate(_legs(path['points'])):
             leg.update(path=index,part=part,rid=path['rid'],priority=path['priority'],
-                       endpoints=endpoints,backbone=bool(path.get('backbone')),points=[leg['a'],leg['b']])
+                       endpoints=endpoints,backbone=bool(path.get('backbone')),routing_locked=bool(path.get('routing_locked')),points=[leg['a'],leg['b']])
             entries.append(leg)
             if leg['priority']>0:
                 buckets[(leg['rid'],leg['priority'],leg['axis'],round(leg['level']/grid,8))].append(leg)
@@ -254,6 +254,9 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
     for group in groups:
         collisions=[(leg,hits(leg,leg['points'])) for leg in group]
         if not any(nodes for _,nodes in collisions):continue
+        if any(leg['routing_locked'] for leg in group):
+            report['unresolved'].append(dict(reaction_id=group[0]['rid'],reason='preallocated red lane requires protected-node review'))
+            continue
         candidates=[]
         # Preserve the simple U when possible. Add steps at one end, then both.
         for variants in [[(False,False)],[(True,False),(False,True)],[(True,True)]]:
