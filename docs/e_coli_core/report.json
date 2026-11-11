@@ -1770,6 +1770,7 @@
     }
   },
   "escher_overlap_routing": {
+    "trunk_grouping": "positive_length_overlap",
     "node_obstacle_policy": "red_orange_structural_nodes",
     "obstacle_node_ids": [
       "met:13dpg_c",
@@ -1857,6 +1858,7 @@
       "rxn:TPI"
     ],
     "node_detours": {
+      "trunk_grouping": "positive_length_overlap",
       "route_offset_grid": 0.3,
       "enabled": true,
       "shifted_segments": 3,
@@ -2033,6 +2035,7 @@
       "backbone_max_offset_grid": 0
     },
     "parallel_detours": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
       "shifted_segments": 5,
@@ -2062,6 +2065,7 @@
   },
   "display_parallel_routing": {
     "svg": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
       "shifted_segments": 5,
@@ -2079,6 +2083,24 @@
         },
         {
           "reaction_id": "PFK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PFK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PGI",
           "axis": 1,
           "level": 1.0,
           "reason": "fixed backbone",
@@ -2105,7 +2127,34 @@
           ]
         },
         {
+          "reaction_id": "PGK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
           "reaction_id": "PGM",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PGM",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCpts"
+          ]
+        },
+        {
+          "reaction_id": "PYK",
           "axis": 1,
           "level": 1.0,
           "reason": "fixed backbone",
@@ -2131,15 +2180,26 @@
             "FBA",
             "GLCpts"
           ]
+        },
+        {
+          "reaction_id": "TPI",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "FBA",
+            "GLCpts"
+          ]
         }
       ],
       "max_offset_grid": 0.3000000000000007,
       "fixed_endpoints": true,
       "shared_same_reaction_trunks": true,
       "node_detours": {
+        "trunk_grouping": "positive_length_overlap",
         "route_offset_grid": 0.3,
         "enabled": true,
-        "shifted_segments": 10,
+        "shifted_segments": 8,
         "unresolved": [
           {
             "reaction_id": "ACALD",
@@ -2304,7 +2364,7 @@
         ],
         "shape": "rectangle with optional endpoint steps",
         "endpoint_step_grid": 0.15,
-        "endpoint_step_fallback_segments": 7,
+        "endpoint_step_fallback_segments": 6,
         "detours": [
           {
             "reaction_id": "FBA",
@@ -2312,7 +2372,7 @@
             "offset_grid": -0.3,
             "inset_start": false,
             "inset_end": false,
-            "segments": 3,
+            "segments": 2,
             "existing_endpoint_stem_overlaps": 0
           },
           {
@@ -2321,7 +2381,7 @@
             "offset_grid": 0.3,
             "inset_start": true,
             "inset_end": true,
-            "segments": 4,
+            "segments": 3,
             "existing_endpoint_stem_overlaps": 9
           },
           {
@@ -2354,7 +2414,7 @@
         ],
         "fixed_endpoints": true,
         "shared_same_reaction_trunks": true,
-        "backbone_shifted_segments": 4,
+        "backbone_shifted_segments": 2,
         "max_offset_grid": 0.3,
         "backbone_max_offset_grid": 0.3
       },
@@ -2653,9 +2713,10 @@
         "copy:PDH:nadh_c": 0
       },
       "original_route_length": 982.8,
-      "display_route_length": 991.8
+      "display_route_length": 990.6
     },
     "escher": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
       "shifted_segments": 5,

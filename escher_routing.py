@@ -145,7 +145,8 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(node_obstacle_policy='red_orange_structural_nodes',obstacle_node_ids=obstacle_keys,
+    meta['overlap_routing']=dict(trunk_grouping='positive_length_overlap',
+                                node_obstacle_policy='red_orange_structural_nodes',obstacle_node_ids=obstacle_keys,
                                 node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
                                 shifted_legs=sum(bool(l['offset']) for l in legs),
                                 max_offset=max((abs(l['offset']) for l in legs),default=0),

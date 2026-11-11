@@ -62,7 +62,8 @@ def separate_parallel(paths, grid=1.0, obstacles=(), clearance=.3, min_overlap=1
     """Mutate path points, keeping endpoints and fixed backbone segments intact.
 
     Paths provide rid, priority (2 red / 1 orange / 0 other), points and optional
-    backbone. Same-reaction, same-color overlapping trunks share one offset.
+    backbone. Same-reaction, same-color trunks share an offset only when they overlap
+    with positive length; touching at an endpoint does not bundle them.
     Obstacles are biological node coordinates; crossings of other lines are
     scored when choosing a side. Unplaceable groups remain unchanged and are
     recorded. Geometry, never fluxes or chemistry, is changed.
@@ -81,7 +82,8 @@ def separate_parallel(paths, grid=1.0, obstacles=(), clearance=.3, min_overlap=1
     for key, legs in sorted(buckets.items()):
         group=[]; end=-math.inf
         for leg in sorted(legs, key=lambda x:(x['lo'],x['hi'],x['path'],x['part'])):
-            if group and leg['lo'] > end+EPS:
+            # Sharing only an endpoint must not bundle a collision-free branch.
+            if group and leg['lo'] >= end-EPS:
                 groups.append(group); group=[]
             group.append(leg); end=max(end,leg['hi'])
         if group: groups.append(group)
@@ -143,7 +145,7 @@ def separate_parallel(paths, grid=1.0, obstacles=(), clearance=.3, min_overlap=1
             detour=_detour(leg,leg['offset'],grid)
             points.extend(detour if not points else detour[1:])
         path['points']=points
-    return dict(clearance_grid=clearance,min_parallel_length_grid=min_overlap,
+    return dict(trunk_grouping='positive_length_overlap',clearance_grid=clearance,min_parallel_length_grid=min_overlap,
                 shifted_segments=shifted,unresolved=unresolved,
                 max_offset_grid=max((abs(x['offset'])/grid for x in entries),default=0),
                 fixed_endpoints=True,shared_same_reaction_trunks=True)
@@ -191,7 +193,7 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
     If a direct U is blocked, a 0.15-grid step is tried at either or both ends.
     """
     validate_route_offset(route_offset)
-    report=dict(route_offset_grid=route_offset,enabled=route_offset>0,
+    report=dict(trunk_grouping='positive_length_overlap',route_offset_grid=route_offset,enabled=route_offset>0,
                 shifted_segments=0,unresolved=[],shape='rectangle with optional endpoint steps',
                 endpoint_step_grid=.15,endpoint_step_fallback_segments=0,detours=[],
                 fixed_endpoints=True,shared_same_reaction_trunks=True,
@@ -214,7 +216,8 @@ def avoid_nodes(paths, grid=1.0, obstacles=(), route_offset=.3):
     for key,legs in sorted(buckets.items()):
         group=[];end=-math.inf
         for leg in sorted(legs,key=lambda x:(x['lo'],x['hi'],x['path'],x['part'])):
-            if group and leg['lo']>end+EPS:
+            # Sharing only an endpoint must not bundle a collision-free branch.
+            if group and leg['lo']>=end-EPS:
                 groups.append(group);group=[]
             group.append(leg);end=max(end,leg['hi'])
         if group:groups.append(group)

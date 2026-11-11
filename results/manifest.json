@@ -66,7 +66,8 @@
         "parallel_detours_geometry_and_browser_verified": true,
         "whole_segment_node_avoidance_verified": true,
         "formate_branch_clears_succinate_with_endpoint_step": true,
-        "only_structural_red_orange_nodes_are_obstacles": true
+        "only_structural_red_orange_nodes_are_obstacles": true,
+        "glucose_uptake_branch_stays_straight_in_both_viewers": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -91,16 +92,16 @@
           "sha256": "92da2931394b1adb05c409055f492da6bbe10bea8c02b0e25b89142fabe21c65"
         },
         "escher_map.json": {
-          "bytes": 817702,
-          "sha256": "1d4660d05d9dca2dfaada4e814f6cd48f88eb683adec2e94c425c37102c1c563"
+          "bytes": 817865,
+          "sha256": "9097015b8037f9f0c3552d81edf0114a0a9fc8820d6d751cef923c923c2982fa"
         },
         "escher_map_metadata.json": {
           "bytes": 377480,
           "sha256": "66299642fb71f1cc2efe99bcb5f9d45a06aeb4629df2130749b713935b58abbd"
         },
         "escher_preview.html": {
-          "bytes": 1437474,
-          "sha256": "cb812f6b7b3f97b59c6d957ecd050fe5c2eb5035403a8008cce678bdbc64628e"
+          "bytes": 1437609,
+          "sha256": "0292baa010ad00a5b45b526df6ca22958e90cb3a688c6396910c27a3ad1d12b8"
         },
         "exchange_connectors.json": {
           "bytes": 3333,
@@ -119,16 +120,16 @@
           "sha256": "9029ff788c311540c11480c7a7ab34cddc9a32234a2222f873632872c5175c3d"
         },
         "index.html": {
-          "bytes": 589968,
-          "sha256": "20d8927196e72d5badb2c8ee03f80f456fa87f63b64187b3575f427dd783442c"
+          "bytes": 589831,
+          "sha256": "d2c538a857fc0a4d17f1100690514124ba14c7e9270e90f9dfbaa2b8ded3f15e"
         },
         "layout.png": {
-          "bytes": 493636,
-          "sha256": "189bcdea17bbb37efa6de8b2795a74b1b2e27dfd6765de12c36785dfbe0c83ec"
+          "bytes": 493663,
+          "sha256": "6b5e2e87a67a4252f260f4e49e9e56316535547cc2359868caead1ea25c040bd"
         },
         "layout.svg": {
-          "bytes": 438848,
-          "sha256": "c45b3f0d6eece238e47b414ba13946f6cbe9d8005da40f6b3f4487dea4c16f71"
+          "bytes": 438711,
+          "sha256": "7d84935ad177994b3d65692453b32f7bf0477b34cf75b658872dd0e64cc65f1a"
         },
         "major_backbones.json": {
           "bytes": 19735,
@@ -139,12 +140,12 @@
           "sha256": "1c454fac51bf90a6ac632537db3802bfef701506ab01ba11d5b516ef35570a63"
         },
         "orange_routes.png": {
-          "bytes": 326778,
-          "sha256": "ccb5f3c23e648a0e0c5e9f9e8424e41353f1e0eab7712f2c1ba6ff0adc6adb0f"
+          "bytes": 326683,
+          "sha256": "0d31b48e3b9d7bc507b53234fed2c9c4f63bfd58871e40a4dc6158849e06bf52"
         },
         "orange_routes.svg": {
-          "bytes": 260328,
-          "sha256": "174a66a3ca2f84888cf6cdfe90cceab18bbb084fb27221df32a61e0ea1b95a42"
+          "bytes": 260191,
+          "sha256": "15542a3905be788fa94a47fc0390861342b6ce3cddf5e369b2de39df7935bdbf"
         },
         "pathway_extraction.json": {
           "bytes": 202310,
@@ -159,8 +160,8 @@
           "sha256": "7e1e18a9d69d2f6bcccf3e15811c173b5831f9d0d840ce983ee2eae181c207cd"
         },
         "report.json": {
-          "bytes": 61034,
-          "sha256": "905af4b875eaece37e9b768cb16c6dffa4af02e53793d673877996ee211704ab"
+          "bytes": 62594,
+          "sha256": "4029d2e6fce95bb842ed352767ddfb584362719b31fcd48b78b65e18fee6ce15"
         },
         "run.log": {
           "bytes": 7810,
@@ -203,8 +204,8 @@
           "sha256": "a3a86098e099f60f0adbf8c3302c206106b3ce82655ad5dc82c2b03d2c058cd8"
         },
         "parallel_routing.json": {
-          "bytes": 13139,
-          "sha256": "63a23f7974325fb6bbf0990702ee5bbe9979ff9c97d9f7377c8d60299c0ddaeb"
+          "bytes": 14269,
+          "sha256": "b54f0ec45020afba8620356769d55a5baeb252b5d87003e3e2eb0ced146e2d75"
         }
       },
       "program_name": "sbml2escher",
@@ -221,10 +222,10 @@
         "highlighting.py": "99efc02d908ffb1d58ae227b236a4781ae68efc51139c61e38df0ab6de3959ab",
         "highlight_controls.js": "f6a2b483095bea5b9246511aa641332e4c48adcb420b4811349c5c530fe33348",
         "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
-        "export_escher.py": "7c943f5ebf777c0b59a599997dd739453d3c99b1177004f56cd377b3e31206d7",
-        "escher_routing.py": "54c3446ad1ae9fb01b73743efc7e2dfb220587a7350867cb990494097f5d39cd",
+        "export_escher.py": "5dc1778a84ab96eca2657012da7cb2c796b781510d77ea1dabcd340c310bded1",
+        "escher_routing.py": "047fa4079870c185ae893c1dc09521941760b7533fd99fec692046978ab22fe5",
         "escher_layers.js": "6c8bfdec85bab4e5e81f00090ba2fce3e2640072a7a062248bc59cb903cd0f46",
-        "parallel_routing.py": "bd0e047c4d66432db4345b589bf04fc235d2b6e0e93a36ad18713f532849cd3b",
+        "parallel_routing.py": "e666c973c65d3577c6accc5d3ba15865f05f7fbd8f59114d021b630a34b756f4",
         "sbml2map.py": "735f64300a8b943813ea809778972b86b13794fff59d4147f1567e8a9d148219"
       },
       "tca_orientation": "clockwise",
@@ -282,6 +283,7 @@
       "escher_initial_flux_data_loaded": false,
       "escher_data_overlay_disables_pathway_colors": true,
       "escher_overlap_routing": {
+        "trunk_grouping": "positive_length_overlap",
         "node_obstacle_policy": "red_orange_structural_nodes",
         "obstacle_node_ids": [
           "met:13dpg_c",
@@ -369,6 +371,7 @@
           "rxn:TPI"
         ],
         "node_detours": {
+          "trunk_grouping": "positive_length_overlap",
           "route_offset_grid": 0.3,
           "enabled": true,
           "shifted_segments": 3,
@@ -545,6 +548,7 @@
           "backbone_max_offset_grid": 0
         },
         "parallel_detours": {
+          "trunk_grouping": "positive_length_overlap",
           "clearance_grid": 0.3,
           "min_parallel_length_grid": 1.0,
           "shifted_segments": 5,

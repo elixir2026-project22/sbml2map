@@ -76,3 +76,7 @@ gray unless explicitly used by an orange connector. SVG and Escher use the same
 classification; selections and display filters do not alter routing. The policy
 and protected source node IDs are recorded as `node_obstacle_policy` and
 `obstacle_node_ids` in each SVG report and Escher `overlap_routing` metadata.
+
+Shared trunks require positive-length overlap. Branches that only touch at an
+endpoint are routed separately, keeping the E. coli core `glc__D_e`–`GLCpts`
+branch straight while colliding long branches can detour.

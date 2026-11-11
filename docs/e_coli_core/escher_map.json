@@ -15949,6 +15949,7 @@
         "969": 2
       },
       "overlap_routing": {
+        "trunk_grouping": "positive_length_overlap",
         "node_obstacle_policy": "red_orange_structural_nodes",
         "obstacle_node_ids": [
           "met:13dpg_c",
@@ -16036,6 +16037,7 @@
           "rxn:TPI"
         ],
         "node_detours": {
+          "trunk_grouping": "positive_length_overlap",
           "route_offset_grid": 0.3,
           "enabled": true,
           "shifted_segments": 3,
@@ -16212,6 +16214,7 @@
           "backbone_max_offset_grid": 0
         },
         "parallel_detours": {
+          "trunk_grouping": "positive_length_overlap",
           "clearance_grid": 0.3,
           "min_parallel_length_grid": 1.0,
           "shifted_segments": 5,

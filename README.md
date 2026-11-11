@@ -566,3 +566,8 @@ Accepted node detours record the chosen side and endpoint steps in `detours`.
 `endpoint_step_fallback_segments` counts segments that needed this fallback.
 For E. coli core, the saved SVG and Escher routes from `for_e` to `EX_for_e`
 now avoid `succ_c` with the default 0.3-grid displacement.
+
+Shared trunks are grouped only when their collinear intervals overlap with
+positive length. Sharing an endpoint alone does not bundle branches. This keeps
+collision-free short branches straight, including `glc__D_e`–`GLCpts` in the
+saved E. coli core SVG; long branches still detour when needed.

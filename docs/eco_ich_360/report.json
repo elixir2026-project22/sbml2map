@@ -2206,12 +2206,12 @@
       "stoichiometry_preserved": true,
       "coordinate_transform_verified": true,
       "segment_endpoints_verified": true,
-      "nodes": 4295,
+      "nodes": 4298,
       "source_nodes": 921,
-      "routing_nodes": 3374,
+      "routing_nodes": 3377,
       "orthogonal_segments_verified": true,
       "reactions": 326,
-      "segments": 4447,
+      "segments": 4450,
       "primary_metabolites": 250,
       "secondary_metabolites": 345,
       "currency_copy_counts": {
@@ -2655,9 +2655,10 @@
   },
   "display_parallel_routing": {
     "svg": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
-      "shifted_segments": 23,
+      "shifted_segments": 19,
       "unresolved": [
         {
           "reaction_id": "GLCptspp",
@@ -2672,6 +2673,24 @@
         },
         {
           "reaction_id": "PFK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCptspp"
+          ]
+        },
+        {
+          "reaction_id": "PFK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCptspp"
+          ]
+        },
+        {
+          "reaction_id": "PGI",
           "axis": 1,
           "level": 1.0,
           "reason": "fixed backbone",
@@ -2698,7 +2717,34 @@
           ]
         },
         {
+          "reaction_id": "PGK",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCptspp"
+          ]
+        },
+        {
           "reaction_id": "PGM",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCptspp"
+          ]
+        },
+        {
+          "reaction_id": "PGM",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "GLCptspp"
+          ]
+        },
+        {
+          "reaction_id": "PYK",
           "axis": 1,
           "level": 1.0,
           "reason": "fixed backbone",
@@ -2724,15 +2770,26 @@
             "FBA",
             "GLCptspp"
           ]
+        },
+        {
+          "reaction_id": "TPI",
+          "axis": 1,
+          "level": 1.0,
+          "reason": "fixed backbone",
+          "conflicting_reactions": [
+            "FBA",
+            "GLCptspp"
+          ]
         }
       ],
       "max_offset_grid": 0.3000000000000007,
       "fixed_endpoints": true,
       "shared_same_reaction_trunks": true,
       "node_detours": {
+        "trunk_grouping": "positive_length_overlap",
         "route_offset_grid": 0.3,
         "enabled": true,
-        "shifted_segments": 19,
+        "shifted_segments": 20,
         "unresolved": [
           {
             "reaction_id": "AKGDH",
@@ -2883,18 +2940,6 @@
               [
                 11.0,
                 18.0
-              ]
-            ]
-          },
-          {
-            "reaction_id": "Biomass",
-            "axis": 1,
-            "level": 10.0,
-            "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-            "nodes": [
-              [
-                10.0,
-                19.0
               ]
             ]
           },
@@ -3265,7 +3310,7 @@
         ],
         "shape": "rectangle with optional endpoint steps",
         "endpoint_step_grid": 0.15,
-        "endpoint_step_fallback_segments": 16,
+        "endpoint_step_fallback_segments": 18,
         "detours": [
           {
             "reaction_id": "FBA",
@@ -3273,7 +3318,7 @@
             "offset_grid": -0.3,
             "inset_start": false,
             "inset_end": false,
-            "segments": 3,
+            "segments": 2,
             "existing_endpoint_stem_overlaps": 0
           },
           {
@@ -3282,8 +3327,17 @@
             "offset_grid": -0.3,
             "inset_start": true,
             "inset_end": true,
-            "segments": 2,
-            "existing_endpoint_stem_overlaps": 21
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 12
+          },
+          {
+            "reaction_id": "ACALD",
+            "axis": 1,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 9
           },
           {
             "reaction_id": "ACALDtpp",
@@ -3311,6 +3365,15 @@
             "inset_end": true,
             "segments": 1,
             "existing_endpoint_stem_overlaps": 22
+          },
+          {
+            "reaction_id": "Biomass",
+            "axis": 1,
+            "offset_grid": 0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 2,
+            "existing_endpoint_stem_overlaps": 31
           },
           {
             "reaction_id": "EX_for_e",
@@ -3372,8 +3435,26 @@
             "offset_grid": 0.3,
             "inset_start": true,
             "inset_end": true,
-            "segments": 2,
-            "existing_endpoint_stem_overlaps": 26
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 12
+          },
+          {
+            "reaction_id": "LDH_D",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": true,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 25
+          },
+          {
+            "reaction_id": "MALt2_2pp",
+            "axis": 0,
+            "offset_grid": -0.3,
+            "inset_start": false,
+            "inset_end": true,
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 4
           },
           {
             "reaction_id": "SUCCt1pp",
@@ -3387,16 +3468,16 @@
           {
             "reaction_id": "XYLt2pp",
             "axis": 1,
-            "offset_grid": -0.3,
+            "offset_grid": 0.3,
             "inset_start": true,
             "inset_end": true,
-            "segments": 2,
-            "existing_endpoint_stem_overlaps": 19
+            "segments": 1,
+            "existing_endpoint_stem_overlaps": 10
           }
         ],
         "fixed_endpoints": true,
         "shared_same_reaction_trunks": true,
-        "backbone_shifted_segments": 2,
+        "backbone_shifted_segments": 1,
         "max_offset_grid": 0.3,
         "backbone_max_offset_grid": 0.3
       },
@@ -4491,9 +4572,10 @@
         "copy:Biomass:utp_c": 0
       },
       "original_route_length": 9616.25,
-      "display_route_length": 9641.45
+      "display_route_length": 9639.65
     },
     "escher": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
       "shifted_segments": 10,
@@ -4504,6 +4586,7 @@
     }
   },
   "escher_overlap_routing": {
+    "trunk_grouping": "positive_length_overlap",
     "node_obstacle_policy": "red_orange_structural_nodes",
     "obstacle_node_ids": [
       "met:13dpg_c",
@@ -4672,9 +4755,10 @@
       "rxn:XYLtex"
     ],
     "node_detours": {
+      "trunk_grouping": "positive_length_overlap",
       "route_offset_grid": 0.3,
       "enabled": true,
-      "shifted_segments": 16,
+      "shifted_segments": 18,
       "unresolved": [
         {
           "reaction_id": "AKGDH",
@@ -4921,18 +5005,6 @@
           ]
         },
         {
-          "reaction_id": "MALtex",
-          "axis": 0,
-          "level": 4760,
-          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-          "nodes": [
-            [
-              2420,
-              4760
-            ]
-          ]
-        },
-        {
           "reaction_id": "RIBtex",
           "axis": 0,
           "level": 3860,
@@ -5051,39 +5123,36 @@
               3320
             ]
           ]
-        },
-        {
-          "reaction_id": "XYLt2pp",
-          "axis": 1,
-          "level": 1520,
-          "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-          "nodes": [
-            [
-              1520,
-              4040
-            ]
-          ]
         }
       ],
       "shape": "rectangle with optional endpoint steps",
       "endpoint_step_grid": 0.15,
-      "endpoint_step_fallback_segments": 5,
+      "endpoint_step_fallback_segments": 4,
       "detours": [
         {
           "reaction_id": "ACALD",
           "axis": 1,
           "offset_grid": -0.3,
           "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "ACALD",
+          "axis": 1,
+          "offset_grid": -0.3,
+          "inset_start": false,
           "inset_end": true,
-          "segments": 2,
+          "segments": 1,
           "existing_endpoint_stem_overlaps": 2
         },
         {
           "reaction_id": "ACALDtpp",
           "axis": 0,
-          "offset_grid": -0.3,
+          "offset_grid": 0.3,
           "inset_start": false,
-          "inset_end": true,
+          "inset_end": false,
           "segments": 1,
           "existing_endpoint_stem_overlaps": 0
         },
@@ -5187,8 +5256,26 @@
           "existing_endpoint_stem_overlaps": 0
         },
         {
+          "reaction_id": "MALtex",
+          "axis": 0,
+          "offset_grid": -0.3,
+          "inset_start": true,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
           "reaction_id": "SUCCt1pp",
           "axis": 0,
+          "offset_grid": 0.3,
+          "inset_start": false,
+          "inset_end": false,
+          "segments": 1,
+          "existing_endpoint_stem_overlaps": 0
+        },
+        {
+          "reaction_id": "XYLt2pp",
+          "axis": 1,
           "offset_grid": 0.3,
           "inset_start": false,
           "inset_end": false,
@@ -5212,6 +5299,7 @@
       "backbone_max_offset_grid": 0
     },
     "parallel_detours": {
+      "trunk_grouping": "positive_length_overlap",
       "clearance_grid": 0.3,
       "min_parallel_length_grid": 1.0,
       "shifted_segments": 10,
