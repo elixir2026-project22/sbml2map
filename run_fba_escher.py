@@ -124,7 +124,15 @@ def run(model_path, directory):
     validate_map(data, layout_model, nodes, xy)
     transform = data[0]['metadata']['coordinate_transform']
     label_options = data[0]['metadata'].get('label_display', {})
-    nodes, edges, xy, layout_validation = complete_layout(model, nodes, xy)
+    namespace=next((v for key,v in data[0]['metadata'].items() if key in ('sbml2map','sbml2escher','escher_grid')), {})
+    backbone=namespace.get('major_backbones',{})
+    region=backbone.get('tca_exclusion',{}).get('region')
+    alignment_mode=backbone.get('exchange_alignment',{}).get('mode','off')
+    shape=None
+    if (directory/'report.json').exists() and (region is not None or alignment_mode=='collinear'):
+        saved_report=json.loads((directory/'report.json').read_text())
+        shape=(saved_report['placement']['grid_cols'],saved_report['placement']['grid_rows'])
+    nodes, edges, xy, layout_validation = complete_layout(model, nodes, xy,region,alignment_mode,shape)
     data = create_map(model, nodes, edges, xy, scale=transform['scale'],
                       padding=transform['padding'], layout_method='complete FBA layout')
     data[0]['metadata']['label_display'] = {

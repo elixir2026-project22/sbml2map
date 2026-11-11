@@ -645,3 +645,48 @@ FBA colors run from blue through violet and magenta to red, with square-root
 scaling to distinguish low and moderate absolute fluxes. Widths range from 3 to
 8; zero flux stays gray at width 1. Legend ticks and signed labels retain actual
 flux units. Numerical FBA results and branch visibility are unchanged.
+
+## TCA shape and straight exchange triplets
+
+The default is `--tca-shape circle --exchange-alignment collinear`.
+TCA compound and reaction nodes follow the source cycle in clockwise order on
+an exact circular perimeter. Other ordinary nodes remain on a grid. TCA
+anchors and their aligned exchange partners may use fractional coordinates.
+
+```bash
+python sbml2map.py --model models/e_coli_core.xml --no-sampling \
+  --tca-shape circle --exchange-alignment collinear \
+  --output-dir results/runs/e_coli_core_circle
+
+python sbml2map.py --model models/e_coli_core.xml --no-sampling \
+  --tca-shape square --output-dir results/runs/e_coli_core_square
+
+# Disable only the three-point exchange alignment.
+python sbml2map.py --model models/e_coli_core.xml --no-sampling \
+  --exchange-alignment off --output-dir results/runs/e_coli_core_unaligned
+```
+
+For both shapes the TCA interior is forbidden to every compound, reaction and
+reaction-local cofactor copy. Non-TCA nodes also keep a 0.16-grid clearance from
+the perimeter. TCA nodes themselves stay on that perimeter. The forbidden
+region applies during initialization, heuristic moves, finite-cell MILP and
+FBA completion. The grid expands automatically when its size is unspecified;
+an insufficient explicit grid fails without dropping constraints.
+
+Straight alignment orders each confidently matched triplet from outside inward:
+EX reaction, extracellular compound, cytosolic compound. The EX node is on an
+outer edge; the other two nodes share its row or column. Compartment-normalized
+source IDs or exact chemical identity annotations establish matches. Missing or
+ambiguous matches are listed in the report and are not guessed. Matching the
+three points does not change chemistry or invent a transport reaction.
+
+The original weighted Manhattan-length objective and routing policy are retained.
+The crossing-first experiment has been reverted. Existing published examples
+are unchanged; new shape/alignment examples are under `docs/tca-layout/`.
+`report.json` records `tca_shape`, `tca_exclusion` and `exchange_alignment`,
+including matched/skipped triplets and verified empty-interior counts. The CSV
+`on_grid` field describes actual integer coordinates. Full FBA completion
+preserves saved coordinates and applies the same exclusion/alignment rules to
+added nodes; an insufficient saved frame requires regenerating a larger layout.
+Incomplete source cycles retain their supported components and angular gaps.
+No missing cycle reaction or closing connection is synthesized.
