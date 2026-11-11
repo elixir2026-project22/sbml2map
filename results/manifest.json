@@ -69,7 +69,8 @@
         "only_structural_red_orange_nodes_are_obstacles": true,
         "glucose_uptake_branch_stays_straight_in_both_viewers": true,
         "layout_stage_red_parallel_spacing_verified_in_both_viewers": true,
-        "acetate_uses_two_bends_and_gray_pgl_yields": true
+        "acetate_uses_two_bends_and_gray_pgl_yields": true,
+        "svg_escher_fba_label_controls_and_white_halos_verified": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -102,8 +103,8 @@
           "sha256": "66299642fb71f1cc2efe99bcb5f9d45a06aeb4629df2130749b713935b58abbd"
         },
         "escher_preview.html": {
-          "bytes": 1440643,
-          "sha256": "e3dbd235c09d9a813af1ecbad35b77f7a0d7a27ef86e0972c530c210fd5fda50"
+          "bytes": 1441525,
+          "sha256": "fce62248388098f3482ef2bfdee17f247b6f416efa0bae01306acc9b324773f2"
         },
         "exchange_connectors.json": {
           "bytes": 3333,
@@ -122,16 +123,16 @@
           "sha256": "9029ff788c311540c11480c7a7ab34cddc9a32234a2222f873632872c5175c3d"
         },
         "index.html": {
-          "bytes": 588274,
-          "sha256": "980a5cc034691c4bcd68eb81b74ce68ddd317aea4c20232ee9d041dbad20d4e4"
+          "bytes": 1380249,
+          "sha256": "9182e3d006ec31bf89e67832afd54fc9ccc3e3a6a53d633a49cc0a27b643bbc5"
         },
         "layout.png": {
-          "bytes": 501971,
-          "sha256": "5a292cd242b2b518c72c8cc8aa4c6ca5b194c6a7ec76aea9494d74f467b400ab"
+          "bytes": 524818,
+          "sha256": "9b99b2779fb48f40ad1ffd792c620d229cb1e08e9e1c1c5dbbd7a16d6a15dbd9"
         },
         "layout.svg": {
-          "bytes": 437154,
-          "sha256": "e5a2f63a39af31c4e81baed479a3012ea6ebcd3defc0e83b13fc99954d46587d"
+          "bytes": 1216094,
+          "sha256": "bfe7bc90865451a4972fa4114337b3c627f958146e0b8c2df181c826218f29dd"
         },
         "major_backbones.json": {
           "bytes": 44580,
@@ -142,12 +143,12 @@
           "sha256": "1c454fac51bf90a6ac632537db3802bfef701506ab01ba11d5b516ef35570a63"
         },
         "orange_routes.png": {
-          "bytes": 329733,
-          "sha256": "113e4ecf30938c68a382e1c0ebad568cbdf47e1d58bb6471e164f9ab23afb239"
+          "bytes": 352216,
+          "sha256": "cd37135995cae55939d4ada9fc1414e2207904b5f26c2f8844ddacc773c9d02e"
         },
         "orange_routes.svg": {
-          "bytes": 259730,
-          "sha256": "ed9d9aef2da2ef0c33b2979b001acf58d9907eef25001ba61158ef429a9014cf"
+          "bytes": 1021819,
+          "sha256": "fb07fed57c3391211595a2c06504a897cb075c47187dbb2c29feb386dbb17265"
         },
         "pathway_extraction.json": {
           "bytes": 202310,
@@ -178,8 +179,8 @@
           "sha256": "332d5e296e1f41ecc314d09d4a15bd0a4ef8d5f80a17fcf91354be6f37324115"
         },
         "escher_fba.html": {
-          "bytes": 1341066,
-          "sha256": "ef697ffeb7e49f995b60ac080a7f65d1e731b39052c34733879682ee1eb4c7c9"
+          "bytes": 1351377,
+          "sha256": "6f3364dca5971db1ca63d4a5ed6b6328a7cfb0b3bf1229e4880d37b98b0db0df"
         },
         "fba_report.json": {
           "bytes": 2555,
@@ -216,21 +217,23 @@
       "recalculated_at_utc": "2026-11-10T08:44:57.454660+00:00",
       "source_files_sha256": {
         "sbml2escher.py": "2d17e97c6556986dbab2fe7c0bb527d7d41d776623ac3498b5dd10ab7e88d812",
-        "escher_grid.py": "dcd067191b2572f6a62ae4096c87526f198a918d5a7fc490cefc4e799e53754b",
+        "escher_grid.py": "8a91494e874d3a39c36000dc1838a05b2ce07ddd1de17123e99bc95bf11cd676",
         "grid_layout2.py": "3ec3e68bd26a8d804c69f1c8bb215b4ad244920a158f942fcb249fe40e6e7af9",
         "bacterial_pathways.py": "64ac1c4a0919e1fe6680b44681f74c462fd5145c3beae14253fe8d81563165f1",
         "flux_sampling2.py": "b49d4afbd4e523c37b0dabec2884948f17d19f0809ebba27b47a41a1b1373b4c",
         "data/bacteria/central_reference.json": "f924f3fc28bbeef00e6ee8593acbc9e9c76f4e764333aee3dc460bc4e8a64380",
-        "highlighting.py": "99efc02d908ffb1d58ae227b236a4781ae68efc51139c61e38df0ab6de3959ab",
-        "highlight_controls.js": "f6a2b483095bea5b9246511aa641332e4c48adcb420b4811349c5c530fe33348",
+        "highlighting.py": "14e92fd157d99f570600101ab3abe60a726c9f5f3c31cf3585dcd6cc1e5c1893",
+        "highlight_controls.js": "927a41cca49c7c659491ec21ebd4248f4abe4d8dee0a182ef4175185734c785d",
         "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
         "export_escher.py": "40f3d4c2c02187f766bd40a8751b70faa9d47128c62b6a19d9fe5ba0f4ea6fe8",
         "escher_routing.py": "408a3f2611f4df0d7835d6b02b75010628bc49db70390dd539b2a3a6e8464476",
-        "escher_layers.js": "6c8bfdec85bab4e5e81f00090ba2fce3e2640072a7a062248bc59cb903cd0f46",
+        "escher_layers.js": "ee9ff0b89c485cdcc17ddda2e3c51006209df51cc738e8d40b01569b22258774",
         "parallel_routing.py": "aaa798492c0cdacd005cc8ece78e478b6f91d7ded5908c567a52c530531b8636",
         "sbml2map.py": "f2c4f002bfe015c522f6710e4ea31b54646a5c15ba4500b730cd635d41d5fbe6",
         "red_route_layout.py": "e45676712ad26edc4b9cb413451e88f527581aefd2ebf0a15d5713eb14a96e29",
-        "routing_simplification.py": "ab887da0513fb5293710a30be74766723254ec928dabf8200ff6af75f59400c6"
+        "routing_simplification.py": "ab887da0513fb5293710a30be74766723254ec928dabf8200ff6af75f59400c6",
+        "grid_labels.js": "dbc01beaa5acc0c1b3d8d415703b5311c32d931d90f96a276f47e8d6682923c1",
+        "escher_labels.js": "bf38b656fd8d13809ee6762772a898bc83dbf3ea475ff2d345044a446928017a"
       },
       "tca_orientation": "clockwise",
       "fba": {

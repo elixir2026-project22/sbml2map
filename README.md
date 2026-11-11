@@ -78,7 +78,9 @@ The generated HTML provides `Metabolite labels`, `Reaction labels`, and
 `Allow label overlap` checkboxes. Hidden label types stay hidden even when overlap
 is allowed. Bounds are measured again after zooming, resizing, and label edits.
 Names, IDs, chemistry and coordinates are preserved. These options apply to
-Escher views; `layout.png`, `layout.svg`, and the regular `index.html` are unchanged.
+interactive SVG and Escher views, including FBA. Static PNG/SVG downloads retain
+the complete annotation set. Important SVG/PNG labels have white halos and are
+painted above lines; Escher labels also use white halos without changing colors.
 
 ## Installation
 
@@ -620,3 +622,18 @@ them. Preallocated red channels are preserved.
 The saved E. coli core `EX_ac_e`–`ac_e` branch uses a two-bend U. The conflicting
 gray PGL route yields. Diagnostics are `important_simplification` and `gray_yield`
 in SVG reports and Escher `overlap_routing` metadata.
+
+
+## Label visibility and readability
+
+SVG, structural Escher, and FBA viewers expose the same three controls:
+`Metabolite labels`, `Reaction labels`, and `Allow label overlap`. Hiding a
+reaction label also hides its displayed flux value. Disabled label types remain
+hidden when overlap is allowed, when filters/zoom change, and when selected
+objects are forced visible. Important labels take priority during overlap
+filtering. Reaction-label copies in Escher’s priority layer follow the same
+visibility state. Saved current-view SVG exports retain visibility and halos.
+
+White outlines separate important labels from red/orange lines without moving
+nodes, routes, label coordinates or changing reaction data. Labels are drawn in
+front of the lines. This first readability pass uses halos and overlap filtering.

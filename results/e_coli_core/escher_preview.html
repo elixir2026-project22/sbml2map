@@ -396,8 +396,8 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
 (()=>{
 const NS='http://www.w3.org/2000/svg';
 let pending=false,last='';
-const props=['stroke','fill','stroke-width','stroke-opacity','fill-opacity','opacity','stroke-dasharray','stroke-linecap','stroke-linejoin','display','visibility','font-family','font-size','font-weight','text-anchor'];
-function sync(){
+const props=['stroke','fill','stroke-width','stroke-opacity','fill-opacity','opacity','stroke-dasharray','stroke-linecap','stroke-linejoin','display','visibility','font-family','font-size','font-weight','text-anchor','paint-order','vector-effect'];
+function sync(force=false){
  const map=window.builder?.map,root=document.getElementById('reactions');
  if(!map||!root)return;
  const fixed=document.getElementById('major-pathway-colors');
@@ -412,7 +412,7 @@ function sync(){
  }
  const labels=[...root.querySelectorAll('.reaction-label')].filter(label=>label.getClientRects().length);
  const key=items.map(x=>x.key).join(';')+'::'+labels.map(label=>[label.closest('.reaction').id,label.textContent,label.getCTM()?.toString()].join('|')).join(';');
- if(key===last && (document.getElementById('escher-priority-layer') || !items.length))return;
+ if(!force && key===last && (document.getElementById('escher-priority-layer') || !items.length))return;
  last=key;
  document.getElementById('escher-priority-layer')?.remove();
  if(!items.length)return;
@@ -443,12 +443,15 @@ sync();
 const host=document.getElementById('map');
 const options=mapData[0].metadata.label_display;
 const style=document.createElement('style');
-style.textContent='[data-escher-label-hidden]{visibility:hidden !important;}';
+style.textContent=`[data-escher-label-hidden],[data-escher-label-hidden] *{visibility:hidden!important;}
+#map .reaction-label,#map .reaction-label text,#map .node-label,#map .node-label text{
+ paint-order:stroke fill;stroke:#fff!important;stroke-width:3px;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+}`;
 document.head.append(style);
 let pending=false;
 const controls=[['show-metabolite-labels','show_metabolites'],['show-reaction-labels','show_reactions'],['allow-label-overlap','allow_overlap']];
 for(const [id,key] of controls){
- const input=document.getElementById(id);input.checked=options[key];
+ const input=document.getElementById(id);if(!input)continue;input.checked=options[key];
  input.addEventListener('change',()=>{options[key]=input.checked;schedule();});
 }
 function schedule(){if(!pending){pending=true;requestAnimationFrame(()=>{pending=false;sync();});}}
@@ -495,11 +498,17 @@ function sync(){
  // The priority layer contains non-interactive copies of reaction labels.
  for(const clone of host.querySelectorAll('#escher-priority-layer [data-source-label]')){
   const source=byKey.get(clone.dataset.sourceLabel);
-  clone.removeAttribute('data-escher-label-hidden');
-  clone.style.visibility=source?getComputedStyle(source).visibility:'hidden';
+  const hidden=!source||getComputedStyle(source).visibility==='hidden'||getComputedStyle(source).display==='none';
+  clone.toggleAttribute('data-escher-label-hidden',hidden);
+  const originals=source?[source,...source.querySelectorAll('*')]:[];
+  [clone,...clone.querySelectorAll('*')].forEach((el,i)=>{
+   const visibility=hidden?'hidden':getComputedStyle(originals[i]||source).visibility;
+   if(el.style.visibility!==visibility)el.style.visibility=visibility;
+  });
  }
 }
 window.syncEscherLabels=sync;
+window.syncEscherLayers?.(true);
 const observer=new MutationObserver(records=>{
  if(records.some(r=>!r.target.closest?.('#escher-priority-layer')))schedule();
 });
@@ -556,6 +565,7 @@ sync();
 #highlight-panel{padding:10px;border:1px solid #ccd;margin:10px 0;font:14px system-ui}
 #highlight-panel label{display:inline-block;margin:4px}#highlight-panel button{margin:3px}
 #hl-results{max-height:130px;overflow:auto}#hl-results button{display:block;text-align:left}
+body #viewer [id^=label-].user-blue path,body #viewer [id^=label-].user-blue use{stroke:white!important;stroke-width:2px!important;paint-order:stroke fill;}
 #hl-selected{max-height:130px;overflow:auto}#hl-bulk{vertical-align:middle}
 body #viewer .user-blue path,body #viewer .user-blue use,body #viewer .user-blue text{stroke:#7b2cbf!important;fill:#7b2cbf!important}
 body #viewer .user-blue[data-hl-role="edge"] path{fill:none!important;stroke:#7b2cbf!important;stroke-opacity:1!important}
@@ -660,7 +670,7 @@ $('hl-load').onchange=async event=>{
 $('hl-svg').onclick=()=>{
   const source=document.querySelector(config.escher?'#map svg':'#viewer svg');if(!source)return;
   const clone=source.cloneNode(true), a=[source,...source.querySelectorAll('*')],b=[clone,...clone.querySelectorAll('*')];
-  const props=['fill','stroke','stroke-width','stroke-opacity','fill-opacity','opacity','display','visibility','font-family','font-size','font-weight','text-anchor'];
+  const props=['fill','stroke','stroke-width','stroke-opacity','fill-opacity','opacity','display','visibility','font-family','font-size','font-weight','text-anchor','paint-order','stroke-linejoin','vector-effect'];
   a.forEach((el,i)=>{const css=getComputedStyle(el);for(const prop of props)b[i].style.setProperty(prop,css.getPropertyValue(prop));});
   clone.setAttribute('xmlns','http://www.w3.org/2000/svg');
   download('highlighted_map.svg',new XMLSerializer().serializeToString(clone),'image/svg+xml');

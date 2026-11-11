@@ -96,3 +96,9 @@ The E. coli core `EX_ac_e`–`ac_e` route is a simple two-bend U in both viewers
 the gray PGL route moves aside. Reports record simplification and unresolved
 gray conflicts under `important_simplification` and `gray_yield`. Preallocated
 one-grid red channels and protected-node avoidance remain in effect.
+
+
+All SVG/Escher viewers, including the FBA page, have metabolite-label,
+reaction-label and overlap controls. Important static labels and Escher labels
+use white halos above the lines; label colors and coordinates are preserved.
+Visibility is maintained across zoom/filter changes and selected-object forcing.

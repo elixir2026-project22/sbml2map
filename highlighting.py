@@ -82,6 +82,7 @@ def inject_controls(page, model, elements=(), initial=None, records=(), escher=F
 #highlight-panel{padding:10px;border:1px solid #ccd;margin:10px 0;font:14px system-ui}
 #highlight-panel label{display:inline-block;margin:4px}#highlight-panel button{margin:3px}
 #hl-results{max-height:130px;overflow:auto}#hl-results button{display:block;text-align:left}
+body #viewer [id^=label-].user-blue path,body #viewer [id^=label-].user-blue use{stroke:white!important;stroke-width:2px!important;paint-order:stroke fill;}
 #hl-selected{max-height:130px;overflow:auto}#hl-bulk{vertical-align:middle}
 body #viewer .user-blue path,body #viewer .user-blue use,body #viewer .user-blue text{stroke:#7b2cbf!important;fill:#7b2cbf!important}
 body #viewer .user-blue[data-hl-role="edge"] path{fill:none!important;stroke:#7b2cbf!important;stroke-opacity:1!important}
