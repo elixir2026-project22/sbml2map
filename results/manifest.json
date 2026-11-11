@@ -71,7 +71,8 @@
         "layout_stage_red_parallel_spacing_verified_in_both_viewers": true,
         "acetate_uses_two_bends_and_gray_pgl_yields": true,
         "svg_escher_fba_label_controls_and_white_halos_verified": true,
-        "fba_all_reactions_and_connections_verified": true
+        "fba_all_reactions_and_connections_verified": true,
+        "fba_square_root_palette_browser_verified": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -180,8 +181,8 @@
           "sha256": "332d5e296e1f41ecc314d09d4a15bd0a4ef8d5f80a17fcf91354be6f37324115"
         },
         "escher_fba.html": {
-          "bytes": 1182573,
-          "sha256": "59289a8e21cbc18d50035c8e57b847176157186589754731c31229ec3bf8bf30"
+          "bytes": 1187797,
+          "sha256": "fd5623b61dc96398d214c618c5d724834669fbeb6a80a573da418053b4f63c3c"
         },
         "fba_report.json": {
           "bytes": 2754,
@@ -230,7 +231,7 @@
         "highlighting.py": "14e92fd157d99f570600101ab3abe60a726c9f5f3c31cf3585dcd6cc1e5c1893",
         "highlight_controls.js": "927a41cca49c7c659491ec21ebd4248f4abe4d8dee0a182ef4175185734c785d",
         "run_fba_escher.py": "a428fe7f72d92defa76efe4d50af76bc37b808eac2b47b34fd6bbf15f44da540",
-        "export_escher.py": "40f3d4c2c02187f766bd40a8751b70faa9d47128c62b6a19d9fe5ba0f4ea6fe8",
+        "export_escher.py": "c7970bceaf9fa62b48cc26ec2c058a4133c7426954accbbcc174b90f9d95a7de",
         "escher_routing.py": "408a3f2611f4df0d7835d6b02b75010628bc49db70390dd539b2a3a6e8464476",
         "escher_layers.js": "ee9ff0b89c485cdcc17ddda2e3c51006209df51cc738e8d40b01569b22258774",
         "parallel_routing.py": "aaa798492c0cdacd005cc8ece78e478b6f91d7ded5908c567a52c530531b8636",
@@ -850,6 +851,24 @@
         "zero_flux_reactions": 47,
         "schema_valid": true,
         "browser_validation": "Firefox: 95 reactions, all 625 line segments visible; 47 zero-flux reactions retained in gray; label toggles preserve all branches; no JavaScript errors."
+      },
+      "fba_color_display": {
+        "palette": [
+          "#2166ac",
+          "#756bb1",
+          "#c05a88",
+          "#d73027"
+        ],
+        "scaling": "square root of absolute flux, normalized over active range; 64 interpolation intervals",
+        "active_width_range": [
+          3,
+          8
+        ],
+        "zero_color": "#b8b8b8",
+        "zero_width": 1,
+        "numerical_fluxes_unchanged": true,
+        "visible_segments": 625,
+        "tests_passed": 20
       }
     },
     {

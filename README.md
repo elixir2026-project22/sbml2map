@@ -640,3 +640,8 @@ visibility state. Saved current-view SVG exports retain visibility and halos.
 White outlines separate important labels from red/orange lines without moving
 nodes, routes, label coordinates or changing reaction data. Labels are drawn in
 front of the lines. This first readability pass uses halos and overlap filtering.
+
+FBA colors run from blue through violet and magenta to red, with square-root
+scaling to distinguish low and moderate absolute fluxes. Widths range from 3 to
+8; zero flux stays gray at width 1. Legend ticks and signed labels retain actual
+flux units. Numerical FBA results and branch visibility are unchanged.

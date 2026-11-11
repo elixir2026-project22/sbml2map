@@ -22,6 +22,31 @@ SCHEMA = BASE / 'vendor/escher/map-schema-1-0-0.json'
 VIEWER = BASE / 'vendor/escher/escher-1.8.1.min.js'
 
 
+def fba_flux_style(value, maximum, first):
+    """Square-root intensity on absolute flux; keep signed reaction data intact."""
+    if value == 0:
+        return dict(type='value', value=0, color='#b8b8b8', size=1)
+    low = math.sqrt(first / maximum)
+    intensity = max(0.0, min(1.0, (math.sqrt(abs(value) / maximum) - low) / (1 - low)))
+    anchors = [(0.0, '#2166ac'), (.35, '#756bb1'), (.7, '#c05a88'), (1.0, '#d73027')]
+    for (a, left), (b, right) in zip(anchors, anchors[1:]):
+        if intensity <= b:
+            weight = (intensity - a) / (b - a)
+            channels = [round(int(left[i:i+2], 16) * (1-weight) + int(right[i:i+2], 16) * weight)
+                        for i in (1, 3, 5)]
+            return dict(type='value', value=value,
+                        color='#' + ''.join(f'{channel:02x}' for channel in channels),
+                        size=3 + 5 * intensity)
+
+
+def fba_flux_scale(maximum, first):
+    # Escher interpolates linearly in raw flux. Dense stops approximate the
+    # square-root transfer without changing data, labels, tooltips or arrows.
+    low = math.sqrt(first / maximum)
+    values = [first] + [maximum * (low + (1-low)*i/64)**2 for i in range(1, 64)] + [maximum]
+    return [fba_flux_style(0, maximum, first)] + [fba_flux_style(v, maximum, first) for v in values]
+
+
 def read_layout(directory):
     model = json.loads((directory / 'model.json').read_text())
     with (directory / 'coordinates.csv').open() as stream:
@@ -414,7 +439,7 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
                                        dict(type='value', value=maximum * 0.5, color='#fdae61' if fba_report else '#e31a1c', size=9),
                                        dict(type='value', value=maximum, color='#d73027' if fba_report else '#9e0142', size=14)])
         if fba_report:
-            options['reaction_scale'].insert(3, dict(type='value', value=maximum * 0.25, color='#ffffbf', size=7))
+            options['reaction_scale'] = fba_flux_scale(maximum, first)
         page = page.replace('enable_editing:true,', json.dumps(options, allow_nan=False)[1:-1] + ',enable_editing:true,')
         page = page.replace('Escher layout', 'FBA flux in Escher')
         summary = ('Line width and color show absolute flux. Labels show signed values. '
@@ -422,14 +447,19 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
                    f'Scale: 0 to {maximum:.4g}. Arrows show the calculated flow direction. '
                    'Arrows on zero-flux reactions show allowed directions, not flow.')
         if fba_report:
-            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from blue through light blue, yellow, and orange to red. Fixed pathway colors are not applied.')
+            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from blue through violet and magenta to red. Color and width use a square-root scale; legend ticks show actual absolute flux. Fixed pathway colors are not applied.')
             summary += (f' Biomass reaction: {fba_report["objective_value"]:.6f} h⁻¹. '
                         'This is one optimal solution that maximizes growth within the SBML bounds.')
         if fba_report:
+            # The header legend uses readable physical ticks; the built-in
+            # legend would label every interpolation stop.
+            page = page.replace('</head>', '<style>#map .legend-container,#map .vertical-legend-container{display:none!important}</style></head>', 1)
             legend = '<p id="fba-color-legend" aria-label="Absolute FBA flux color scale">Absolute flux (mmol/gDW/h): '
+            ticks = sorted({0, *[v for v in (1, 5, 10, 20) if first <= v < maximum], maximum})
+            legend_stops = [fba_flux_style(v, maximum, first) for v in ticks]
             legend += ' &nbsp; '.join(
                 f'<span><span aria-hidden="true" style="display:inline-block;width:1em;height:1em;background:{stop["color"]};border:1px solid #777"></span> {stop["value"]:.4g}</span>'
-                for stop in options['reaction_scale'])
+                for stop in legend_stops)
             legend += '</p>'
             page = page.replace('<p id="escher-display-mode">', legend + '<p id="escher-display-mode">', 1)
         page = page.replace('Reaction positions and CO2 copies are kept. This view uses Escher styles. Use the mouse wheel to zoom.', summary)

@@ -47,8 +47,11 @@ class RestoredLabelTests(unittest.TestCase):
         folder=ROOT/'results/e_coli_core';page=(folder/'escher_fba.html').read_text()
         options=builder_options(page)
         self.assertEqual(options['reaction_data'],json.loads((folder/'escher_fluxes.json').read_text()))
-        self.assertEqual([x['color'] for x in options['reaction_scale']],
-                         ['#b8b8b8','#2166ac','#67a9cf','#ffffbf','#fdae61','#d73027'])
+        self.assertEqual(options['reaction_scale'][0]['color'],'#b8b8b8')
+        self.assertEqual(options['reaction_scale'][1]['color'],'#2166ac')
+        self.assertEqual(options['reaction_scale'][-1]['color'],'#d73027')
+        self.assertEqual(options['reaction_scale'][-1]['size'],8)
+        self.assertIn('square-root scale',page)
         data=json.loads(re.search(r'const mapData=(.*);\n',page).group(1))
         for key in ('show_metabolites','show_reactions','allow_overlap'):
             self.assertIn(key,data[0]['metadata']['label_display'])
