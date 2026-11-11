@@ -16,7 +16,7 @@ FILES = (
     'reaction_ranking.csv', 'escher_map.json', 'escher_flux_medians.json',
 )
 
-FBA_FILES = ('escher_fba.html','fba_report.json','fba_fluxes.csv','fba_fluxes.json','escher_fluxes.json')
+FBA_FILES = ('escher_fba.html','escher_fba_map.json','fba_report.json','fba_fluxes.csv','fba_fluxes.json','escher_fluxes.json')
 SBML_FILES = ('layout.sbml','sbml_layout_report.json')
 
 

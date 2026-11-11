@@ -12,7 +12,7 @@ least one grid unit are separated by approximately 0.3 grid units using rectangu
 detours in both SVG and Escher structural views. Node collisions are avoided;
 unresolved routes are recorded in `parallel_routing.json` (SVG) and map metadata
 (Escher). Display detours add length without changing the original layout objective.
-FBA uses the original neutral orthogonal routes without structural priority.
+FBA uses a dedicated complete map with neutral orthogonal routes, retaining the saved pathway coordinates.
 
 `sbml2map.py` draws metabolic networks with nodes on a grid.
 Cofactors may also be placed off the grid. Inorganic species are ignored.
@@ -308,10 +308,13 @@ python run_fba_escher.py --model models/e_coli_core.xml --layout-dir results/e_c
 ```
 
 Open `results/e_coli_core/escher_fba.html`. FBA uses the full source model and its
-original bounds, including participants omitted from the drawing. Existing
-coordinates and sampled medians are preserved. All 95 source reaction values
-are available in `fba_fluxes.csv` and `fba_fluxes.json`; `escher_fluxes.json`
-contains sign-adjusted values for the 76 displayed reactions.
+original bounds. Its dedicated `escher_fba_map.json` includes all 95 reactions
+and all 360 reaction–metabolite connections, including water, protons and
+cofactors as reaction-local copies. Zero-flux reactions remain visible in thin
+gray. Existing pathway coordinates and sampled medians are preserved. All 95
+source reaction values are available in `fba_fluxes.csv` and `fba_fluxes.json`;
+`escher_fluxes.json` contains sign-adjusted values for all 95 reactions.
+Label controls only change label visibility; the full FBA map has no coverage filter.
 The bundled result has a biomass objective of approximately 0.873922 h⁻¹.
 This is one optimal FBA solution; other optimal flux distributions may exist.
 

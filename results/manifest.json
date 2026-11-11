@@ -70,7 +70,8 @@
         "glucose_uptake_branch_stays_straight_in_both_viewers": true,
         "layout_stage_red_parallel_spacing_verified_in_both_viewers": true,
         "acetate_uses_two_bends_and_gray_pgl_yields": true,
-        "svg_escher_fba_label_controls_and_white_halos_verified": true
+        "svg_escher_fba_label_controls_and_white_halos_verified": true,
+        "fba_all_reactions_and_connections_verified": true
       },
       "status": "complete",
       "source_reactions": 95,
@@ -179,24 +180,24 @@
           "sha256": "332d5e296e1f41ecc314d09d4a15bd0a4ef8d5f80a17fcf91354be6f37324115"
         },
         "escher_fba.html": {
-          "bytes": 1351377,
-          "sha256": "6f3364dca5971db1ca63d4a5ed6b6328a7cfb0b3bf1229e4880d37b98b0db0df"
+          "bytes": 1182573,
+          "sha256": "59289a8e21cbc18d50035c8e57b847176157186589754731c31229ec3bf8bf30"
         },
         "fba_report.json": {
-          "bytes": 2555,
-          "sha256": "7f3cc314297f5fb14afc198d8b864d0599b026b27715f8ca07aab0ff5f034fcd"
+          "bytes": 2754,
+          "sha256": "b133de796cd0d8e5b73d5b95c6cb7d5c576cac5238350708a5770b083053f677"
         },
         "fba_fluxes.csv": {
-          "bytes": 3799,
-          "sha256": "99e2f06447ab40372bcc664b22f9605d90efd8becaf24ac131f494dcb77b9c8d"
+          "bytes": 4022,
+          "sha256": "7f74f71e0efe7c56f5eb6058eb86f9ae75d47db2f28ce72689788493f2cd439d"
         },
         "fba_fluxes.json": {
           "bytes": 2266,
           "sha256": "bfaba3e7ce208043acae9a1221f607848e3b89d07821726fa18688e1b9413715"
         },
         "escher_fluxes.json": {
-          "bytes": 1742,
-          "sha256": "e8bea944f0e1a72a385cc5445186647fd7121e95d54d7f612ee6feb5867e96cb"
+          "bytes": 2246,
+          "sha256": "6e1d47a578bbebc2c05eb81c29bfbce04f7e3a56b3c2bef0dd077ac7a43a3713"
         },
         "layout.sbml": {
           "bytes": 1187037,
@@ -209,6 +210,10 @@
         "parallel_routing.json": {
           "bytes": 20276,
           "sha256": "fb5544d8457fe985c7d3cbc0d534c54aad15bcb086f8a382e6e81a46443c20d2"
+        },
+        "escher_fba_map.json": {
+          "bytes": 383807,
+          "sha256": "23cfc97f0e8ff00de73ef820c935d783d70e136a5735a6249f694be4327edbfb"
         }
       },
       "program_name": "sbml2escher",
@@ -224,7 +229,7 @@
         "data/bacteria/central_reference.json": "f924f3fc28bbeef00e6ee8593acbc9e9c76f4e764333aee3dc460bc4e8a64380",
         "highlighting.py": "14e92fd157d99f570600101ab3abe60a726c9f5f3c31cf3585dcd6cc1e5c1893",
         "highlight_controls.js": "927a41cca49c7c659491ec21ebd4248f4abe4d8dee0a182ef4175185734c785d",
-        "run_fba_escher.py": "ad2ec8951d03975e99711a00c355672f16ea20c27985311e3d2423cbecd9de75",
+        "run_fba_escher.py": "a428fe7f72d92defa76efe4d50af76bc37b808eac2b47b34fd6bbf15f44da540",
         "export_escher.py": "40f3d4c2c02187f766bd40a8751b70faa9d47128c62b6a19d9fe5ba0f4ea6fe8",
         "escher_routing.py": "408a3f2611f4df0d7835d6b02b75010628bc49db70390dd539b2a3a6e8464476",
         "escher_layers.js": "ee9ff0b89c485cdcc17ddda2e3c51006209df51cc738e8d40b01569b22258774",
@@ -233,7 +238,9 @@
         "red_route_layout.py": "e45676712ad26edc4b9cb413451e88f527581aefd2ebf0a15d5713eb14a96e29",
         "routing_simplification.py": "ab887da0513fb5293710a30be74766723254ec928dabf8200ff6af75f59400c6",
         "grid_labels.js": "dbc01beaa5acc0c1b3d8d415703b5311c32d931d90f96a276f47e8d6682923c1",
-        "escher_labels.js": "bf38b656fd8d13809ee6762772a898bc83dbf3ea475ff2d345044a446928017a"
+        "escher_labels.js": "bf38b656fd8d13809ee6762772a898bc83dbf3ea475ff2d345044a446928017a",
+        "full_fba_layout.py": "7316ba95b9342aacb16c952b6e9f672974291887fb6dfc63b35b10532b15c961",
+        "prepare_github_pages.py": "b457b53ac5fbc0b54712d04b9490d50bac2861a15af68592829a7bcd31287c69"
       },
       "tca_orientation": "clockwise",
       "fba": {
@@ -834,6 +841,15 @@
         "parallel_pairs": 62,
         "violations": [],
         "verified": true
+      },
+      "fba_complete_map": {
+        "reactions": 95,
+        "connections": 360,
+        "existing_nodes_preserved": 206,
+        "added_nodes": 132,
+        "zero_flux_reactions": 47,
+        "schema_valid": true,
+        "browser_validation": "Firefox: 95 reactions, all 625 line segments visible; 47 zero-flux reactions retained in gray; label toggles preserve all branches; no JavaScript errors."
       }
     },
     {
