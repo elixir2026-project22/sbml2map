@@ -400,10 +400,10 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
         first = min(min(active), maximum * 0.02) if active else maximum * 0.02
         options = dict(reaction_data=reaction_data, reaction_styles=['color', 'size', 'text', 'abs'],
                        reaction_scale=[dict(type='value', value=0, color='#b8b8b8', size=1),
-                                       dict(type='value', value=first, color='#deebf7' if fba_report else '#e6ab02', size=3),
-                                       dict(type='value', value=maximum * 0.1, color='#9ecae1' if fba_report else '#ff7f00', size=5),
-                                       dict(type='value', value=maximum * 0.5, color='#4292c6' if fba_report else '#e31a1c', size=9),
-                                       dict(type='value', value=maximum, color='#08519c' if fba_report else '#9e0142', size=14)])
+                                       dict(type='value', value=first, color='#ffffb2' if fba_report else '#e6ab02', size=3),
+                                       dict(type='value', value=maximum * 0.1, color='#fecc5c' if fba_report else '#ff7f00', size=5),
+                                       dict(type='value', value=maximum * 0.5, color='#f03b20' if fba_report else '#e31a1c', size=9),
+                                       dict(type='value', value=maximum, color='#bd0026' if fba_report else '#9e0142', size=14)])
         page = page.replace('enable_editing:true,', json.dumps(options, allow_nan=False)[1:-1] + ',enable_editing:true,')
         page = page.replace('Escher layout', 'FBA flux in Escher')
         summary = ('Line width and color show absolute flux. Labels show signed values. '
@@ -411,9 +411,16 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
                    f'Scale: 0 to {maximum:.4g}. Arrows show the calculated flow direction. '
                    'Arrows on zero-flux reactions show allowed directions, not flow.')
         if fba_report:
-            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from light blue to dark blue. Fixed pathway colors are not applied.')
+            summary = summary.replace('Higher flux changes from yellow to orange, red, and purple.', 'Higher flux changes from pale yellow through orange to dark red. Fixed pathway colors are not applied.')
             summary += (f' Biomass reaction: {fba_report["objective_value"]:.6f} h⁻¹. '
                         'This is one optimal solution that maximizes growth within the SBML bounds.')
+        if fba_report:
+            legend = '<p id="fba-color-legend" aria-label="Absolute FBA flux color scale">Absolute flux (mmol/gDW/h): '
+            legend += ' &nbsp; '.join(
+                f'<span><span aria-hidden="true" style="display:inline-block;width:1em;height:1em;background:{stop["color"]};border:1px solid #777"></span> {stop["value"]:.4g}</span>'
+                for stop in options['reaction_scale'])
+            legend += '</p>'
+            page = page.replace('<p id="escher-display-mode">', legend + '<p id="escher-display-mode">', 1)
         page = page.replace('Reaction positions and CO2 copies are kept. This view uses Escher styles. Use the mouse wheel to zoom.', summary)
         page = page.replace('const mapData=MAP_PLACEHOLDER;',
                             'window.fbaFluxes=' + json.dumps(reaction_data, allow_nan=False) + ';const mapData=MAP_PLACEHOLDER;')

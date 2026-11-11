@@ -282,8 +282,8 @@ The initial Escher view has no reaction flux data loaded: sampled values, flux
 widths, and the flux color scale are hidden. Arrows show model-permitted
 directions; red and orange describe the pathway structure. Loading reaction
 data automatically disables those fixed pathway colors, and clearing the data
-restores them. FBA pages start with simulation values and a light-to-dark blue
-flux scale (gray for zero), with fixed pathway colors off.
+restores them. FBA pages start with simulation values and a pale-yellow-to-dark-red
+absolute flux scale (gray for zero), with fixed pathway colors off.
 
 Escher connections are exported as horizontal and vertical segments. Diagonal
 incidences receive an intermediate `multimarker` at the corner; already aligned

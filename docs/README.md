@@ -37,3 +37,9 @@ These saved structural views show 326 of the source model's 349 reactions,
 without flux sampling. No new model files or source/display model snapshots
 are included. `prepare_github_pages.py` refreshes E. coli core and preserves
 this separately published iCH360 directory.
+
+FBA color and width show absolute flux: gray at zero, then pale yellow, orange,
+red, and dark red as flux increases. Labels retain signed values.
+
+iCH360 publication excludes SBML/XML model files and links to them.
+Run `python3 prepare_github_pages.py` before publishing to check this policy.

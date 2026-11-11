@@ -4,6 +4,8 @@ from pathlib import Path
 import csv
 import json
 import shutil
+from html.parser import HTMLParser
+from urllib.parse import unquote, urlsplit
 
 from highlighting import grid_elements, inject_controls
 
@@ -18,7 +20,30 @@ FBA_FILES = ('escher_fba.html','fba_report.json','fba_fluxes.csv','fba_fluxes.js
 SBML_FILES = ('layout.sbml','sbml_layout_report.json')
 
 
+
+class _ModelLinks(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        for key, value in attrs:
+            if key in ('href', 'src', 'download') and value:
+                path = unquote(urlsplit(value).path).lower()
+                if path.endswith(('.sbml', '.xml')) or '.sbml.' in path:
+                    raise ValueError('iCH360 must not link to SBML/XML model downloads: ' + value)
+
+
+def check_ich360_publication(docs):
+    """Keep iCH360 source/positioned SBML files and model links off the site."""
+    for path in docs.rglob('*'):
+        if 'ich' not in str(path.relative_to(docs)).lower() or not path.is_file():
+            continue
+        name = path.name.lower()
+        if name.endswith(('.sbml', '.xml')) or '.sbml.' in name:
+            raise ValueError('iCH360 SBML/XML model must not be published: ' + str(path))
+        if path.suffix.lower() == '.html':
+            _ModelLinks().feed(path.read_text())
+
+
 def main():
+    check_ich360_publication(ROOT / 'docs')
     source = ROOT / 'results/e_coli_core'
     target = ROOT / 'docs/e_coli_core'
     for name in (*FILES, 'source_model.json', 'coordinates.csv', 'edges.csv', 'reaction_ranking.json'):
