@@ -10,7 +10,7 @@ import re
 
 import numpy as np
 
-from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset
+from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
 
 from highlighting import HIGHLIGHT_COLOR, read_selection, grid_elements, catalog, inject_controls
 
@@ -205,6 +205,11 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     connectors = (backbones or {}).get('exchange_connectors')
     orange_edges = set(connectors['edge_indices']) if connectors else set()
     orange_nodes = {key for i in orange_edges for key in (edges[i]['source'], edges[i]['target'])}
+    orange_pairs={frozenset((edges[i]['source'],edges[i]['target'])) for i in orange_edges}
+    node_priorities=structural_node_priorities(nodes,
+        {rid for rid,record in stats.items() if record.get('is_major_pathway',False)},major_mids,orange_pairs)
+    obstacle_keys=sorted(key for key,rank in node_priorities.items() if rank>0)
+    obstacles=[xy[key] for key in obstacle_keys]
     selected = [r for r in records if r['selected']]
     from display_ranking import reaction_display_order
     orange_reactions = {edges[i]['reaction_id']: 1 for i in orange_edges}
@@ -244,8 +249,11 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             priority=2 if stats[rid].get('is_major_pathway',False) else 1 if j in orange_edges else 0,
             backbone=frozenset((edge['source'],edge['target'])) in backbone_pairs))
     original_route_length=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
-    parallel_report=separate_parallel(display_paths,obstacles=xy.values())
-    parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=xy.values(),route_offset=route_offset)
+    parallel_report=separate_parallel(display_paths,obstacles=obstacles)
+    parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=obstacles,route_offset=route_offset)
+    parallel_report['node_obstacle_policy']='red_orange_structural_nodes'
+    parallel_report['obstacle_node_ids']=obstacle_keys
+    parallel_report['structural_node_priorities']=node_priorities
     parallel_report['original_route_length']=original_route_length
     parallel_report['display_route_length']=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
     dump(output/'parallel_routing.json',parallel_report)
@@ -285,7 +293,7 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         p = xy[key]; rid = node['original_id'] if node['kind'] == 'reaction' else node['parent_id'].removeprefix('rxn:')
         is_reaction = node['kind'] == 'reaction'; coenzyme = node['kind'] == 'currency'
         major = stats[rid].get('is_major_pathway', False) if is_reaction else node['original_id'] in major_mids
-        color = RED if major and not coenzyme else ORANGE if key in orange_nodes else '#83949d' if connectors or structural else cmap(norm(stats[rid]['priority'])) if is_reaction else '#83949d' if coenzyme else '#173c53'
+        color = RED if node_priorities[key]==2 else ORANGE if node_priorities[key]==1 else '#83949d' if connectors or structural else cmap(norm(stats[rid]['priority'])) if is_reaction else '#83949d' if coenzyme else '#173c53'
         artist = ax.scatter(*p, marker='s' if is_reaction else 'o', s=25 if is_reaction else 9 if coenzyme else 32,
                             c=[color], zorder=3, edgecolor='white', linewidth=.4)
         artist.set_gid(f'node-{j}')

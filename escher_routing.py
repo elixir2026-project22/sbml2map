@@ -4,7 +4,7 @@ import hashlib
 import json
 import math
 
-from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset
+from parallel_routing import separate_parallel, avoid_nodes, validate_route_offset, structural_node_priorities
 
 
 def _simplify(points):
@@ -39,13 +39,22 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
     major=set(major_reactions);orange=set(connector_pairs or ())
     sources=meta['source_node_ids'];old_nodes=body['nodes']
     base_id=meta.get('overlap_routing',{}).get('base_map_id',header['map_id'])
-    backbone=set()
+    backbone=set();major_metabolites=set()
     for namespace in ('sbml2map','sbml2escher','escher_grid'):
         for route in meta.get(namespace,{}).get('major_backbones',{}).get('routes',[]):
+            major_metabolites.update(route.get('metabolite_ids',()))
             for step in route.get('steps',[]):
                 reaction='rxn:'+step['reaction_id']
                 backbone.add(frozenset((reaction,'met:'+step['source'])))
                 backbone.add(frozenset((reaction,'met:'+step['target'])))
+    node_records={key:dict(kind='reaction' if old_nodes[nid]['node_type']=='midmarker' else
+        'metabolite' if old_nodes[nid].get('node_is_primary') else 'currency',
+        original_id=key.removeprefix('rxn:') if old_nodes[nid]['node_type']=='midmarker' else old_nodes[nid]['bigg_id'])
+        for nid,key in sources.items()}
+    node_priorities=structural_node_priorities(node_records,major,major_metabolites,orange)
+    obstacle_keys=sorted(key for key,rank in node_priorities.items() if rank>0)
+    obstacles=[(old_nodes[nid]['x'],old_nodes[nid]['y']) for nid,key in sources.items() if key in obstacle_keys]
+    meta['structural_node_priorities']=node_priorities
     routes=[]
     for rid,reaction in body['reactions'].items():
         marker=meta['reactions'][reaction['bigg_id']]['marker_node_id']
@@ -115,9 +124,9 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
         route['points']=_simplify([start,a,shifted_a,*joints,shifted_z,z,end])
     parallel_report = separate_parallel(
         routes, grid=meta['coordinate_transform']['scale'],
-        obstacles=[(old_nodes[key]['x'],old_nodes[key]['y']) for key in sources]) if enabled else None
+        obstacles=obstacles) if enabled else None
     node_report = avoid_nodes(routes, grid=meta['coordinate_transform']['scale'],
-        obstacles=[(old_nodes[key]['x'],old_nodes[key]['y']) for key in sources],
+        obstacles=obstacles,
         route_offset=route_offset) if enabled else None
     map_nodes={key:old_nodes[key] for key in sources}
     node_number=max(map(int,sources))+1
@@ -136,7 +145,8 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
             source_edges[sid]=route['pair'];priorities[sid]=route['priority']
     body['nodes']=map_nodes
     meta.update(routing_node_ids=routing,segment_source_edges=source_edges,segment_priorities=priorities)
-    meta['overlap_routing']=dict(node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
+    meta['overlap_routing']=dict(node_obstacle_policy='red_orange_structural_nodes',obstacle_node_ids=obstacle_keys,
+                                node_detours=node_report,parallel_detours=parallel_report,enabled=enabled,base_map_id=base_id,lane_spacing=step if enabled else 0,
                                 shifted_legs=sum(bool(l['offset']) for l in legs),
                                 max_offset=max((abs(l['offset']) for l in legs),default=0),
                                 priority=['red','orange','gray'],shared_same_reaction_trunks=True,

@@ -106,17 +106,18 @@ class EscherNodeRoutingTests(unittest.TestCase):
         nodes,edges=build_network(model,[])
         xy={'rxn:red':[0,0],'met:a':[4,0],'rxn:other':[2,0],'met:b':[2,1]}
         original=create_map(model,nodes,edges,xy,scale=180,padding=40)
+        orange_pairs={frozenset(('rxn:other','met:b'))}
         for offset in (.3,.5,0):
             with self.subTest(offset=offset):
                 data=copy.deepcopy(original)
-                separate_routes(data,{'red'},route_offset=offset)
+                separate_routes(data,{'red'},orange_pairs,route_offset=offset)
                 meta=data[0]['metadata']
                 report=meta['overlap_routing']['node_detours']
                 self.assertEqual(meta['route_offset_grid'],offset)
                 self.assertEqual(report['route_offset_grid'],offset)
                 self.assertEqual(report['shifted_segments'],1 if offset else 0)
                 self.assertTrue(validate_map_geometry(data,model,nodes,xy)['orthogonal_segments_verified'])
-                first=copy.deepcopy(data);separate_routes(data,{'red'});self.assertEqual(data,first)
+                first=copy.deepcopy(data);separate_routes(data,{'red'},orange_pairs);self.assertEqual(data,first)
                 separate_routes(data,enabled=False)
                 self.assertIsNone(data[0]['metadata']['overlap_routing']['node_detours'])
                 self.assertTrue(validate_map_geometry(data,model,nodes,xy)['orthogonal_segments_verified'])

@@ -449,7 +449,7 @@ def write_pathway_preview(path, data, major_reactions=(), connector_pairs=None,
                           model=None, elements=(), initial_highlights=None, records=()):
     """Start with pathway structure; disable fixed colors when reaction data loads."""
     if data[0]['metadata'].get('routing')=='orthogonal' and (not data[0]['metadata'].get('overlap_routing',{}).get('enabled') or
-            'endpoint_step_grid' not in (data[0]['metadata'].get('overlap_routing',{}).get('node_detours') or {})):
+            data[0]['metadata'].get('overlap_routing',{}).get('node_obstacle_policy')!='red_orange_structural_nodes'):
         data = separate_routes(copy.deepcopy(data),major_reactions,connector_pairs)
     configure_label_display(data, major_reactions)
     configure_reaction_coverage(data, records)

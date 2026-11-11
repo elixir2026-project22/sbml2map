@@ -5,6 +5,21 @@ import math
 EPS = 1e-7
 
 
+
+def structural_node_priorities(nodes, major_reactions=(), major_metabolites=(), connector_pairs=()):
+    """Use the structural red/orange node policy, independent of UI selections.
+
+    Cofactor copies on red reactions remain gray unless an orange connector
+    explicitly uses that copy. Red metabolites are backbone participants only.
+    """
+    major_reactions=set(major_reactions);major_metabolites=set(major_metabolites)
+    orange_nodes={key for pair in (connector_pairs or ()) for key in pair}
+    return {key:(2 if ((node['kind']=='reaction' and node['original_id'] in major_reactions) or
+                       (node['kind']=='metabolite' and node['original_id'] in major_metabolites)) else
+                 1 if key in orange_nodes else 0)
+            for key,node in nodes.items()}
+
+
 def _legs(points):
     for a, b in zip(points, points[1:]):
         if math.dist(a, b) <= EPS:

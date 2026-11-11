@@ -6,7 +6,7 @@ To export SBML with positions, use `--export-sbml-layout`.
 
 The structural Escher view paints red above orange above gray and offsets coincident routes of different reactions.
 Biological nodes stay fixed; same-reaction trunks remain bundled. Primary backbone
-centerlines stay fixed during parallel-lane separation, but may detour around unrelated nodes.
+centerlines stay fixed during parallel-lane separation, but may detour around unrelated red/orange nodes.
 Parallel red/orange segments from different reactions that run together for at
 least one grid unit are separated by approximately 0.3 grid units using rectangular
 detours in both SVG and Escher structural views. Node collisions are avoided;
@@ -533,11 +533,15 @@ incumbent comparisons use the same objective; global optimality is not assumed.
 ## Avoid nodes with whole-segment rectangular detours
 
 In structural SVG and Escher views, red/orange segments that cross an unrelated
-metabolite or reaction node can move sideways as three sides of a rectangle.
+red/orange metabolite or reaction node can move sideways as three sides of a rectangle.
 The direct U uses two bends to connect the segment endpoints to the shifted line;
 node positions, reaction participants and flux values stay unchanged. This also
 applies to primary pathway lines. Both the long side and the two short sides
-must be free of unrelated nodes. If a direct U is obstructed, the line first
+must be free of unrelated red/orange nodes. Gray and other nodes may be crossed.
+The same structural node classification drives SVG colors and both viewers’
+obstacle lists; purple selections and display filters do not change it.
+Gray cofactor copies on red reactions remain outside the obstacle list.
+If a direct U is obstructed, the line first
 steps approximately 0.15 grid units along the original direction at one endpoint,
 then turns twice to reach the offset lane. Both endpoints can use this fallback.
 On short segments, the step is capped at one quarter of the segment length.

@@ -68,3 +68,11 @@ allows two right-angle turns into the offset lane. Existing short endpoint
 stems may remain coincident without increasing their overlap. The chosen shape
 is recorded in `detours`; `endpoint_step_fallback_segments` counts its uses.
 The E. coli core `for_e`–`EX_for_e` branch now clears `succ_c` in both viewers.
+
+
+Node avoidance protects only structurally red/orange metabolite and reaction
+nodes. Gray/other nodes may be crossed. Cofactor copies on red reactions stay
+gray unless explicitly used by an orange connector. SVG and Escher use the same
+classification; selections and display filters do not alter routing. The policy
+and protected source node IDs are recorded as `node_obstacle_policy` and
+`obstacle_node_ids` in each SVG report and Escher `overlap_routing` metadata.
