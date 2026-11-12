@@ -62,6 +62,7 @@ def place_corridors(model,nodes,xy,backbones,exchange_nodes,groups,cols,rows):
             if target not in (region or {}).get('node_ids',[]) and not allowed_points([c],region)[0]:continue
             if target not in reserved_keys and any(_on(c,p['points'][0],p['points'][-1]) for p in reserved):continue
             for face,axis,value,sign in sides:
+                if backbones.get('adaptive_grid') and abs(c[1-axis]-round(c[1-axis]))>EPS:continue
                 a=list(c);a[axis]=value;length=abs(c[axis]-value)
                 if length<(.64 if primary else .16):continue
                 proposed={ex:a,target:c}

@@ -356,6 +356,9 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             a, b = b, a
         major = stats[rid].get('is_major_pathway', False)
         orange = j in orange_edges
+        if (backbones or {}).get('adaptive_layout'):
+            major=canonical['routes'][j]['priority']==2
+            orange=canonical['routes'][j]['priority']==1
         color = RED if major else ORANGE if orange else '#cbd3d8' if connectors or structural else cmap(norm(stats[rid]['priority']))
         coenzyme = nodes[edge['source']]['kind'] == 'currency' or nodes[edge['target']]['kind'] == 'currency'
         points=np.array(display_paths[j]['points'])
@@ -392,8 +395,15 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         is_reaction = node['kind'] == 'reaction'; coenzyme = node['kind'] == 'currency'
         major = stats[rid].get('is_major_pathway', False) if is_reaction else node['original_id'] in major_mids
         color = RED if node_priorities[key]==2 else ORANGE if node_priorities[key]==1 else '#83949d' if connectors or structural else cmap(norm(stats[rid]['priority'])) if is_reaction else '#83949d' if coenzyme else '#173c53'
-        artist = ax.scatter(*p, marker='s' if is_reaction else 'o', s=25 if is_reaction else 9 if coenzyme else 32,
-                            c=[color], zorder=3, edgecolor='white', linewidth=.4)
+        port_spec=((backbones or {}).get('crossing_routing') or {}).get('report',{})
+        if key in port_spec.get('node_port_nodes',[]):
+            from matplotlib.patches import Circle,Rectangle
+            radius=port_spec['node_port_glyph_radius_grid']
+            artist=Rectangle((p[0]-radius,p[1]-radius),2*radius,2*radius,facecolor=color,edgecolor='white',linewidth=.4,zorder=3) if is_reaction else Circle(p,radius,facecolor=color,edgecolor='white',linewidth=.4,zorder=3)
+            ax.add_patch(artist)
+        else:
+            artist = ax.scatter(*p, marker='s' if is_reaction else 'o', s=25 if is_reaction else 9 if coenzyme else 32,
+                                c=[color], zorder=3, edgecolor='white', linewidth=.4)
         artist.set_gid(f'node-{j}')
         label = node['original_id']
         if is_reaction and not structural:
@@ -534,7 +544,11 @@ document.getElementById('coverage').oninput=update;document.getElementById('coen
         description=f"TCA shape: {exclusion['shape']}. {interior_text}"
         if exclusion['shape']=='circle':
             region=exclusion['region']
-            description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use a {region.get('node_grid_step',1):g}-step auxiliary grid and cycle connections use curved Beziers."
+            if region.get('anchor_mode')=='grid_line_intersection':
+                description+=' TCA nodes lie at circle/grid-line intersections; each has at least one integer coordinate. TCA cycle arcs remain curved.'
+            else:
+                description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use a {region.get('node_grid_step') or 1:g}-step auxiliary grid and cycle connections use curved Beziers."
+
         if alignment.get('mode')=='collinear':
             description+=f" {alignment['checked_triplets']} matched EX / extracellular / cytosolic triplets are collinear, ordered from outside inward."
         page=page.replace('</header>','<p id="tca-layout-policy">'+description+'</p></header>',1)
@@ -676,6 +690,15 @@ def run(args):
     backbones['skipped_routes'] = skipped_routes
     from tca_geometry import configure_plan
     fixed_offsets, backbones = configure_plan(fixed_offsets,backbones,getattr(args,'tca_shape','circle'),getattr(args,'tca_interior','allow'))
+    adaptive=getattr(args,'crossing_policy','legacy')=='adaptive-grid'
+    if adaptive:
+        from adaptive_geometry import compact_tca
+        preview_connectors=connector_plan(nodes,edges,roots,exchange_nodes,major_reactions,allow_disconnected=no_sampling) if strategy and selected else {}
+        degrees={}
+        for index in preview_connectors.get('edge_indices',[]):
+            for key in (edges[index]['source'],edges[index]['target']):degrees[key]=degrees.get(key,0)+1
+        required_ports={key for key,degree in degrees.items() if degree>1}
+        fixed_offsets,backbones=compact_tca(fixed_offsets,backbones,grid_point_keys=required_ports)
     for route in routes:
         if route['id']=='tca':route['shape']=getattr(args,'tca_shape','circle')
     grid_options = strategy.grid_options(nodes, backbones) if strategy else {}
@@ -702,6 +725,7 @@ def run(args):
         backbone=frozenset((e['source'],e['target'])) in backbone_pairs)
         for e in edges if e['reaction_id'] in major_reactions and e['source'] in grid_ids and e['target'] in grid_ids
         and frozenset((e['source'],e['target'])) not in tca_pairs]
+    if adaptive:red_edges=[]
     major_mids={mid for route in routes for mid in route['metabolite_ids']}
     def routing_obstacles(plan):
         orange_pairs={frozenset((edges[i]['source'],edges[i]['target'])) for i in (plan or {}).get('edge_indices',[])}
@@ -809,7 +833,7 @@ def run(args):
     tca_region=requested_tca_region
     backbones['tca_exclusion']={'region':tca_region}
     backbones.setdefault('routing_boundary',[0,cols-1,0,rows-1])
-    if tca_region and tca_region.get('interior_policy')=='allow':
+    if not adaptive and tca_region and tca_region.get('interior_policy')=='allow':
         from orange_reposition import place_gray_inside_tca
         backbones['tca_interior_placement']=place_gray_inside_tca(nodes,edges,xy,backbones)
     if (getattr(args,'reposition_orange',True) and getattr(args,'crossing_policy','legacy')=='red-hard'
@@ -822,6 +846,13 @@ def run(args):
             if connectors:placement['objective']=connector_cost(connectors,edges,xy)
             placement['global_optimality_proven']=False
             placement.pop('relative_gap',None)
+    if adaptive:
+        from adaptive_routing import adaptive_layout
+        adaptive_layout(model,nodes,edges,xy,backbones,exchange_nodes,alignment_groups,cols,rows,major_reactions)
+        tca_region=backbones['tca_exclusion']['region']
+        if glucose_node:placement['position_constraints']['top_left_position']=list(xy[glucose_node])
+        if connectors:placement['objective']=connector_cost(connectors,edges,xy)
+        placement['global_optimality_proven']=False
     routing_boundary=backbones.get('routing_boundary',[0,cols-1,0,rows-1])
     xmin,xmax,ymin,ymax=routing_boundary
     tca_exclusion = validate_exclusion(nodes,xy,tca_region)
@@ -852,7 +883,7 @@ def run(args):
     length = float(sum(np.abs(np.array(xy[e['source']]) - xy[e['target']]).sum() for e in edges))
     coenzyme_count = sum(n['kind'] == 'currency' for n in nodes.values())
     grid_length = sum(sum(abs(a-b) for a,b in zip(xy[a_key],xy[b_key])) for a_key,b_key in grid_pairs)
-    if not math.isclose(length, grid_length + .45 * coenzyme_count, abs_tol=1e-7):
+    if not adaptive and not math.isclose(length, grid_length + .45 * coenzyme_count, abs_tol=1e-7):
         raise RuntimeError('Edge-length objective differs from drawn orthogonal geometry')
     if connectors and not math.isclose(connector_cost(connectors,edges,xy),placement['objective'],abs_tol=1e-7):
         raise RuntimeError('Orange objective differs from drawn orthogonal geometry')
@@ -935,7 +966,7 @@ def run(args):
                                   no_zero_median_reactions=True, visible_stoichiometry_preserved=True,
                                   full_model_used_for_sampling=True, network=network, escher=escher_check),
                   limitations=['Global length optimality is reported, not assumed.',
-                               ('Red crossings are forbidden; orange length is minimized over a bounded candidate search. Orange crossings are permitted.' if backbones.get('crossing_routing') else 'Crossings, coincident edge paths, and label overlap are not minimized.'),
+                               ('Orange overlaps outside node glyphs are forbidden. Red/orange point crossings are allowed only for audited long detours; thin orange corridors allow at most two incidences.' if backbones.get('adaptive_layout') else 'Red crossings are forbidden; orange length is minimized over a bounded candidate search. Orange crossings are permitted.' if backbones.get('crossing_routing') else 'Crossings, coincident edge paths, and label overlap are not minimized.'),
                                'Display model omits inorganic participants and is not suitable for FBA.',
                                'TCA cycle connections may use circular Beziers; other connections use orthogonal routing. Biological coordinates and reaction chemistry are preserved.',
                                'Sampling uses original bounds without a growth floor or loopless constraints; internal cycles may dominate.'])
@@ -956,6 +987,7 @@ def run(args):
     report['routing_boundary']=routing_boundary
     if backbones.get('boundary_compaction'):report['boundary_compaction']=backbones['boundary_compaction']
     if backbones.get('orange_reposition'):report['orange_reposition']=backbones['orange_reposition']
+    if backbones.get('adaptive_layout'):report['adaptive_layout']=backbones['adaptive_layout']
     if backbones.get('tca_interior_placement'):report['tca_interior_placement']=backbones['tca_interior_placement']
     report['tca_shape'] = getattr(args,'tca_shape','circle')
     report['tca_exclusion'] = tca_exclusion
@@ -1019,7 +1051,7 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
-    p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange length')
+    p.add_argument('--crossing-policy',choices=('adaptive-grid','red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange length')
     p.add_argument('--routing-attempts','--crossing-attempts',dest='crossing_attempts',type=int,default=12,help='Orange length ordering candidates (default: 12)')
     p.add_argument('--no-reposition-orange',dest='reposition_orange',action='store_false',help='Disable local node relocation to reduce orange line overlap')
     p.add_argument('--no-compact-boundary',dest='compact_boundary',action='store_false',help='Keep the initial lower and right exchange boundaries')

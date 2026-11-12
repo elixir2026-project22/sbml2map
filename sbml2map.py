@@ -96,7 +96,7 @@ def parser():
     p=engine.parser()
     p.description=__doc__
     p.prog='sbml2map.py'
-    p.set_defaults(crossing_policy='red-hard',output_dir=Path(__file__).parent/'e_coli_core_sbml2map_output',program_name='sbml2map')
+    p.set_defaults(crossing_policy='adaptive-grid',output_dir=Path(__file__).parent/'e_coli_core_sbml2map_output',program_name='sbml2map')
     p.add_argument('--reference',type=Path,default=REFERENCE,help='Versioned BiGG/KEGG compound-role reference JSON')
     p.add_argument('--identity-map',type=Path,help='JSON mapping model-local metabolite IDs to reference chemical roles')
     p.add_argument('--mnxref-dir',type=Path,help='Local MNXref release directory containing chem_xref.tsv and chem_depr.tsv; no automatic downloads')

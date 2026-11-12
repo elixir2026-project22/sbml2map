@@ -405,7 +405,7 @@ def apply_to_escher(data,plan):
     from routing_simplification import POLICY as LEGACY_POLICY
     from red_route_layout import plan_from_metadata
     meta['overlap_routing']=dict(enabled=True,routing_preference=LEGACY_POLICY,node_obstacle_policy='red_orange_structural_nodes',
-        trunk_grouping='positive_length_overlap',red_layout_signature=(plan_from_metadata(meta) or {}).get('signature'),hard_crossing_policy=POLICY,
+        trunk_grouping='positive_length_overlap',red_layout_signature=(plan_from_metadata(meta) or {}).get('signature'),hard_crossing_policy=plan['report'].get('policy',POLICY),
         preallocated_parallel_channels_applied=False)
     header['map_id']=plan['signature']
     canvas=body['canvas'];padding=transform['padding']
@@ -436,12 +436,19 @@ def validate_saved_geometry(data,metadata=None):
                 following,segment=options[0];segments.append(segment);previous=chain[-1];chain.append(following)
             chain.reverse();segments.reverse()
             record=canonical[rid,mid]
-            p=dict(rid=rid,mid=mid,source=sources[marker],target=sources[target],priority=2 if rid in major else record['priority'],points=[inverse(body['nodes'][n]) for n in chain])
+            p=dict(rid=rid,mid=mid,source=sources[marker],target=sources[target],priority=record['priority'] if backbones.get('adaptive_layout') else 2 if rid in major else record['priority'],points=[inverse(body['nodes'][n]) for n in chain])
+            p['backbone']=record.get('backbone',False)
+            if record.get('auxiliary_lane'):p['auxiliary_lane']=True
             if len(segments)==1 and segments[0]['b1'] is not None:
                 controls=[segments[0]['b1'],segments[0]['b2']]
                 if segments[0]['from_node_id']!=marker:controls.reverse()
                 p['curve_controls']=[inverse(c) for c in controls]
             paths.append(p)
+    if backbones.get('adaptive_layout'):
+        from adaptive_routing import validate_paths
+        xy={source:inverse(body['nodes'][key]) for key,source in sources.items()}
+        return validate_paths(paths,xy,backbones['routing_boundary'],backbones['tca_exclusion'].get('region'),
+                              backbones['crossing_routing']['report']['conditional_crossings'])
     result=measure(paths)
     boundary=backbones.get('routing_boundary')
     if boundary is not None:result['boundary_validation']=validate_boundary(paths,boundary)

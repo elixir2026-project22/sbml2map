@@ -5,7 +5,7 @@
   "source_sbml": "/home/tamura/codex/drawing/e_coli_core.xml",
   "source_sha256": "b4db506aeed0e434c1f5f1fdd35feda0dfe5d82badcfda0e9d1342335ab31116",
   "output_file": "layout.sbml",
-  "output_sha256": "bcc56618d49ef728ddbbeddf8305a2640627aa66e98917d19973586defe6f847",
+  "output_sha256": "efadf8b4b28c70151c1821e9b12f4132fdab62907b938b894f9c2c35860933d1",
   "level": 3,
   "version": 1,
   "libsbml_version": "5.21.2",
@@ -17,7 +17,7 @@
   "reaction_glyphs": 84,
   "text_glyphs": 220,
   "species_reference_glyphs": 253,
-  "line_segments": 425,
+  "line_segments": 431,
   "cubic_beziers": 18,
   "undisplayed_reaction_ids": [
     "CO2t",
@@ -51,8 +51,8 @@
     35.0
   ],
   "layout_dimensions": [
-    3808.0,
-    6335.0
+    7768.0,
+    10655.0
   ],
   "validation": {
     "original_xml_semantics_preserved": true,

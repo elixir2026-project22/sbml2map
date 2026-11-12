@@ -1,5 +1,7 @@
 # sbml2map
 
+Current default: adaptive grid routing with disjoint visible orange lines, audited red/orange crossings and a smaller TCA circle. See [Adaptive grid routing](#adaptive-grid-routing-current-default) and the [test page](https://elixir2026-project22.github.io/sbml2map/test-tca/).
+
 sbml2map draws metabolic maps from SBML models. It can export Escher maps,
 SVG images, and SBML files with compound and reaction positions and connecting lines.
 To export SBML with positions, use `--export-sbml-layout`.
@@ -823,3 +825,47 @@ report records moves, per-pair searches, rejections and remaining overlaps.
 The source also distinguishes infeasible tested candidates from tested candidates
 that do not improve the objective. The bounded search does not prove global
 optimality or prove a remaining overlap impossible to avoid.
+
+
+
+## Adaptive grid routing (current default)
+
+`sbml2map.py` now defaults to `--crossing-policy adaptive-grid`. The older
+`red-hard` and `legacy` modes remain available. The adaptive policy keeps red
+paths first, then reserves straight exchange corridors. Ordinary grid lines
+are primary; at most two orange incidences may use the same thin auxiliary
+corridor. Auxiliary levels use quarter/three-quarter grid offsets. A third
+incidence cannot be added there: placement spreads right and down and retries.
+After routing succeeds, unused EX margins are compacted only if validation
+passes and orange length does not increase.
+
+Orange incidences do not overlap outside node glyphs, including branches of
+one reaction. High-degree biological nodes have separate ports within their
+symbol, using a 0.25-grid connection box covered by a 0.36-grid glyph. These
+short connections remain attached to the same original biological node. Raw
+and visible overlap lengths are recorded separately; no reactions or species
+are invented. Different orange paths may cross at points.
+
+Red/orange point crossings are allowed only when the uncrossed route is at
+least twice as long, adds at least four grid units, or has no feasible route.
+Each authorization stores the uncrossed and crossed length. Red/red crossings
+and red/orange overlap outside a node are forbidden. Static rendering and
+saved Escher geometry use the same priorities; local cofactor connections are
+gray and are outside the red/red crossing rule.
+
+The circle diameter is now about 8.49 grid units, approximately two thirds of
+12.75. Ordered TCA anchors lie at circle/grid-line intersections, with at least
+one integer coordinate each. Nodes with multiple orange connections use full
+grid intersections where possible. Only TCA cycle arcs remain curved. Other
+lines use grid or explicitly audited auxiliary lanes. TCA clearance is at least
+one grid unit on both sides, except the initial straight lead attached to a real
+TCA endpoint. That exception cannot re-enter the opposite clearance band.
+The square option remains supported, and `--tca-interior forbid` restores the
+interior exclusion policy.
+
+`adaptive_layout` records expansions, rejected layouts and optional EX margin
+compaction. `crossing_routing.report` records conditional crossings, port nodes,
+raw and visible overlap, the peak auxiliary corridor load and boundary checks.
+Validators reconstruct the actual saved paths. Search is bounded and does not
+prove global length/area optimality. The test page includes SVG, PNG, Escher,
+SBML Layout and detailed validation data for e_coli_core.

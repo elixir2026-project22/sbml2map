@@ -440,6 +440,13 @@ window.builder.callback_manager.set('update_data.pathway_colors',syncEscherDispl
 const m=window.builder.map;document.getElementById('status').textContent=Object.keys(m.reactions).length+' reactions, '+Object.keys(m.nodes).length+' nodes';},100);
 document.getElementById('save').onclick=()=>{const data=window.builder.map.map_for_export();data[0].metadata=mapData[0].metadata;const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='escher_map.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 </script></html>'''
+    from tca_curves import backbone_from_metadata
+    routing=backbone_from_metadata(data[0].get('metadata',{})).get('crossing_routing',{}).get('report',{})
+    port_keys=set(routing.get('node_port_nodes',[]))
+    if port_keys:
+        radius=routing['node_port_glyph_radius_grid']*data[0]['metadata']['coordinate_transform']['scale']
+        css=''.join('#n'+str(nid)+' circle{r:'+str(radius)+'px!important;}' for nid,key in data[0]['metadata']['source_node_ids'].items() if key in port_keys)
+        page=page.replace('</style>',css+'</style>',1)
     if reaction_data is not None:
         if set(reaction_data) != {r['bigg_id'] for r in data[1]['reactions'].values()}:
             raise ValueError('Flux IDs must match all map reactions')
