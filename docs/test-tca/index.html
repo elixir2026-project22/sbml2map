@@ -5,25 +5,25 @@
 <style>
 :root{color-scheme:light;font-family:system-ui,-apple-system,sans-serif;color:#193747;background:#f4f7f8}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1400px;margin:auto;padding:22px 28px}header{padding-top:36px}small{letter-spacing:.14em;color:#53717c}h1{font-size:clamp(25px,4vw,38px);margin:8px 0 12px}p{line-height:1.8;margin:8px 0}.toolbar{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:white;border:1px solid #d1dfe3;border-radius:12px;padding:16px}label{display:flex;align-items:center;gap:9px;font-size:14px}select,button,.link{font:inherit;background:white;border:1px solid #bdcfd5;border-radius:6px;padding:9px 12px;color:#193747}button,.link{cursor:pointer}.link{text-decoration:none;display:inline-block}button:hover,.link:hover{background:#eaf4f3}.links{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.legend{font-size:14px;color:#4a626f}.red{color:#df292e}.orange{color:#d16a08}.viewport{height:72vh;min-height:400px;overflow:auto;border:1px solid #cad8dd;border-radius:10px;background:white;padding:16px}.viewport img{display:block;max-width:none;height:auto;margin:0 auto}footer{font-size:13px;color:#4a626f;padding-bottom:36px}#status{font-size:14px}a{color:#165b69}@media(max-width:600px){header,main,footer{padding:18px}.viewport{height:65vh}.toolbar{gap:12px}input[type=range]{width:110px}}
 </style>
-<header><small>SBML2MAP / TEST PAGE</small><h1>TCA回路の円形配置 — テスト閲覧ページ</h1><p>代謝物と反応を、経路の順序に沿って円周上へ時計回りに配置した描画結果です。モデルと配置形状を切り替えて比較できます。</p></header>
+<header><small>SBML2MAP / TEST PAGE</small><h1>TCA回路の円形配置 — テスト閲覧ページ</h1><p>代謝物と反応を、経路の順序に沿って円周上へ時計回りに配置した描画結果です。e_coli_coreの円形・四角形を切り替えて比較できます。</p></header>
 <main>
 <div class="toolbar">
-<label>モデル <select id="model"><option value="e_coli_core">E. coli core</option><option value="eco_ich_360">iCH360</option></select></label>
+<label>モデル <select id="model" aria-label="描画モデル"><option value="e_coli_core">E. coli core</option></select></label>
 <label>配置 <select id="shape"><option value="circle">円形</option><option value="square">四角形</option></select></label>
 <label>拡大率 <input id="zoom" type="range" min="50" max="300" value="100" step="10"><output id="zoomValue">100%</output></label>
 <button id="fit" type="button">幅に合わせる</button>
 </div>
 <p id="status" aria-live="polite"></p>
-<div class="links"><a class="link" id="interactive" href="../tca-layout/e_coli_core/circle/">操作付きビューアー</a><a class="link" id="escher" href="../tca-layout/e_coli_core/circle/escher_preview.html">Escherで開く</a><a class="link" id="png" href="../tca-layout/e_coli_core/circle/layout.png" download>PNGを保存</a><a class="link" id="svg" href="../tca-layout/e_coli_core/circle/layout.svg" download>SVGを保存</a></div>
+<div class="links"><a class="link" id="interactive" href="e_coli_core/circle/">操作付きビューアー</a><a class="link" id="escher" href="e_coli_core/circle/escher_preview.html">Escherで開く</a><a class="link" id="png" href="e_coli_core/circle/layout.png" download>PNGを保存</a><a class="link" id="svg" href="e_coli_core/circle/layout.svg" download>SVGを保存</a></div>
 <p class="legend"><span class="red">● 赤：主要経路</span>　<span class="orange">● オレンジ：交換反応への接続経路</span>　● 灰：その他の分岐</p>
-<div class="viewport" id="viewport"><img id="drawing" src="../tca-layout/e_coli_core/circle/layout.svg" alt="TCA回路を含む代謝ネットワークの描画結果"></div>
-<p>円形配置はノードの位置に適用しています。接続線は直角配線です。TCA内部は他の代謝物・反応・補酵素ノードの配置禁止領域です。</p>
+<div class="viewport" id="viewport"><img id="drawing" src="e_coli_core/circle/layout.svg" alt="TCA回路を含む代謝ネットワークの描画結果"></div>
+<p>円形は24個の整数格子点を通る円を選び、TCAの18ノードを格子点上に配置しています。TCA回路の接続線は滑らかな円弧です。四角形は直角配線で描画します。TCA内部は他の代謝物・反応・補酵素ノードの配置禁止領域です。</p>
 <noscript><p>表示の切替にはJavaScriptが必要です。<a href="../tca-layout/">配置比較一覧</a>から各描画を開くこともできます。</p></noscript></main>
-<footer><p><a href="../">通常の閲覧ページ</a> · <a href="../tca-layout/">配置比較一覧</a> · <a href="https://github.com/elixir2026-project22/sbml2map">GitHubリポジトリ</a></p>描画データ：2026年11月11日生成。保存済み検証では両モデル・両形状ともTCA内部のノード数は0件です。<a href="../tca-layout/tca_layout_validation.json">検証結果（JSON）</a></footer>
+<footer><p><a href="../">通常の閲覧ページ</a> · <a href="../tca-layout/">配置比較一覧</a> · <a href="https://github.com/elixir2026-project22/sbml2map">GitHubリポジトリ</a></p>描画データ：2026年11月12日生成。円形・四角形ともTCA内部のノード数は0件です。<a href="validation.json">検証結果（JSON）</a></footer>
 <script>
 const model=document.querySelector('#model'),shape=document.querySelector('#shape'),zoom=document.querySelector('#zoom'),drawing=document.querySelector('#drawing'),viewport=document.querySelector('#viewport');
 function resize(){drawing.style.width=Math.max(280,(viewport.clientWidth-34)*Number(zoom.value)/100)+'px';document.querySelector('#zoomValue').value=zoom.value+'%'}
-function update(){const base='../tca-layout/'+model.value+'/'+shape.value+'/';drawing.src=base+'layout.svg';drawing.alt=model.options[model.selectedIndex].text+'・TCA'+shape.options[shape.selectedIndex].text+'配置';for(const [id,file] of Object.entries({interactive:'index.html',escher:'escher_preview.html',png:'layout.png',svg:'layout.svg'}))document.getElementById(id).href=base+file;document.querySelector('#status').textContent=model.options[model.selectedIndex].text+' / '+shape.options[shape.selectedIndex].text+'配置 / 交換反応の直線配置あり';resize();viewport.scrollTop=0;viewport.scrollLeft=0}
+function update(){const base=model.value+'/'+shape.value+'/';drawing.src=base+'layout.svg';drawing.alt=model.options[model.selectedIndex].text+'・TCA'+shape.options[shape.selectedIndex].text+'配置';for(const [id,file] of Object.entries({interactive:'index.html',escher:'escher_preview.html',png:'layout.png',svg:'layout.svg'}))document.getElementById(id).href=base+file;document.querySelector('#status').textContent=model.options[model.selectedIndex].text+' / '+shape.options[shape.selectedIndex].text+'配置 / 交換反応の直線配置あり';resize();viewport.scrollTop=0;viewport.scrollLeft=0}
 model.addEventListener('change',update);shape.addEventListener('change',update);zoom.addEventListener('input',resize);document.querySelector('#fit').addEventListener('click',()=>{zoom.value=100;resize();viewport.scrollTop=0;viewport.scrollLeft=0});window.addEventListener('resize',resize);drawing.addEventListener('error',()=>document.querySelector('#status').textContent='画像を読み込めませんでした。PNGまたは操作付きビューアーを開いてください。');update();
 </script>
 </html>

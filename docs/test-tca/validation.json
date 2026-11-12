@@ -1,0 +1,114 @@
+{
+  "model": "e_coli_core",
+  "generated": "2026-11-12",
+  "default_tca_shape": "circle",
+  "cases": [
+    {
+      "shape": "circle",
+      "tca_nodes": 18,
+      "interior_node_count": 0,
+      "clearance_violation_count": 0,
+      "all_tca_nodes_on_integer_grid": true,
+      "escher": {
+        "schema_valid": true,
+        "metadata_embedded": true,
+        "reaction_ids_preserved": true,
+        "stoichiometry_preserved": true,
+        "coordinate_transform_verified": true,
+        "segment_endpoints_verified": true,
+        "nodes": 687,
+        "source_nodes": 220,
+        "routing_nodes": 467,
+        "orthogonal_segments_verified": false,
+        "non_tca_orthogonal_segments_verified": true,
+        "tca_curved_segments": 18,
+        "reactions": 84,
+        "segments": 720,
+        "primary_metabolites": 50,
+        "secondary_metabolites": 86,
+        "currency_copy_counts": {
+          "adp_c": 12,
+          "atp_c": 13,
+          "coa_c": 9,
+          "nad_c": 12,
+          "nadh_c": 12,
+          "amp_c": 2,
+          "nadp_c": 9,
+          "nadph_c": 9,
+          "q8_c": 4,
+          "q8h2_c": 4
+        },
+        "reverse_only_reactions": [
+          "FORt"
+        ],
+        "blocked_reactions": [],
+        "missing_gene_rule_count": 0
+      },
+      "grid_cols": 31,
+      "grid_rows": 47,
+      "lattice_point_count": 24,
+      "radius_grid": 12.747548783981962,
+      "center_grid": [
+        16.5,
+        13.5
+      ],
+      "connection_style": "circular_bezier",
+      "sbml": {
+        "original_xml_semantics_preserved": true,
+        "source_model_preserved": true,
+        "sbml_consistency_errors": 0,
+        "glyph_references_and_coordinates_verified": true,
+        "curves_horizontal_or_vertical": false,
+        "tca_bezier_controls_verified": true
+      },
+      "svg_cubic_paths": 18,
+      "maximum_bezier_radial_error_grid": 1.633851518967333e-05,
+      "sbml_cubic_beziers": 18
+    },
+    {
+      "shape": "square",
+      "tca_nodes": 18,
+      "interior_node_count": 0,
+      "clearance_violation_count": 0,
+      "all_tca_nodes_on_integer_grid": true,
+      "escher": {
+        "schema_valid": true,
+        "metadata_embedded": true,
+        "reaction_ids_preserved": true,
+        "stoichiometry_preserved": true,
+        "coordinate_transform_verified": true,
+        "segment_endpoints_verified": true,
+        "nodes": 740,
+        "source_nodes": 220,
+        "routing_nodes": 520,
+        "orthogonal_segments_verified": true,
+        "non_tca_orthogonal_segments_verified": true,
+        "tca_curved_segments": 0,
+        "reactions": 84,
+        "segments": 773,
+        "primary_metabolites": 50,
+        "secondary_metabolites": 86,
+        "currency_copy_counts": {
+          "adp_c": 12,
+          "atp_c": 13,
+          "coa_c": 9,
+          "nad_c": 12,
+          "nadh_c": 12,
+          "amp_c": 2,
+          "nadp_c": 9,
+          "nadph_c": 9,
+          "q8_c": 4,
+          "q8h2_c": 4
+        },
+        "reverse_only_reactions": [
+          "FORt"
+        ],
+        "blocked_reactions": [],
+        "missing_gene_rule_count": 0
+      },
+      "grid_cols": 14,
+      "grid_rows": 27,
+      "svg_cubic_paths": 0
+    }
+  ]
+}

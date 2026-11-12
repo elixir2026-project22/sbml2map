@@ -212,6 +212,8 @@ def validate_map_geometry(data, model, source_nodes, source_xy, source_metadata=
         if node['node_type'] != 'multimarker' or not all(math.isfinite(node[k]) for k in ('x','y')):
             raise ValueError('Invalid routing node')
     transform = metadata['coordinate_transform']
+    from tca_curves import escher_curve_controls
+    curved_count=0
     counts = Counter()
     for node_id, source_id in source_ids.items():
         node, source = map_nodes[node_id], source_nodes[source_id]
@@ -269,7 +271,16 @@ def validate_map_geometry(data, model, source_nodes, source_xy, source_metadata=
                                    math.isclose(c[axis],pa[axis],abs_tol=1e-6,rel_tol=0) for c in controls)
                                for axis in ('x','y'))
                 if not straight:
-                    raise ValueError('Segment is not horizontal or vertical')
+                    pair=metadata.get('segment_source_edges',{}).get(sid,[])
+                    expected=escher_curve_controls(metadata,pair,[pa['x'],pa['y']],[pb['x'],pb['y']])
+                    if (expected is None or a not in source_ids or b not in source_ids or
+                            frozenset(pair)!=frozenset((source_ids[a],source_ids[b])) or
+                            any(segment[k] is None or any(not math.isfinite(segment[k][axis]) or
+                                not math.isclose(segment[k][axis],value,abs_tol=1e-5,rel_tol=0)
+                                for axis,value in zip(('x','y'),point))
+                                for k,point in zip(('b1','b2'),expected))):
+                        raise ValueError('Segment is not horizontal or vertical, or a valid TCA circular Bezier')
+                    curved_count+=1
             graph.setdefault(a,[]).append((b,sid))
             graph.setdefault(b,[]).append((a,sid))
             for endpoint in (a,b):
@@ -327,7 +338,8 @@ def validate_map_geometry(data, model, source_nodes, source_xy, source_metadata=
                 reaction_ids_preserved=True, stoichiometry_preserved=True,
                 coordinate_transform_verified=True, segment_endpoints_verified=True,
                 nodes=len(map_nodes), source_nodes=len(source_nodes), routing_nodes=len(routing_ids),
-                orthogonal_segments_verified=orthogonal, reactions=len(reactions), segments=len(segment_ids),
+                orthogonal_segments_verified=orthogonal and curved_count==0,
+                non_tca_orthogonal_segments_verified=orthogonal,tca_curved_segments=curved_count, reactions=len(reactions), segments=len(segment_ids),
                 primary_metabolites=sum(n['node_type'] == 'metabolite' and n['node_is_primary'] for n in map_nodes.values()),
                 secondary_metabolites=sum(n['node_type'] == 'metabolite' and not n['node_is_primary'] for n in map_nodes.values()),
                 currency_copy_counts=dict(Counter(n['original_id'] for n in source_nodes.values() if n['kind'] == 'currency')),

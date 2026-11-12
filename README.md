@@ -650,8 +650,13 @@ flux units. Numerical FBA results and branch visibility are unchanged.
 
 The default is `--tca-shape circle --exchange-alignment collinear`.
 TCA compound and reaction nodes follow the source cycle in clockwise order on
-an exact circular perimeter. Other ordinary nodes remain on a grid. TCA
-anchors and their aligned exchange partners may use fractional coordinates.
+an exact circular perimeter through enough integer grid intersections for every
+cycle node. The smallest eligible circle is selected using integer or half-integer
+centers; every TCA node has integer grid coordinates. E. coli core uses 18 cycle
+nodes on a circle through 24 grid intersections. Circular TCA connections use
+cubic Bezier arcs with tangents along the circle; other connections retain
+orthogonal routing. `--tca-shape square` retains square, orthogonal TCA routing.
+SVG, PNG, Escher and SBML Layout preserve this geometry.
 
 ```bash
 python sbml2map.py --model models/e_coli_core.xml --no-sampling \
@@ -683,6 +688,7 @@ three points does not change chemistry or invent a transport reaction.
 The original weighted Manhattan-length objective and routing policy are retained.
 The crossing-first experiment has been reverted. Existing published examples
 are unchanged; new shape/alignment examples are under `docs/tca-layout/`.
+The e_coli_core grid-circle/curve comparison is at `docs/test-tca/`.
 `report.json` records `tca_shape`, `tca_exclusion` and `exchange_alignment`,
 including matched/skipped triplets and verified empty-interior counts. The CSV
 `on_grid` field describes actual integer coordinates. Full FBA completion

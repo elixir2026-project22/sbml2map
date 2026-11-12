@@ -1,4 +1,4 @@
-"""Exact circular anchors and hard empty-interior constraints."""
+"""Grid-intersection circular anchors and hard empty-interior constraints."""
 import copy
 import math
 from pathlib import Path
@@ -35,7 +35,10 @@ class TCAGeometryTests(unittest.TestCase):
             region=absolute_region(plan['tca_geometry'],rows)
             self.assertTrue(validate_backbones(plan,xy,rows)['all_displayed_backbone_positions_verified'])
             for key in region['node_ids']:self.assertTrue(on_perimeter(xy[key],region))
-            if shape=='circle':self.assertTrue(any(not float(v).is_integer() for key in region['node_ids'] for v in xy[key]))
+            if shape=='circle':
+                self.assertTrue(all(float(v).is_integer() for key in region['node_ids'] for v in xy[key]))
+                self.assertGreaterEqual(region['lattice_point_count'],region['required_slots'])
+                self.assertEqual(len({tuple(xy[k]) for k in region['node_ids']}),len(region['node_ids']))
             self.assertEqual(next(r for r in plan['routes'] if r['id']=='tca')['shape'],shape)
 
     def test_interiors_and_clearance_are_forbidden(self):

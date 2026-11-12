@@ -1,9 +1,35 @@
 """TCA perimeter geometry and renderer-independent node exclusion checks."""
 import math
+from collections import defaultdict
+from functools import lru_cache
 import numpy as np
 
 EPS = 1e-7
 NODE_CLEARANCE = .16
+
+
+@lru_cache(maxsize=64)
+def lattice_circle(required_slots, minimum_radius=2.):
+    """Smallest circle with enough integer/half-integer centered lattice points.
+
+    Search doubled integer coordinates, grouped by parity and squared radius.
+    Translation then puts every selected point on the ordinary integer grid.
+    """
+    limit = max(8, required_slots)
+    while True:
+        groups = defaultdict(list)
+        for x in range(-limit, limit+1):
+            for y in range(-limit, limit+1):
+                radius2 = x*x+y*y
+                if 4*minimum_radius**2-EPS <= radius2 <= limit*limit:
+                    groups[(radius2, x % 2, y % 2)].append((x/2, y/2))
+        candidates = [(key, points) for key, points in groups.items() if len(points) >= required_slots]
+        if candidates:
+            (radius2, _, _), points = min(candidates, key=lambda item:item[0])
+            # Begin near the upper-left entry; walk clockwise in y-up space.
+            points.sort(key=lambda p:(3*math.pi/4-math.atan2(p[1],p[0])) % (2*math.pi))
+            return tuple(points), math.sqrt(radius2)/2
+        limit *= 2
 
 
 def configure_plan(fixed, plan, shape='circle'):
@@ -23,9 +49,13 @@ def configure_plan(fixed, plan, shape='circle'):
     region = dict(shape=shape, node_ids=node_ids, clearance_grid=NODE_CLEARANCE,
                   orientation='clockwise', closed=route.get('closed', True))
     if shape == 'circle':
-        radius = max(2., side/2, count/(2*math.pi))
-        center = (left+radius, top-radius)
-        # Use square perimeter progress to preserve missing-step gaps and order.
+        # A genuine circle through integer grid intersections, rather than
+        # rounded samples of a smaller circle. Keep enough slots for absent steps.
+        lattice, radius = lattice_circle(max(count, 4*side), max(2., side/2))
+        xmin = min(x for x, y in lattice)
+        ymax = max(y for x, y in lattice)
+        shift = [left-xmin, top-ymax]
+        center = [shift[0], shift[1]]
         for key, (x, y) in list(offsets.items()):
             if abs(y-top) < EPS:
                 progress = x-left
@@ -35,14 +65,17 @@ def configure_plan(fixed, plan, shape='circle'):
                 progress = 2*side+left+side-x
             else:
                 progress = 3*side+y-(top-side)
-            angle = 3*math.pi/4-2*math.pi*progress/(4*side)
-            position = [center[0]+radius*math.cos(angle), center[1]+radius*math.sin(angle)]
+            slot = round(progress*len(lattice)/(4*side)) % len(lattice)
+            position = [int(round(lattice[slot][i]+shift[i])) for i in (0, 1)]
             offsets[key] = position
             if key in fixed:
                 fixed[key] = position
                 plan['fixed_node_offsets'][key] = position
-        region.update(center_offset=list(center), radius=radius)
-        plan['circle'] = dict(center_offset=list(center), radius=radius, orientation='clockwise')
+        region.update(center_offset=center, radius=radius,
+                      lattice_point_count=len(lattice), required_slots=max(count, 4*side),
+                      all_tca_nodes_on_grid=True, connection_style='circular_bezier')
+        plan['circle'] = dict(center_offset=center, radius=radius, orientation='clockwise',
+                              lattice_point_count=len(lattice))
         plan['square'] = None
     else:
         region.update(left=left, top_offset=top, side_length=side)

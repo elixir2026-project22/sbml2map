@@ -256,6 +256,9 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     # Defer autoscaling until all artists exist; scatter otherwise rescans
     # previous collections for every added node on genome-scale maps.
     ax.set_autoscale_on(False)
+    from tca_curves import curved_pairs, arc_controls, sample_curve
+    tca_pairs=curved_pairs(backbones)
+    tca_center=((backbones or {}).get('tca_exclusion',{}).get('region') or {}).get('center')
     backbone_pairs=set()
     for route in (backbones or {}).get('routes', []):
         for step in route.get('steps', []):
@@ -282,19 +285,27 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
                 points=[tuple(p) for p in route['points']]
                 if path['points'][0]!=points[0]:points.reverse()
                 path.update(points=points,routing_locked=True)
-    parallel_report=separate_parallel(display_paths,obstacles=obstacles)
-    parallel_report['node_detours']=avoid_nodes(display_paths,obstacles=obstacles,route_offset=route_offset)
+    straight_paths=[p for edge,p in zip(edges,display_paths) if frozenset((edge['source'],edge['target'])) not in tca_pairs]
+    parallel_report=separate_parallel(straight_paths,obstacles=obstacles)
+    parallel_report['node_detours']=avoid_nodes(straight_paths,obstacles=obstacles,route_offset=route_offset)
     parallel_report['routing_preference']=POLICY
     requested_red_spacing=red_plan['requested_spacing_grid'] if red_plan and red_plan.get('enabled') else .3
-    parallel_report['important_simplification']=simplify_important(display_paths,obstacles=obstacles,
+    parallel_report['important_simplification']=simplify_important(straight_paths,obstacles=obstacles,
         route_offset=route_offset,red_spacing=requested_red_spacing)
-    parallel_report['gray_yield']=yield_gray(display_paths,obstacles=obstacles,route_offset=route_offset)
+    parallel_report['gray_yield']=yield_gray(straight_paths,obstacles=obstacles,route_offset=route_offset)
 
     if red_plan:
         parallel_report['red_parallel_layout']={k:v for k,v in red_plan.items() if k not in ('routes','allocations')}
-        parallel_report['red_parallel_spacing']=spacing_report(display_paths,red_plan['requested_spacing_grid'])
+        parallel_report['red_parallel_spacing']=spacing_report(straight_paths,red_plan['requested_spacing_grid'])
         if red_plan.get('enabled') and red_plan.get('verified') and not parallel_report['red_parallel_spacing']['verified']:
             raise RuntimeError('Preallocated red spacing changed during SVG rendering')
+    for edge,path in zip(edges,display_paths):
+        if frozenset((edge['source'],edge['target'])) in tca_pairs:
+            a,b=path['points'][0],path['points'][-1]
+            path['curve_controls']=arc_controls(a,b,tca_center)
+            path['points']=sample_curve(a,path['curve_controls'],b)
+    parallel_report['tca_curves']=dict(style='circular_bezier',curved_incidences=sum('curve_controls' in p for p in display_paths),
+                                      scope='supported TCA cycle incidences only')
     route_points=[p for path in display_paths for p in path['points']]
     if route_points:
         ax.set_xticks(np.arange(math.floor(min(p[0] for p in route_points)),math.ceil(max(p[0] for p in route_points))+1))
@@ -303,7 +314,7 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     parallel_report['obstacle_node_ids']=obstacle_keys
     parallel_report['structural_node_priorities']=node_priorities
     parallel_report['original_route_length']=original_route_length
-    parallel_report['display_route_length']=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
+    parallel_report['display_route_length']=sum(math.dist(a,b) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
     dump(output/'parallel_routing.json',parallel_report)
     for j, edge in enumerate(edges):
         rid = edge['reaction_id']
@@ -316,10 +327,17 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         color = RED if major else ORANGE if orange else '#cbd3d8' if connectors or structural else cmap(norm(stats[rid]['priority']))
         coenzyme = nodes[edge['source']]['kind'] == 'currency' or nodes[edge['target']]['kind'] == 'currency'
         points=np.array(display_paths[j]['points'])
-        path, = ax.plot(points[:,0], points[:,1],
-                        color=color, lw=.7 if coenzyme else 2.3 if major or orange else 1.0,
-                        alpha=.95 if major or orange else .35 if connectors else .65 if coenzyme else .55,
-                        zorder=2 if major or orange else 1)
+        style=dict(color=color, lw=.7 if coenzyme else 2.3 if major or orange else 1.0,
+                   alpha=.95 if major or orange else .35 if connectors else .65 if coenzyme else .55,
+                   zorder=2 if major or orange else 1)
+        if 'curve_controls' in display_paths[j]:
+            from matplotlib.path import Path as PlotPath
+            from matplotlib.patches import PathPatch
+            vertices=[points[0],*display_paths[j]['curve_controls'],points[-1]]
+            path=PathPatch(PlotPath(vertices,[PlotPath.MOVETO,*([PlotPath.CURVE4]*3)]),fill=False,**style)
+            ax.add_patch(path)
+        else:
+            path, = ax.plot(points[:,0], points[:,1],**style)
         path.set_gid(f'edge-{j}')
         direction = points[-1]-points[-2]
         length = np.linalg.norm(direction)
@@ -475,6 +493,9 @@ document.getElementById('coverage').oninput=update;document.getElementById('coen
     alignment=(backbones or {}).get('exchange_alignment',{})
     if exclusion.get('enabled'):
         description=f"TCA shape: {exclusion['shape']}. No nodes are placed inside the TCA perimeter."
+        if exclusion['shape']=='circle':
+            region=exclusion['region']
+            description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use integer grid coordinates and cycle connections use curved Beziers."
         if alignment.get('mode')=='collinear':
             description+=f" {alignment['checked_triplets']} matched EX / extracellular / cytosolic triplets are collinear, ordered from outside inward."
         page=page.replace('</header>','<p id="tca-layout-policy">'+description+'</p></header>',1)
@@ -633,10 +654,13 @@ def run(args):
     backbone_pairs={frozenset(('rxn:'+step['reaction_id'],'met:'+mid))
         for route in backbones.get('routes',[]) for step in route.get('steps',[])
         for mid in (step['source'],step['target'])}
+    from tca_curves import curved_pairs
+    tca_pairs=curved_pairs(backbones)
     red_edges=[dict(rid=e['reaction_id'],mid=e['metabolite_id'],source=e['source'],target=e['target'],
         reverse=(e['direction']=='reverse' if no_sampling else record_map[e['reaction_id']]['median']<0),
         backbone=frozenset((e['source'],e['target'])) in backbone_pairs)
-        for e in edges if e['reaction_id'] in major_reactions and e['source'] in grid_ids and e['target'] in grid_ids]
+        for e in edges if e['reaction_id'] in major_reactions and e['source'] in grid_ids and e['target'] in grid_ids
+        and frozenset((e['source'],e['target'])) not in tca_pairs]
     major_mids={mid for route in routes for mid in route['metabolite_ids']}
     def routing_obstacles(plan):
         orange_pairs={frozenset((edges[i]['source'],edges[i]['target'])) for i in (plan or {}).get('edge_indices',[])}
@@ -718,7 +742,7 @@ def run(args):
     if any(not (0 <= p[0] <= cols - 1 and 0 <= p[1] <= rows - 1) for p in xy.values()):
         raise RuntimeError('A displayed node lies outside the grid rectangle')
     network = validate_network(projected, nodes, edges, xy)
-    fractional_allowed = set((tca_region or {}).get('node_ids',())) | {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
+    fractional_allowed = {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
     for key in grid_ids:
         if key not in fractional_allowed and not np.allclose(xy[key], np.rint(xy[key]), atol=1e-9, rtol=0):
             raise RuntimeError('A non-coenzyme node is off-grid')
@@ -808,7 +832,7 @@ def run(args):
                   limitations=['Global length optimality is reported, not assumed.',
                                'Crossings, coincident edge paths, and label overlap are not minimized.',
                                'Display model omits inorganic participants and is not suitable for FBA.',
-                               'Escher uses orthogonal segments with routing nodes; original node coordinates and reaction chemistry are preserved.',
+                               'TCA cycle connections may use circular Beziers; other connections use orthogonal routing. Biological coordinates and reaction chemistry are preserved.',
                                'Sampling uses original bounds without a growth floor or loopless constraints; internal cycles may dominate.'])
     if no_sampling:
         report['validation'].pop('no_zero_median_reactions')
@@ -886,7 +910,7 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
-    p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA node perimeter shape (default: circle); its interior excludes every node')
+    p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')
     p.add_argument('--exchange-alignment',choices=('collinear','off'),default='collinear',help='Align EX, extracellular and matching cytosolic nodes from outside inward (default: collinear)')
     p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')
     p.add_argument('--route-offset', type=validate_route_offset_arg, default=.3, help='Whole-segment U-shaped node avoidance offset in grid units (default: 0.3; 0 disables node avoidance)')
