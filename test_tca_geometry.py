@@ -36,8 +36,10 @@ class TCAGeometryTests(unittest.TestCase):
             self.assertTrue(validate_backbones(plan,xy,rows)['all_displayed_backbone_positions_verified'])
             for key in region['node_ids']:self.assertTrue(on_perimeter(xy[key],region))
             if shape=='circle':
-                self.assertTrue(all(float(v).is_integer() for key in region['node_ids'] for v in xy[key]))
+                self.assertTrue(all(float(v/region['node_grid_step']).is_integer() for key in region['node_ids'] for v in xy[key]))
                 self.assertGreaterEqual(region['lattice_point_count'],region['required_slots'])
+                self.assertLessEqual(2*region['radius'],math.sqrt(650)/2+1e-8)
+                self.assertEqual(region['node_grid_step'],.5)
                 self.assertEqual(len({tuple(xy[k]) for k in region['node_ids']}),len(region['node_ids']))
             self.assertEqual(next(r for r in plan['routes'] if r['id']=='tca')['shape'],shape)
 

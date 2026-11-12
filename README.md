@@ -650,10 +650,12 @@ flux units. Numerical FBA results and branch visibility are unchanged.
 
 The default is `--tca-shape circle --exchange-alignment collinear`.
 TCA compound and reaction nodes follow the source cycle in clockwise order on
-an exact circular perimeter through enough integer grid intersections for every
-cycle node. The smallest eligible circle is selected using integer or half-integer
-centers; every TCA node has integer grid coordinates. E. coli core uses 18 cycle
-nodes on a circle through 24 grid intersections. Circular TCA connections use
+an exact circular perimeter through enough auxiliary grid intersections for every
+cycle node. The circular layout uses a 0.5-step auxiliary grid, halving the previous
+diameter while preserving 18 e_coli_core nodes and 24 circle/grid intersections.
+E. coli core now has a diameter of 12.74755 main-grid units (previously 25.49510).
+Other ordinary nodes retain the main grid. Explicit grid dimensions retain the
+full drawing frame, so automatic cropping does not undo the visual reduction. Circular TCA connections use
 cubic Bezier arcs with tangents along the circle; other connections retain
 orthogonal routing. `--tca-shape square` retains square, orthogonal TCA routing.
 SVG, PNG, Escher and SBML Layout preserve this geometry.

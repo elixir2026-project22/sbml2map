@@ -2,17 +2,29 @@
   "trunk_grouping": "positive_length_overlap",
   "clearance_grid": 0.3,
   "min_parallel_length_grid": 1.0,
-  "shifted_segments": 13,
+  "shifted_segments": 12,
   "unresolved": [],
-  "max_offset_grid": 0.6000000000000014,
+  "max_offset_grid": 0.3000000000000007,
   "fixed_endpoints": true,
   "shared_same_reaction_trunks": true,
   "node_detours": {
     "trunk_grouping": "positive_length_overlap",
     "route_offset_grid": 0.3,
     "enabled": true,
-    "shifted_segments": 5,
+    "shifted_segments": 6,
     "unresolved": [
+      {
+        "reaction_id": "ICDHyr",
+        "axis": 0,
+        "level": 21.000172506691605,
+        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
+        "nodes": [
+          [
+            17.0,
+            21.0
+          ]
+        ]
+      },
       {
         "reaction_id": "ACALD",
         "axis": 0,
@@ -20,60 +32,72 @@
         "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
         "nodes": [
           [
-            4.0,
+            16.0,
             23.0
-          ],
-          [
-            5.0,
-            23.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "ALCD2x",
-        "axis": 0,
-        "level": 24.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            7.0,
-            24.0
           ]
         ]
       },
       {
         "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
         "axis": 0,
-        "level": 25.0,
+        "level": 21.92,
         "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
         "nodes": [
           [
-            4.0,
-            25.0
+            17.0,
+            22.0
+          ]
+        ]
+      },
+      {
+        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "axis": 0,
+        "level": 22.0,
+        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
+        "nodes": [
+          [
+            17.0,
+            22.0
+          ]
+        ]
+      },
+      {
+        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "axis": 1,
+        "level": 17.0,
+        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
+        "nodes": [
+          [
+            17.0,
+            22.0
+          ]
+        ]
+      },
+      {
+        "reaction_id": "D_LACt2",
+        "axis": 0,
+        "level": 21.0,
+        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
+        "nodes": [
+          [
+            3.0,
+            21.0
+          ],
+          [
+            16.5,
+            21.0
           ]
         ]
       },
       {
         "reaction_id": "LDH_D",
         "axis": 0,
-        "level": 25.92,
+        "level": 21.0,
         "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
         "nodes": [
           [
             1.0,
-            26.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "LDH_D",
-        "axis": 0,
-        "level": 26.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            1.0,
-            26.0
+            21.0
           ]
         ]
       },
@@ -85,67 +109,31 @@
         "nodes": [
           [
             1.0,
-            26.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "PTAr",
-        "axis": 0,
-        "level": 25.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
+            21.0
+          ],
           [
-            4.0,
-            25.0
+            1.0,
+            22.0
+          ],
+          [
+            1.0,
+            23.0
+          ],
+          [
+            1.0,
+            24.0
           ]
         ]
       },
       {
-        "reaction_id": "PTAr",
+        "reaction_id": "LDH_D",
         "axis": 1,
-        "level": 3.92,
+        "level": 1.08,
         "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
         "nodes": [
           [
-            4.0,
-            25.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "PTAr",
-        "axis": 1,
-        "level": 4.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            4.0,
-            25.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "SUCCt2_2",
-        "axis": 0,
-        "level": 1.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            11.0,
-            1.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "SUCCt2_2",
-        "axis": 1,
-        "level": 11.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            11.0,
-            1.0
+            1.0,
+            21.0
           ]
         ]
       }
@@ -155,20 +143,11 @@
     "endpoint_step_fallback_segments": 2,
     "detours": [
       {
-        "reaction_id": "ACALD",
+        "reaction_id": "ACKr",
         "axis": 1,
-        "offset_grid": -0.3,
-        "inset_start": false,
-        "inset_end": true,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 1
-      },
-      {
-        "reaction_id": "ACALDt",
-        "axis": 0,
         "offset_grid": 0.3,
-        "inset_start": false,
-        "inset_end": true,
+        "inset_start": true,
+        "inset_end": false,
         "segments": 1,
         "existing_endpoint_stem_overlaps": 0
       },
@@ -182,6 +161,15 @@
         "existing_endpoint_stem_overlaps": 0
       },
       {
+        "reaction_id": "ALCD2x",
+        "axis": 1,
+        "offset_grid": -0.3,
+        "inset_start": false,
+        "inset_end": true,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
         "reaction_id": "EX_fru_e",
         "axis": 0,
         "offset_grid": -0.3,
@@ -191,9 +179,18 @@
         "existing_endpoint_stem_overlaps": 0
       },
       {
-        "reaction_id": "GLNabc",
+        "reaction_id": "FORt",
         "axis": 0,
-        "offset_grid": -0.3,
+        "offset_grid": 0.3,
+        "inset_start": false,
+        "inset_end": false,
+        "segments": 1,
+        "existing_endpoint_stem_overlaps": 0
+      },
+      {
+        "reaction_id": "PTAr",
+        "axis": 0,
+        "offset_grid": 0.3,
         "inset_start": false,
         "inset_end": false,
         "segments": 1,
@@ -209,26 +206,16 @@
   "routing_preference": "important_bends_then_length_gray_yields",
   "important_simplification": {
     "policy": "important_bends_then_length_gray_yields",
-    "changed_paths": 7,
-    "removed_bends": 15,
+    "changed_paths": 6,
+    "removed_bends": 10,
     "details": [
       {
-        "reaction_id": "ACKr",
-        "bends_before": 4,
-        "bends_after": 2
+        "reaction_id": "ICDHyr",
+        "bends_before": 1,
+        "bends_after": 1
       },
       {
-        "reaction_id": "ACKr",
-        "bends_before": 4,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "bends_before": 5,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "reaction_id": "ACt2r",
         "bends_before": 4,
         "bends_after": 2
       },
@@ -238,7 +225,12 @@
         "bends_after": 2
       },
       {
-        "reaction_id": "FORt",
+        "reaction_id": "LDH_D",
+        "bends_before": 4,
+        "bends_after": 2
+      },
+      {
+        "reaction_id": "PFL",
         "bends_before": 4,
         "bends_after": 2
       },
@@ -250,45 +242,30 @@
     ],
     "unresolved": [
       {
+        "reaction_id": "ICDHyr",
+        "reason": "No simpler feasible important route"
+      },
+      {
         "reaction_id": "ACALD",
         "reason": "No simpler feasible important route"
       },
       {
-        "reaction_id": "ALCD2x",
+        "reaction_id": "ACKr",
         "reason": "No simpler feasible important route"
       },
       {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "reaction_id": "D_LACt2",
         "reason": "No simpler feasible important route"
       },
       {
         "reaction_id": "LDH_D",
         "reason": "No simpler feasible important route"
-      },
-      {
-        "reaction_id": "PTAr",
-        "reason": "No simpler feasible important route"
       }
     ]
   },
   "gray_yield": {
-    "changed_paths": 19,
+    "changed_paths": 9,
     "details": [
-      {
-        "reaction_id": "ACKr",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "ATPM",
-        "bends_before": 1,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "ATPS4r",
-        "bends_before": 1,
-        "bends_after": 1
-      },
       {
         "reaction_id": "FRD7",
         "bends_before": 1,
@@ -300,54 +277,19 @@
         "bends_after": 2
       },
       {
-        "reaction_id": "GLNS",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "GLUDy",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
         "reaction_id": "GLUN",
         "bends_before": 0,
-        "bends_after": 3
-      },
-      {
-        "reaction_id": "GLUN",
-        "bends_before": 1,
         "bends_after": 2
       },
       {
-        "reaction_id": "GLUSy",
+        "reaction_id": "LDH_D",
         "bends_before": 1,
         "bends_after": 1
-      },
-      {
-        "reaction_id": "GND",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "ICL",
-        "bends_before": 1,
-        "bends_after": 2
       },
       {
         "reaction_id": "MALS",
         "bends_before": 1,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "PGL",
-        "bends_before": 0,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "PPC",
-        "bends_before": 0,
-        "bends_after": 2
+        "bends_after": 1
       },
       {
         "reaction_id": "PPCK",
@@ -360,9 +302,9 @@
         "bends_after": 1
       },
       {
-        "reaction_id": "PPS",
-        "bends_before": 0,
-        "bends_after": 3
+        "reaction_id": "RPI",
+        "bends_before": 1,
+        "bends_after": 2
       },
       {
         "reaction_id": "SUCCt3",
@@ -371,6 +313,18 @@
       }
     ],
     "unresolved": [
+      {
+        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
+        "reason": "Shared gray trunk retained"
+      },
       {
         "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
         "reason": "Shared gray trunk retained"
@@ -417,10 +371,10 @@
       },
       {
         "reaction_id": "GLNS",
-        "reason": "No free gray route found"
+        "reason": "Shared gray trunk retained"
       },
       {
-        "reaction_id": "GLNS",
+        "reaction_id": "GLUDy",
         "reason": "Shared gray trunk retained"
       },
       {
@@ -432,16 +386,12 @@
         "reason": "Shared gray trunk retained"
       },
       {
-        "reaction_id": "GLUSy",
-        "reason": "No free gray route found"
+        "reaction_id": "GND",
+        "reason": "Shared gray trunk retained"
       },
       {
         "reaction_id": "ICL",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "MALS",
-        "reason": "Shared gray trunk retained"
+        "reason": "No free gray route found"
       },
       {
         "reaction_id": "MALS",
@@ -456,16 +406,28 @@
         "reason": "Shared gray trunk retained"
       },
       {
-        "reaction_id": "PFL",
+        "reaction_id": "ME2",
         "reason": "Shared gray trunk retained"
       },
       {
-        "reaction_id": "PPC",
-        "reason": "No free gray route found"
+        "reaction_id": "NADH16",
+        "reason": "Shared gray trunk retained"
       },
       {
-        "reaction_id": "PPCK",
-        "reason": "No free gray route found"
+        "reaction_id": "NADH16",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "NADTRHD",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "NADTRHD",
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "PFL",
+        "reason": "Shared gray trunk retained"
       },
       {
         "reaction_id": "PPS",
@@ -481,11 +443,15 @@
       },
       {
         "reaction_id": "TALA",
-        "reason": "No free gray route found"
+        "reason": "Shared gray trunk retained"
+      },
+      {
+        "reaction_id": "TALA",
+        "reason": "Shared gray trunk retained"
       },
       {
         "reaction_id": "TKT1",
-        "reason": "No free gray route found"
+        "reason": "Shared gray trunk retained"
       },
       {
         "reaction_id": "TKT1",
@@ -608,16 +574,16 @@
     "nodes_moved": false,
     "global_optimality_proven": false,
     "minimum_parallel_gap_grid": 1.0,
-    "parallel_pairs": 46,
+    "parallel_pairs": 42,
     "violations": [],
     "verified": true,
     "method": "Constraint-checked greedy routing channels",
-    "elapsed_seconds": 0.16479888200410642,
-    "signature": "d76d364691b21358ebb4c272",
+    "elapsed_seconds": 0.16700150398537517,
+    "signature": "cdc44e9f2225ec6e7e186b9d",
     "routing_envelope": {
       "x_min": -1.0,
-      "x_max": 11.0,
-      "y_min": 25.0,
+      "x_max": 7.5,
+      "y_min": 24.0,
       "y_max": 46.0
     }
   },
@@ -625,7 +591,7 @@
     "requested_spacing_grid": 1.0,
     "min_parallel_length_grid": 1,
     "minimum_parallel_gap_grid": 1.0,
-    "parallel_pairs": 46,
+    "parallel_pairs": 42,
     "violations": [],
     "verified": true
   },
@@ -955,6 +921,6 @@
     "copy:PDH:nad_c": 0,
     "copy:PDH:nadh_c": 0
   },
-  "original_route_length": 1405.7000000000003,
-  "display_route_length": 1416.6941671702411
+  "original_route_length": 1480.7000000000012,
+  "display_route_length": 1499.8472560918121
 }

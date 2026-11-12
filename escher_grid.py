@@ -245,6 +245,8 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     norm = LogNorm(vmin=max(vmin, 1e-12), vmax=vmax)
     cmap = plt.get_cmap('viridis')
     span = np.ptp(np.array(list(xy.values())), axis=0) if xy else np.array([8, 8])
+    frame=(backbones or {}).get('render_frame')
+    if frame:span=np.array([frame[1]-frame[0],frame[3]-frame[2]])
     size = (max(10, min(22, .8 * span[0] + 3)), max(10, min(30, .8 * span[1] + 3)))
     fig, ax = plt.subplots(figsize=size)
     ax.set_aspect('equal')
@@ -259,6 +261,17 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     from tca_curves import curved_pairs, arc_controls, sample_curve
     tca_pairs=curved_pairs(backbones)
     tca_center=((backbones or {}).get('tca_exclusion',{}).get('region') or {}).get('center')
+    region=((backbones or {}).get('tca_exclusion',{}).get('region') or {})
+    if region.get('shape')=='circle' and region.get('node_grid_step',1)<1:
+        # Show the declared half-step lattice locally, keeping other regions clear.
+        step=region['node_grid_step'];cx,cy=region['center'];radius=region['radius']
+        low=[math.floor((v-radius)/step)*step for v in (cx,cy)]
+        high=[math.ceil((v+radius)/step)*step for v in (cx,cy)]
+        xs=[v for v in np.arange(low[0],high[0]+step/2,step) if abs(v-round(v))>1e-8]
+        ys=[v for v in np.arange(low[1],high[1]+step/2,step) if abs(v-round(v))>1e-8]
+        ax.vlines(xs,low[1],high[1],color='#e6ebef',linewidth=.4,zorder=0)
+        ax.hlines(ys,low[0],high[0],color='#e6ebef',linewidth=.4,zorder=0)
+
     backbone_pairs=set()
     for route in (backbones or {}).get('routes', []):
         for step in route.get('steps', []):
@@ -385,6 +398,10 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
     if not nodes:
         ax.text(.5, .5, 'No reactions selected', transform=ax.transAxes, ha='center')
     ax.set_autoscale_on(True)
+    if frame:
+        ax.update_datalim([(frame[0],frame[2]),(frame[1],frame[3])])
+        ax.set_xticks(np.arange(math.floor(frame[0]),math.ceil(frame[1])+1))
+        ax.set_yticks(np.arange(math.floor(frame[2]),math.ceil(frame[3])+1))
     ax.margins(.08)
     oxidation_label='pyruvate oxidation' if program_name in ('sbml2map', 'sbml2escher') else 'PDH'
     connector_label = (f'Orange: shared undirected EX connectors; unique orange L1 length = {connectors["total_length"]:g}.\n' if connectors else '')
@@ -495,7 +512,7 @@ document.getElementById('coverage').oninput=update;document.getElementById('coen
         description=f"TCA shape: {exclusion['shape']}. No nodes are placed inside the TCA perimeter."
         if exclusion['shape']=='circle':
             region=exclusion['region']
-            description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use integer grid coordinates and cycle connections use curved Beziers."
+            description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use a {region.get('node_grid_step',1):g}-step auxiliary grid and cycle connections use curved Beziers."
         if alignment.get('mode')=='collinear':
             description+=f" {alignment['checked_triplets']} matched EX / extracellular / cytosolic triplets are collinear, ordered from outside inward."
         page=page.replace('</header>','<p id="tca-layout-policy">'+description+'</p></header>',1)
@@ -724,6 +741,8 @@ def run(args):
     cols, rows = placement['grid_cols'], placement['grid_rows']
     from tca_geometry import absolute_region,validate_exclusion
     tca_region = absolute_region(backbones.get('tca_geometry'),rows)
+    if args.grid_cols is not None and args.grid_rows is not None:
+        backbones['render_frame']=[0,cols-1,0,rows-1]
     attach_coenzymes(nodes, xy, grid_shape=(cols, rows),forbidden_region=tca_region)
     tca_exclusion = validate_exclusion(nodes,xy,tca_region)
     backbones['tca_exclusion'] = tca_exclusion
@@ -742,7 +761,7 @@ def run(args):
     if any(not (0 <= p[0] <= cols - 1 and 0 <= p[1] <= rows - 1) for p in xy.values()):
         raise RuntimeError('A displayed node lies outside the grid rectangle')
     network = validate_network(projected, nodes, edges, xy)
-    fractional_allowed = {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
+    fractional_allowed = set((tca_region or {}).get('node_ids',())) | {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
     for key in grid_ids:
         if key not in fractional_allowed and not np.allclose(xy[key], np.rint(xy[key]), atol=1e-9, rtol=0):
             raise RuntimeError('A non-coenzyme node is off-grid')

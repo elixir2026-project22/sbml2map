@@ -555,76 +555,76 @@
       },
       "node_offsets": {
         "met:oaa_c": [
-          8,
-          -23
+          6.0,
+          -21.5
         ],
         "rxn:CS": [
-          11,
-          -21
+          7.5,
+          -20.5
         ],
         "met:cit_c": [
-          14,
-          -20
+          9.0,
+          -20.0
         ],
         "rxn:ACONTa": [
-          22,
-          -21
+          13.0,
+          -20.5
         ],
         "met:acon_C_c": [
-          25,
-          -23
+          14.5,
+          -21.5
         ],
         "rxn:ACONTb": [
-          26,
-          -24
+          15.0,
+          -22.0
         ],
         "met:icit_c": [
-          28,
-          -27
+          16.0,
+          -23.5
         ],
         "rxn:ICDHyr": [
-          29,
-          -30
+          16.5,
+          -25.0
         ],
         "met:akg_c": [
-          28,
-          -38
+          16.0,
+          -29.0
         ],
         "rxn:AKGDH": [
-          25,
-          -42
+          14.5,
+          -31.0
         ],
         "met:succoa_c": [
-          22,
-          -44
+          13.0,
+          -32.0
         ],
         "rxn:SUCOAS": [
-          19,
-          -45
+          11.5,
+          -32.5
         ],
         "met:succ_c": [
-          11,
-          -44
+          7.5,
+          -32.0
         ],
         "rxn:SUCDi": [
-          8,
-          -42
+          6.0,
+          -31.0
         ],
         "met:fum_c": [
-          7,
-          -41
+          5.5,
+          -30.5
         ],
         "rxn:FUM": [
-          5,
-          -38
+          4.5,
+          -29.0
         ],
         "met:mal__L_c": [
-          4,
-          -35
+          4.0,
+          -27.5
         ],
         "rxn:MDH": [
-          5,
-          -27
+          4.5,
+          -23.5
         ]
       },
       "displayed_node_ids": [
@@ -760,76 +760,76 @@
       -21
     ],
     "met:oaa_c": [
-      8,
-      -23
+      6.0,
+      -21.5
     ],
     "rxn:CS": [
-      11,
-      -21
+      7.5,
+      -20.5
     ],
     "met:cit_c": [
-      14,
-      -20
+      9.0,
+      -20.0
     ],
     "rxn:ACONTa": [
-      22,
-      -21
+      13.0,
+      -20.5
     ],
     "met:acon_C_c": [
-      25,
-      -23
+      14.5,
+      -21.5
     ],
     "rxn:ACONTb": [
-      26,
-      -24
+      15.0,
+      -22.0
     ],
     "met:icit_c": [
-      28,
-      -27
+      16.0,
+      -23.5
     ],
     "rxn:ICDHyr": [
-      29,
-      -30
+      16.5,
+      -25.0
     ],
     "met:akg_c": [
-      28,
-      -38
+      16.0,
+      -29.0
     ],
     "rxn:AKGDH": [
-      25,
-      -42
+      14.5,
+      -31.0
     ],
     "met:succoa_c": [
-      22,
-      -44
+      13.0,
+      -32.0
     ],
     "rxn:SUCOAS": [
-      19,
-      -45
+      11.5,
+      -32.5
     ],
     "met:succ_c": [
-      11,
-      -44
+      7.5,
+      -32.0
     ],
     "rxn:SUCDi": [
-      8,
-      -42
+      6.0,
+      -31.0
     ],
     "met:fum_c": [
-      7,
-      -41
+      5.5,
+      -30.5
     ],
     "rxn:FUM": [
-      5,
-      -38
+      4.5,
+      -29.0
     ],
     "met:mal__L_c": [
-      4,
-      -35
+      4.0,
+      -27.5
     ],
     "rxn:MDH": [
-      5,
-      -27
+      4.5,
+      -23.5
     ]
   },
   "glucose_top_margin": 1,
@@ -837,10 +837,10 @@
   "skipped_routes": [],
   "circle": {
     "center_offset": [
-      16.5,
-      -32.5
+      10.25,
+      -26.25
     ],
-    "radius": 12.747548783981962,
+    "radius": 6.373774391990981,
     "orientation": "clockwise",
     "lattice_point_count": 24
   },
@@ -870,13 +870,15 @@
     "orientation": "clockwise",
     "closed": true,
     "center_offset": [
-      16.5,
-      -32.5
+      10.25,
+      -26.25
     ],
-    "radius": 12.747548783981962,
+    "radius": 6.373774391990981,
     "lattice_point_count": 24,
     "required_slots": 20,
     "all_tca_nodes_on_grid": true,
+    "node_grid_step": 0.5,
+    "diameter_scale": 0.5,
     "connection_style": "circular_bezier"
   },
   "exchange_connectors": {
@@ -898,7 +900,7 @@
       48,
       63,
       64,
-      71,
+      73,
       80,
       81,
       90,
@@ -1040,7 +1042,7 @@
         "rxn:EX_glc__D_e"
       ],
       "rxn:EX_gln__L_e": [
-        "met:accoa_c",
+        "met:akg_c",
         "rxn:BIOMASS_Ecoli_core_w_GAM",
         "met:gln__L_c",
         "rxn:GLNabc",
@@ -1048,7 +1050,7 @@
         "rxn:EX_gln__L_e"
       ],
       "rxn:EX_glu__L_e": [
-        "met:accoa_c",
+        "met:akg_c",
         "rxn:BIOMASS_Ecoli_core_w_GAM",
         "met:glu__L_c",
         "rxn:GLUt2r",
@@ -1146,8 +1148,8 @@
     "objective": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
     "method": "Greedy shared shortest-path forest alternating with constrained grid placement",
     "global_optimality_proven": false,
-    "total_length": 223.0,
-    "total_cost": 223.0,
+    "total_length": 257.0,
+    "total_cost": 257.0,
     "flux_costs": {
       "flux_weight": 0,
       "reaction_weights": {
@@ -1218,20 +1220,20 @@
       {
         "iteration": 1,
         "red_spacing_verified": true,
-        "before_reroute": 230.0,
-        "orange_cost": 224.0,
-        "orange_length": 224.0,
-        "optimized_fixed_network_cost": 230.0,
-        "optimized_fixed_network_length": 230.0
+        "before_reroute": 273.0,
+        "orange_cost": 260.0,
+        "orange_length": 260.0,
+        "optimized_fixed_network_cost": 273.0,
+        "optimized_fixed_network_length": 273.0
       },
       {
         "iteration": 2,
         "red_spacing_verified": true,
-        "before_reroute": 223.0,
-        "orange_cost": 223.0,
-        "orange_length": 223.0,
-        "optimized_fixed_network_cost": 223.0,
-        "optimized_fixed_network_length": 223.0
+        "before_reroute": 257.0,
+        "orange_cost": 257.0,
+        "orange_length": 257.0,
+        "optimized_fixed_network_cost": 257.0,
+        "optimized_fixed_network_length": 257.0
       }
     ]
   },
@@ -1351,15 +1353,19 @@
           ],
           [
             3.0,
-            26.0
+            24.0
           ],
           [
-            11.0,
-            26.0
+            7.5,
+            24.0
           ],
           [
-            11.0,
+            7.5,
             25.0
+          ],
+          [
+            7.5,
+            25.5
           ]
         ],
         "priority": 2
@@ -2050,8 +2056,8 @@
         "rid": "CS",
         "axis": 0,
         "original_level": 25.0,
-        "lane_level": 26.0,
-        "offset": 1,
+        "lane_level": 24.0,
+        "offset": -1,
         "inset_start": false,
         "inset_end": false
       },
@@ -2063,25 +2069,40 @@
         "offset": 0,
         "inset_start": false,
         "inset_end": false
+      },
+      {
+        "rid": "CS",
+        "axis": 1,
+        "original_level": 7.5,
+        "lane_level": 7.5,
+        "offset": 0,
+        "inset_start": false,
+        "inset_end": false
       }
     ],
     "unresolved": [],
     "nodes_moved": false,
     "global_optimality_proven": false,
     "minimum_parallel_gap_grid": 1.0,
-    "parallel_pairs": 46,
+    "parallel_pairs": 42,
     "violations": [],
     "verified": true,
     "method": "Constraint-checked greedy routing channels",
-    "elapsed_seconds": 0.16479888200410642,
-    "signature": "d76d364691b21358ebb4c272",
+    "elapsed_seconds": 0.16700150398537517,
+    "signature": "cdc44e9f2225ec6e7e186b9d",
     "routing_envelope": {
       "x_min": -1.0,
-      "x_max": 11.0,
-      "y_min": 25.0,
+      "x_max": 7.5,
+      "y_min": 24.0,
       "y_max": 46.0
     }
   },
+  "render_frame": [
+    0,
+    30,
+    0,
+    46
+  ],
   "tca_exclusion": {
     "enabled": true,
     "shape": "circle",
@@ -2111,17 +2132,19 @@
       "orientation": "clockwise",
       "closed": true,
       "center_offset": [
-        16.5,
-        -32.5
+        10.25,
+        -26.25
       ],
-      "radius": 12.747548783981962,
+      "radius": 6.373774391990981,
       "lattice_point_count": 24,
       "required_slots": 20,
       "all_tca_nodes_on_grid": true,
+      "node_grid_step": 0.5,
+      "diameter_scale": 0.5,
       "connection_style": "circular_bezier",
       "center": [
-        16.5,
-        13.5
+        10.25,
+        19.75
       ]
     },
     "interior_node_count": 0,
@@ -2175,7 +2198,7 @@
         "external": "met:for_e",
         "internal": "met:for_c",
         "evidence": "Exact chemical identity annotation",
-        "face": "right"
+        "face": "left"
       },
       {
         "reaction_id": "EX_fum_e",
@@ -2183,7 +2206,7 @@
         "external": "met:fum_e",
         "internal": "met:fum_c",
         "evidence": "Exact chemical identity annotation",
-        "face": "bottom"
+        "face": "left"
       },
       {
         "reaction_id": "EX_gln__L_e",
@@ -2199,7 +2222,7 @@
         "external": "met:glu__L_e",
         "internal": "met:glu__L_c",
         "evidence": "Exact chemical identity annotation",
-        "face": "left"
+        "face": "right"
       },
       {
         "reaction_id": "EX_lac__D_e",
@@ -2207,7 +2230,7 @@
         "external": "met:lac__D_e",
         "internal": "met:lac__D_c",
         "evidence": "Exact chemical identity annotation",
-        "face": "right"
+        "face": "left"
       },
       {
         "reaction_id": "EX_mal__L_e",
@@ -2231,7 +2254,7 @@
         "external": "met:succ_e",
         "internal": "met:succ_c",
         "evidence": "Exact chemical identity annotation",
-        "face": "bottom"
+        "face": "left"
       }
     ],
     "ordering": "EX -> extracellular -> cytosolic, from outer boundary inward",

@@ -5,7 +5,7 @@
   "source_sbml": "e_coli_core.xml",
   "source_sha256": "b4db506aeed0e434c1f5f1fdd35feda0dfe5d82badcfda0e9d1342335ab31116",
   "output_file": "layout.sbml",
-  "output_sha256": "11b717f04be45cbcbbe31f8364db15ddb8c673abb399ed4d8befa85db4baa3a1",
+  "output_sha256": "de8cf286195265dbaadbe0ed7313c004f6ee7455baabbd1f16271cc7fe08a3a1",
   "level": 3,
   "version": 1,
   "libsbml_version": "5.21.2",
@@ -17,7 +17,7 @@
   "reaction_glyphs": 84,
   "text_glyphs": 220,
   "species_reference_glyphs": 253,
-  "line_segments": 702,
+  "line_segments": 705,
   "cubic_beziers": 18,
   "undisplayed_reaction_ids": [
     "CO2t",
@@ -52,7 +52,7 @@
   ],
   "layout_dimensions": [
     6148.0,
-    8495.0
+    6150.8325114537565
   ],
   "validation": {
     "original_xml_semantics_preserved": true,

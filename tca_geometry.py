@@ -6,6 +6,7 @@ import numpy as np
 
 EPS = 1e-7
 NODE_CLEARANCE = .16
+TCA_GRID_STEP = .5
 
 
 @lru_cache(maxsize=64)
@@ -52,6 +53,9 @@ def configure_plan(fixed, plan, shape='circle'):
         # A genuine circle through integer grid intersections, rather than
         # rounded samples of a smaller circle. Keep enough slots for absent steps.
         lattice, radius = lattice_circle(max(count, 4*side), max(2., side/2))
+        # Half-step auxiliary grid halves the diameter without losing slots.
+        lattice = tuple((x*TCA_GRID_STEP,y*TCA_GRID_STEP) for x,y in lattice)
+        radius *= TCA_GRID_STEP
         xmin = min(x for x, y in lattice)
         ymax = max(y for x, y in lattice)
         shift = [left-xmin, top-ymax]
@@ -66,14 +70,15 @@ def configure_plan(fixed, plan, shape='circle'):
             else:
                 progress = 3*side+y-(top-side)
             slot = round(progress*len(lattice)/(4*side)) % len(lattice)
-            position = [int(round(lattice[slot][i]+shift[i])) for i in (0, 1)]
+            position = [round((lattice[slot][i]+shift[i])/TCA_GRID_STEP)*TCA_GRID_STEP for i in (0, 1)]
             offsets[key] = position
             if key in fixed:
                 fixed[key] = position
                 plan['fixed_node_offsets'][key] = position
         region.update(center_offset=center, radius=radius,
                       lattice_point_count=len(lattice), required_slots=max(count, 4*side),
-                      all_tca_nodes_on_grid=True, connection_style='circular_bezier')
+                      all_tca_nodes_on_grid=True, node_grid_step=TCA_GRID_STEP,
+                      diameter_scale=.5, connection_style='circular_bezier')
         plan['circle'] = dict(center_offset=center, radius=radius, orientation='clockwise',
                               lattice_point_count=len(lattice))
         plan['square'] = None

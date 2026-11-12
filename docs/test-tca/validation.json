@@ -8,7 +8,7 @@
       "tca_nodes": 18,
       "interior_node_count": 0,
       "clearance_violation_count": 0,
-      "all_tca_nodes_on_integer_grid": true,
+      "all_tca_nodes_on_integer_grid": false,
       "escher": {
         "schema_valid": true,
         "metadata_embedded": true,
@@ -16,14 +16,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 687,
+        "nodes": 690,
         "source_nodes": 220,
-        "routing_nodes": 467,
+        "routing_nodes": 470,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 720,
+        "segments": 723,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -47,10 +47,10 @@
       "grid_cols": 31,
       "grid_rows": 47,
       "lattice_point_count": 24,
-      "radius_grid": 12.747548783981962,
+      "radius_grid": 6.373774391990981,
       "center_grid": [
-        16.5,
-        13.5
+        10.25,
+        19.75
       ],
       "connection_style": "circular_bezier",
       "sbml": {
@@ -62,8 +62,14 @@
         "tca_bezier_controls_verified": true
       },
       "svg_cubic_paths": 18,
-      "maximum_bezier_radial_error_grid": 1.633851518967333e-05,
-      "sbml_cubic_beziers": 18
+      "maximum_bezier_radial_error_grid": 8.169257594836665e-06,
+      "sbml_cubic_beziers": 18,
+      "diameter_grid": 12.747548783981962,
+      "previous_diameter_grid": 25.495097567963924,
+      "diameter_ratio": 0.5,
+      "svg_diameter_ratio": 0.4999999999528854,
+      "node_grid_step": 0.5,
+      "all_tca_nodes_on_declared_grid": true
     },
     {
       "shape": "square",
