@@ -523,6 +523,8 @@ document.getElementById('coverage').oninput=update;document.getElementById('coen
                             '共有枝は1回だけ数え、長さに低フラックスのペナルティを付けたコストを最小化します。')
         page = page.replace('The layout minimizes total path length, counting shared branches once.',
                             'The layout minimizes length with a low-flux penalty, counting shared branches once.')
+    if (backbones or {}).get('orange_reposition',{}).get('enabled'):
+        page=page.replace('The layout minimizes total path length, counting shared branches once.', 'Local relocation reduces overlapping orange lines from different reactions, then compares total length; shared branches within one reaction count once. Point crossings are allowed.')
     page = page.replace('sbml2map', html.escape(program_name)).replace('__MODEL__', html.escape(model_id)).replace('__MAX__', str(selection['coverage_percent'])).replace('__SVG__', svg).replace('__REGISTRY__', json.dumps(registry)).replace('__ELIGIBLE__', str(selection['eligible_reactions']))
     page=page.replace('</html>','<script>window.gridLabelOptions='+json.dumps(label_options)+';</script><script>'+BASE.joinpath('grid_labels.js').read_text()+'</script></html>')
     exclusion=(backbones or {}).get('tca_exclusion',{})
@@ -800,6 +802,16 @@ def run(args):
             if connectors:placement['objective']=connector_cost(connectors,edges,xy)
             placement['global_optimality_proven']=False
             placement.pop('relative_gap',None)
+    if (getattr(args,'reposition_orange',True) and getattr(args,'crossing_policy','legacy')=='red-hard'
+            and backbones.get('exchange_corridors')):
+        from orange_reposition import reposition_orange
+        reposition_orange(nodes,edges,xy,backbones,major_reactions,alignment_groups,cols,rows,
+            attempts=getattr(args,'crossing_attempts',12))
+        if backbones['orange_reposition']['accepted_moves']:
+            placement['objective_before_orange_reposition']=placement['objective']
+            if connectors:placement['objective']=connector_cost(connectors,edges,xy)
+            placement['global_optimality_proven']=False
+            placement.pop('relative_gap',None)
     routing_boundary=backbones.get('routing_boundary',[0,cols-1,0,rows-1])
     xmin,xmax,ymin,ymax=routing_boundary
     tca_exclusion = validate_exclusion(nodes,xy,tca_region)
@@ -933,6 +945,7 @@ def run(args):
     report['program_name'] = program_name
     report['routing_boundary']=routing_boundary
     if backbones.get('boundary_compaction'):report['boundary_compaction']=backbones['boundary_compaction']
+    if backbones.get('orange_reposition'):report['orange_reposition']=backbones['orange_reposition']
     report['tca_shape'] = getattr(args,'tca_shape','circle')
     report['tca_exclusion'] = tca_exclusion
     report['exchange_alignment'] = exchange_alignment
@@ -997,6 +1010,7 @@ def parser():
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
     p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange length')
     p.add_argument('--routing-attempts','--crossing-attempts',dest='crossing_attempts',type=int,default=12,help='Orange length ordering candidates (default: 12)')
+    p.add_argument('--no-reposition-orange',dest='reposition_orange',action='store_false',help='Disable local node relocation to reduce orange line overlap')
     p.add_argument('--no-compact-boundary',dest='compact_boundary',action='store_false',help='Keep the initial lower and right exchange boundaries')
     p.add_argument('--boundary-margin',type=float,default=1.,help='Minimum clearance around frozen red geometry during boundary compaction (default: 1 grid unit)')
     p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')

@@ -42,7 +42,7 @@
     "metrics": {
       "red_red": 0,
       "red_orange": 0,
-      "orange_orange": 68,
+      "orange_orange": 62,
       "hard_verified": true,
       "violations": [
         {
@@ -58,55 +58,22 @@
           "contacts": [
             [
               [
-                5.85,
-                7.0
-              ],
-              [
-                5.85,
-                7.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "accoa_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
                 9.5,
                 0.52204679
               ],
               [
                 9.5,
-                6.31021866
+                7.0
               ]
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
                 9.5,
                 0.52204679
-              ]
-            ],
-            [
-              [
-                3.0,
-                0.52204679
-              ],
-              [
-                3.0,
-                5.0
               ]
             ]
           ]
@@ -157,7 +124,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -167,11 +134,21 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
+                3.15,
+                5.0
+              ]
+            ],
+            [
+              [
                 3.0,
+                5.0
+              ],
+              [
+                3.15,
                 5.0
               ]
             ]
@@ -269,7 +246,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -292,35 +269,12 @@
           "contacts": [
             [
               [
-                3.0,
+                3.15,
                 3.0
               ],
               [
-                3.0,
+                3.15,
                 3.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "for_c",
-            "acald_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                7.0
-              ],
-              [
-                5.85,
-                11.0
               ]
             ]
           ]
@@ -356,40 +310,17 @@
           ],
           "metabolites": [
             "for_c",
-            "gln__L_c"
+            "3pg_c"
           ],
           "contacts": [
             [
               [
                 5.85,
-                10.0
+                10.85
               ],
               [
                 5.85,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "for_c",
-            "glu__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                10.0
+                10.85
               ]
             ]
           ]
@@ -413,177 +344,6 @@
               [
                 5.85,
                 11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "ALCD2x"
-          ],
-          "metabolites": [
-            "acald_c",
-            "acald_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                6.0,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "ALCD2x"
-          ],
-          "metabolites": [
-            "acald_c",
-            "etoh_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "PTAr"
-          ],
-          "metabolites": [
-            "acald_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                8.0
-              ],
-              [
-                5.85,
-                8.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "glu__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                10.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "LDH_D"
-          ],
-          "metabolites": [
-            "acald_c",
-            "lac__D_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                5.85,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                5.85,
-                6.31021866
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "LDH_D"
-          ],
-          "metabolites": [
-            "acald_c",
-            "pyr_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                5.85,
-                6.31021866
               ]
             ]
           ]
@@ -595,7 +355,7 @@
             "AKGt2r"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "akg_c"
           ],
           "contacts": [
@@ -615,26 +375,39 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
+            "ACALDt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                12.0
+              ],
+              [
+                6.15,
+                12.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
             "PTAr"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "accoa_c"
           ],
           "contacts": [
             [
               [
-                9.5,
-                0.52204679
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -644,12 +417,58 @@
             ],
             [
               [
-                3.0,
+                9.5,
                 0.52204679
               ],
               [
-                3.0,
-                5.0
+                9.5,
+                8.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "3pg_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                10.85
+              ],
+              [
+                6.15,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "glu__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                10.0
+              ],
+              [
+                6.15,
+                10.0
               ]
             ]
           ]
@@ -661,7 +480,7 @@
             "SUCCt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "succ_e"
           ],
           "contacts": [
@@ -681,10 +500,33 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
+            "FORt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                11.0
+              ],
+              [
+                6.15,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
             "FUMt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "fum_e"
           ],
           "contacts": [
@@ -704,21 +546,21 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
-            "LDH_D"
+            "GLUt2r"
           ],
           "metabolites": [
-            "accoa_c",
-            "lac__D_c"
+            "acald_c",
+            "glu__L_c"
           ],
           "contacts": [
             [
               [
-                2.0,
-                6.31021866
+                6.15,
+                10.0
               ],
               [
-                5.85,
-                6.31021866
+                6.15,
+                10.0
               ]
             ]
           ]
@@ -730,30 +572,10 @@
             "LDH_D"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "pyr_c"
           ],
           "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                9.5,
-                0.52204679
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
             [
               [
                 3.0,
@@ -762,6 +584,16 @@
               [
                 9.5,
                 0.52204679
+              ]
+            ],
+            [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                6.31021866
               ]
             ]
           ]
@@ -773,7 +605,7 @@
             "MALt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "mal__L_c"
           ],
           "contacts": [
@@ -894,34 +726,11 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
                 12.0
               ],
               [
-                3.98978134,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ALCD2x",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
+                4.0,
                 12.0
               ]
             ]
@@ -1019,35 +828,12 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
                 12.0
               ],
               [
-                3.98978134,
+                4.0,
                 12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ALCD2x",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "etoh_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
-                14.0
               ]
             ]
           ]
@@ -1078,22 +864,22 @@
         {
           "category": "orange_orange",
           "reactions": [
-            "ACKr",
+            "ACALDt",
             "BIOMASS_Ecoli_core_w_GAM"
           ],
           "metabolites": [
-            "ac_c",
+            "acald_c",
             "gln__L_c"
           ],
           "contacts": [
             [
               [
-                5.85,
-                13.0
+                7.0,
+                12.0
               ],
               [
-                5.85,
-                13.0
+                7.0,
+                12.0
               ]
             ]
           ]
@@ -1116,6 +902,29 @@
               ],
               [
                 5.85,
+                13.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "ac_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                13.0
+              ],
+              [
+                7.0,
                 13.0
               ]
             ]
@@ -1213,7 +1022,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -1236,11 +1045,11 @@
           "contacts": [
             [
               [
-                3.0,
+                3.15,
                 3.0
               ],
               [
-                3.0,
+                3.15,
                 3.0
               ]
             ]
@@ -1259,11 +1068,34 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
+                10.85
+              ],
+              [
+                4.0,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
                 11.0
               ],
               [
-                3.98978134,
+                7.0,
                 11.0
               ]
             ]
@@ -1276,17 +1108,86 @@
             "LDH_D"
           ],
           "metabolites": [
-            "gln__L_c",
+            "3pg_c",
             "lac__D_c"
           ],
           "contacts": [
             [
               [
                 5.85,
-                10.0
+                10.85
               ],
               [
                 5.85,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                14.0
+              ],
+              [
+                7.0,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                11.0
+              ],
+              [
+                7.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                15.0
+              ],
+              [
+                7.0,
                 15.0
               ]
             ]
@@ -1296,20 +1197,43 @@
           "category": "orange_orange",
           "reactions": [
             "BIOMASS_Ecoli_core_w_GAM",
-            "LDH_D"
+            "FORt"
           ],
           "metabolites": [
             "glu__L_c",
-            "lac__D_c"
+            "for_c"
           ],
           "contacts": [
             [
               [
-                5.85,
+                7.0,
+                11.0
+              ],
+              [
+                7.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "glu__L_c",
+            "glu__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
                 10.0
               ],
               [
-                5.85,
+                7.0,
                 10.0
               ]
             ]
@@ -1380,29 +1304,6 @@
               [
                 6.0,
                 0.52204679
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
-          ],
-          "metabolites": [
-            "fru_e",
-            "f6p_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                21.0
-              ],
-              [
-                2.0,
-                21.0
               ]
             ]
           ]
@@ -1458,7 +1359,7 @@
     "initial_feasible_metrics": {
       "red_red": 0,
       "red_orange": 0,
-      "orange_orange": 68,
+      "orange_orange": 62,
       "hard_verified": true,
       "violations": [
         {
@@ -1474,55 +1375,22 @@
           "contacts": [
             [
               [
-                5.85,
-                7.0
-              ],
-              [
-                5.85,
-                7.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "accoa_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
                 9.5,
                 0.52204679
               ],
               [
                 9.5,
-                6.31021866
+                7.0
               ]
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
                 9.5,
                 0.52204679
-              ]
-            ],
-            [
-              [
-                3.0,
-                0.52204679
-              ],
-              [
-                3.0,
-                5.0
               ]
             ]
           ]
@@ -1573,7 +1441,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -1583,11 +1451,21 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
+                3.15,
+                5.0
+              ]
+            ],
+            [
+              [
                 3.0,
+                5.0
+              ],
+              [
+                3.15,
                 5.0
               ]
             ]
@@ -1685,7 +1563,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -1708,35 +1586,12 @@
           "contacts": [
             [
               [
-                3.0,
+                3.15,
                 3.0
               ],
               [
-                3.0,
+                3.15,
                 3.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "for_c",
-            "acald_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                7.0
-              ],
-              [
-                5.85,
-                11.0
               ]
             ]
           ]
@@ -1772,40 +1627,17 @@
           ],
           "metabolites": [
             "for_c",
-            "gln__L_c"
+            "3pg_c"
           ],
           "contacts": [
             [
               [
                 5.85,
-                10.0
+                10.85
               ],
               [
                 5.85,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "for_c",
-            "glu__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                10.0
+                10.85
               ]
             ]
           ]
@@ -1829,177 +1661,6 @@
               [
                 5.85,
                 11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "ALCD2x"
-          ],
-          "metabolites": [
-            "acald_c",
-            "acald_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                6.0,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "ALCD2x"
-          ],
-          "metabolites": [
-            "acald_c",
-            "etoh_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "PTAr"
-          ],
-          "metabolites": [
-            "acald_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                8.0
-              ],
-              [
-                5.85,
-                8.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "glu__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                10.0
-              ],
-              [
-                5.85,
-                10.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "LDH_D"
-          ],
-          "metabolites": [
-            "acald_c",
-            "lac__D_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                5.85,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                5.85,
-                6.31021866
-              ],
-              [
-                5.85,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "LDH_D"
-          ],
-          "metabolites": [
-            "acald_c",
-            "pyr_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                5.85,
-                6.31021866
               ]
             ]
           ]
@@ -2011,7 +1672,7 @@
             "AKGt2r"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "akg_c"
           ],
           "contacts": [
@@ -2031,26 +1692,39 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
+            "ACALDt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                12.0
+              ],
+              [
+                6.15,
+                12.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
             "PTAr"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "accoa_c"
           ],
           "contacts": [
             [
               [
-                9.5,
-                0.52204679
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -2060,12 +1734,58 @@
             ],
             [
               [
-                3.0,
+                9.5,
                 0.52204679
               ],
               [
-                3.0,
-                5.0
+                9.5,
+                8.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "3pg_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                10.85
+              ],
+              [
+                6.15,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "glu__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                10.0
+              ],
+              [
+                6.15,
+                10.0
               ]
             ]
           ]
@@ -2077,7 +1797,7 @@
             "SUCCt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "succ_e"
           ],
           "contacts": [
@@ -2097,10 +1817,33 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
+            "FORt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.15,
+                11.0
+              ],
+              [
+                6.15,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
             "FUMt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "fum_e"
           ],
           "contacts": [
@@ -2120,21 +1863,21 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
-            "LDH_D"
+            "GLUt2r"
           ],
           "metabolites": [
-            "accoa_c",
-            "lac__D_c"
+            "acald_c",
+            "glu__L_c"
           ],
           "contacts": [
             [
               [
-                2.0,
-                6.31021866
+                6.15,
+                10.0
               ],
               [
-                5.85,
-                6.31021866
+                6.15,
+                10.0
               ]
             ]
           ]
@@ -2146,30 +1889,10 @@
             "LDH_D"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "pyr_c"
           ],
           "contacts": [
-            [
-              [
-                2.0,
-                6.31021866
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
-            [
-              [
-                9.5,
-                0.52204679
-              ],
-              [
-                9.5,
-                6.31021866
-              ]
-            ],
             [
               [
                 3.0,
@@ -2178,6 +1901,16 @@
               [
                 9.5,
                 0.52204679
+              ]
+            ],
+            [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                6.31021866
               ]
             ]
           ]
@@ -2189,7 +1922,7 @@
             "MALt2_2"
           ],
           "metabolites": [
-            "accoa_c",
+            "acald_c",
             "mal__L_c"
           ],
           "contacts": [
@@ -2310,34 +2043,11 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
                 12.0
               ],
               [
-                3.98978134,
-                12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ALCD2x",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "acald_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
+                4.0,
                 12.0
               ]
             ]
@@ -2435,35 +2145,12 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
                 12.0
               ],
               [
-                3.98978134,
+                4.0,
                 12.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ALCD2x",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "etoh_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.85,
-                12.0
-              ],
-              [
-                5.85,
-                14.0
               ]
             ]
           ]
@@ -2494,22 +2181,22 @@
         {
           "category": "orange_orange",
           "reactions": [
-            "ACKr",
+            "ACALDt",
             "BIOMASS_Ecoli_core_w_GAM"
           ],
           "metabolites": [
-            "ac_c",
+            "acald_c",
             "gln__L_c"
           ],
           "contacts": [
             [
               [
-                5.85,
-                13.0
+                7.0,
+                12.0
               ],
               [
-                5.85,
-                13.0
+                7.0,
+                12.0
               ]
             ]
           ]
@@ -2532,6 +2219,29 @@
               ],
               [
                 5.85,
+                13.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "ac_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                13.0
+              ],
+              [
+                7.0,
                 13.0
               ]
             ]
@@ -2629,7 +2339,7 @@
             ],
             [
               [
-                3.0,
+                3.15,
                 0.52204679
               ],
               [
@@ -2652,11 +2362,11 @@
           "contacts": [
             [
               [
-                3.0,
+                3.15,
                 3.0
               ],
               [
-                3.0,
+                3.15,
                 3.0
               ]
             ]
@@ -2675,11 +2385,34 @@
           "contacts": [
             [
               [
-                3.98978134,
+                4.0,
+                10.85
+              ],
+              [
+                4.0,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
                 11.0
               ],
               [
-                3.98978134,
+                7.0,
                 11.0
               ]
             ]
@@ -2692,17 +2425,86 @@
             "LDH_D"
           ],
           "metabolites": [
-            "gln__L_c",
+            "3pg_c",
             "lac__D_c"
           ],
           "contacts": [
             [
               [
                 5.85,
-                10.0
+                10.85
               ],
               [
                 5.85,
+                10.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                14.0
+              ],
+              [
+                7.0,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.0,
+                11.0
+              ],
+              [
+                7.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                15.0
+              ],
+              [
+                7.0,
                 15.0
               ]
             ]
@@ -2712,20 +2514,43 @@
           "category": "orange_orange",
           "reactions": [
             "BIOMASS_Ecoli_core_w_GAM",
-            "LDH_D"
+            "FORt"
           ],
           "metabolites": [
             "glu__L_c",
-            "lac__D_c"
+            "for_c"
           ],
           "contacts": [
             [
               [
-                5.85,
+                7.0,
+                11.0
+              ],
+              [
+                7.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "glu__L_c",
+            "glu__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
                 10.0
               ],
               [
-                5.85,
+                7.0,
                 10.0
               ]
             ]
@@ -2796,29 +2621,6 @@
               [
                 6.0,
                 0.52204679
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
-          ],
-          "metabolites": [
-            "fru_e",
-            "f6p_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                21.0
-              ],
-              [
-                2.0,
-                21.0
               ]
             ]
           ]
@@ -2908,62 +2710,16 @@
       "bends"
     ],
     "orange_crossings_optimized": false,
-    "orange_length_grid": 203.58384434,
-    "first_feasible_orange_length_grid": 203.58384434,
+    "orange_length_grid": 198.11340701999998,
+    "first_feasible_orange_length_grid": 199.11340701999998,
     "length_definition": "Union of orange segments within each reaction; different reactions count separately",
     "global_optimality_proven": false,
     "before": {
       "red_red": 0,
-      "red_orange": 16,
-      "orange_orange": 63,
+      "red_orange": 14,
+      "orange_orange": 57,
       "hard_verified": false,
       "violations": [
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "accoa_c",
-            "acald_c"
-          ],
-          "contacts": [
-            [
-              [
-                3.0,
-                6.0
-              ],
-              [
-                3.0,
-                6.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PFL",
-            "ACALD"
-          ],
-          "metabolites": [
-            "accoa_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
-                3.0,
-                5.0
-              ],
-              [
-                3.0,
-                6.0
-              ]
-            ]
-          ]
-        },
         {
           "category": "orange_orange",
           "reactions": [
@@ -3098,6 +2854,29 @@
               [
                 3.0,
                 7.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "for_c",
+            "3pg_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                11.0
+              ],
+              [
+                6.0,
+                11.0
               ]
             ]
           ]
@@ -3277,21 +3056,21 @@
           "category": "orange_orange",
           "reactions": [
             "ACALD",
-            "PTAr"
+            "BIOMASS_Ecoli_core_w_GAM"
           ],
           "metabolites": [
             "acald_c",
-            "accoa_c"
+            "3pg_c"
           ],
           "contacts": [
             [
               [
-                3.0,
-                6.0
+                6.0,
+                11.0
               ],
               [
-                3.0,
-                6.0
+                6.0,
+                11.0
               ]
             ]
           ]
@@ -3350,95 +3129,16 @@
           ],
           "metabolites": [
             "acald_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.15,
-                6.0
-              ],
-              [
-                5.0,
-                6.0
-              ]
-            ],
-            [
-              [
-                3.0,
-                6.0
-              ],
-              [
-                3.0,
-                6.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "red_orange",
-          "reactions": [
-            "ACALD",
-            "CS"
-          ],
-          "metabolites": [
-            "acald_c",
             "cit_c"
           ],
           "contacts": [
             [
               [
-                5.0,
+                6.0,
                 6.0
               ],
               [
                 6.0,
-                6.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "red_orange",
-          "reactions": [
-            "ACALD",
-            "CS"
-          ],
-          "metabolites": [
-            "acald_c",
-            "coa_c"
-          ],
-          "contacts": [
-            [
-              [
-                5.0,
-                6.0
-              ],
-              [
-                5.28978134,
-                6.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "red_orange",
-          "reactions": [
-            "ACALD",
-            "CS"
-          ],
-          "metabolites": [
-            "acald_c",
-            "oaa_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.0,
-                6.0
-              ],
-              [
-                5.0,
                 6.0
               ]
             ]
@@ -3521,40 +3221,17 @@
           ],
           "metabolites": [
             "acald_c",
-            "oaa_c"
+            "mal__L_c"
           ],
           "contacts": [
             [
               [
                 4.0,
-                6.0
+                4.0
               ],
               [
                 4.0,
-                6.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACALD",
-            "PTAr"
-          ],
-          "metabolites": [
-            "accoa_c",
-            "accoa_c"
-          ],
-          "contacts": [
-            [
-              [
-                3.0,
-                5.0
-              ],
-              [
-                3.0,
-                6.0
+                4.0
               ]
             ]
           ]
@@ -3563,21 +3240,67 @@
           "category": "red_orange",
           "reactions": [
             "ACALD",
-            "CS"
+            "MDH"
           ],
           "metabolites": [
-            "accoa_c",
-            "accoa_c"
+            "acald_c",
+            "nad_c"
           ],
           "contacts": [
             [
               [
-                3.0,
-                5.0
+                4.0,
+                4.0
               ],
               [
-                3.0,
-                6.0
+                4.0,
+                4.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACALD",
+            "MDH"
+          ],
+          "metabolites": [
+            "acald_c",
+            "nadh_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                4.0
+              ],
+              [
+                4.0,
+                4.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACALD",
+            "MDH"
+          ],
+          "metabolites": [
+            "acald_c",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                4.0
+              ],
+              [
+                4.0,
+                4.0
               ]
             ]
           ]
@@ -3935,7 +3658,7 @@
           ],
           "metabolites": [
             "ac_c",
-            "gln__L_c"
+            "3pg_c"
           ],
           "contacts": [
             [
@@ -3947,7 +3670,20 @@
                 6.0,
                 11.0
               ]
-            ],
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACKr",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "ac_c",
+            "gln__L_c"
+          ],
+          "contacts": [
             [
               [
                 6.0,
@@ -3973,7 +3709,7 @@
           "contacts": [
             [
               [
-                5.0,
+                6.0,
                 11.0
               ],
               [
@@ -4061,52 +3797,6 @@
           "metabolites": [
             "actp_c",
             "3pg_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.0,
-                11.0
-              ],
-              [
-                4.0,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACKr",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "actp_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.0,
-                11.0
-              ],
-              [
-                5.0,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "ACKr",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "actp_c",
-            "glu__L_c"
           ],
           "contacts": [
             [
@@ -4237,52 +3927,6 @@
           ]
         },
         {
-          "category": "orange_orange",
-          "reactions": [
-            "PTAr",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "actp_c",
-            "gln__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.0,
-                11.0
-              ],
-              [
-                4.0,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "PTAr",
-            "BIOMASS_Ecoli_core_w_GAM"
-          ],
-          "metabolites": [
-            "actp_c",
-            "glu__L_c"
-          ],
-          "contacts": [
-            [
-              [
-                4.0,
-                11.0
-              ],
-              [
-                4.0,
-                11.0
-              ]
-            ]
-          ]
-        },
-        {
           "category": "red_orange",
           "reactions": [
             "PYK",
@@ -4378,6 +4022,52 @@
           "category": "orange_orange",
           "reactions": [
             "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                11.0
+              ],
+              [
+                7.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                11.0
+              ],
+              [
+                6.0,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
             "ETOHt2r"
           ],
           "metabolites": [
@@ -4414,7 +4104,7 @@
                 11.0
               ],
               [
-                6.0,
+                7.0,
                 11.0
               ]
             ]
@@ -4460,7 +4150,7 @@
                 11.0
               ],
               [
-                6.0,
+                7.0,
                 11.0
               ]
             ]
@@ -4554,52 +4244,6 @@
               [
                 6.0,
                 14.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
-          ],
-          "metabolites": [
-            "fru_e",
-            "f6p_c"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                21.0
-              ],
-              [
-                2.0,
-                21.0
-              ]
-            ]
-          ]
-        },
-        {
-          "category": "orange_orange",
-          "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
-          ],
-          "metabolites": [
-            "fru_e",
-            "fru_e"
-          ],
-          "contacts": [
-            [
-              [
-                2.0,
-                20.0
-              ],
-              [
-                2.0,
-                21.0
               ]
             ]
           ]
@@ -5034,6 +4678,6 @@
     "copy:PDH:nad_c": 0,
     "copy:PDH:nadh_c": 0
   },
-  "original_route_length": 885.6166666666649,
-  "display_route_length": 982.3840409066667
+  "original_route_length": 900.6166666666649,
+  "display_route_length": 987.0636035866667
 }

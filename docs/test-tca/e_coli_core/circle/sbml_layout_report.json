@@ -2,10 +2,10 @@
   "status": "valid",
   "format": "SBML Level 3 Layout Version 1",
   "render_exported": false,
-  "source_sbml": "e_coli_core.xml",
+  "source_sbml": "/home/tamura/codex/drawing/e_coli_core.xml",
   "source_sha256": "b4db506aeed0e434c1f5f1fdd35feda0dfe5d82badcfda0e9d1342335ab31116",
   "output_file": "layout.sbml",
-  "output_sha256": "352f9c14f9d10f69124ac0413f5f3bb7f8b76eff1708e930c81c5e066e89a2b8",
+  "output_sha256": "d90f2f69605a6dfe2b0497ae2005e437ab22517196c91ac218f02de6e4b70b73",
   "level": 3,
   "version": 1,
   "libsbml_version": "5.21.2",
@@ -167,10 +167,6 @@
       "message": "If the attribute 'substanceUnits' in a Species object has not been set, then the unit of measurement associated with the species' quantity is determined by the value of the enclosing Model object's 'substanceUnits' attribute. If neither the Species object's 'substanceUnits' attribute nor the enclosing Model object's 'substanceUnits' attribute are set, then the unit of that species' quantity is undefined.\nReference: L3V1 Section 4.6.5\n The <species> with id 'M_h2o_e' does not have a substanceUnits attribute, nor does its enclosing <model>."
     }
   ],
-  "fba_verification": {
-    "before": 0.8739215069684304,
-    "after": 0.8739215069684304,
-    "unchanged": true
-  },
+  "fba_verification": null,
   "limitation": "Layout stores geometry only. Colors and arrow styling require Render support in a consuming application."
 }

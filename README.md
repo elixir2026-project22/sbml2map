@@ -786,3 +786,24 @@ circle example changes [0,30,0,46] to [0,18,12,46] and 340.81 to 216.76 orange
 grid units. The square changes [0,13,0,26] to [0,11,0,26] and 220.38 to 203.58.
 Both retain 38 straight exchange incidences and zero red crossings or outside
 paths. Model stoichiometry and FBA are unchanged.
+
+
+## Relocate nodes to reduce orange line overlap
+
+After boundary compaction, `orange_reposition.py` detects positive-length
+collinear overlaps between different orange reactions. Connected trunks within
+one reaction and point crossings are allowed. A bounded local search moves
+affected non-red nodes by at most three grid units, with up to 24 fully routed
+candidates. External nodes in two-point exchange pairs are considered first;
+they move only along the existing straight inward corridor. Red endpoints,
+red paths and the other straight exchange groups remain fixed. Local currency
+copies follow their parent. Every candidate is rerouted and checked for red
+crossings, straight exchange geometry, TCA exclusion and the active boundary.
+
+For each affected node, overlapping length comes first, then orange length,
+then displacement. The total orange length may increase to reduce overlap.
+This does not minimize point crossings or prove a global optimum; overlaps may
+remain when fixed groups or the bounded search prevent a solution. Candidates
+that break a hard constraint are discarded. Disable with
+`--no-reposition-orange`. The `orange_reposition` report records moves,
+rejections, before/after lengths and remaining overlap segments.

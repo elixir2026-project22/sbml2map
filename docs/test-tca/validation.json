@@ -177,13 +177,377 @@
           46.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 216.75929297000008,
+        "orange_length_grid": 212.95791289000005,
         "orange_crossings_optimized": false,
         "orange_candidates": 4,
-        "global_optimality_proven": false
+        "global_optimality_proven": false,
+        "orange_reposition": {
+          "enabled": true,
+          "before_overlap_grid": 121.02183069,
+          "after_overlap_grid": 97.55483398999999,
+          "before_orange_length_grid": 216.75929297000008,
+          "after_orange_length_grid": 212.95791289000005,
+          "attempted_candidates": 24,
+          "accepted_moves": [
+            {
+              "node": "met:fru_e",
+              "before": [
+                2.0,
+                40.0
+              ],
+              "after": [
+                2.0,
+                42.0
+              ],
+              "overlap_grid": 120.0218307,
+              "orange_length_grid": 214.759293
+            },
+            {
+              "node": "rxn:ACALD",
+              "before": [
+                3.0,
+                23.0
+              ],
+              "after": [
+                1.0,
+                22.0
+              ],
+              "overlap_grid": 105.7785027,
+              "orange_length_grid": 216.759293
+            },
+            {
+              "node": "rxn:ALCD2x",
+              "before": [
+                17.0,
+                27.0
+              ],
+              "after": [
+                17.0,
+                24.0
+              ],
+              "overlap_grid": 100.4783302,
+              "orange_length_grid": 214.5591205
+            },
+            {
+              "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+              "before": [
+                16.0,
+                16.0
+              ],
+              "after": [
+                17.0,
+                17.0
+              ],
+              "overlap_grid": 97.554834,
+              "orange_length_grid": 212.9579129
+            }
+          ],
+          "rejected_candidates": [
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                4.0,
+                22.0
+              ],
+              "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c', 'copy:ACALD:coa_c']"
+            },
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                5.0,
+                24.0
+              ],
+              "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c']"
+            }
+          ],
+          "objective_order": [
+            "distinct_reaction_overlap_length",
+            "orange_length",
+            "displacement"
+          ],
+          "point_crossings_penalized": false,
+          "shared_same_reaction_trunks_penalized": false,
+          "global_optimality_proven": false,
+          "candidate_limit": 24,
+          "remaining_overlaps": [
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  3.0,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.94982749
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.099827490000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.49826978
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.099827490000001
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.49826978
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 12.79826978
+            },
+            {
+              "reactions": [
+                "AKGt2r",
+                "BIOMASS_Ecoli_core_w_GAM"
+              ],
+              "points": [
+                [
+                  16.0,
+                  17.0
+                ],
+                [
+                  16.15,
+                  17.0
+                ]
+              ],
+              "length_grid": 0.14999999999999858
+            },
+            {
+              "reactions": [
+                "AKGt2r",
+                "BIOMASS_Ecoli_core_w_GAM"
+              ],
+              "points": [
+                [
+                  17.0,
+                  17.0
+                ],
+                [
+                  17.09982749,
+                  17.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLUt2r"
+              ],
+              "points": [
+                [
+                  17.0,
+                  19.0
+                ],
+                [
+                  17.09982749,
+                  19.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLNabc"
+              ],
+              "points": [
+                [
+                  17.0,
+                  25.0
+                ],
+                [
+                  17.09982749,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PYRt2"
+              ],
+              "points": [
+                [
+                  1.0,
+                  24.86486554
+                ],
+                [
+                  1.0,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.0,
+                  24.86486554
+                ],
+                [
+                  3.0,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  18.0
+                ]
+              ],
+              "length_grid": 4.913596930000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  20.0
+                ]
+              ],
+              "length_grid": 6.913596930000001
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  18.0
+                ]
+              ],
+              "length_grid": 4.913596930000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  17.0,
+                  21.0
+                ],
+                [
+                  17.0,
+                  21.15
+                ]
+              ],
+              "length_grid": 0.14999999999999858
+            }
+          ],
+          "red_routes_preserved": true
+        }
       },
       "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755.",
-      "orange_length_grid": 216.75929297000008,
+      "orange_length_grid": 212.95791289000005,
       "previous_orange_length_grid": 340.80877544,
       "boundary_validation": {
         "boundary": [
@@ -528,7 +892,7 @@
               ],
               [
                 2.0,
-                40.0
+                42.0
               ]
             ]
           },
@@ -1351,6 +1715,370 @@
         "right_margin_removed_grid": 12,
         "before_area_grid": 1380,
         "after_area_grid": 612
+      },
+      "orange_reposition": {
+        "enabled": true,
+        "before_overlap_grid": 121.02183069,
+        "after_overlap_grid": 97.55483398999999,
+        "before_orange_length_grid": 216.75929297000008,
+        "after_orange_length_grid": 212.95791289000005,
+        "attempted_candidates": 24,
+        "accepted_moves": [
+          {
+            "node": "met:fru_e",
+            "before": [
+              2.0,
+              40.0
+            ],
+            "after": [
+              2.0,
+              42.0
+            ],
+            "overlap_grid": 120.0218307,
+            "orange_length_grid": 214.759293
+          },
+          {
+            "node": "rxn:ACALD",
+            "before": [
+              3.0,
+              23.0
+            ],
+            "after": [
+              1.0,
+              22.0
+            ],
+            "overlap_grid": 105.7785027,
+            "orange_length_grid": 216.759293
+          },
+          {
+            "node": "rxn:ALCD2x",
+            "before": [
+              17.0,
+              27.0
+            ],
+            "after": [
+              17.0,
+              24.0
+            ],
+            "overlap_grid": 100.4783302,
+            "orange_length_grid": 214.5591205
+          },
+          {
+            "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+            "before": [
+              16.0,
+              16.0
+            ],
+            "after": [
+              17.0,
+              17.0
+            ],
+            "overlap_grid": 97.554834,
+            "orange_length_grid": 212.9579129
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "node": "rxn:ACALD",
+            "position": [
+              4.0,
+              22.0
+            ],
+            "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c', 'copy:ACALD:coa_c']"
+          },
+          {
+            "node": "rxn:ACALD",
+            "position": [
+              5.0,
+              24.0
+            ],
+            "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c']"
+          }
+        ],
+        "objective_order": [
+          "distinct_reaction_overlap_length",
+          "orange_length",
+          "displacement"
+        ],
+        "point_crossings_penalized": false,
+        "shared_same_reaction_trunks_penalized": false,
+        "global_optimality_proven": false,
+        "candidate_limit": 24,
+        "remaining_overlaps": [
+          {
+            "reactions": [
+              "ACALD",
+              "LDH_D"
+            ],
+            "points": [
+              [
+                3.0,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                13.08640307
+              ]
+            ],
+            "length_grid": 13.94982749
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PFL"
+            ],
+            "points": [
+              [
+                3.85,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                13.08640307
+              ]
+            ],
+            "length_grid": 13.099827490000001
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                13.08640307
+              ],
+              [
+                16.64826978,
+                13.08640307
+              ]
+            ],
+            "length_grid": 13.49826978
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PFL"
+            ],
+            "points": [
+              [
+                3.85,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                13.08640307
+              ]
+            ],
+            "length_grid": 13.099827490000001
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                13.08640307
+              ],
+              [
+                16.64826978,
+                13.08640307
+              ]
+            ],
+            "length_grid": 13.49826978
+          },
+          {
+            "reactions": [
+              "PFL",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.85,
+                13.08640307
+              ],
+              [
+                16.64826978,
+                13.08640307
+              ]
+            ],
+            "length_grid": 12.79826978
+          },
+          {
+            "reactions": [
+              "AKGt2r",
+              "BIOMASS_Ecoli_core_w_GAM"
+            ],
+            "points": [
+              [
+                16.0,
+                17.0
+              ],
+              [
+                16.15,
+                17.0
+              ]
+            ],
+            "length_grid": 0.14999999999999858
+          },
+          {
+            "reactions": [
+              "AKGt2r",
+              "BIOMASS_Ecoli_core_w_GAM"
+            ],
+            "points": [
+              [
+                17.0,
+                17.0
+              ],
+              [
+                17.09982749,
+                17.0
+              ]
+            ],
+            "length_grid": 0.09982748999999913
+          },
+          {
+            "reactions": [
+              "BIOMASS_Ecoli_core_w_GAM",
+              "GLUt2r"
+            ],
+            "points": [
+              [
+                17.0,
+                19.0
+              ],
+              [
+                17.09982749,
+                19.0
+              ]
+            ],
+            "length_grid": 0.09982748999999913
+          },
+          {
+            "reactions": [
+              "BIOMASS_Ecoli_core_w_GAM",
+              "GLNabc"
+            ],
+            "points": [
+              [
+                17.0,
+                25.0
+              ],
+              [
+                17.09982749,
+                25.0
+              ]
+            ],
+            "length_grid": 0.09982748999999913
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PYRt2"
+            ],
+            "points": [
+              [
+                1.0,
+                24.86486554
+              ],
+              [
+                1.0,
+                25.0
+              ]
+            ],
+            "length_grid": 0.13513445999999973
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PFL"
+            ],
+            "points": [
+              [
+                3.0,
+                24.86486554
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ],
+            "length_grid": 0.13513445999999973
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "LDH_D"
+            ],
+            "points": [
+              [
+                16.94982749,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                18.0
+              ]
+            ],
+            "length_grid": 4.913596930000001
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PFL"
+            ],
+            "points": [
+              [
+                16.94982749,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                20.0
+              ]
+            ],
+            "length_grid": 6.913596930000001
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PFL"
+            ],
+            "points": [
+              [
+                16.94982749,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                18.0
+              ]
+            ],
+            "length_grid": 4.913596930000001
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PTAr"
+            ],
+            "points": [
+              [
+                17.0,
+                21.0
+              ],
+              [
+                17.0,
+                21.15
+              ]
+            ],
+            "length_grid": 0.14999999999999858
+          }
+        ],
+        "red_routes_preserved": true
       }
     },
     {
@@ -1363,7 +2091,7 @@
         "crossing_constraints": {
           "red_red": 0,
           "red_orange": 0,
-          "orange_orange": 68,
+          "orange_orange": 62,
           "hard_verified": true,
           "boundary_validation": {
             "boundary": [
@@ -1398,14 +2126,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 414,
+        "nodes": 415,
         "source_nodes": 220,
-        "routing_nodes": 194,
+        "routing_nodes": 195,
         "orthogonal_segments_verified": true,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 0,
         "reactions": 84,
-        "segments": 447,
+        "segments": 448,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -1433,7 +2161,7 @@
         "shape": "square",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 68,
+        "orange_orange": 62,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
         "boundary_compaction": {
@@ -1504,12 +2232,423 @@
           26.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 203.58384434,
+        "orange_length_grid": 198.11340701999998,
         "orange_crossings_optimized": false,
         "orange_candidates": 4,
-        "global_optimality_proven": false
+        "global_optimality_proven": false,
+        "orange_reposition": {
+          "enabled": true,
+          "before_overlap_grid": 121.32758799,
+          "after_overlap_grid": 88.96146291,
+          "before_orange_length_grid": 203.58384434,
+          "after_orange_length_grid": 198.11340701999998,
+          "attempted_candidates": 24,
+          "accepted_moves": [
+            {
+              "node": "rxn:ACALD",
+              "before": [
+                2.0,
+                6.0
+              ],
+              "after": [
+                3.0,
+                4.0
+              ],
+              "overlap_grid": 94.9614629,
+              "orange_length_grid": 199.1236257
+            },
+            {
+              "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+              "before": [
+                4.0,
+                11.0
+              ],
+              "after": [
+                7.0,
+                11.0
+              ],
+              "overlap_grid": 89.9614629,
+              "orange_length_grid": 200.113407
+            },
+            {
+              "node": "met:fru_e",
+              "before": [
+                2.0,
+                20.0
+              ],
+              "after": [
+                2.0,
+                22.0
+              ],
+              "overlap_grid": 88.9614629,
+              "orange_length_grid": 198.113407
+            }
+          ],
+          "rejected_candidates": [
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                3.0,
+                6.0
+              ],
+              "reason": "Hard red crossing constraints are infeasible in the current embedding: {'policy': 'exchange_boundary_red_crossings_forbidden_orange_length_first', 'verified': False, 'metrics': {'red_red': 0, 'red_orange': 2, 'orange_orange': 52, 'hard_verified': Fal"
+            }
+          ],
+          "objective_order": [
+            "distinct_reaction_overlap_length",
+            "orange_length",
+            "displacement"
+          ],
+          "point_crossings_penalized": false,
+          "shared_same_reaction_trunks_penalized": false,
+          "global_optimality_proven": false,
+          "candidate_limit": 24,
+          "remaining_overlaps": [
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  3.0,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.5
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.0,
+                  5.0
+                ],
+                [
+                  3.15,
+                  5.0
+                ]
+              ],
+              "length_grid": 0.1499999999999999
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLUt2r"
+              ],
+              "points": [
+                [
+                  6.0,
+                  10.0
+                ],
+                [
+                  7.0,
+                  10.0
+                ]
+              ],
+              "length_grid": 1.0
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "ACALDt"
+              ],
+              "points": [
+                [
+                  6.0,
+                  12.0
+                ],
+                [
+                  6.15,
+                  12.0
+                ]
+              ],
+              "length_grid": 0.15000000000000036
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLNabc"
+              ],
+              "points": [
+                [
+                  6.0,
+                  15.0
+                ],
+                [
+                  7.0,
+                  15.0
+                ]
+              ],
+              "length_grid": 1.0
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PYRt2"
+              ],
+              "points": [
+                [
+                  1.0,
+                  4.86486554
+                ],
+                [
+                  1.0,
+                  5.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  3.15,
+                  5.0
+                ]
+              ],
+              "length_grid": 4.47795321
+            },
+            {
+              "reactions": [
+                "ALCD2x",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  5.85,
+                  12.0
+                ],
+                [
+                  5.85,
+                  14.0
+                ]
+              ],
+              "length_grid": 2.0
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  5.85,
+                  7.0
+                ],
+                [
+                  5.85,
+                  11.0
+                ]
+              ],
+              "length_grid": 4.0
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  7.0
+                ]
+              ],
+              "length_grid": 6.47795321
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  8.0
+                ]
+              ],
+              "length_grid": 7.47795321
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  7.0
+                ]
+              ],
+              "length_grid": 6.47795321
+            }
+          ],
+          "red_routes_preserved": true
+        }
       },
-      "orange_length_grid": 203.58384434,
+      "orange_length_grid": 198.11340701999998,
       "previous_orange_length_grid": 220.38246425999998,
       "boundary_validation": {
         "boundary": [
@@ -1854,7 +2993,7 @@
               ],
               [
                 2.0,
-                20.0
+                22.0
               ]
             ]
           },
@@ -2287,6 +3426,417 @@
         "right_margin_removed_grid": 2,
         "before_area_grid": 338,
         "after_area_grid": 286
+      },
+      "orange_reposition": {
+        "enabled": true,
+        "before_overlap_grid": 121.32758799,
+        "after_overlap_grid": 88.96146291,
+        "before_orange_length_grid": 203.58384434,
+        "after_orange_length_grid": 198.11340701999998,
+        "attempted_candidates": 24,
+        "accepted_moves": [
+          {
+            "node": "rxn:ACALD",
+            "before": [
+              2.0,
+              6.0
+            ],
+            "after": [
+              3.0,
+              4.0
+            ],
+            "overlap_grid": 94.9614629,
+            "orange_length_grid": 199.1236257
+          },
+          {
+            "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+            "before": [
+              4.0,
+              11.0
+            ],
+            "after": [
+              7.0,
+              11.0
+            ],
+            "overlap_grid": 89.9614629,
+            "orange_length_grid": 200.113407
+          },
+          {
+            "node": "met:fru_e",
+            "before": [
+              2.0,
+              20.0
+            ],
+            "after": [
+              2.0,
+              22.0
+            ],
+            "overlap_grid": 88.9614629,
+            "orange_length_grid": 198.113407
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "node": "rxn:ACALD",
+            "position": [
+              3.0,
+              6.0
+            ],
+            "reason": "Hard red crossing constraints are infeasible in the current embedding: {'policy': 'exchange_boundary_red_crossings_forbidden_orange_length_first', 'verified': False, 'metrics': {'red_red': 0, 'red_orange': 2, 'orange_orange': 52, 'hard_verified': Fal"
+          }
+        ],
+        "objective_order": [
+          "distinct_reaction_overlap_length",
+          "orange_length",
+          "displacement"
+        ],
+        "point_crossings_penalized": false,
+        "shared_same_reaction_trunks_penalized": false,
+        "global_optimality_proven": false,
+        "candidate_limit": 24,
+        "remaining_overlaps": [
+          {
+            "reactions": [
+              "ACALD",
+              "LDH_D"
+            ],
+            "points": [
+              [
+                3.0,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.5
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PFL"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.35
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.35
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PFL"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.35
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.35
+          },
+          {
+            "reactions": [
+              "PFL",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                9.5,
+                0.52204679
+              ]
+            ],
+            "length_grid": 6.35
+          },
+          {
+            "reactions": [
+              "PFL",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.0,
+                5.0
+              ],
+              [
+                3.15,
+                5.0
+              ]
+            ],
+            "length_grid": 0.1499999999999999
+          },
+          {
+            "reactions": [
+              "BIOMASS_Ecoli_core_w_GAM",
+              "GLUt2r"
+            ],
+            "points": [
+              [
+                6.0,
+                10.0
+              ],
+              [
+                7.0,
+                10.0
+              ]
+            ],
+            "length_grid": 1.0
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "ACALDt"
+            ],
+            "points": [
+              [
+                6.0,
+                12.0
+              ],
+              [
+                6.15,
+                12.0
+              ]
+            ],
+            "length_grid": 0.15000000000000036
+          },
+          {
+            "reactions": [
+              "BIOMASS_Ecoli_core_w_GAM",
+              "GLNabc"
+            ],
+            "points": [
+              [
+                6.0,
+                15.0
+              ],
+              [
+                7.0,
+                15.0
+              ]
+            ],
+            "length_grid": 1.0
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PYRt2"
+            ],
+            "points": [
+              [
+                1.0,
+                4.86486554
+              ],
+              [
+                1.0,
+                5.0
+              ]
+            ],
+            "length_grid": 0.13513445999999973
+          },
+          {
+            "reactions": [
+              "PFL",
+              "PTAr"
+            ],
+            "points": [
+              [
+                3.15,
+                0.52204679
+              ],
+              [
+                3.15,
+                5.0
+              ]
+            ],
+            "length_grid": 4.47795321
+          },
+          {
+            "reactions": [
+              "ALCD2x",
+              "LDH_D"
+            ],
+            "points": [
+              [
+                5.85,
+                12.0
+              ],
+              [
+                5.85,
+                14.0
+              ]
+            ],
+            "length_grid": 2.0
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PFL"
+            ],
+            "points": [
+              [
+                5.85,
+                7.0
+              ],
+              [
+                5.85,
+                11.0
+              ]
+            ],
+            "length_grid": 4.0
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "LDH_D"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                6.31021866
+              ]
+            ],
+            "length_grid": 5.78817187
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PFL"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                7.0
+              ]
+            ],
+            "length_grid": 6.47795321
+          },
+          {
+            "reactions": [
+              "ACALD",
+              "PTAr"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                8.0
+              ]
+            ],
+            "length_grid": 7.47795321
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PFL"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                6.31021866
+              ]
+            ],
+            "length_grid": 5.78817187
+          },
+          {
+            "reactions": [
+              "LDH_D",
+              "PTAr"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                6.31021866
+              ]
+            ],
+            "length_grid": 5.78817187
+          },
+          {
+            "reactions": [
+              "PFL",
+              "PTAr"
+            ],
+            "points": [
+              [
+                9.5,
+                0.52204679
+              ],
+              [
+                9.5,
+                7.0
+              ]
+            ],
+            "length_grid": 6.47795321
+          }
+        ],
+        "red_routes_preserved": true
       }
     }
   ],
@@ -2297,6 +3847,946 @@
     "Place initial straight exchange corridors",
     "Shrink lower/right boundaries only when orange length does not increase",
     "Reposition remaining nodes inside accepted boundary",
+    "Relocate affected orange endpoints to reduce positive-length overlap, then compare orange length",
     "Validate frozen red, straight corridors and all-color boundary"
-  ]
+  ],
+  "orange_reposition_validation": {
+    "cases": [
+      {
+        "shape": "circle",
+        "red_red": 0,
+        "red_orange": 0,
+        "orange_orange": 59,
+        "hard_verified": true,
+        "svg_escher_geometry_verified": true,
+        "boundary_compaction": {
+          "enabled": true,
+          "before_boundary": [
+            0,
+            30,
+            0,
+            46
+          ],
+          "after_boundary": [
+            0,
+            18,
+            12,
+            46
+          ],
+          "before_orange_length_grid": 340.80877544,
+          "after_orange_length_grid": 216.75929297000008,
+          "margin_grid": 1.0,
+          "accepted": true,
+          "red_coordinates_preserved": true,
+          "red_routes_preserved": true,
+          "attempted_candidates": 1,
+          "rejected_candidates": [],
+          "global_optimality_proven": false,
+          "protected_red_extents": [
+            0.40017251,
+            16.94982749,
+            13.10093049,
+            46.0
+          ],
+          "lower_margin_removed_grid": 12,
+          "right_margin_removed_grid": 12,
+          "before_area_grid": 1380,
+          "after_area_grid": 612
+        },
+        "straight_exchange_validation": {
+          "verified": true,
+          "groups": 14,
+          "triplets": 12,
+          "pairs": 2,
+          "straight_incidences": 38
+        },
+        "red_routes_preserved": true,
+        "boundary_validation": {
+          "boundary": [
+            0,
+            18,
+            12,
+            46
+          ],
+          "outside_path_count": 0,
+          "outside_paths": [],
+          "all_colors_checked": true,
+          "cubic_extrema_checked": true,
+          "verified": true,
+          "route_extents": [
+            0.0,
+            18.0,
+            12.0,
+            46.0
+          ]
+        },
+        "exchange_envelope": [
+          0.0,
+          18.0,
+          12.0,
+          46.0
+        ],
+        "exchange_entry_inward": true,
+        "orange_length_grid": 212.95791289000005,
+        "orange_crossings_optimized": false,
+        "orange_candidates": 4,
+        "global_optimality_proven": false,
+        "orange_reposition": {
+          "enabled": true,
+          "before_overlap_grid": 121.02183069,
+          "after_overlap_grid": 97.55483398999999,
+          "before_orange_length_grid": 216.75929297000008,
+          "after_orange_length_grid": 212.95791289000005,
+          "attempted_candidates": 24,
+          "accepted_moves": [
+            {
+              "node": "met:fru_e",
+              "before": [
+                2.0,
+                40.0
+              ],
+              "after": [
+                2.0,
+                42.0
+              ],
+              "overlap_grid": 120.0218307,
+              "orange_length_grid": 214.759293
+            },
+            {
+              "node": "rxn:ACALD",
+              "before": [
+                3.0,
+                23.0
+              ],
+              "after": [
+                1.0,
+                22.0
+              ],
+              "overlap_grid": 105.7785027,
+              "orange_length_grid": 216.759293
+            },
+            {
+              "node": "rxn:ALCD2x",
+              "before": [
+                17.0,
+                27.0
+              ],
+              "after": [
+                17.0,
+                24.0
+              ],
+              "overlap_grid": 100.4783302,
+              "orange_length_grid": 214.5591205
+            },
+            {
+              "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+              "before": [
+                16.0,
+                16.0
+              ],
+              "after": [
+                17.0,
+                17.0
+              ],
+              "overlap_grid": 97.554834,
+              "orange_length_grid": 212.9579129
+            }
+          ],
+          "rejected_candidates": [
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                4.0,
+                22.0
+              ],
+              "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c', 'copy:ACALD:coa_c']"
+            },
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                5.0,
+                24.0
+              ],
+              "reason": "TCA perimeter/interior exclusion violated: ['copy:ACALD:coa_c']"
+            }
+          ],
+          "objective_order": [
+            "distinct_reaction_overlap_length",
+            "orange_length",
+            "displacement"
+          ],
+          "point_crossings_penalized": false,
+          "shared_same_reaction_trunks_penalized": false,
+          "global_optimality_proven": false,
+          "candidate_limit": 24,
+          "remaining_overlaps": [
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  3.0,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.94982749
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.099827490000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.49826978
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.099827490000001
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 13.49826978
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.85,
+                  13.08640307
+                ],
+                [
+                  16.64826978,
+                  13.08640307
+                ]
+              ],
+              "length_grid": 12.79826978
+            },
+            {
+              "reactions": [
+                "AKGt2r",
+                "BIOMASS_Ecoli_core_w_GAM"
+              ],
+              "points": [
+                [
+                  16.0,
+                  17.0
+                ],
+                [
+                  16.15,
+                  17.0
+                ]
+              ],
+              "length_grid": 0.14999999999999858
+            },
+            {
+              "reactions": [
+                "AKGt2r",
+                "BIOMASS_Ecoli_core_w_GAM"
+              ],
+              "points": [
+                [
+                  17.0,
+                  17.0
+                ],
+                [
+                  17.09982749,
+                  17.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLUt2r"
+              ],
+              "points": [
+                [
+                  17.0,
+                  19.0
+                ],
+                [
+                  17.09982749,
+                  19.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLNabc"
+              ],
+              "points": [
+                [
+                  17.0,
+                  25.0
+                ],
+                [
+                  17.09982749,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.09982748999999913
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PYRt2"
+              ],
+              "points": [
+                [
+                  1.0,
+                  24.86486554
+                ],
+                [
+                  1.0,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.0,
+                  24.86486554
+                ],
+                [
+                  3.0,
+                  25.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  18.0
+                ]
+              ],
+              "length_grid": 4.913596930000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  20.0
+                ]
+              ],
+              "length_grid": 6.913596930000001
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  16.94982749,
+                  13.08640307
+                ],
+                [
+                  16.94982749,
+                  18.0
+                ]
+              ],
+              "length_grid": 4.913596930000001
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  17.0,
+                  21.0
+                ],
+                [
+                  17.0,
+                  21.15
+                ]
+              ],
+              "length_grid": 0.14999999999999858
+            }
+          ],
+          "red_routes_preserved": true
+        }
+      },
+      {
+        "shape": "square",
+        "red_red": 0,
+        "red_orange": 0,
+        "orange_orange": 62,
+        "hard_verified": true,
+        "svg_escher_geometry_verified": true,
+        "boundary_compaction": {
+          "enabled": true,
+          "before_boundary": [
+            0,
+            13,
+            0,
+            26
+          ],
+          "after_boundary": [
+            0,
+            11,
+            0,
+            26
+          ],
+          "before_orange_length_grid": 220.38246425999998,
+          "after_orange_length_grid": 203.58384434,
+          "margin_grid": 1.0,
+          "accepted": true,
+          "red_coordinates_preserved": true,
+          "red_routes_preserved": true,
+          "attempted_candidates": 1,
+          "rejected_candidates": [],
+          "global_optimality_proven": false,
+          "protected_red_extents": [
+            0.40017251,
+            9.44982749,
+            0.55017251,
+            26.0
+          ],
+          "lower_margin_removed_grid": 0,
+          "right_margin_removed_grid": 2,
+          "before_area_grid": 338,
+          "after_area_grid": 286
+        },
+        "straight_exchange_validation": {
+          "verified": true,
+          "groups": 14,
+          "triplets": 12,
+          "pairs": 2,
+          "straight_incidences": 38
+        },
+        "red_routes_preserved": true,
+        "boundary_validation": {
+          "boundary": [
+            0,
+            11,
+            0,
+            26
+          ],
+          "outside_path_count": 0,
+          "outside_paths": [],
+          "all_colors_checked": true,
+          "cubic_extrema_checked": true,
+          "verified": true,
+          "route_extents": [
+            0.0,
+            11.0,
+            0.0,
+            26.0
+          ]
+        },
+        "exchange_envelope": [
+          0.0,
+          11.0,
+          0.0,
+          26.0
+        ],
+        "exchange_entry_inward": true,
+        "orange_length_grid": 198.11340701999998,
+        "orange_crossings_optimized": false,
+        "orange_candidates": 4,
+        "global_optimality_proven": false,
+        "orange_reposition": {
+          "enabled": true,
+          "before_overlap_grid": 121.32758799,
+          "after_overlap_grid": 88.96146291,
+          "before_orange_length_grid": 203.58384434,
+          "after_orange_length_grid": 198.11340701999998,
+          "attempted_candidates": 24,
+          "accepted_moves": [
+            {
+              "node": "rxn:ACALD",
+              "before": [
+                2.0,
+                6.0
+              ],
+              "after": [
+                3.0,
+                4.0
+              ],
+              "overlap_grid": 94.9614629,
+              "orange_length_grid": 199.1236257
+            },
+            {
+              "node": "rxn:BIOMASS_Ecoli_core_w_GAM",
+              "before": [
+                4.0,
+                11.0
+              ],
+              "after": [
+                7.0,
+                11.0
+              ],
+              "overlap_grid": 89.9614629,
+              "orange_length_grid": 200.113407
+            },
+            {
+              "node": "met:fru_e",
+              "before": [
+                2.0,
+                20.0
+              ],
+              "after": [
+                2.0,
+                22.0
+              ],
+              "overlap_grid": 88.9614629,
+              "orange_length_grid": 198.113407
+            }
+          ],
+          "rejected_candidates": [
+            {
+              "node": "rxn:ACALD",
+              "position": [
+                3.0,
+                6.0
+              ],
+              "reason": "Hard red crossing constraints are infeasible in the current embedding: {'policy': 'exchange_boundary_red_crossings_forbidden_orange_length_first', 'verified': False, 'metrics': {'red_red': 0, 'red_orange': 2, 'orange_orange': 52, 'hard_verified': Fal"
+            }
+          ],
+          "objective_order": [
+            "distinct_reaction_overlap_length",
+            "orange_length",
+            "displacement"
+          ],
+          "point_crossings_penalized": false,
+          "shared_same_reaction_trunks_penalized": false,
+          "global_optimality_proven": false,
+          "candidate_limit": 24,
+          "remaining_overlaps": [
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  3.0,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.5
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  0.52204679
+                ]
+              ],
+              "length_grid": 6.35
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.0,
+                  5.0
+                ],
+                [
+                  3.15,
+                  5.0
+                ]
+              ],
+              "length_grid": 0.1499999999999999
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLUt2r"
+              ],
+              "points": [
+                [
+                  6.0,
+                  10.0
+                ],
+                [
+                  7.0,
+                  10.0
+                ]
+              ],
+              "length_grid": 1.0
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "ACALDt"
+              ],
+              "points": [
+                [
+                  6.0,
+                  12.0
+                ],
+                [
+                  6.15,
+                  12.0
+                ]
+              ],
+              "length_grid": 0.15000000000000036
+            },
+            {
+              "reactions": [
+                "BIOMASS_Ecoli_core_w_GAM",
+                "GLNabc"
+              ],
+              "points": [
+                [
+                  6.0,
+                  15.0
+                ],
+                [
+                  7.0,
+                  15.0
+                ]
+              ],
+              "length_grid": 1.0
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PYRt2"
+              ],
+              "points": [
+                [
+                  1.0,
+                  4.86486554
+                ],
+                [
+                  1.0,
+                  5.0
+                ]
+              ],
+              "length_grid": 0.13513445999999973
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  3.15,
+                  0.52204679
+                ],
+                [
+                  3.15,
+                  5.0
+                ]
+              ],
+              "length_grid": 4.47795321
+            },
+            {
+              "reactions": [
+                "ALCD2x",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  5.85,
+                  12.0
+                ],
+                [
+                  5.85,
+                  14.0
+                ]
+              ],
+              "length_grid": 2.0
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  5.85,
+                  7.0
+                ],
+                [
+                  5.85,
+                  11.0
+                ]
+              ],
+              "length_grid": 4.0
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "LDH_D"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PFL"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  7.0
+                ]
+              ],
+              "length_grid": 6.47795321
+            },
+            {
+              "reactions": [
+                "ACALD",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  8.0
+                ]
+              ],
+              "length_grid": 7.47795321
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PFL"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "LDH_D",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  6.31021866
+                ]
+              ],
+              "length_grid": 5.78817187
+            },
+            {
+              "reactions": [
+                "PFL",
+                "PTAr"
+              ],
+              "points": [
+                [
+                  9.5,
+                  0.52204679
+                ],
+                [
+                  9.5,
+                  7.0
+                ]
+              ],
+              "length_grid": 6.47795321
+            }
+          ],
+          "red_routes_preserved": true
+        }
+      }
+    ]
+  }
 }
