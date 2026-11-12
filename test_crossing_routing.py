@@ -1,7 +1,7 @@
 """Crossing constraints include touching, overlaps and circular Beziers."""
 import copy
 import unittest
-from crossing_routing import measure,route
+from crossing_routing import measure,route,orange_length
 from tca_curves import arc_controls
 
 
@@ -59,3 +59,21 @@ class CrossingRoutingTests(unittest.TestCase):
     def test_orange_crossing_is_reported_without_hard_failure(self):
         paths=[path('A','a','b',(0,1),(2,1),priority=1),path('B','c','d',(1,0),(1,2),priority=1)]
         r=measure(paths);self.assertTrue(r['hard_verified']);self.assertEqual(r['orange_orange'],1)
+
+
+    def test_orange_crossing_does_not_trigger_a_detour(self):
+        paths=[path('A','a','b',(0,1),(2,1),priority=1),path('B','c','d',(1,0),(1,2),priority=1)]
+        xy={k:p for q in paths for k,p in [(q['source'],q['points'][0]),(q['target'],q['points'][-1])]}
+        result=route(paths,xy,attempts=3,progress=lambda *a,**k:None)
+        self.assertTrue(result['verified'])
+        self.assertFalse(result['orange_crossings_optimized'])
+        self.assertEqual(result['metrics']['orange_orange'],1)
+        self.assertAlmostEqual(orange_length(paths),4)
+        self.assertNotIn('orange crossings',result['objective_order'])
+
+    def test_shared_orange_reaction_trunk_counts_once(self):
+        paths=[path('R','r','a',(0,0),(2,0),priority=1),
+               path('R','r','b',(0,0),(1,2),priority=1,points=[(0,0),(1,0),(1,2)])]
+        self.assertAlmostEqual(orange_length(paths),4)
+        paths.append(path('OTHER','c','d',(0,0),(2,0),priority=1))
+        self.assertAlmostEqual(orange_length(paths),6)

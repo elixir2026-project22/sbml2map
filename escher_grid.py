@@ -862,7 +862,7 @@ def run(args):
                                   no_zero_median_reactions=True, visible_stoichiometry_preserved=True,
                                   full_model_used_for_sampling=True, network=network, escher=escher_check),
                   limitations=['Global length optimality is reported, not assumed.',
-                               ('Red crossings are forbidden; orange crossings use a bounded search without a global optimality guarantee.' if backbones.get('crossing_routing') else 'Crossings, coincident edge paths, and label overlap are not minimized.'),
+                               ('Red crossings are forbidden; orange length is minimized over a bounded candidate search. Orange crossings are permitted.' if backbones.get('crossing_routing') else 'Crossings, coincident edge paths, and label overlap are not minimized.'),
                                'Display model omits inorganic participants and is not suitable for FBA.',
                                'TCA cycle connections may use circular Beziers; other connections use orthogonal routing. Biological coordinates and reaction chemistry are preserved.',
                                'Sampling uses original bounds without a growth floor or loopless constraints; internal cycles may dominate.'])
@@ -942,8 +942,8 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
-    p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange crossings')
-    p.add_argument('--crossing-attempts',type=int,default=24,help='Deterministic orange ordering candidates (default: 24)')
+    p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange length')
+    p.add_argument('--routing-attempts','--crossing-attempts',dest='crossing_attempts',type=int,default=12,help='Orange length ordering candidates (default: 12)')
     p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')
     p.add_argument('--exchange-alignment',choices=('collinear','off'),default='collinear',help='Align EX, extracellular and matching cytosolic nodes from outside inward (default: collinear)')
     p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')

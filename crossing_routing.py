@@ -1,4 +1,4 @@
-"""Hard red crossing constraints and crossing-first orange routing.
+"""Hard red crossing constraints and length-first orange routing.
 
 Biological endpoints stay fixed. Same-reaction branches may share a connected
 trunk; unrelated touching/overlap is forbidden whenever either branch is red.
@@ -15,7 +15,7 @@ import numpy as np
 from tca_curves import arc_controls, curved_pairs, sample_curve
 
 EPS=1e-7
-POLICY='red_crossings_forbidden_orange_crossings_first'
+POLICY='red_crossings_forbidden_orange_length_first'
 
 
 def clean(points):
@@ -115,6 +115,25 @@ def measure(paths):
     return dict(**counts,hard_verified=counts['red_red']==counts['red_orange']==0,violations=details)
 
 
+def orange_length(paths):
+    """Physical orange length; connected same-reaction trunks count once."""
+    groups=defaultdict(list)
+    for path in paths:
+        if path['priority']!=1:continue
+        for a,b in zip(path['points'],path['points'][1:]):
+            axis=0 if abs(a[1]-b[1])<EPS else 1
+            groups[(path['rid'],axis,round(a[1-axis],8))].append(sorted((a[axis],b[axis])))
+    total=0.
+    for segments in groups.values():
+        low=high=None
+        for a,b in sorted(segments):
+            if high is None:low,high=a,b
+            elif a<=high+EPS:high=max(high,b)
+            else:total+=high-low;low,high=a,b
+        if high is not None:total+=high-low
+    return total
+
+
 def initial_paths(nodes,edges,xy,backbones,major):
     orange=set((backbones.get('exchange_connectors') or {}).get('edge_indices',()))
     curves=curved_pairs(backbones);region=backbones.get('tca_exclusion',{}).get('region')
@@ -174,7 +193,7 @@ class RoutingGrid:
     def reserve(self,path,trace):
         self.traces[id(path)]=trace
 
-    def masks(self,path,orange_hard=False):
+    def masks(self,path):
         blocked=self.node.copy();start=self.lookup[path['source']];end=self.lookup[path['target']];blocked[[start,end]]=False
         hard_h=self.arc_h.copy();hard_v=self.arc_v.copy()
         for key,events in self.events.items():
@@ -200,17 +219,19 @@ class RoutingGrid:
                 else:ov[min(a//self.nx,b//self.nx),a%self.nx]=True if ov.dtype==bool else ov[min(a//self.nx,b//self.nx),a%self.nx]+1
         blocked[[start,end]]=False;soft[[start,end]]=0
         # Red must also avoid already routed orange when used for a later repair.
-        if path['priority']==2 or orange_hard:
+        if path['priority']==2:
             blocked|=soft>0;blocked[[start,end]]=False;hard_h|=soft_h>0;hard_v|=soft_v>0
         return blocked,hard_h,hard_v,soft,soft_h,soft_v,own_h,own_v
 
-    def search(self,path,orange_hard=False):
+    def search(self,path):
         start=self.lookup[path['source']];target=self.lookup[path['target']]
-        blocked,hh,hv,soft,sh,sv,oh,ov=self.masks(path,orange_hard)
-        x,y=self.x,self.y;nx=self.nx;ny=self.ny;target_x,target_y=target%nx,target//nx
-        initial=start*3;distance={initial:0.};previous={};queue=[(0.,0.,initial)]
+        blocked,hh,hv,soft,sh,sv,oh,ov=self.masks(path)
+        x,y=self.x,self.y;nx=self.nx;ny=self.ny
+        # Exact lexicographic Dijkstra: length first, then bends. Orange
+        # occupancy never contributes a crossing penalty or blocks orange.
+        initial=start*3;distance={initial:(0.,0)};previous={};queue=[(0.,0,initial)]
         while queue:
-            _,cost,state=heapq.heappop(queue)
+            length_cost,bends,state=heapq.heappop(queue);cost=(length_cost,bends)
             if cost!=distance.get(state):continue
             v,axis=divmod(state,3);ix,iy=v%nx,v//nx
             if v==target:
@@ -218,19 +239,19 @@ class RoutingGrid:
                 while state!=initial:state=previous[state];trace.append(state//3)
                 trace.reverse();return trace
             options=[]
-            if ix:options.append((v-1,1,x[ix]-x[ix-1],hh[iy,ix-1],sh[iy,ix-1],oh[iy,ix-1]))
-            if ix+1<nx:options.append((v+1,1,x[ix+1]-x[ix],hh[iy,ix],sh[iy,ix],oh[iy,ix]))
-            if iy:options.append((v-nx,2,y[iy]-y[iy-1],hv[iy-1,ix],sv[iy-1,ix],ov[iy-1,ix]))
-            if iy+1<ny:options.append((v+nx,2,y[iy+1]-y[iy],hv[iy,ix],sv[iy,ix],ov[iy,ix]))
-            for other,direction,length,wall,cross,own in options:
+            if ix:options.append((v-1,1,x[ix]-x[ix-1],hh[iy,ix-1],oh[iy,ix-1]))
+            if ix+1<nx:options.append((v+1,1,x[ix+1]-x[ix],hh[iy,ix],oh[iy,ix]))
+            if iy:options.append((v-nx,2,y[iy]-y[iy-1],hv[iy-1,ix],ov[iy-1,ix]))
+            if iy+1<ny:options.append((v+nx,2,y[iy+1]-y[iy],hv[iy,ix],ov[iy,ix]))
+            for other,direction,length,wall,own in options:
                 if wall or blocked[other]:continue
-                value=cost+float(length)*(.05 if own else 1.)+(2. if axis and axis!=direction else 0.)+1000000.*(int(soft[other])+int(cross))
+                # A shared orange trunk has already paid its physical length.
+                step=0. if own and path['priority']==1 else float(length)*(.05 if own else 1.)
+                value=(round(length_cost+step,8),bends+int(bool(axis and axis!=direction)))
                 following=other*3+direction
-                if value>=distance.get(following,math.inf)-1e-9:continue
+                if value>=distance.get(following,(math.inf,math.inf)):continue
                 distance[following]=value;previous[following]=state
-                # Discounted own trunks make a zero heuristic the safe lower bound.
-                heuristic=.05*(abs(x[other%nx]-x[target_x])+abs(y[other//nx]-y[target_y]))
-                heapq.heappush(queue,(value+heuristic,value,following))
+                heapq.heappush(queue,(*value,following))
         return None
 
 
@@ -240,43 +261,42 @@ def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17):
     grid=RoutingGrid(paths,xy,margin)
     ordered=sorted(important,key=lambda p:(-p['priority'],not p['backbone'],math.dist(p['points'][0],p['points'][-1]),p['rid'],p['mid']))
     for index,path in enumerate(ordered):
-        trace=grid.search(path,orange_hard=True)
-        if trace is None and path['priority']==1:trace=grid.search(path)
+        trace=grid.search(path)
         if trace is None:
             return dict(verified=False,reason='No crossing-free path in the current fixed embedding',reaction_id=path['rid'],metabolite_id=path['mid'],routed=index,total=len(ordered))
         path['points']=clean([grid.point(v) for v in trace]);grid.reserve(path,trace)
         if index%20==0:progress(f'Crossing constraints: routed {index+1}/{len(ordered)}',flush=True)
     metrics=measure(paths)
     baseline=copy.deepcopy(metrics)
+    first_length=orange_length(paths)
     def score():
         m=measure(paths)
-        return (m['red_red']+m['red_orange'],m['orange_orange'],
-                sum(len(p['points'])-2 for p in paths if p['priority']),
-                sum(math.dist(a,b) for p in paths if p['priority'] for a,b in zip(p['points'],p['points'][1:])))
+        return (m['red_red']+m['red_orange'],round(orange_length(paths),8),
+                sum(len(p['points'])-2 for p in paths if p['priority']==1))
     best_score=score();best_points={id(p):list(p['points']) for p in important}
     orange=[p for p in ordered if p['priority']==1]
     red_traces={id(p):grid.traces[id(p)] for p in ordered if p['priority']==2}
     generator=random.Random(seed)
     for attempt in range(attempts):
-        if best_score[1]==0:break
         grid.traces=dict(red_traces)
         ordering=list(orange)
         if attempt==0:ordering.sort(key=lambda p:-math.dist(p['points'][0],p['points'][-1]))
         else:generator.shuffle(ordering)
         for path in ordering:
-            trace=grid.search(path,orange_hard=True)
-            if trace is None:trace=grid.search(path)
+            trace=grid.search(path)
             if trace is None:break
             path['points']=clean([grid.point(v) for v in trace]);grid.reserve(path,trace)
         else:
             candidate=score()
             if candidate<best_score:
                 best_score=candidate;best_points={id(p):list(p['points']) for p in important}
-                progress(f'Orange crossing search {attempt+1}/{attempts}: {best_score[1]} contacts',flush=True)
+                progress(f'Orange length search {attempt+1}/{attempts}: {best_score[1]:.4f} grid units',flush=True)
     for path in important:path['points']=best_points[id(path)]
     metrics=measure(paths)
     return dict(policy=POLICY,verified=metrics['hard_verified'],metrics=metrics,initial_feasible_metrics=baseline,nodes_moved=False,grid_shape=[grid.nx,grid.ny],
-                attempts=attempts,objective_order=['red crossings forbidden','orange crossings','bends','length'],global_optimality_proven=False)
+                attempts=attempts,objective_order=['red crossings forbidden','orange total physical length','bends'],
+                orange_crossings_optimized=False,orange_length_grid=orange_length(paths),first_feasible_orange_length_grid=first_length,
+                length_definition='Union of orange segments within each reaction; different reactions count separately',global_optimality_proven=False)
 
 
 def plan_routes(nodes,edges,xy,backbones,major,attempts=24,progress=print):

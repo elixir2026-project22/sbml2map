@@ -707,11 +707,15 @@ red/orange crossing, unrelated touching and overlap are forbidden. Valid shared
 biological endpoints and connected trunks of one reaction are allowed. Cubic
 TCA arcs are checked by solving their line-intersection polynomials.
 
-Orange/orange contacts are minimized over deterministic ordering candidates
-(`--crossing-attempts 24` by default), then bends and route length. Zero orange
-contacts and global optimality are not guaranteed. The first feasible circle
-routing had 152 orange contacts; the selected candidate has 92. Square has 33.
-A hard constraint failure aborts output instead of silently relaxing it.
+Orange/orange contacts are permitted and never penalized or minimized.
+Routing first minimizes total physical orange length, counting a shared trunk
+once within the same reaction, then bends. Different reactions count separately.
+`--routing-attempts 12` selects the number of deterministic length candidates;
+`--crossing-attempts` remains an alias. Local searches minimize incremental
+length before bends. The final candidate is selected by total orange length.
+The circle example decreased from 738.81 to 472.27 grid units; square decreased
+from 429.51 to 265.35. Global length optimality is not guaranteed.
+A hard red-constraint failure aborts output instead of silently relaxing it.
 
 A coordinate-compressed routing grid provides detour lanes outside the original
 frame. The selected routes are shared by SVG, PNG, Escher and SBML Layout;

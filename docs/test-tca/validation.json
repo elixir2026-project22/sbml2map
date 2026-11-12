@@ -10,20 +10,26 @@
       "clearance_violation_count": 0,
       "all_tca_nodes_on_integer_grid": false,
       "escher": {
+        "crossing_constraints": {
+          "red_red": 0,
+          "red_orange": 0,
+          "orange_orange": 154,
+          "hard_verified": true
+        },
         "schema_valid": true,
         "metadata_embedded": true,
         "reaction_ids_preserved": true,
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 511,
+        "nodes": 447,
         "source_nodes": 220,
-        "routing_nodes": 291,
+        "routing_nodes": 227,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 544,
+        "segments": 480,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -74,14 +80,18 @@
         "shape": "circle",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 92,
+        "orange_orange": 154,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
-        "orange_first_feasible": 152,
-        "orange_candidates": 24,
+        "orange_length_grid": 472.2695234599998,
+        "orange_crossings_optimized": false,
+        "orange_candidates": 12,
         "global_optimality_proven": false
       },
-      "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755."
+      "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755.",
+      "orange_length_grid": 472.2695234599998,
+      "previous_orange_length_grid": 738.8116308923055,
+      "orange_length_reduction_fraction": 0.36077140137924923
     },
     {
       "shape": "square",
@@ -90,20 +100,26 @@
       "clearance_violation_count": 0,
       "all_tca_nodes_on_integer_grid": true,
       "escher": {
+        "crossing_constraints": {
+          "red_red": 0,
+          "red_orange": 0,
+          "orange_orange": 68,
+          "hard_verified": true
+        },
         "schema_valid": true,
         "metadata_embedded": true,
         "reaction_ids_preserved": true,
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 463,
+        "nodes": 431,
         "source_nodes": 220,
-        "routing_nodes": 243,
+        "routing_nodes": 211,
         "orthogonal_segments_verified": true,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 0,
         "reactions": 84,
-        "segments": 496,
+        "segments": 464,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -131,14 +147,19 @@
         "shape": "square",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 33,
+        "orange_orange": 68,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
-        "orange_first_feasible": 40,
-        "orange_candidates": 8,
+        "orange_length_grid": 265.34586786,
+        "orange_crossings_optimized": false,
+        "orange_candidates": 12,
         "global_optimality_proven": false
-      }
+      },
+      "orange_length_grid": 265.34586786,
+      "previous_orange_length_grid": 429.5054418199998,
+      "orange_length_reduction_fraction": 0.3822060397288214
     }
   ],
-  "crossing_policy": "red crossings forbidden; orange crossings minimized over deterministic candidates"
+  "crossing_policy": "red crossings forbidden; orange crossings ignored; orange total physical length first",
+  "orange_length_definition": "Sum of orange geometry, merging shared segments within the same reaction; different reactions counted separately."
 }
