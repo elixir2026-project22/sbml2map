@@ -413,6 +413,8 @@ def apply_to_escher(data,plan):
     x1=min(canvas['x'],min(xs)-padding);x2=max(canvas['x']+canvas['width'],max(xs)+padding)
     y1=min(canvas['y'],min(ys)-padding);y2=max(canvas['y']+canvas['height'],max(ys)+padding)
     canvas.update(x=x1,y=y1,width=x2-x1,height=y2-y1)
+    if plan['report'].get('uniform_node_sizes'):
+        fit_escher_canvas(body)
     return data
 
 
@@ -439,6 +441,7 @@ def validate_saved_geometry(data,metadata=None):
             p=dict(rid=rid,mid=mid,source=sources[marker],target=sources[target],priority=record['priority'] if backbones.get('adaptive_layout') else 2 if rid in major else record['priority'],points=[inverse(body['nodes'][n]) for n in chain])
             p['backbone']=record.get('backbone',False)
             if record.get('auxiliary_lane'):p['auxiliary_lane']=True
+            if record.get('local_cofactor'):p['local_cofactor']=True
             if len(segments)==1 and segments[0]['b1'] is not None:
                 controls=[segments[0]['b1'],segments[0]['b2']]
                 if segments[0]['from_node_id']!=marker:controls.reverse()
@@ -447,8 +450,20 @@ def validate_saved_geometry(data,metadata=None):
     if backbones.get('adaptive_layout'):
         from adaptive_routing import validate_paths
         xy={source:inverse(body['nodes'][key]) for key,source in sources.items()}
-        return validate_paths(paths,xy,backbones['routing_boundary'],backbones['tca_exclusion'].get('region'),
+        result=validate_paths(paths,xy,backbones['routing_boundary'],backbones['tca_exclusion'].get('region'),
                               backbones['crossing_routing']['report']['conditional_crossings'])
+        optimization=backbones.get('red_optimization')
+        if optimization:
+            from red_objective import preservation_report,relaxation_level
+            reference=dict(positions=optimization['reference_positions'],routes=optimization['reference_routes'],
+                           length=optimization['optimized_length_grid'],signature=optimization['reference_signature'])
+            check=preservation_report(reference,xy,paths)
+            if abs(check['final_length_grid']-optimization['preservation']['final_length_grid'])>1e-6:
+                raise ValueError('Saved red length differs from its preservation report')
+            if relaxation_level(reference,dict(positions=xy,routes=paths))!=optimization['relaxation_level']:
+                raise ValueError('Saved red geometry violates its preservation level')
+            result['red_preservation']=check
+        return result
     result=measure(paths)
     boundary=backbones.get('routing_boundary')
     if boundary is not None:result['boundary_validation']=validate_boundary(paths,boundary)
@@ -457,3 +472,23 @@ def validate_saved_geometry(data,metadata=None):
         result['straight_exchange_validation']=validate_corridors(paths,backbones['exchange_corridors'])
     if not result['hard_verified']:raise ValueError('Saved geometry violates hard red crossing constraints: '+str(result['violations']))
     return {k:v for k,v in result.items() if k!='violations'}
+
+
+def fit_escher_canvas(body):
+    canvas=body['canvas']
+    # Fit the saved geometry and full label widths rather than keeping
+    # the initial canvas's fixed 350-unit right-hand allowance.
+    bounds=[(n['x']-10,n['y']-10,n['x']+10,n['y']+10) for n in body['nodes'].values()]
+    bounds += [(n['label_x'],n['label_y']-20,n['label_x']+len(n['bigg_id'])*12,n['label_y']+5)
+               for n in body['nodes'].values() if n['node_type']=='metabolite']
+    bounds += [(r['label_x'],r['label_y']-20,r['label_x']+len(r['bigg_id'])*12,r['label_y']+5) for r in body['reactions'].values()]
+    bounds += [(t['x'],t['y']-20,t['x']+len(t['text'])*12,t['y']+5) for t in body['text_labels'].values()]
+    for reaction in body['reactions'].values():
+        for segment in reaction['segments'].values():
+            for key in ('b1','b2'):
+                if segment[key] is not None:
+                    p=segment[key];bounds.append((p['x'],p['y'],p['x'],p['y']))
+    margin=12.
+    x1=min(b[0] for b in bounds)-margin;y1=min(b[1] for b in bounds)-margin
+    x2=max(b[2] for b in bounds)+margin;y2=max(b[3] for b in bounds)+margin
+    canvas.update(x=x1,y=y1,width=x2-x1,height=y2-y1)

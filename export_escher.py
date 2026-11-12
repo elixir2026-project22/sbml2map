@@ -443,7 +443,7 @@ document.getElementById('save').onclick=()=>{const data=window.builder.map.map_f
     from tca_curves import backbone_from_metadata
     routing=backbone_from_metadata(data[0].get('metadata',{})).get('crossing_routing',{}).get('report',{})
     port_keys=set(routing.get('node_port_nodes',[]))
-    if port_keys:
+    if port_keys and not routing.get('uniform_node_sizes'):
         radius=routing['node_port_glyph_radius_grid']*data[0]['metadata']['coordinate_transform']['scale']
         css=''.join('#n'+str(nid)+' circle{r:'+str(radius)+'px!important;}' for nid,key in data[0]['metadata']['source_node_ids'].items() if key in port_keys)
         page=page.replace('</style>',css+'</style>',1)

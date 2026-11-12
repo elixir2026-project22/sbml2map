@@ -1,12 +1,17 @@
 # Interactive drawing results
 
+Latest layouts: [E. coli core and iCH360, circular/square comparison](test-tca/).
+The red route length is optimized first and the selected red coordinates and routes
+are preserved through the final SVG and Escher export. Current validation reports
+are linked from the comparison page.
+
 The `docs/` directory is ready for GitHub Pages. In the repository's Settings → Pages,
 select **Deploy from a branch**, branch **main**, directory **/docs**, and Save.
 Pages must be enabled before the public site becomes available.
 
 When Pages is enabled, the default viewer URLs are:
 
-- MetNetComp: https://metnetcomp.github.io/sbml2escher/e_coli_core/
+- MetNetComp: https://metnetcomp.github.io/sbml2map/e_coli_core/
 - ELIXIR: https://elixir2026-project22.github.io/sbml2map/e_coli_core/
 
 Append `escher_preview.html` for the structural Escher view or `escher_fba.html`
@@ -31,7 +36,7 @@ with its [validation report](e_coli_core/sbml_layout_report.json). The CLI does 
 - [Escher viewer](eco_ich_360/escher_preview.html)
 - [PNG](eco_ich_360/layout.png)
 
-Live site: https://metnetcomp.github.io/sbml2escher/eco_ich_360/
+Live site: https://elixir2026-project22.github.io/sbml2map/eco_ich_360/
 
 These saved structural views show 326 of the source model's 349 reactions,
 without flux sampling. No new model files or source/display model snapshots

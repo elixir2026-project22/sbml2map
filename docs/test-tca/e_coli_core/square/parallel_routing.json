@@ -41,34 +41,41 @@
     "verified": true,
     "metrics": {
       "red_red": 0,
-      "red_orange": 3,
-      "orange_orange": 108,
+      "red_orange": 1,
+      "orange_orange": 89,
       "hard_verified": true,
+      "raw_red_red": 0,
       "strict_red_crossings_absent": false,
-      "raw_red_orange": 6
+      "raw_red_orange": 5
     },
     "orange_overlap_grid": 0.0,
-    "raw_orange_overlap_grid": 0.5,
+    "raw_orange_overlap_grid": 1.0,
     "node_port_nodes": [
+      "met:ac_c",
+      "met:acald_c",
       "met:accoa_c",
-      "met:lac__D_c",
+      "met:akg_c",
+      "met:fru_e",
       "met:pyr_c",
-      "rxn:LDH_D"
+      "rxn:ALCD2x"
     ],
-    "node_port_half_width_grid": 0.25,
-    "node_port_glyph_radius_grid": 0.36,
-    "node_port_contacts": 6,
+    "node_port_half_width_grid": 0.5,
+    "node_port_contacts": 9,
+    "uniform_node_sizes": true,
+    "parallel_spacing_grid": 1.0,
+    "parallel_length_grid": 2.0,
+    "parallel_conflict_count": 0,
     "grid_lines_verified": false,
     "primary_or_auxiliary_grid_verified": true,
-    "thin_lanes_used": 67,
+    "thin_lanes_used": 82,
     "tca_clearance_grid": 1.0,
     "tca_clearance_verified": true,
     "boundary_validation": {
       "boundary": [
         0,
-        26,
-        -27,
-        26
+        30,
+        3,
+        46
       ],
       "outside_path_count": 0,
       "outside_paths": [],
@@ -77,39 +84,26 @@
       "verified": true,
       "route_extents": [
         0.0,
-        26.0,
-        -27.0,
-        26.0
+        30.0,
+        3.0,
+        46.0
       ]
     },
     "conditional_crossings": [
       {
-        "reaction_id": "FRUpts2",
-        "metabolite_id": "f6p_c",
+        "reaction_id": "PYRt2",
+        "metabolite_id": "pyr_c",
         "uncrossed_length_grid": null,
-        "crossed_length_grid": 2.0,
-        "no_uncrossed_path": true
-      },
-      {
-        "reaction_id": "PTAr",
-        "metabolite_id": "accoa_c",
-        "uncrossed_length_grid": 59.0,
-        "crossed_length_grid": 45.0,
-        "no_uncrossed_path": false
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "metabolite_id": "3pg_c",
-        "uncrossed_length_grid": null,
-        "crossed_length_grid": 77.0,
+        "crossed_length_grid": 3.0,
         "no_uncrossed_path": true
       }
     ],
-    "orange_length_grid": 522.75,
+    "orange_length_grid": 427.25,
     "orange_crossings_optimized": false,
     "red_first": true,
     "objective_order": [
-      "no orange overlaps outside node glyphs",
+      "no overlaps outside common node neighborhoods",
+      "no long close parallel runs",
       "TCA clearance",
       "short routes with audited red crossings",
       "bends"
@@ -117,6 +111,14 @@
     "thin_lane_limit": 2,
     "maximum_thin_corridor_load": 2,
     "global_optimality_proven": false,
+    "node_grid": {
+      "verified": true,
+      "exceptions": [
+        "TCA perimeter",
+        "reaction-local cofactors"
+      ],
+      "checked_nodes": 116
+    },
     "straight_exchange_validation": {
       "verified": true,
       "groups": 14,
@@ -124,7 +126,18 @@
       "pairs": 2,
       "straight_incidences": 38
     },
-    "red_routes_preserved": true
+    "red_routes_preserved": true,
+    "red_preservation": {
+      "initial_length_grid": 90.5,
+      "final_length_grid": 90.5,
+      "length_increase_grid": 0.0,
+      "moved_node_count": 0,
+      "moved_node_ids": [],
+      "changed_route_count": 0,
+      "changed_routes": [],
+      "exactly_preserved": true,
+      "reference_signature": "8aa29cc75bdb0db5f33d186e"
+    }
   },
   "tca_curves": {
     "style": "circular_bezier",
@@ -452,6 +465,6 @@
     "copy:PDH:nad_c": 0,
     "copy:PDH:nadh_c": 0
   },
-  "original_route_length": 1898.4,
-  "display_route_length": 2017.4
+  "original_route_length": 2124.8,
+  "display_route_length": 2182.7999999999997
 }

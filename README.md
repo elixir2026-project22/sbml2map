@@ -1,20 +1,17 @@
 # sbml2map
 
-Current default: adaptive grid routing with disjoint visible orange lines, audited red/orange crossings and a smaller TCA circle. See [Adaptive grid routing](#adaptive-grid-routing-current-default) and the [test page](https://elixir2026-project22.github.io/sbml2map/test-tca/).
+[配置・描画ルールの優先順位（日本語）](docs/layout-rules-ja.md)
 
 sbml2map draws metabolic maps from SBML models. It can export Escher maps,
 SVG images, and SBML files with compound and reaction positions and connecting lines.
 To export SBML with positions, use `--export-sbml-layout`.
 
-The structural Escher view paints red above orange above gray and offsets coincident routes of different reactions.
-Biological nodes stay fixed; same-reaction trunks remain bundled. Primary backbone
-centerlines stay fixed during parallel-lane separation, but may detour around unrelated red/orange nodes.
-Parallel red/orange segments from different reactions that run together for at
-least one grid unit are separated by approximately 0.3 grid units using rectangular
-detours in both SVG and Escher structural views. Node collisions are avoided;
-unresolved routes are recorded in `parallel_routing.json` (SVG) and map metadata
-(Escher). Display detours add length without changing the original layout objective.
-FBA uses a dedicated complete map with neutral orthogonal routes, retaining the saved pathway coordinates.
+The current structural view uses uniform node sizes, grid intersections for ordinary nodes,
+and free cofactor placement. Branches may overlap within 0.5 grid units of a common node.
+Parallel lines of any color with spacing below one grid unit cannot run together for two
+or more grid units. Right and bottom exchange tails and label margins are compacted
+after validation. See the [latest published layouts](https://elixir2026-project22.github.io/sbml2map/test-tca/)
+and [drawing rules](docs/layout-rules-ja.md). Earlier FBA examples use separate coordinates.
 
 `sbml2map.py` draws metabolic networks with nodes on a grid.
 Cofactors may also be placed off the grid. Inorganic species are ignored.
@@ -53,9 +50,9 @@ The ready-to-publish [`docs/`](docs/README.md) directory contains the E. coli co
 views. After updating results, run `python3 prepare_github_pages.py` and commit/push
 `docs/`. An enabled Pages site can use branch `main`, directory `/docs`.
 
-The iCH360 structural drawing is also available in the [live SVG viewer](https://metnetcomp.github.io/sbml2escher/eco_ich_360/)
-and [live Escher viewer](https://metnetcomp.github.io/sbml2escher/eco_ich_360/escher_preview.html).
-It shows 326 of 349 reactions without flux sampling; no new model files are included.
+The iCH360 structural drawing is also available in the [live SVG viewer](https://elixir2026-project22.github.io/sbml2map/eco_ich_360/)
+and [live Escher viewer](https://elixir2026-project22.github.io/sbml2map/eco_ich_360/escher_preview.html).
+It shows 326 of 349 reactions without flux sampling. The [circular/square comparison](https://elixir2026-project22.github.io/sbml2map/test-tca/?model=eco_ich_360) includes validated red-core preservation and real periplasm transport chains; no source model downloads are included.
 
 Run the packaged checks with `python -m unittest discover`.
 
@@ -652,15 +649,8 @@ flux units. Numerical FBA results and branch visibility are unchanged.
 
 The default is `--tca-shape circle --exchange-alignment collinear`.
 TCA compound and reaction nodes follow the source cycle in clockwise order on
-an exact circular perimeter through enough auxiliary grid intersections for every
-cycle node. The circular layout uses a 0.5-step auxiliary grid, halving the previous
-diameter while preserving 18 e_coli_core nodes and 24 circle/grid intersections.
-E. coli core now has a diameter of 12.74755 main-grid units (previously 25.49510).
-Other ordinary nodes retain the main grid. Explicit grid dimensions retain the
-full drawing frame, so automatic cropping does not undo the visual reduction. Circular TCA connections use
-cubic Bezier arcs with tangents along the circle; other connections retain
-orthogonal routing. `--tca-shape square` retains square, orthogonal TCA routing.
-SVG, PNG, Escher and SBML Layout preserve this geometry.
+an exact circular perimeter. Other ordinary nodes remain on a grid. TCA
+anchors and their aligned exchange partners may use fractional coordinates.
 
 ```bash
 python sbml2map.py --model models/e_coli_core.xml --no-sampling \
@@ -675,10 +665,11 @@ python sbml2map.py --model models/e_coli_core.xml --no-sampling \
   --exchange-alignment off --output-dir results/runs/e_coli_core_unaligned
 ```
 
-For both shapes TCA interior placement is allowed by default. Use
-`--tca-interior forbid` for the previous exclusion policy. Non-TCA nodes keep
-a 0.16-grid clearance from the perimeter; TCA nodes remain on the perimeter.
-FBA completion follows the saved interior policy. The grid expands automatically when its size is unspecified;
+For both shapes the TCA interior is forbidden to every compound, reaction and
+reaction-local cofactor copy. Non-TCA nodes also keep a 0.16-grid clearance from
+the perimeter. TCA nodes themselves stay on that perimeter. The forbidden
+region applies during initialization, heuristic moves, finite-cell MILP and
+FBA completion. The grid expands automatically when its size is unspecified;
 an insufficient explicit grid fails without dropping constraints.
 
 Straight alignment orders each confidently matched triplet from outside inward:
@@ -691,9 +682,8 @@ three points does not change chemistry or invent a transport reaction.
 The original weighted Manhattan-length objective and routing policy are retained.
 The crossing-first experiment has been reverted. Existing published examples
 are unchanged; new shape/alignment examples are under `docs/tca-layout/`.
-The e_coli_core grid-circle/curve comparison is at `docs/test-tca/`.
 `report.json` records `tca_shape`, `tca_exclusion` and `exchange_alignment`,
-including matched/skipped triplets, interior policy and actual interior counts. The CSV
+including matched/skipped triplets and verified empty-interior counts. The CSV
 `on_grid` field describes actual integer coordinates. Full FBA completion
 preserves saved coordinates and applies the same exclusion/alignment rules to
 added nodes; an insufficient saved frame requires regenerating a larger layout.
@@ -701,171 +691,46 @@ Incomplete source cycles retain their supported components and angular gaps.
 No missing cycle reaction or closing connection is synthesized.
 
 
-## Hard red crossing constraints
+## 赤線の長さを先に最小化し、配置を保持する
 
-`sbml2map.py` now defaults to `--crossing-policy red-hard`. Red/red and
-red/orange crossing, unrelated touching and overlap are forbidden. Valid shared
-biological endpoints and connected trunks of one reaction are allowed. Cubic
-TCA arcs are checked by solving their line-intersection polynomials.
+`adaptive-grid`では、初期配置の目的を赤の非円弧接続のL1長にし、オレンジの配置より先に
+赤だけの配置・配線候補を比較します。TCAの相対移動をMILPで提案し、既存の経路テンプレートを
+保った候補と赤全体の等長な平行移動を実際に配線します。評価には迂回とTCAの三次Bezier円弧の
+実長を含めます。短い共有接続口も、生物学的な接続ごとに1回ずつ数えます。
 
-Orange/orange contacts are permitted and never penalized or minimized.
-Routing first minimizes total physical orange length, counting a shared trunk
-once within the same reaction, then bends. Different reactions count separately.
-`--routing-attempts 12` selects the number of deterministic length candidates;
-`--crossing-attempts` remains an alias. Local searches minimize incremental
-length before bends. The final candidate is selected by total orange length.
-The circle example decreased from 738.81 to 472.27 grid units; square decreased
-from 429.51 to 265.35. Global length optimality is not guaranteed.
-A hard red-constraint failure aborts output instead of silently relaxing it.
+赤へ直接つながる交換反応の通路が成立するかを先に検証し、最良の赤の座標・経路を保存して固定します。
+後段は非赤ノードの移動・再配線・外周拡張を先に試します。灰色でも直線配置が必須の通路は、
+自由なオレンジ経路より先に確保します。円形TCAの補酵素は、許容される接続口を経由する短い局所接続を使います。
 
-A coordinate-compressed routing grid provides detour lanes strictly inside the
-exchange-node boundary. All red, orange and gray paths, including cubic extrema,
-are verified against this rectangle. Boundary vertices cannot be through routes;
-exchange connections approach from the interior. Missing outer-side EX anchors
-are supplied by moving an EX node and its extracellular partner while preserving
-collinearity and keeping intracellular backbone nodes fixed. Infeasible bounded
-routing fails explicitly; no outside fallback is used. The selected routes are shared by SVG, PNG, Escher and SBML Layout;
-Escher validation reconstructs saved geometry and checks the hard constraints.
-This routing supersedes the legacy parallel-channel display reservations.
-`--crossing-policy legacy` selects the earlier routing behavior. Gray crossings
-are outside this policy. Red geometry and biochemical incidence are retained;
-other ordinary nodes may move to clear straight exchange corridors.
-The examples and final counts are under `docs/test-tca/validation.json`.
+固定した赤で全体配置が成立しない場合だけ、同じ座標での等長再配線、等長の赤ノード移動、
+赤の延長量が小さい候補の順に緩めます。優先順位は、必須条件、赤の総延長、基準の赤からの変更量、
+オレンジの長さ、余白です。最終の余白調整後とEscher保存データでも、赤の長さと保持状態を検証します。
+
+`red_optimization.json`と`report.json`に、基準・最終の赤の実長、移動ノード数、変更経路数、
+緩和段階・理由、成立しなかった配置候補を保存します。最適性の証明有無も記録します。
+MILPの補助目的が最適でも、有限個の配置・配線候補全体の大域最適性は保証しません。
+`--red-time-limit`（既定10秒、成立候補を得るまで超過する場合あり）と
+`--red-candidates`（既定10配置）で、赤の候補探索を調整できます。
 
 
-## Exchange boundary validation
+## iCH360と複数段の膜輸送
 
-The current e_coli_core test drawings have zero paths outside the actual EX
-node envelope, and zero red/red or red/orange contacts. After automatic compaction, the circle boundary is
-[0,18] x [12,46]; square is [0,11] x [0,26]. Orange length is 216.76 and 203.58
-grid units respectively under the active constraints. Orange crossings are not
-optimized. `routing_boundary`, `exchange_boundary_adjustments` and the saved
-geometry's `boundary_validation` record the constraints and verification.
+細胞外→ペリプラズム→細胞内のような、同一化合物の複数段輸送にも対応します。
+元モデルの実在する化学種・反応だけで連鎖を探索し、中間の化学種と輸送反応も外側から内側へ直線配置します。
+不足する中間反応を追加したり、細胞外から細胞内への架空の一段輸送に置き換えたりしません。
 
+ノード付近の短い共有枝を許可し、線の色にかかわらず間隔1グリッド未満で
+2グリッド以上続く近接平行線を禁止します。旧来の補助通路の一律2本上限は使いません。
+短い分岐の本数は診断値として記録します。TCAへ接続する枝は、そのノード付近だけ
+短い外向きの分岐を許可し、無関係な輪郭への接近や回路横断は許可しません。
 
-## Red-first layout and mandatory straight exchanges
+実行例（構造表示、サンプリングなし）:
 
-Red node positions and red routes are computed first, then frozen. Exchange
-corridors are placed on a clear outer face around that saved red geometry.
-The default `--exchange-alignment collinear` now locks geometry, not just node
-coordinates. Existing EX/extracellular/cytosolic triples use a real primary
-transport reaction on the same axis. Alternate source transports are retained.
-If no corresponding cytosolic species exists, only EX/extracellular endpoints
-are aligned; no species or connection is fabricated. Ambiguous correspondence
-and undisplayed existing counterparts fail explicitly. Cytosolic sinks are not
-misclassified as extracellular exchange pairs.
+```bash
+python sbml2map.py --model data/e_coli_iCH360.sbml --no-sampling \
+  --tca-shape circle --output-dir results/local/red-priority-ich360-circle
+```
 
-For e_coli_core, 12 triples and 2 pairs give 38 locked straight incidences.
-EX_fru_e is (2,46), fru_e is (2,40), and their saved connection is a straight
-6-grid-unit segment. Other ordinary nodes are moved away from the reserved
-corridors while TCA and all red endpoints are retained. The same saved red
-routes are reused by every renderer and checked again after serialization.
-`straight_exchange_validation`, `exchange_corridors`, `red_first` and
-`red_routes_preserved` record these guarantees. The current test drawings use
-4 orange length candidates; the default remains 12.
-
-
-## Automatic lower/right boundary compaction
-
-Enabled by default after red-first layout. The left and top boundaries and all
-red node coordinates/routes remain fixed. The lower edge moves upward and the
-right edge moves left, with a default one-grid-unit margin around red geometry,
-including cubic extrema and local red cofactor endpoints. Remaining nodes and
-straight EX/transport corridors are placed again inside each candidate rectangle.
-Orange length may not increase. A failed candidate is discarded; if none passes,
-the original boundary is retained. Searches are bounded, without a global
-compactness or length optimality guarantee.
-
-`--no-compact-boundary` disables this step. `--boundary-margin 1` controls the
-clearance. Initial `--grid-cols`/`--grid-rows` describe the placement grid; the
-final active `routing_boundary` can have a nonzero lower edge. All validators,
-cofactor placement and renderers use that active boundary.
-
-`boundary_compaction` records before/after boundaries and orange length,
-rejected candidates, unchanged red geometry, and removed margins. The current
-circle example changes [0,30,0,46] to [0,18,12,46] and 340.81 to 216.76 orange
-grid units. The square changes [0,13,0,26] to [0,11,0,26] and 220.38 to 203.58.
-Both retain 38 straight exchange incidences and zero red crossings or outside
-paths. Model stoichiometry and FBA are unchanged.
-
-
-## Relocate nodes to reduce orange line overlap
-
-`orange_reposition.py` detects positive-length collinear overlaps between
-orange incidences, including two different incidences of the same reaction.
-Point crossings cost zero. Different reaction pairs use union overlap length;
-same-reaction pairs are measured by biological incidence. Shared physical
-length within one reaction is still counted once in the separate length metric.
-
-Each overlapping incidence/reaction pair receives its own search budget.
-Affected nodes are tried in round-robin order, with same-reaction junctions
-considered first. Neighborhood radii expand from 1 to 3 to 6 grid units; each
-radius receives up to four new candidate evaluations, for at most two sweeps.
-There is no 24-candidate global cutoff. Candidates must reduce both the targeted
-pair's overlap and total overlap. Scores compare total overlap, orange length,
-then displacement. Total orange length may increase to improve overlap.
-
-Red endpoints and routes, and straight exchange triplets remain fixed. External
-nodes in two-point exchange pairs move along their existing corridor. Currency
-copies follow their parent. Each candidate is rerouted and validated for red
-crossings, straight exchange geometry, TCA clearance and the active boundary.
-Invalid candidates are discarded without changing the accepted embedding.
-
-`--tca-interior allow` is now the default for both TCA shapes. Ordinary nodes
-and cofactor copies may occupy the interior while TCA anchors remain fixed.
-A 0.16-grid clearance from the perimeter remains on both sides. A feasible
-exterior seed is retained through red-first planning and boundary compaction;
-gray nodes then use shorter interior placements, and orange inward relocations
-are accepted only after full routing checks. This avoids trapping orange nodes
-behind the closed red cycle. Interior permission does not permit red crossings.
-`--tca-interior forbid` restores the previous exclusion policy.
-
-Disable overlap relocation with `--no-reposition-orange`. The `orange_reposition`
-report records moves, per-pair searches, rejections and remaining overlaps.
-The source also distinguishes infeasible tested candidates from tested candidates
-that do not improve the objective. The bounded search does not prove global
-optimality or prove a remaining overlap impossible to avoid.
-
-
-
-## Adaptive grid routing (current default)
-
-`sbml2map.py` now defaults to `--crossing-policy adaptive-grid`. The older
-`red-hard` and `legacy` modes remain available. The adaptive policy keeps red
-paths first, then reserves straight exchange corridors. Ordinary grid lines
-are primary; at most two orange incidences may use the same thin auxiliary
-corridor. Auxiliary levels use quarter/three-quarter grid offsets. A third
-incidence cannot be added there: placement spreads right and down and retries.
-After routing succeeds, unused EX margins are compacted only if validation
-passes and orange length does not increase.
-
-Orange incidences do not overlap outside node glyphs, including branches of
-one reaction. High-degree biological nodes have separate ports within their
-symbol, using a 0.25-grid connection box covered by a 0.36-grid glyph. These
-short connections remain attached to the same original biological node. Raw
-and visible overlap lengths are recorded separately; no reactions or species
-are invented. Different orange paths may cross at points.
-
-Red/orange point crossings are allowed only when the uncrossed route is at
-least twice as long, adds at least four grid units, or has no feasible route.
-Each authorization stores the uncrossed and crossed length. Red/red crossings
-and red/orange overlap outside a node are forbidden. Static rendering and
-saved Escher geometry use the same priorities; local cofactor connections are
-gray and are outside the red/red crossing rule.
-
-The circle diameter is now about 8.49 grid units, approximately two thirds of
-12.75. Ordered TCA anchors lie at circle/grid-line intersections, with at least
-one integer coordinate each. Nodes with multiple orange connections use full
-grid intersections where possible. Only TCA cycle arcs remain curved. Other
-lines use grid or explicitly audited auxiliary lanes. TCA clearance is at least
-one grid unit on both sides, except the initial straight lead attached to a real
-TCA endpoint. That exception cannot re-enter the opposite clearance band.
-The square option remains supported, and `--tca-interior forbid` restores the
-interior exclusion policy.
-
-`adaptive_layout` records expansions, rejected layouts and optional EX margin
-compaction. `crossing_routing.report` records conditional crossings, port nodes,
-raw and visible overlap, the peak auxiliary corridor load and boundary checks.
-Validators reconstruct the actual saved paths. Search is bounded and does not
-prove global length/area optimality. The test page includes SVG, PNG, Escher,
-SBML Layout and detailed validation data for e_coli_core.
+四角形は `--tca-shape square` を指定します。iCH360は元モデル349反応中326反応を描画し、
+17組の複数段輸送と2組の単純な交換接続、計87区間を直線配置として検証しています。
+入力SBMLやモデルJSONの公開は行わず、必要な解析用ファイルはローカルに保存します。
