@@ -19,7 +19,7 @@
   "placement": {
     "grid_cols": 14,
     "grid_rows": 27,
-    "objective": 145.99999999999997,
+    "objective": 129.99999999999997,
     "objective_metric": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
     "optimality_proven": false,
     "method": "Constraint-preserving lattice heuristic with fixed TCA anchors",
@@ -333,7 +333,7 @@
     "fractional_fixed_node_ids": [],
     "fixed_network_solver_objective": 203.0,
     "fixed_network_lower_bound": 0.0,
-    "red_parallel_layout_total_seconds": 0.8207301079528406,
+    "red_parallel_layout_total_seconds": 0.5677871360094287,
     "red_parallel_layout": {
       "enabled": true,
       "requested_spacing_grid": 1.0,
@@ -445,7 +445,7 @@
       "violations": [],
       "verified": true,
       "method": "Constraint-checked greedy routing channels",
-      "elapsed_seconds": 0.41025534499203786,
+      "elapsed_seconds": 0.2843720160308294,
       "signature": "5b951a67a0b10ab383869150",
       "routing_envelope": {
         "x_min": -1.0,
@@ -455,7 +455,8 @@
       }
     },
     "objective_before_straight_exchange_adjustment": 203.0,
-    "global_optimality_proven": false
+    "global_optimality_proven": false,
+    "objective_before_boundary_compaction": 145.99999999999997
   },
   "major_backbones": {
     "routes": [
@@ -2998,7 +2999,7 @@
       "violations": [],
       "verified": true,
       "method": "Constraint-checked greedy routing channels",
-      "elapsed_seconds": 0.41025534499203786,
+      "elapsed_seconds": 0.2843720160308294,
       "signature": "5b951a67a0b10ab383869150",
       "routing_envelope": {
         "x_min": -1.0,
@@ -4552,7 +4553,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               3.0
             ],
             [
@@ -4698,7 +4699,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               13.0
             ],
             [
@@ -4727,7 +4728,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               12.0
             ],
             [
@@ -4756,7 +4757,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               14.0
             ],
             [
@@ -4786,7 +4787,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               11.0
             ],
             [
@@ -4839,7 +4840,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               15.0
             ],
             [
@@ -4868,7 +4869,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               10.0
             ],
             [
@@ -4897,7 +4898,7 @@
           ],
           "corridor": [
             [
-              13.0,
+              11.0,
               16.0
             ],
             [
@@ -4910,562 +4911,252 @@
       "changed_nodes": {
         "rxn:EX_akg_e": {
           "before": [
-            9.0,
-            26.0
+            13.0,
+            3.0
           ],
           "after": [
-            13.0,
+            11.0,
             3.0
           ]
         },
         "met:akg_e": {
           "before": [
-            9.0,
-            25.0
-          ],
-          "after": [
             12.25,
             3.0
-          ]
-        },
-        "rxn:EX_fum_e": {
-          "before": [
-            4.0,
-            26.0
           ],
           "after": [
-            4.0,
-            0.0
-          ]
-        },
-        "met:fum_e": {
-          "before": [
-            4.0,
-            25.0
-          ],
-          "after": [
-            4.0,
-            0.3333333333333333
-          ]
-        },
-        "met:mal__L_e": {
-          "before": [
-            1.0,
-            3.0
-          ],
-          "after": [
-            0.75,
+            10.333333333333334,
             3.0
           ]
         },
-        "rxn:EX_pyr_e": {
+        "rxn:EX_ac_e": {
           "before": [
             13.0,
-            5.0
+            13.0
           ],
           "after": [
-            1.0,
-            0.0
-          ]
-        },
-        "met:pyr_e": {
-          "before": [
-            12.0,
-            5.0
-          ],
-          "after": [
-            1.0,
-            0.75
-          ]
-        },
-        "rxn:EX_succ_e": {
-          "before": [
-            6.0,
-            26.0
-          ],
-          "after": [
-            6.0,
-            0.0
-          ]
-        },
-        "met:succ_e": {
-          "before": [
-            6.0,
-            25.0
-          ],
-          "after": [
-            6.0,
-            0.3333333333333333
+            11.0,
+            13.0
           ]
         },
         "met:ac_e": {
           "before": [
-            12.0,
+            12.25,
             13.0
           ],
           "after": [
-            12.25,
+            10.25,
             13.0
+          ]
+        },
+        "rxn:EX_acald_e": {
+          "before": [
+            13.0,
+            12.0
+          ],
+          "after": [
+            11.0,
+            12.0
           ]
         },
         "met:acald_e": {
           "before": [
-            12.0,
+            12.25,
             12.0
           ],
           "after": [
-            12.25,
+            10.25,
             12.0
+          ]
+        },
+        "rxn:EX_etoh_e": {
+          "before": [
+            13.0,
+            14.0
+          ],
+          "after": [
+            11.0,
+            14.0
           ]
         },
         "met:etoh_e": {
           "before": [
-            12.0,
+            12.25,
             14.0
           ],
           "after": [
-            12.25,
+            10.25,
             14.0
+          ]
+        },
+        "rxn:EX_for_e": {
+          "before": [
+            13.0,
+            11.0
+          ],
+          "after": [
+            11.0,
+            11.0
           ]
         },
         "met:for_e": {
           "before": [
-            12.0,
+            12.25,
             11.0
           ],
           "after": [
-            12.25,
+            10.25,
             11.0
+          ]
+        },
+        "rxn:EX_gln__L_e": {
+          "before": [
+            13.0,
+            15.0
+          ],
+          "after": [
+            11.0,
+            15.0
           ]
         },
         "met:gln__L_e": {
           "before": [
-            12.0,
+            12.25,
             15.0
           ],
           "after": [
-            12.25,
+            10.25,
             15.0
+          ]
+        },
+        "rxn:EX_glu__L_e": {
+          "before": [
+            13.0,
+            10.0
+          ],
+          "after": [
+            11.0,
+            10.0
           ]
         },
         "met:glu__L_e": {
           "before": [
-            12.0,
+            12.25,
             10.0
           ],
           "after": [
-            12.25,
+            10.25,
             10.0
+          ]
+        },
+        "rxn:EX_lac__D_e": {
+          "before": [
+            13.0,
+            16.0
+          ],
+          "after": [
+            11.0,
+            16.0
           ]
         },
         "met:lac__D_e": {
           "before": [
-            12.0,
-            16.0
-          ],
-          "after": [
             12.25,
             16.0
-          ]
-        },
-        "rxn:BIOMASS_Ecoli_core_w_GAM": {
-          "before": [
-            5.0,
-            11.0
           ],
           "after": [
-            4.0,
-            11.0
-          ]
-        },
-        "rxn:ACALD": {
-          "before": [
-            3.0,
-            6.0
-          ],
-          "after": [
-            2.0,
-            6.0
+            10.25,
+            16.0
           ]
         },
         "rxn:ACALDt": {
           "before": [
-            7.0,
+            11.5,
             12.0
           ],
           "after": [
-            11.5,
+            9.5,
             12.0
           ]
         },
         "rxn:ACt2r": {
           "before": [
-            7.0,
+            11.5,
             13.0
           ],
           "after": [
-            11.5,
+            9.5,
             13.0
           ]
         },
         "rxn:AKGt2r": {
           "before": [
-            9.0,
-            7.0
-          ],
-          "after": [
             11.5,
             3.0
-          ]
-        },
-        "rxn:ALCD2x": {
-          "before": [
-            5.0,
-            12.0
           ],
           "after": [
-            3.0,
-            12.0
+            9.666666666666666,
+            3.0
           ]
         },
         "rxn:D_LACt2": {
           "before": [
-            7.0,
+            11.5,
             16.0
           ],
           "after": [
-            11.5,
+            9.5,
             16.0
           ]
         },
         "rxn:ETOHt2r": {
           "before": [
-            7.0,
+            11.5,
             14.0
           ],
           "after": [
-            11.5,
+            9.5,
             14.0
           ]
         },
         "rxn:FORt": {
           "before": [
-            7.0,
-            11.0
-          ],
-          "after": [
             11.5,
             11.0
-          ]
-        },
-        "rxn:FUMt2_2": {
-          "before": [
-            4.0,
-            7.0
           ],
           "after": [
-            4.0,
-            0.6666666666666666
+            9.5,
+            11.0
           ]
         },
         "rxn:GLNabc": {
           "before": [
-            7.0,
+            11.5,
             15.0
           ],
           "after": [
-            11.5,
+            9.5,
             15.0
           ]
         },
         "rxn:GLUt2r": {
           "before": [
-            7.0,
-            10.0
-          ],
-          "after": [
             11.5,
             10.0
-          ]
-        },
-        "rxn:LDH_D": {
-          "before": [
-            2.0,
-            6.0
           ],
           "after": [
-            2.0,
-            7.0
-          ]
-        },
-        "rxn:MALt2_2": {
-          "before": [
-            2.0,
-            3.0
-          ],
-          "after": [
-            1.5,
-            3.0
-          ]
-        },
-        "rxn:PYRt2": {
-          "before": [
-            10.0,
-            5.0
-          ],
-          "after": [
-            1.0,
-            1.5
-          ]
-        },
-        "rxn:SUCCt2_2": {
-          "before": [
-            6.0,
-            7.0
-          ],
-          "after": [
-            6.0,
-            0.6666666666666666
-          ]
-        },
-        "rxn:ACKr": {
-          "before": [
-            5.0,
-            13.0
-          ],
-          "after": [
-            5.0,
-            11.0
-          ]
-        },
-        "rxn:FRUpts2": {
-          "before": [
-            2.0,
-            21.0
-          ],
-          "after": [
-            3.0,
-            21.0
-          ]
-        },
-        "rxn:EX_fru_e": {
-          "before": [
-            0.0,
-            20.0
-          ],
-          "after": [
-            2.0,
-            26.0
-          ]
-        },
-        "met:6pgc_c": {
-          "before": [
-            8.0,
-            13.0
-          ],
-          "after": [
-            5.0,
-            13.0
-          ]
-        },
-        "met:e4p_c": {
-          "before": [
-            8.0,
-            12.0
-          ],
-          "after": [
-            5.0,
-            12.0
-          ]
-        },
-        "met:glx_c": {
-          "before": [
-            8.0,
-            14.0
-          ],
-          "after": [
-            8.0,
-            17.0
-          ]
-        },
-        "met:r5p_c": {
-          "before": [
-            9.0,
-            13.0
-          ],
-          "after": [
-            9.0,
-            9.0
-          ]
-        },
-        "rxn:ATPM": {
-          "before": [
-            8.0,
-            11.0
-          ],
-          "after": [
-            8.0,
-            9.0
-          ]
-        },
-        "rxn:ATPS4r": {
-          "before": [
-            8.0,
-            15.0
-          ],
-          "after": [
-            7.0,
-            17.0
-          ]
-        },
-        "rxn:CYTBD": {
-          "before": [
-            9.0,
-            12.0
-          ],
-          "after": [
-            9.0,
-            8.0
-          ]
-        },
-        "rxn:FBP": {
-          "before": [
-            9.0,
-            14.0
-          ],
-          "after": [
-            9.0,
-            17.0
-          ]
-        },
-        "rxn:FORt2": {
-          "before": [
-            10.0,
-            13.0
-          ],
-          "after": [
-            10.0,
-            9.0
-          ]
-        },
-        "rxn:G6PDH2r": {
-          "before": [
-            3.0,
-            12.0
-          ],
-          "after": [
-            2.0,
-            12.0
-          ]
-        },
-        "rxn:GLUDy": {
-          "before": [
-            4.0,
-            11.0
-          ],
-          "after": [
-            3.0,
-            11.0
-          ]
-        },
-        "rxn:ME2": {
-          "before": [
-            7.0,
-            17.0
-          ],
-          "after": [
-            7.0,
-            18.0
-          ]
-        },
-        "rxn:NADH16": {
-          "before": [
-            8.0,
+            9.5,
             10.0
-          ],
-          "after": [
-            8.0,
-            8.0
-          ]
-        },
-        "rxn:NADTRHD": {
-          "before": [
-            8.0,
-            16.0
-          ],
-          "after": [
-            8.0,
-            18.0
-          ]
-        },
-        "rxn:PGL": {
-          "before": [
-            9.0,
-            11.0
-          ],
-          "after": [
-            9.0,
-            7.0
-          ]
-        },
-        "rxn:PPC": {
-          "before": [
-            9.0,
-            15.0
-          ],
-          "after": [
-            9.0,
-            18.0
-          ]
-        },
-        "rxn:PPCK": {
-          "before": [
-            10.0,
-            12.0
-          ],
-          "after": [
-            10.0,
-            8.0
-          ]
-        },
-        "rxn:PPS": {
-          "before": [
-            10.0,
-            14.0
-          ],
-          "after": [
-            10.0,
-            17.0
           ]
         },
         "rxn:RPE": {
           "before": [
             11.0,
-            13.0
-          ],
-          "after": [
-            11.0,
             9.0
-          ]
-        },
-        "rxn:RPI": {
-          "before": [
-            2.0,
-            12.0
           ],
           "after": [
-            2.0,
-            11.0
-          ]
-        },
-        "rxn:TALA": {
-          "before": [
-            3.0,
-            11.0
-          ],
-          "after": [
-            3.0,
-            10.0
+            10.0,
+            7.0
           ]
         }
       },
@@ -5526,156 +5217,9 @@
       "verified": true
     },
     "exchange_boundary_adjustments": [],
-    "exchange_alignment": {
-      "verified": true,
-      "checked_triplets": 12,
-      "aligned_triplets": [
-        {
-          "reaction_id": "EX_ac_e",
-          "exchange": "rxn:EX_ac_e",
-          "external": "met:ac_e",
-          "internal": "met:ac_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_acald_e",
-          "exchange": "rxn:EX_acald_e",
-          "external": "met:acald_e",
-          "internal": "met:acald_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_akg_e",
-          "exchange": "rxn:EX_akg_e",
-          "external": "met:akg_e",
-          "internal": "met:akg_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_etoh_e",
-          "exchange": "rxn:EX_etoh_e",
-          "external": "met:etoh_e",
-          "internal": "met:etoh_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_for_e",
-          "exchange": "rxn:EX_for_e",
-          "external": "met:for_e",
-          "internal": "met:for_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_fum_e",
-          "exchange": "rxn:EX_fum_e",
-          "external": "met:fum_e",
-          "internal": "met:fum_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "bottom"
-        },
-        {
-          "reaction_id": "EX_gln__L_e",
-          "exchange": "rxn:EX_gln__L_e",
-          "external": "met:gln__L_e",
-          "internal": "met:gln__L_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_glu__L_e",
-          "exchange": "rxn:EX_glu__L_e",
-          "external": "met:glu__L_e",
-          "internal": "met:glu__L_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_lac__D_e",
-          "exchange": "rxn:EX_lac__D_e",
-          "external": "met:lac__D_e",
-          "internal": "met:lac__D_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "right"
-        },
-        {
-          "reaction_id": "EX_mal__L_e",
-          "exchange": "rxn:EX_mal__L_e",
-          "external": "met:mal__L_e",
-          "internal": "met:mal__L_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "left"
-        },
-        {
-          "reaction_id": "EX_pyr_e",
-          "exchange": "rxn:EX_pyr_e",
-          "external": "met:pyr_e",
-          "internal": "met:pyr_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "bottom"
-        },
-        {
-          "reaction_id": "EX_succ_e",
-          "exchange": "rxn:EX_succ_e",
-          "external": "met:succ_e",
-          "internal": "met:succ_c",
-          "evidence": "Exact chemical identity annotation",
-          "face": "bottom"
-        }
-      ],
-      "ordering": "EX -> extracellular -> cytosolic, from outer boundary inward",
-      "mode": "collinear",
-      "skipped": [
-        {
-          "reaction_id": "EX_fru_e",
-          "external_metabolite_id": "fru_e",
-          "reason": "No unique displayed cytosolic chemical match",
-          "candidates": []
-        },
-        {
-          "reaction_id": "EX_glc__D_e",
-          "external_metabolite_id": "glc__D_e",
-          "reason": "No unique displayed cytosolic chemical match",
-          "candidates": []
-        }
-      ]
-    },
-    "validation": {
-      "all_displayed_backbone_positions_verified": true,
-      "routes": [
-        {
-          "id": "glycolysis",
-          "shape": "vertical",
-          "checked_nodes": 22,
-          "verified": true
-        },
-        {
-          "id": "glucose_exchange",
-          "shape": "exchange",
-          "checked_nodes": 2,
-          "verified": true
-        },
-        {
-          "id": "pdh",
-          "shape": "horizontal",
-          "checked_nodes": 3,
-          "verified": true
-        },
-        {
-          "id": "tca",
-          "shape": "square",
-          "checked_nodes": 18,
-          "verified": true
-        }
-      ]
-    },
     "routing_boundary": [
       0,
-      13,
+      11,
       0,
       26
     ],
@@ -5778,11 +5322,11 @@
               7.0
             ],
             [
-              9.59982749,
+              9.5,
               7.0
             ],
             [
-              9.59982749,
+              9.5,
               0.52204679
             ],
             [
@@ -6078,11 +5622,11 @@
               6.31021866
             ],
             [
-              9.59982749,
+              9.5,
               6.31021866
             ],
             [
-              9.59982749,
+              9.5,
               0.52204679
             ],
             [
@@ -6170,7 +5714,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.666666666666666,
               3.0
             ],
             [
@@ -6189,11 +5733,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.666666666666666,
               3.0
             ],
             [
-              12.25,
+              10.333333333333334,
               3.0
             ]
           ],
@@ -6334,7 +5878,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               12.0
             ],
             [
@@ -6353,11 +5897,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               12.0
             ],
             [
-              12.25,
+              10.25,
               12.0
             ]
           ],
@@ -6712,7 +6256,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               13.0
             ],
             [
@@ -6731,11 +6275,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               13.0
             ],
             [
-              12.25,
+              10.25,
               13.0
             ]
           ],
@@ -7059,11 +6603,11 @@
               8.0
             ],
             [
-              9.59982749,
+              9.5,
               8.0
             ],
             [
-              9.59982749,
+              9.5,
               0.52204679
             ],
             [
@@ -7695,12 +7239,12 @@
           "backbone": false,
           "points": [
             [
-              11.0,
-              9.0
+              10.0,
+              7.0
             ],
             [
               3.0,
-              9.0
+              7.0
             ],
             [
               3.0,
@@ -7717,12 +7261,12 @@
           "backbone": false,
           "points": [
             [
-              11.0,
-              9.0
+              10.0,
+              7.0
             ],
             [
               4.0,
-              9.0
+              7.0
             ],
             [
               4.0,
@@ -7957,7 +7501,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               16.0
             ],
             [
@@ -7976,11 +7520,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               16.0
             ],
             [
-              12.25,
+              10.25,
               16.0
             ]
           ],
@@ -8077,7 +7621,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               14.0
             ],
             [
@@ -8096,11 +7640,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               14.0
             ],
             [
-              12.25,
+              10.25,
               14.0
             ]
           ],
@@ -8692,11 +8236,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               13.0
             ],
             [
-              12.25,
+              10.25,
               13.0
             ]
           ],
@@ -8711,11 +8255,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               12.0
             ],
             [
-              12.25,
+              10.25,
               12.0
             ]
           ],
@@ -8730,11 +8274,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               3.0
             ],
             [
-              12.25,
+              10.333333333333334,
               3.0
             ]
           ],
@@ -8749,11 +8293,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               14.0
             ],
             [
-              12.25,
+              10.25,
               14.0
             ]
           ],
@@ -8768,11 +8312,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               11.0
             ],
             [
-              12.25,
+              10.25,
               11.0
             ]
           ],
@@ -8845,11 +8389,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               15.0
             ],
             [
-              12.25,
+              10.25,
               15.0
             ]
           ],
@@ -8864,11 +8408,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               10.0
             ],
             [
-              12.25,
+              10.25,
               10.0
             ]
           ],
@@ -8883,11 +8427,11 @@
           "backbone": false,
           "points": [
             [
-              13.0,
+              11.0,
               16.0
             ],
             [
-              12.25,
+              10.25,
               16.0
             ]
           ],
@@ -9098,11 +8642,11 @@
               9.0
             ],
             [
-              12.25,
+              10.25,
               9.0
             ],
             [
-              12.25,
+              10.25,
               11.0
             ]
           ]
@@ -9116,7 +8660,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               11.0
             ],
             [
@@ -9135,11 +8679,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               11.0
             ],
             [
-              12.25,
+              10.25,
               11.0
             ]
           ],
@@ -9762,15 +9306,15 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               15.0
             ],
             [
-              11.949827493308394,
+              9.949827493308394,
               15.0
             ],
             [
-              11.949827493308394,
+              9.949827493308394,
               15.000172506691607
             ]
           ]
@@ -9784,15 +9328,15 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               15.0
             ],
             [
-              11.050172506691606,
+              9.050172506691606,
               15.0
             ],
             [
-              11.050172506691606,
+              9.050172506691606,
               14.999827493308393
             ]
           ]
@@ -9806,7 +9350,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               15.0
             ],
             [
@@ -9825,11 +9369,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               15.0
             ],
             [
-              12.25,
+              10.25,
               15.0
             ]
           ],
@@ -10078,7 +9622,7 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               10.0
             ],
             [
@@ -10097,11 +9641,11 @@
           "backbone": false,
           "points": [
             [
-              11.5,
+              9.5,
               10.0
             ],
             [
-              12.25,
+              10.25,
               10.0
             ]
           ],
@@ -10428,11 +9972,11 @@
               6.31021866
             ],
             [
-              9.59982749,
+              9.5,
               6.31021866
             ],
             [
-              9.59982749,
+              9.5,
               0.52204679
             ],
             [
@@ -11164,11 +10708,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -11178,7 +10722,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -11207,11 +10751,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -11230,11 +10774,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     7.0
                   ]
                 ],
@@ -11244,7 +10788,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -11342,11 +10886,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -11356,7 +10900,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -11684,11 +11228,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -11707,11 +11251,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -11721,7 +11265,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -11823,17 +11367,17 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -11843,7 +11387,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -11885,11 +11429,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -11908,11 +11452,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -12286,11 +11830,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -12300,7 +11844,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -12580,11 +12124,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -12594,7 +12138,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -12623,11 +12167,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -12646,11 +12190,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     7.0
                   ]
                 ],
@@ -12660,7 +12204,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -12758,11 +12302,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -12772,7 +12316,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -13100,11 +12644,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -13123,11 +12667,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -13137,7 +12681,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -13239,17 +12783,17 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -13259,7 +12803,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -13301,11 +12845,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -13324,11 +12868,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -13702,11 +13246,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -13716,7 +13260,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -13956,19 +13500,19 @@
         },
         "nodes_moved": false,
         "grid_shape": [
-          94,
+          100,
           160
         ],
         "boundary": [
           0,
-          13,
+          11,
           0,
           26
         ],
         "boundary_validation": {
           "boundary": [
             0,
-            13,
+            11,
             0,
             26
           ],
@@ -13979,7 +13523,7 @@
           "verified": true,
           "route_extents": [
             0.0,
-            13.0,
+            11.0,
             0.0,
             26.0
           ]
@@ -13991,8 +13535,8 @@
           "bends"
         ],
         "orange_crossings_optimized": false,
-        "orange_length_grid": 220.38246425999998,
-        "first_feasible_orange_length_grid": 220.38246425999998,
+        "orange_length_grid": 203.58384434,
+        "first_feasible_orange_length_grid": 203.58384434,
         "length_definition": "Union of orange segments within each reaction; different reactions count separately",
         "global_optimality_proven": false,
         "before": {
@@ -15791,7 +15335,194 @@
           "straight_incidences": 38
         }
       },
-      "signature": "127f5e166cf6284f0dd8b318"
+      "signature": "fff715ea549cfae8a1ff4c98"
+    },
+    "render_frame": [
+      0,
+      11,
+      0,
+      26
+    ],
+    "boundary_compaction": {
+      "enabled": true,
+      "before_boundary": [
+        0,
+        13,
+        0,
+        26
+      ],
+      "after_boundary": [
+        0,
+        11,
+        0,
+        26
+      ],
+      "before_orange_length_grid": 220.38246425999998,
+      "after_orange_length_grid": 203.58384434,
+      "margin_grid": 1.0,
+      "accepted": true,
+      "red_coordinates_preserved": true,
+      "red_routes_preserved": true,
+      "attempted_candidates": 1,
+      "rejected_candidates": [],
+      "global_optimality_proven": false,
+      "protected_red_extents": [
+        0.40017251,
+        9.44982749,
+        0.55017251,
+        26.0
+      ],
+      "lower_margin_removed_grid": 0,
+      "right_margin_removed_grid": 2,
+      "before_area_grid": 338,
+      "after_area_grid": 286
+    },
+    "exchange_alignment": {
+      "verified": true,
+      "checked_triplets": 12,
+      "aligned_triplets": [
+        {
+          "reaction_id": "EX_ac_e",
+          "exchange": "rxn:EX_ac_e",
+          "external": "met:ac_e",
+          "internal": "met:ac_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_acald_e",
+          "exchange": "rxn:EX_acald_e",
+          "external": "met:acald_e",
+          "internal": "met:acald_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_akg_e",
+          "exchange": "rxn:EX_akg_e",
+          "external": "met:akg_e",
+          "internal": "met:akg_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_etoh_e",
+          "exchange": "rxn:EX_etoh_e",
+          "external": "met:etoh_e",
+          "internal": "met:etoh_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_for_e",
+          "exchange": "rxn:EX_for_e",
+          "external": "met:for_e",
+          "internal": "met:for_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_fum_e",
+          "exchange": "rxn:EX_fum_e",
+          "external": "met:fum_e",
+          "internal": "met:fum_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "bottom"
+        },
+        {
+          "reaction_id": "EX_gln__L_e",
+          "exchange": "rxn:EX_gln__L_e",
+          "external": "met:gln__L_e",
+          "internal": "met:gln__L_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_glu__L_e",
+          "exchange": "rxn:EX_glu__L_e",
+          "external": "met:glu__L_e",
+          "internal": "met:glu__L_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_lac__D_e",
+          "exchange": "rxn:EX_lac__D_e",
+          "external": "met:lac__D_e",
+          "internal": "met:lac__D_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "right"
+        },
+        {
+          "reaction_id": "EX_mal__L_e",
+          "exchange": "rxn:EX_mal__L_e",
+          "external": "met:mal__L_e",
+          "internal": "met:mal__L_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "left"
+        },
+        {
+          "reaction_id": "EX_pyr_e",
+          "exchange": "rxn:EX_pyr_e",
+          "external": "met:pyr_e",
+          "internal": "met:pyr_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "bottom"
+        },
+        {
+          "reaction_id": "EX_succ_e",
+          "exchange": "rxn:EX_succ_e",
+          "external": "met:succ_e",
+          "internal": "met:succ_c",
+          "evidence": "Exact chemical identity annotation",
+          "face": "bottom"
+        }
+      ],
+      "ordering": "EX -> extracellular -> cytosolic, from outer boundary inward",
+      "mode": "collinear",
+      "skipped": [
+        {
+          "reaction_id": "EX_fru_e",
+          "external_metabolite_id": "fru_e",
+          "reason": "No unique displayed cytosolic chemical match",
+          "candidates": []
+        },
+        {
+          "reaction_id": "EX_glc__D_e",
+          "external_metabolite_id": "glc__D_e",
+          "reason": "No unique displayed cytosolic chemical match",
+          "candidates": []
+        }
+      ]
+    },
+    "validation": {
+      "all_displayed_backbone_positions_verified": true,
+      "routes": [
+        {
+          "id": "glycolysis",
+          "shape": "vertical",
+          "checked_nodes": 22,
+          "verified": true
+        },
+        {
+          "id": "glucose_exchange",
+          "shape": "exchange",
+          "checked_nodes": 2,
+          "verified": true
+        },
+        {
+          "id": "pdh",
+          "shape": "horizontal",
+          "checked_nodes": 3,
+          "verified": true
+        },
+        {
+          "id": "tca",
+          "shape": "square",
+          "checked_nodes": 18,
+          "verified": true
+        }
+      ]
     }
   },
   "source_reactions": 95,
@@ -15818,7 +15549,7 @@
     "EX_pyr_e",
     "EX_succ_e"
   ],
-  "total_orthogonal_edge_length": 901.6166666666682,
+  "total_orthogonal_edge_length": 885.6166666666682,
   "coenzyme_edge_length": 38.7,
   "inorganic_metabolites": [
     "h2o_c",
@@ -16049,7 +15780,7 @@
         "boundary_validation": {
           "boundary": [
             0,
-            13,
+            11,
             0,
             26
           ],
@@ -16060,7 +15791,7 @@
           "verified": true,
           "route_extents": [
             0.0,
-            13.0,
+            11.0,
             0.0,
             26.0
           ]
@@ -16123,6 +15854,46 @@
   "red_parallel_spacing_grid": 1.0,
   "route_offset_grid": 0.3,
   "program_name": "sbml2map",
+  "routing_boundary": [
+    0,
+    11,
+    0,
+    26
+  ],
+  "boundary_compaction": {
+    "enabled": true,
+    "before_boundary": [
+      0,
+      13,
+      0,
+      26
+    ],
+    "after_boundary": [
+      0,
+      11,
+      0,
+      26
+    ],
+    "before_orange_length_grid": 220.38246425999998,
+    "after_orange_length_grid": 203.58384434,
+    "margin_grid": 1.0,
+    "accepted": true,
+    "red_coordinates_preserved": true,
+    "red_routes_preserved": true,
+    "attempted_candidates": 1,
+    "rejected_candidates": [],
+    "global_optimality_proven": false,
+    "protected_red_extents": [
+      0.40017251,
+      9.44982749,
+      0.55017251,
+      26.0
+    ],
+    "lower_margin_removed_grid": 0,
+    "right_margin_removed_grid": 2,
+    "before_area_grid": 338,
+    "after_area_grid": 286
+  },
   "tca_shape": "square",
   "tca_exclusion": {
     "enabled": true,

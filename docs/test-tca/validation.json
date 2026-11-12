@@ -18,8 +18,8 @@
           "boundary_validation": {
             "boundary": [
               0,
-              30,
-              0,
+              18,
+              12,
               46
             ],
             "outside_path_count": 0,
@@ -29,8 +29,8 @@
             "verified": true,
             "route_extents": [
               0.0,
-              30.0,
-              0.0,
+              18.0,
+              12.0,
               46.0
             ]
           },
@@ -48,14 +48,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 421,
+        "nodes": 419,
         "source_nodes": 220,
-        "routing_nodes": 201,
+        "routing_nodes": 199,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 454,
+        "segments": 452,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -109,6 +109,40 @@
         "orange_orange": 59,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
+        "boundary_compaction": {
+          "enabled": true,
+          "before_boundary": [
+            0,
+            30,
+            0,
+            46
+          ],
+          "after_boundary": [
+            0,
+            18,
+            12,
+            46
+          ],
+          "before_orange_length_grid": 340.80877544,
+          "after_orange_length_grid": 216.75929297000008,
+          "margin_grid": 1.0,
+          "accepted": true,
+          "red_coordinates_preserved": true,
+          "red_routes_preserved": true,
+          "attempted_candidates": 1,
+          "rejected_candidates": [],
+          "global_optimality_proven": false,
+          "protected_red_extents": [
+            0.40017251,
+            16.94982749,
+            13.10093049,
+            46.0
+          ],
+          "lower_margin_removed_grid": 12,
+          "right_margin_removed_grid": 12,
+          "before_area_grid": 1380,
+          "after_area_grid": 612
+        },
         "straight_exchange_validation": {
           "verified": true,
           "groups": 14,
@@ -120,8 +154,8 @@
         "boundary_validation": {
           "boundary": [
             0,
-            30,
-            0,
+            18,
+            12,
             46
           ],
           "outside_path_count": 0,
@@ -131,31 +165,31 @@
           "verified": true,
           "route_extents": [
             0.0,
-            30.0,
-            0.0,
+            18.0,
+            12.0,
             46.0
           ]
         },
         "exchange_envelope": [
           0.0,
-          30.0,
-          0.0,
+          18.0,
+          12.0,
           46.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 340.80877544,
+        "orange_length_grid": 216.75929297000008,
         "orange_crossings_optimized": false,
         "orange_candidates": 4,
         "global_optimality_proven": false
       },
       "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755.",
-      "orange_length_grid": 340.80877544,
-      "previous_orange_length_grid": 557.8463722999999,
+      "orange_length_grid": 216.75929297000008,
+      "previous_orange_length_grid": 340.80877544,
       "boundary_validation": {
         "boundary": [
           0,
-          30,
-          0,
+          18,
+          12,
           46
         ],
         "outside_path_count": 0,
@@ -165,15 +199,15 @@
         "verified": true,
         "route_extents": [
           0.0,
-          30.0,
-          0.0,
+          18.0,
+          12.0,
           46.0
         ]
       },
       "exchange_envelope": [
         0.0,
-        30.0,
-        0.0,
+        18.0,
+        12.0,
         46.0
       ],
       "straight_exchange_validation": {
@@ -231,7 +265,7 @@
             ],
             "corridor": [
               [
-                30.0,
+                18.0,
                 17.0
               ],
               [
@@ -250,7 +284,7 @@
               "FUMt2_2"
             ],
             "kind": "triplet",
-            "face": "left",
+            "face": "bottom",
             "primary_transport": "FUMt2_2",
             "node_ids": [
               "rxn:EX_fum_e",
@@ -260,8 +294,8 @@
             ],
             "corridor": [
               [
-                0.0,
-                15.5
+                5.5,
+                12.0
               ],
               [
                 5.5,
@@ -319,7 +353,7 @@
             "corridor": [
               [
                 1.0,
-                0.0
+                12.0
               ],
               [
                 1.0,
@@ -338,7 +372,7 @@
               "SUCCt3"
             ],
             "kind": "triplet",
-            "face": "left",
+            "face": "bottom",
             "primary_transport": "SUCCt2_2",
             "node_ids": [
               "rxn:EX_succ_e",
@@ -348,8 +382,8 @@
             ],
             "corridor": [
               [
-                0.0,
-                14.0
+                7.5,
+                12.0
               ],
               [
                 7.5,
@@ -377,7 +411,7 @@
             ],
             "corridor": [
               [
-                30.0,
+                18.0,
                 23.0
               ],
               [
@@ -406,7 +440,7 @@
             ],
             "corridor": [
               [
-                30.0,
+                18.0,
                 22.0
               ],
               [
@@ -435,7 +469,7 @@
             ],
             "corridor": [
               [
-                30.0,
+                18.0,
                 24.0
               ],
               [
@@ -465,12 +499,12 @@
             ],
             "corridor": [
               [
-                30.0,
-                21.0
+                18.0,
+                20.0
               ],
               [
-                18.0,
-                21.0
+                17.0,
+                20.0
               ]
             ]
           },
@@ -518,7 +552,7 @@
             ],
             "corridor": [
               [
-                30.0,
+                18.0,
                 25.0
               ],
               [
@@ -547,12 +581,12 @@
             ],
             "corridor": [
               [
-                30.0,
-                20.0
+                18.0,
+                19.0
               ],
               [
-                18.0,
-                20.0
+                17.0,
+                19.0
               ]
             ]
           },
@@ -566,7 +600,7 @@
               "D_LACt2"
             ],
             "kind": "triplet",
-            "face": "bottom",
+            "face": "right",
             "primary_transport": "D_LACt2",
             "node_ids": [
               "rxn:EX_lac__D_e",
@@ -576,12 +610,12 @@
             ],
             "corridor": [
               [
-                17.0,
-                0.0
+                18.0,
+                18.0
               ],
               [
                 17.0,
-                20.0
+                18.0
               ]
             ]
           }
@@ -589,235 +623,185 @@
         "changed_nodes": {
           "met:ac_e": {
             "before": [
-              1.0,
-              23.0
-            ],
-            "after": [
               29.25,
               23.0
-            ]
-          },
-          "met:acald_c": {
-            "before": [
-              17.0,
-              23.0
             ],
             "after": [
-              17.0,
-              22.0
+              17.333333333333332,
+              23.0
             ]
           },
           "met:acald_e": {
             "before": [
-              29.0,
-              23.0
+              29.25,
+              22.0
             ],
             "after": [
-              29.25,
+              17.666666666666668,
               22.0
             ]
           },
           "met:akg_e": {
             "before": [
-              1.0,
+              29.25,
               17.0
             ],
             "after": [
-              29.25,
+              17.333333333333332,
               17.0
             ]
           },
           "met:etoh_e": {
             "before": [
-              1.0,
+              29.25,
               24.0
             ],
             "after": [
-              29.25,
+              17.333333333333332,
               24.0
             ]
           },
           "met:for_c": {
             "before": [
-              17.0,
-              22.0
-            ],
-            "after": [
               18.0,
               21.0
+            ],
+            "after": [
+              17.0,
+              20.0
             ]
           },
           "met:for_e": {
             "before": [
-              1.0,
-              22.0
-            ],
-            "after": [
               29.25,
               21.0
+            ],
+            "after": [
+              17.666666666666668,
+              20.0
             ]
           },
           "met:fum_e": {
             "before": [
-              1.0,
-              15.5
-            ],
-            "after": [
               0.75,
               15.5
-            ]
-          },
-          "met:gln__L_c": {
-            "before": [
-              17.0,
-              24.0
             ],
             "after": [
-              17.0,
-              25.0
+              5.5,
+              12.75
             ]
           },
           "met:gln__L_e": {
             "before": [
-              29.0,
-              24.0
+              29.25,
+              25.0
             ],
             "after": [
-              29.25,
+              17.666666666666668,
               25.0
             ]
           },
           "met:glu__L_c": {
             "before": [
               18.0,
-              22.0
+              20.0
             ],
             "after": [
-              18.0,
-              20.0
+              17.0,
+              19.0
             ]
           },
           "met:glu__L_e": {
             "before": [
-              29.0,
-              22.0
-            ],
-            "after": [
               29.25,
               20.0
+            ],
+            "after": [
+              17.666666666666668,
+              19.0
             ]
           },
           "met:glx_c": {
             "before": [
               19.0,
-              23.0
+              26.0
             ],
             "after": [
-              19.0,
+              17.0,
               26.0
             ]
           },
           "met:lac__D_c": {
             "before": [
               17.0,
-              21.0
+              20.0
             ],
             "after": [
               17.0,
-              20.0
+              18.0
             ]
           },
           "met:lac__D_e": {
             "before": [
-              1.0,
-              21.0
-            ],
-            "after": [
               17.0,
               0.75
-            ]
-          },
-          "met:mal__L_e": {
-            "before": [
-              1.0,
-              18.5
             ],
             "after": [
-              0.75,
-              18.5
+              17.666666666666668,
+              18.0
             ]
           },
           "met:pyr_e": {
             "before": [
-              29.0,
-              25.0
+              1.0,
+              0.75
             ],
             "after": [
               1.0,
-              0.75
+              12.75
             ]
           },
           "met:succ_e": {
             "before": [
-              1.0,
+              0.75,
               14.0
             ],
             "after": [
-              0.75,
-              14.0
+              7.5,
+              12.666666666666666
             ]
           },
           "rxn:ACALDt": {
             "before": [
-              18.0,
-              23.0
+              28.5,
+              22.0
             ],
             "after": [
-              28.5,
+              17.333333333333332,
               22.0
             ]
           },
           "rxn:ACt2r": {
             "before": [
-              2.0,
-              23.0
-            ],
-            "after": [
               28.5,
               23.0
-            ]
-          },
-          "rxn:ADK1": {
-            "before": [
-              17.0,
-              25.0
             ],
             "after": [
-              16.0,
-              25.0
+              16.666666666666668,
+              23.0
             ]
           },
           "rxn:AKGt2r": {
             "before": [
-              2.0,
+              28.5,
               17.0
             ],
             "after": [
-              28.5,
+              16.666666666666668,
               17.0
             ]
           },
           "rxn:ALCD2x": {
-            "before": [
-              16.0,
-              25.0
-            ],
-            "after": [
-              17.0,
-              26.0
-            ]
-          },
-          "rxn:ATPM": {
             "before": [
               17.0,
               26.0
@@ -827,404 +811,454 @@
               27.0
             ]
           },
+          "rxn:ATPM": {
+            "before": [
+              17.0,
+              27.0
+            ],
+            "after": [
+              17.0,
+              28.0
+            ]
+          },
           "rxn:ATPS4r": {
             "before": [
               18.0,
-              21.0
+              19.0
             ],
             "after": [
-              18.0,
-              19.0
+              17.0,
+              16.0
             ]
           },
           "rxn:BIOMASS_Ecoli_core_w_GAM": {
             "before": [
-              17.0,
-              20.0
-            ],
-            "after": [
               18.0,
               18.0
+            ],
+            "after": [
+              16.0,
+              16.0
             ]
           },
           "rxn:CYTBD": {
             "before": [
               18.0,
-              25.0
+              26.0
             ],
             "after": [
-              18.0,
-              26.0
+              16.0,
+              28.0
             ]
           },
           "rxn:D_LACt2": {
             "before": [
-              2.0,
-              21.0
-            ],
-            "after": [
               17.0,
               1.5
+            ],
+            "after": [
+              17.333333333333332,
+              18.0
             ]
           },
           "rxn:ETOHt2r": {
             "before": [
-              2.0,
+              28.5,
               24.0
             ],
             "after": [
-              28.5,
+              16.666666666666668,
               24.0
             ]
           },
           "rxn:EX_ac_e": {
             "before": [
-              0.0,
+              30.0,
               23.0
             ],
             "after": [
-              30.0,
+              18.0,
               23.0
             ]
           },
           "rxn:EX_acald_e": {
             "before": [
               30.0,
-              23.0
+              22.0
             ],
             "after": [
-              30.0,
+              18.0,
               22.0
             ]
           },
           "rxn:EX_akg_e": {
             "before": [
-              0.0,
+              30.0,
               17.0
             ],
             "after": [
-              30.0,
+              18.0,
               17.0
             ]
           },
           "rxn:EX_etoh_e": {
             "before": [
-              0.0,
+              30.0,
               24.0
             ],
             "after": [
-              30.0,
+              18.0,
               24.0
             ]
           },
           "rxn:EX_for_e": {
             "before": [
-              0.0,
-              22.0
-            ],
-            "after": [
               30.0,
               21.0
-            ]
-          },
-          "rxn:EX_fru_e": {
-            "before": [
-              0.0,
-              40.0
             ],
             "after": [
-              2.0,
-              46.0
+              18.0,
+              20.0
+            ]
+          },
+          "rxn:EX_fum_e": {
+            "before": [
+              0.0,
+              15.5
+            ],
+            "after": [
+              5.5,
+              12.0
             ]
           },
           "rxn:EX_gln__L_e": {
             "before": [
               30.0,
-              24.0
+              25.0
             ],
             "after": [
-              30.0,
+              18.0,
               25.0
             ]
           },
           "rxn:EX_glu__L_e": {
             "before": [
               30.0,
-              22.0
+              20.0
             ],
             "after": [
-              30.0,
-              20.0
+              18.0,
+              19.0
             ]
           },
           "rxn:EX_lac__D_e": {
             "before": [
-              0.0,
-              21.0
-            ],
-            "after": [
               17.0,
               0.0
+            ],
+            "after": [
+              18.0,
+              18.0
             ]
           },
           "rxn:EX_pyr_e": {
             "before": [
-              30.0,
-              25.0
+              1.0,
+              0.0
             ],
             "after": [
               1.0,
-              0.0
+              12.0
+            ]
+          },
+          "rxn:EX_succ_e": {
+            "before": [
+              0.0,
+              14.0
+            ],
+            "after": [
+              7.5,
+              12.0
             ]
           },
           "rxn:FBP": {
             "before": [
               19.0,
-              24.0
+              27.0
             ],
             "after": [
-              19.0,
-              27.0
+              17.0,
+              29.0
             ]
           },
           "rxn:FORt": {
             "before": [
-              2.0,
-              22.0
-            ],
-            "after": [
               28.5,
               21.0
+            ],
+            "after": [
+              17.333333333333332,
+              20.0
             ]
           },
           "rxn:FORt2": {
             "before": [
               20.0,
-              23.0
-            ],
-            "after": [
-              20.0,
               26.0
-            ]
-          },
-          "rxn:FRUpts2": {
-            "before": [
-              2.0,
-              41.0
             ],
             "after": [
-              3.0,
-              41.0
+              16.0,
+              29.0
             ]
           },
           "rxn:FUMt2_2": {
             "before": [
-              1.0,
-              15.0
-            ],
-            "after": [
               1.5,
               15.5
+            ],
+            "after": [
+              5.5,
+              13.5
             ]
           },
           "rxn:GLNabc": {
             "before": [
-              18.0,
-              24.0
-            ],
-            "after": [
               28.5,
               25.0
+            ],
+            "after": [
+              17.333333333333332,
+              25.0
+            ]
+          },
+          "rxn:GLUDy": {
+            "before": [
+              16.0,
+              28.0
+            ],
+            "after": [
+              16.0,
+              30.0
             ]
           },
           "rxn:GLUN": {
             "before": [
-              17.0,
+              19.0,
               19.0
             ],
             "after": [
-              19.0,
-              19.0
+              17.0,
+              15.0
             ]
           },
           "rxn:GLUSy": {
             "before": [
               17.0,
-              27.0
+              28.0
             ],
             "after": [
               17.0,
-              28.0
+              30.0
             ]
           },
           "rxn:GLUt2r": {
             "before": [
-              19.0,
-              22.0
-            ],
-            "after": [
               28.5,
               20.0
+            ],
+            "after": [
+              17.333333333333332,
+              19.0
             ]
           },
           "rxn:GND": {
             "before": [
-              18.0,
-              20.0
-            ],
-            "after": [
               19.0,
               18.0
+            ],
+            "after": [
+              16.0,
+              15.0
             ]
           },
           "rxn:ICL": {
             "before": [
               18.0,
-              26.0
+              27.0
             ],
             "after": [
-              18.0,
-              27.0
+              17.0,
+              31.0
             ]
           },
           "rxn:MALS": {
             "before": [
-              19.0,
-              21.0
-            ],
-            "after": [
               20.0,
               19.0
-            ]
-          },
-          "rxn:MALt2_2": {
-            "before": [
-              1.0,
-              18.0
             ],
             "after": [
-              1.5,
-              18.5
+              17.0,
+              14.0
             ]
           },
           "rxn:ME1": {
             "before": [
               19.0,
-              25.0
+              28.0
             ],
             "after": [
-              19.0,
+              13.0,
               28.0
             ]
           },
           "rxn:ME2": {
             "before": [
               20.0,
-              22.0
+              18.0
             ],
             "after": [
-              20.0,
-              18.0
+              16.0,
+              14.0
             ]
           },
           "rxn:NADH16": {
             "before": [
               20.0,
-              24.0
+              27.0
             ],
             "after": [
-              20.0,
+              12.0,
               27.0
             ]
           },
           "rxn:NADTRHD": {
             "before": [
               21.0,
-              23.0
+              26.0
             ],
             "after": [
-              21.0,
-              26.0
+              14.0,
+              29.0
+            ]
+          },
+          "rxn:PGL": {
+            "before": [
+              12.0,
+              27.0
+            ],
+            "after": [
+              11.0,
+              27.0
+            ]
+          },
+          "rxn:PPC": {
+            "before": [
+              13.0,
+              28.0
+            ],
+            "after": [
+              12.0,
+              28.0
+            ]
+          },
+          "rxn:PPCK": {
+            "before": [
+              14.0,
+              29.0
+            ],
+            "after": [
+              13.0,
+              29.0
             ]
           },
           "rxn:PYRt2": {
             "before": [
-              4.0,
-              25.0
+              1.0,
+              1.5
             ],
             "after": [
               1.0,
-              1.5
+              13.5
+            ]
+          },
+          "rxn:RPE": {
+            "before": [
+              16.0,
+              29.0
+            ],
+            "after": [
+              16.0,
+              31.0
             ]
           },
           "rxn:RPI": {
             "before": [
-              17.0,
-              18.0
-            ],
-            "after": [
               16.0,
               16.0
+            ],
+            "after": [
+              15.0,
+              14.0
             ]
           },
           "rxn:SUCCt2_2": {
             "before": [
-              2.0,
+              1.5,
               14.0
             ],
             "after": [
-              1.5,
-              14.0
+              7.5,
+              13.333333333333334
             ]
           },
           "rxn:SUCCt3": {
             "before": [
               17.0,
-              28.0
+              29.0
             ],
             "after": [
               17.0,
-              29.0
+              32.0
             ]
           },
           "rxn:TALA": {
             "before": [
               18.0,
-              19.0
+              16.0
             ],
             "after": [
-              18.0,
-              16.0
+              17.0,
+              13.0
             ]
           },
           "rxn:THD2": {
             "before": [
               18.0,
-              27.0
+              28.0
             ],
             "after": [
-              18.0,
-              28.0
+              14.0,
+              30.0
             ]
           },
           "rxn:TKT1": {
             "before": [
-              19.0,
-              20.0
-            ],
-            "after": [
               21.0,
               19.0
+            ],
+            "after": [
+              16.0,
+              13.0
             ]
           },
           "rxn:TKT2": {
             "before": [
               19.0,
-              26.0
+              29.0
             ],
             "after": [
-              19.0,
-              29.0
+              15.0,
+              31.0
             ]
           }
         },
@@ -1283,6 +1317,40 @@
           "rxn:SUCCt2_2"
         ],
         "verified": true
+      },
+      "boundary_compaction": {
+        "enabled": true,
+        "before_boundary": [
+          0,
+          30,
+          0,
+          46
+        ],
+        "after_boundary": [
+          0,
+          18,
+          12,
+          46
+        ],
+        "before_orange_length_grid": 340.80877544,
+        "after_orange_length_grid": 216.75929297000008,
+        "margin_grid": 1.0,
+        "accepted": true,
+        "red_coordinates_preserved": true,
+        "red_routes_preserved": true,
+        "attempted_candidates": 1,
+        "rejected_candidates": [],
+        "global_optimality_proven": false,
+        "protected_red_extents": [
+          0.40017251,
+          16.94982749,
+          13.10093049,
+          46.0
+        ],
+        "lower_margin_removed_grid": 12,
+        "right_margin_removed_grid": 12,
+        "before_area_grid": 1380,
+        "after_area_grid": 612
       }
     },
     {
@@ -1300,7 +1368,7 @@
           "boundary_validation": {
             "boundary": [
               0,
-              13,
+              11,
               0,
               26
             ],
@@ -1311,7 +1379,7 @@
             "verified": true,
             "route_extents": [
               0.0,
-              13.0,
+              11.0,
               0.0,
               26.0
             ]
@@ -1368,6 +1436,40 @@
         "orange_orange": 68,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
+        "boundary_compaction": {
+          "enabled": true,
+          "before_boundary": [
+            0,
+            13,
+            0,
+            26
+          ],
+          "after_boundary": [
+            0,
+            11,
+            0,
+            26
+          ],
+          "before_orange_length_grid": 220.38246425999998,
+          "after_orange_length_grid": 203.58384434,
+          "margin_grid": 1.0,
+          "accepted": true,
+          "red_coordinates_preserved": true,
+          "red_routes_preserved": true,
+          "attempted_candidates": 1,
+          "rejected_candidates": [],
+          "global_optimality_proven": false,
+          "protected_red_extents": [
+            0.40017251,
+            9.44982749,
+            0.55017251,
+            26.0
+          ],
+          "lower_margin_removed_grid": 0,
+          "right_margin_removed_grid": 2,
+          "before_area_grid": 338,
+          "after_area_grid": 286
+        },
         "straight_exchange_validation": {
           "verified": true,
           "groups": 14,
@@ -1379,7 +1481,7 @@
         "boundary_validation": {
           "boundary": [
             0,
-            13,
+            11,
             0,
             26
           ],
@@ -1390,29 +1492,29 @@
           "verified": true,
           "route_extents": [
             0.0,
-            13.0,
+            11.0,
             0.0,
             26.0
           ]
         },
         "exchange_envelope": [
           0.0,
-          13.0,
+          11.0,
           0.0,
           26.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 220.38246425999998,
+        "orange_length_grid": 203.58384434,
         "orange_crossings_optimized": false,
         "orange_candidates": 4,
         "global_optimality_proven": false
       },
-      "orange_length_grid": 220.38246425999998,
-      "previous_orange_length_grid": 305.35142926,
+      "orange_length_grid": 203.58384434,
+      "previous_orange_length_grid": 220.38246425999998,
       "boundary_validation": {
         "boundary": [
           0,
-          13,
+          11,
           0,
           26
         ],
@@ -1423,14 +1525,14 @@
         "verified": true,
         "route_extents": [
           0.0,
-          13.0,
+          11.0,
           0.0,
           26.0
         ]
       },
       "exchange_envelope": [
         0.0,
-        13.0,
+        11.0,
         0.0,
         26.0
       ],
@@ -1489,7 +1591,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 3.0
               ],
               [
@@ -1635,7 +1737,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 13.0
               ],
               [
@@ -1664,7 +1766,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 12.0
               ],
               [
@@ -1693,7 +1795,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 14.0
               ],
               [
@@ -1723,7 +1825,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 11.0
               ],
               [
@@ -1776,7 +1878,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 15.0
               ],
               [
@@ -1805,7 +1907,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 10.0
               ],
               [
@@ -1834,7 +1936,7 @@
             ],
             "corridor": [
               [
-                13.0,
+                11.0,
                 16.0
               ],
               [
@@ -1847,562 +1949,252 @@
         "changed_nodes": {
           "rxn:EX_akg_e": {
             "before": [
-              9.0,
-              26.0
+              13.0,
+              3.0
             ],
             "after": [
-              13.0,
+              11.0,
               3.0
             ]
           },
           "met:akg_e": {
             "before": [
-              9.0,
-              25.0
-            ],
-            "after": [
               12.25,
               3.0
-            ]
-          },
-          "rxn:EX_fum_e": {
-            "before": [
-              4.0,
-              26.0
             ],
             "after": [
-              4.0,
-              0.0
-            ]
-          },
-          "met:fum_e": {
-            "before": [
-              4.0,
-              25.0
-            ],
-            "after": [
-              4.0,
-              0.3333333333333333
-            ]
-          },
-          "met:mal__L_e": {
-            "before": [
-              1.0,
-              3.0
-            ],
-            "after": [
-              0.75,
+              10.333333333333334,
               3.0
             ]
           },
-          "rxn:EX_pyr_e": {
+          "rxn:EX_ac_e": {
             "before": [
               13.0,
-              5.0
+              13.0
             ],
             "after": [
-              1.0,
-              0.0
-            ]
-          },
-          "met:pyr_e": {
-            "before": [
-              12.0,
-              5.0
-            ],
-            "after": [
-              1.0,
-              0.75
-            ]
-          },
-          "rxn:EX_succ_e": {
-            "before": [
-              6.0,
-              26.0
-            ],
-            "after": [
-              6.0,
-              0.0
-            ]
-          },
-          "met:succ_e": {
-            "before": [
-              6.0,
-              25.0
-            ],
-            "after": [
-              6.0,
-              0.3333333333333333
+              11.0,
+              13.0
             ]
           },
           "met:ac_e": {
             "before": [
-              12.0,
+              12.25,
               13.0
             ],
             "after": [
-              12.25,
+              10.25,
               13.0
+            ]
+          },
+          "rxn:EX_acald_e": {
+            "before": [
+              13.0,
+              12.0
+            ],
+            "after": [
+              11.0,
+              12.0
             ]
           },
           "met:acald_e": {
             "before": [
-              12.0,
+              12.25,
               12.0
             ],
             "after": [
-              12.25,
+              10.25,
               12.0
+            ]
+          },
+          "rxn:EX_etoh_e": {
+            "before": [
+              13.0,
+              14.0
+            ],
+            "after": [
+              11.0,
+              14.0
             ]
           },
           "met:etoh_e": {
             "before": [
-              12.0,
+              12.25,
               14.0
             ],
             "after": [
-              12.25,
+              10.25,
               14.0
+            ]
+          },
+          "rxn:EX_for_e": {
+            "before": [
+              13.0,
+              11.0
+            ],
+            "after": [
+              11.0,
+              11.0
             ]
           },
           "met:for_e": {
             "before": [
-              12.0,
+              12.25,
               11.0
             ],
             "after": [
-              12.25,
+              10.25,
               11.0
+            ]
+          },
+          "rxn:EX_gln__L_e": {
+            "before": [
+              13.0,
+              15.0
+            ],
+            "after": [
+              11.0,
+              15.0
             ]
           },
           "met:gln__L_e": {
             "before": [
-              12.0,
+              12.25,
               15.0
             ],
             "after": [
-              12.25,
+              10.25,
               15.0
+            ]
+          },
+          "rxn:EX_glu__L_e": {
+            "before": [
+              13.0,
+              10.0
+            ],
+            "after": [
+              11.0,
+              10.0
             ]
           },
           "met:glu__L_e": {
             "before": [
-              12.0,
+              12.25,
               10.0
             ],
             "after": [
-              12.25,
+              10.25,
               10.0
+            ]
+          },
+          "rxn:EX_lac__D_e": {
+            "before": [
+              13.0,
+              16.0
+            ],
+            "after": [
+              11.0,
+              16.0
             ]
           },
           "met:lac__D_e": {
             "before": [
-              12.0,
-              16.0
-            ],
-            "after": [
               12.25,
               16.0
-            ]
-          },
-          "rxn:BIOMASS_Ecoli_core_w_GAM": {
-            "before": [
-              5.0,
-              11.0
             ],
             "after": [
-              4.0,
-              11.0
-            ]
-          },
-          "rxn:ACALD": {
-            "before": [
-              3.0,
-              6.0
-            ],
-            "after": [
-              2.0,
-              6.0
+              10.25,
+              16.0
             ]
           },
           "rxn:ACALDt": {
             "before": [
-              7.0,
+              11.5,
               12.0
             ],
             "after": [
-              11.5,
+              9.5,
               12.0
             ]
           },
           "rxn:ACt2r": {
             "before": [
-              7.0,
+              11.5,
               13.0
             ],
             "after": [
-              11.5,
+              9.5,
               13.0
             ]
           },
           "rxn:AKGt2r": {
             "before": [
-              9.0,
-              7.0
-            ],
-            "after": [
               11.5,
               3.0
-            ]
-          },
-          "rxn:ALCD2x": {
-            "before": [
-              5.0,
-              12.0
             ],
             "after": [
-              3.0,
-              12.0
+              9.666666666666666,
+              3.0
             ]
           },
           "rxn:D_LACt2": {
             "before": [
-              7.0,
+              11.5,
               16.0
             ],
             "after": [
-              11.5,
+              9.5,
               16.0
             ]
           },
           "rxn:ETOHt2r": {
             "before": [
-              7.0,
+              11.5,
               14.0
             ],
             "after": [
-              11.5,
+              9.5,
               14.0
             ]
           },
           "rxn:FORt": {
             "before": [
-              7.0,
-              11.0
-            ],
-            "after": [
               11.5,
               11.0
-            ]
-          },
-          "rxn:FUMt2_2": {
-            "before": [
-              4.0,
-              7.0
             ],
             "after": [
-              4.0,
-              0.6666666666666666
+              9.5,
+              11.0
             ]
           },
           "rxn:GLNabc": {
             "before": [
-              7.0,
+              11.5,
               15.0
             ],
             "after": [
-              11.5,
+              9.5,
               15.0
             ]
           },
           "rxn:GLUt2r": {
             "before": [
-              7.0,
-              10.0
-            ],
-            "after": [
               11.5,
               10.0
-            ]
-          },
-          "rxn:LDH_D": {
-            "before": [
-              2.0,
-              6.0
             ],
             "after": [
-              2.0,
-              7.0
-            ]
-          },
-          "rxn:MALt2_2": {
-            "before": [
-              2.0,
-              3.0
-            ],
-            "after": [
-              1.5,
-              3.0
-            ]
-          },
-          "rxn:PYRt2": {
-            "before": [
-              10.0,
-              5.0
-            ],
-            "after": [
-              1.0,
-              1.5
-            ]
-          },
-          "rxn:SUCCt2_2": {
-            "before": [
-              6.0,
-              7.0
-            ],
-            "after": [
-              6.0,
-              0.6666666666666666
-            ]
-          },
-          "rxn:ACKr": {
-            "before": [
-              5.0,
-              13.0
-            ],
-            "after": [
-              5.0,
-              11.0
-            ]
-          },
-          "rxn:FRUpts2": {
-            "before": [
-              2.0,
-              21.0
-            ],
-            "after": [
-              3.0,
-              21.0
-            ]
-          },
-          "rxn:EX_fru_e": {
-            "before": [
-              0.0,
-              20.0
-            ],
-            "after": [
-              2.0,
-              26.0
-            ]
-          },
-          "met:6pgc_c": {
-            "before": [
-              8.0,
-              13.0
-            ],
-            "after": [
-              5.0,
-              13.0
-            ]
-          },
-          "met:e4p_c": {
-            "before": [
-              8.0,
-              12.0
-            ],
-            "after": [
-              5.0,
-              12.0
-            ]
-          },
-          "met:glx_c": {
-            "before": [
-              8.0,
-              14.0
-            ],
-            "after": [
-              8.0,
-              17.0
-            ]
-          },
-          "met:r5p_c": {
-            "before": [
-              9.0,
-              13.0
-            ],
-            "after": [
-              9.0,
-              9.0
-            ]
-          },
-          "rxn:ATPM": {
-            "before": [
-              8.0,
-              11.0
-            ],
-            "after": [
-              8.0,
-              9.0
-            ]
-          },
-          "rxn:ATPS4r": {
-            "before": [
-              8.0,
-              15.0
-            ],
-            "after": [
-              7.0,
-              17.0
-            ]
-          },
-          "rxn:CYTBD": {
-            "before": [
-              9.0,
-              12.0
-            ],
-            "after": [
-              9.0,
-              8.0
-            ]
-          },
-          "rxn:FBP": {
-            "before": [
-              9.0,
-              14.0
-            ],
-            "after": [
-              9.0,
-              17.0
-            ]
-          },
-          "rxn:FORt2": {
-            "before": [
-              10.0,
-              13.0
-            ],
-            "after": [
-              10.0,
-              9.0
-            ]
-          },
-          "rxn:G6PDH2r": {
-            "before": [
-              3.0,
-              12.0
-            ],
-            "after": [
-              2.0,
-              12.0
-            ]
-          },
-          "rxn:GLUDy": {
-            "before": [
-              4.0,
-              11.0
-            ],
-            "after": [
-              3.0,
-              11.0
-            ]
-          },
-          "rxn:ME2": {
-            "before": [
-              7.0,
-              17.0
-            ],
-            "after": [
-              7.0,
-              18.0
-            ]
-          },
-          "rxn:NADH16": {
-            "before": [
-              8.0,
+              9.5,
               10.0
-            ],
-            "after": [
-              8.0,
-              8.0
-            ]
-          },
-          "rxn:NADTRHD": {
-            "before": [
-              8.0,
-              16.0
-            ],
-            "after": [
-              8.0,
-              18.0
-            ]
-          },
-          "rxn:PGL": {
-            "before": [
-              9.0,
-              11.0
-            ],
-            "after": [
-              9.0,
-              7.0
-            ]
-          },
-          "rxn:PPC": {
-            "before": [
-              9.0,
-              15.0
-            ],
-            "after": [
-              9.0,
-              18.0
-            ]
-          },
-          "rxn:PPCK": {
-            "before": [
-              10.0,
-              12.0
-            ],
-            "after": [
-              10.0,
-              8.0
-            ]
-          },
-          "rxn:PPS": {
-            "before": [
-              10.0,
-              14.0
-            ],
-            "after": [
-              10.0,
-              17.0
             ]
           },
           "rxn:RPE": {
             "before": [
               11.0,
-              13.0
-            ],
-            "after": [
-              11.0,
               9.0
-            ]
-          },
-          "rxn:RPI": {
-            "before": [
-              2.0,
-              12.0
             ],
             "after": [
-              2.0,
-              11.0
-            ]
-          },
-          "rxn:TALA": {
-            "before": [
-              3.0,
-              11.0
-            ],
-            "after": [
-              3.0,
-              10.0
+              10.0,
+              7.0
             ]
           }
         },
@@ -2461,16 +2253,50 @@
           "rxn:SUCCt2_2"
         ],
         "verified": true
+      },
+      "boundary_compaction": {
+        "enabled": true,
+        "before_boundary": [
+          0,
+          13,
+          0,
+          26
+        ],
+        "after_boundary": [
+          0,
+          11,
+          0,
+          26
+        ],
+        "before_orange_length_grid": 220.38246425999998,
+        "after_orange_length_grid": 203.58384434,
+        "margin_grid": 1.0,
+        "accepted": true,
+        "red_coordinates_preserved": true,
+        "red_routes_preserved": true,
+        "attempted_candidates": 1,
+        "rejected_candidates": [],
+        "global_optimality_proven": false,
+        "protected_red_extents": [
+          0.40017251,
+          9.44982749,
+          0.55017251,
+          26.0
+        ],
+        "lower_margin_removed_grid": 0,
+        "right_margin_removed_grid": 2,
+        "before_area_grid": 338,
+        "after_area_grid": 286
       }
     }
   ],
   "crossing_policy": "all paths inside actual exchange envelope; red crossings forbidden; orange crossings ignored; orange length first",
   "orange_length_definition": "Sum of orange geometry, merging shared segments within the same reaction; different reactions counted separately.",
   "placement_order": [
-    "Place red backbone nodes",
-    "Route red and freeze it",
-    "Arrange straight exchange/transport corridors around frozen red",
-    "Place remaining nodes",
-    "Route remaining edges, preferring orange length"
+    "Freeze red nodes and red routes",
+    "Place initial straight exchange corridors",
+    "Shrink lower/right boundaries only when orange length does not increase",
+    "Reposition remaining nodes inside accepted boundary",
+    "Validate frozen red, straight corridors and all-color boundary"
   ]
 }

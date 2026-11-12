@@ -2,7 +2,7 @@
   {
     "schema": "https://escher.github.io/escher/jsonschema/1-0-0#",
     "homepage": "https://escher.github.io",
-    "map_id": "127f5e166cf6284f0dd8b318",
+    "map_id": "fff715ea549cfae8a1ff4c98",
     "map_name": "e_coli_core.sbml2map structural grid map",
     "map_description": "Structural display projection. No sampling or flux statistics; directions from source bounds.",
     "metadata": {
@@ -5890,7 +5890,7 @@
             "violations": [],
             "verified": true,
             "method": "Constraint-checked greedy routing channels",
-            "elapsed_seconds": 0.41025534499203786,
+            "elapsed_seconds": 0.2843720160308294,
             "signature": "5b951a67a0b10ab383869150",
             "routing_envelope": {
               "x_min": -1.0,
@@ -7444,7 +7444,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     3.0
                   ],
                   [
@@ -7590,7 +7590,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     13.0
                   ],
                   [
@@ -7619,7 +7619,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     12.0
                   ],
                   [
@@ -7648,7 +7648,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     14.0
                   ],
                   [
@@ -7678,7 +7678,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     11.0
                   ],
                   [
@@ -7731,7 +7731,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     15.0
                   ],
                   [
@@ -7760,7 +7760,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     10.0
                   ],
                   [
@@ -7789,7 +7789,7 @@
                 ],
                 "corridor": [
                   [
-                    13.0,
+                    11.0,
                     16.0
                   ],
                   [
@@ -7802,562 +7802,252 @@
             "changed_nodes": {
               "rxn:EX_akg_e": {
                 "before": [
-                  9.0,
-                  26.0
+                  13.0,
+                  3.0
                 ],
                 "after": [
-                  13.0,
+                  11.0,
                   3.0
                 ]
               },
               "met:akg_e": {
                 "before": [
-                  9.0,
-                  25.0
-                ],
-                "after": [
                   12.25,
                   3.0
-                ]
-              },
-              "rxn:EX_fum_e": {
-                "before": [
-                  4.0,
-                  26.0
                 ],
                 "after": [
-                  4.0,
-                  0.0
-                ]
-              },
-              "met:fum_e": {
-                "before": [
-                  4.0,
-                  25.0
-                ],
-                "after": [
-                  4.0,
-                  0.3333333333333333
-                ]
-              },
-              "met:mal__L_e": {
-                "before": [
-                  1.0,
-                  3.0
-                ],
-                "after": [
-                  0.75,
+                  10.333333333333334,
                   3.0
                 ]
               },
-              "rxn:EX_pyr_e": {
+              "rxn:EX_ac_e": {
                 "before": [
                   13.0,
-                  5.0
+                  13.0
                 ],
                 "after": [
-                  1.0,
-                  0.0
-                ]
-              },
-              "met:pyr_e": {
-                "before": [
-                  12.0,
-                  5.0
-                ],
-                "after": [
-                  1.0,
-                  0.75
-                ]
-              },
-              "rxn:EX_succ_e": {
-                "before": [
-                  6.0,
-                  26.0
-                ],
-                "after": [
-                  6.0,
-                  0.0
-                ]
-              },
-              "met:succ_e": {
-                "before": [
-                  6.0,
-                  25.0
-                ],
-                "after": [
-                  6.0,
-                  0.3333333333333333
+                  11.0,
+                  13.0
                 ]
               },
               "met:ac_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   13.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   13.0
+                ]
+              },
+              "rxn:EX_acald_e": {
+                "before": [
+                  13.0,
+                  12.0
+                ],
+                "after": [
+                  11.0,
+                  12.0
                 ]
               },
               "met:acald_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   12.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   12.0
+                ]
+              },
+              "rxn:EX_etoh_e": {
+                "before": [
+                  13.0,
+                  14.0
+                ],
+                "after": [
+                  11.0,
+                  14.0
                 ]
               },
               "met:etoh_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   14.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   14.0
+                ]
+              },
+              "rxn:EX_for_e": {
+                "before": [
+                  13.0,
+                  11.0
+                ],
+                "after": [
+                  11.0,
+                  11.0
                 ]
               },
               "met:for_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   11.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   11.0
+                ]
+              },
+              "rxn:EX_gln__L_e": {
+                "before": [
+                  13.0,
+                  15.0
+                ],
+                "after": [
+                  11.0,
+                  15.0
                 ]
               },
               "met:gln__L_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   15.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   15.0
+                ]
+              },
+              "rxn:EX_glu__L_e": {
+                "before": [
+                  13.0,
+                  10.0
+                ],
+                "after": [
+                  11.0,
+                  10.0
                 ]
               },
               "met:glu__L_e": {
                 "before": [
-                  12.0,
+                  12.25,
                   10.0
                 ],
                 "after": [
-                  12.25,
+                  10.25,
                   10.0
+                ]
+              },
+              "rxn:EX_lac__D_e": {
+                "before": [
+                  13.0,
+                  16.0
+                ],
+                "after": [
+                  11.0,
+                  16.0
                 ]
               },
               "met:lac__D_e": {
                 "before": [
-                  12.0,
-                  16.0
-                ],
-                "after": [
                   12.25,
                   16.0
-                ]
-              },
-              "rxn:BIOMASS_Ecoli_core_w_GAM": {
-                "before": [
-                  5.0,
-                  11.0
                 ],
                 "after": [
-                  4.0,
-                  11.0
-                ]
-              },
-              "rxn:ACALD": {
-                "before": [
-                  3.0,
-                  6.0
-                ],
-                "after": [
-                  2.0,
-                  6.0
+                  10.25,
+                  16.0
                 ]
               },
               "rxn:ACALDt": {
                 "before": [
-                  7.0,
+                  11.5,
                   12.0
                 ],
                 "after": [
-                  11.5,
+                  9.5,
                   12.0
                 ]
               },
               "rxn:ACt2r": {
                 "before": [
-                  7.0,
+                  11.5,
                   13.0
                 ],
                 "after": [
-                  11.5,
+                  9.5,
                   13.0
                 ]
               },
               "rxn:AKGt2r": {
                 "before": [
-                  9.0,
-                  7.0
-                ],
-                "after": [
                   11.5,
                   3.0
-                ]
-              },
-              "rxn:ALCD2x": {
-                "before": [
-                  5.0,
-                  12.0
                 ],
                 "after": [
-                  3.0,
-                  12.0
+                  9.666666666666666,
+                  3.0
                 ]
               },
               "rxn:D_LACt2": {
                 "before": [
-                  7.0,
+                  11.5,
                   16.0
                 ],
                 "after": [
-                  11.5,
+                  9.5,
                   16.0
                 ]
               },
               "rxn:ETOHt2r": {
                 "before": [
-                  7.0,
+                  11.5,
                   14.0
                 ],
                 "after": [
-                  11.5,
+                  9.5,
                   14.0
                 ]
               },
               "rxn:FORt": {
                 "before": [
-                  7.0,
-                  11.0
-                ],
-                "after": [
                   11.5,
                   11.0
-                ]
-              },
-              "rxn:FUMt2_2": {
-                "before": [
-                  4.0,
-                  7.0
                 ],
                 "after": [
-                  4.0,
-                  0.6666666666666666
+                  9.5,
+                  11.0
                 ]
               },
               "rxn:GLNabc": {
                 "before": [
-                  7.0,
+                  11.5,
                   15.0
                 ],
                 "after": [
-                  11.5,
+                  9.5,
                   15.0
                 ]
               },
               "rxn:GLUt2r": {
                 "before": [
-                  7.0,
-                  10.0
-                ],
-                "after": [
                   11.5,
                   10.0
-                ]
-              },
-              "rxn:LDH_D": {
-                "before": [
-                  2.0,
-                  6.0
                 ],
                 "after": [
-                  2.0,
-                  7.0
-                ]
-              },
-              "rxn:MALt2_2": {
-                "before": [
-                  2.0,
-                  3.0
-                ],
-                "after": [
-                  1.5,
-                  3.0
-                ]
-              },
-              "rxn:PYRt2": {
-                "before": [
-                  10.0,
-                  5.0
-                ],
-                "after": [
-                  1.0,
-                  1.5
-                ]
-              },
-              "rxn:SUCCt2_2": {
-                "before": [
-                  6.0,
-                  7.0
-                ],
-                "after": [
-                  6.0,
-                  0.6666666666666666
-                ]
-              },
-              "rxn:ACKr": {
-                "before": [
-                  5.0,
-                  13.0
-                ],
-                "after": [
-                  5.0,
-                  11.0
-                ]
-              },
-              "rxn:FRUpts2": {
-                "before": [
-                  2.0,
-                  21.0
-                ],
-                "after": [
-                  3.0,
-                  21.0
-                ]
-              },
-              "rxn:EX_fru_e": {
-                "before": [
-                  0.0,
-                  20.0
-                ],
-                "after": [
-                  2.0,
-                  26.0
-                ]
-              },
-              "met:6pgc_c": {
-                "before": [
-                  8.0,
-                  13.0
-                ],
-                "after": [
-                  5.0,
-                  13.0
-                ]
-              },
-              "met:e4p_c": {
-                "before": [
-                  8.0,
-                  12.0
-                ],
-                "after": [
-                  5.0,
-                  12.0
-                ]
-              },
-              "met:glx_c": {
-                "before": [
-                  8.0,
-                  14.0
-                ],
-                "after": [
-                  8.0,
-                  17.0
-                ]
-              },
-              "met:r5p_c": {
-                "before": [
-                  9.0,
-                  13.0
-                ],
-                "after": [
-                  9.0,
-                  9.0
-                ]
-              },
-              "rxn:ATPM": {
-                "before": [
-                  8.0,
-                  11.0
-                ],
-                "after": [
-                  8.0,
-                  9.0
-                ]
-              },
-              "rxn:ATPS4r": {
-                "before": [
-                  8.0,
-                  15.0
-                ],
-                "after": [
-                  7.0,
-                  17.0
-                ]
-              },
-              "rxn:CYTBD": {
-                "before": [
-                  9.0,
-                  12.0
-                ],
-                "after": [
-                  9.0,
-                  8.0
-                ]
-              },
-              "rxn:FBP": {
-                "before": [
-                  9.0,
-                  14.0
-                ],
-                "after": [
-                  9.0,
-                  17.0
-                ]
-              },
-              "rxn:FORt2": {
-                "before": [
-                  10.0,
-                  13.0
-                ],
-                "after": [
-                  10.0,
-                  9.0
-                ]
-              },
-              "rxn:G6PDH2r": {
-                "before": [
-                  3.0,
-                  12.0
-                ],
-                "after": [
-                  2.0,
-                  12.0
-                ]
-              },
-              "rxn:GLUDy": {
-                "before": [
-                  4.0,
-                  11.0
-                ],
-                "after": [
-                  3.0,
-                  11.0
-                ]
-              },
-              "rxn:ME2": {
-                "before": [
-                  7.0,
-                  17.0
-                ],
-                "after": [
-                  7.0,
-                  18.0
-                ]
-              },
-              "rxn:NADH16": {
-                "before": [
-                  8.0,
+                  9.5,
                   10.0
-                ],
-                "after": [
-                  8.0,
-                  8.0
-                ]
-              },
-              "rxn:NADTRHD": {
-                "before": [
-                  8.0,
-                  16.0
-                ],
-                "after": [
-                  8.0,
-                  18.0
-                ]
-              },
-              "rxn:PGL": {
-                "before": [
-                  9.0,
-                  11.0
-                ],
-                "after": [
-                  9.0,
-                  7.0
-                ]
-              },
-              "rxn:PPC": {
-                "before": [
-                  9.0,
-                  15.0
-                ],
-                "after": [
-                  9.0,
-                  18.0
-                ]
-              },
-              "rxn:PPCK": {
-                "before": [
-                  10.0,
-                  12.0
-                ],
-                "after": [
-                  10.0,
-                  8.0
-                ]
-              },
-              "rxn:PPS": {
-                "before": [
-                  10.0,
-                  14.0
-                ],
-                "after": [
-                  10.0,
-                  17.0
                 ]
               },
               "rxn:RPE": {
                 "before": [
                   11.0,
-                  13.0
-                ],
-                "after": [
-                  11.0,
                   9.0
-                ]
-              },
-              "rxn:RPI": {
-                "before": [
-                  2.0,
-                  12.0
                 ],
                 "after": [
-                  2.0,
-                  11.0
-                ]
-              },
-              "rxn:TALA": {
-                "before": [
-                  3.0,
-                  11.0
-                ],
-                "after": [
-                  3.0,
-                  10.0
+                  10.0,
+                  7.0
                 ]
               }
             },
@@ -8418,156 +8108,9 @@
             "verified": true
           },
           "exchange_boundary_adjustments": [],
-          "exchange_alignment": {
-            "verified": true,
-            "checked_triplets": 12,
-            "aligned_triplets": [
-              {
-                "reaction_id": "EX_ac_e",
-                "exchange": "rxn:EX_ac_e",
-                "external": "met:ac_e",
-                "internal": "met:ac_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_acald_e",
-                "exchange": "rxn:EX_acald_e",
-                "external": "met:acald_e",
-                "internal": "met:acald_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_akg_e",
-                "exchange": "rxn:EX_akg_e",
-                "external": "met:akg_e",
-                "internal": "met:akg_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_etoh_e",
-                "exchange": "rxn:EX_etoh_e",
-                "external": "met:etoh_e",
-                "internal": "met:etoh_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_for_e",
-                "exchange": "rxn:EX_for_e",
-                "external": "met:for_e",
-                "internal": "met:for_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_fum_e",
-                "exchange": "rxn:EX_fum_e",
-                "external": "met:fum_e",
-                "internal": "met:fum_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "bottom"
-              },
-              {
-                "reaction_id": "EX_gln__L_e",
-                "exchange": "rxn:EX_gln__L_e",
-                "external": "met:gln__L_e",
-                "internal": "met:gln__L_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_glu__L_e",
-                "exchange": "rxn:EX_glu__L_e",
-                "external": "met:glu__L_e",
-                "internal": "met:glu__L_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_lac__D_e",
-                "exchange": "rxn:EX_lac__D_e",
-                "external": "met:lac__D_e",
-                "internal": "met:lac__D_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "right"
-              },
-              {
-                "reaction_id": "EX_mal__L_e",
-                "exchange": "rxn:EX_mal__L_e",
-                "external": "met:mal__L_e",
-                "internal": "met:mal__L_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "left"
-              },
-              {
-                "reaction_id": "EX_pyr_e",
-                "exchange": "rxn:EX_pyr_e",
-                "external": "met:pyr_e",
-                "internal": "met:pyr_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "bottom"
-              },
-              {
-                "reaction_id": "EX_succ_e",
-                "exchange": "rxn:EX_succ_e",
-                "external": "met:succ_e",
-                "internal": "met:succ_c",
-                "evidence": "Exact chemical identity annotation",
-                "face": "bottom"
-              }
-            ],
-            "ordering": "EX -> extracellular -> cytosolic, from outer boundary inward",
-            "mode": "collinear",
-            "skipped": [
-              {
-                "reaction_id": "EX_fru_e",
-                "external_metabolite_id": "fru_e",
-                "reason": "No unique displayed cytosolic chemical match",
-                "candidates": []
-              },
-              {
-                "reaction_id": "EX_glc__D_e",
-                "external_metabolite_id": "glc__D_e",
-                "reason": "No unique displayed cytosolic chemical match",
-                "candidates": []
-              }
-            ]
-          },
-          "validation": {
-            "all_displayed_backbone_positions_verified": true,
-            "routes": [
-              {
-                "id": "glycolysis",
-                "shape": "vertical",
-                "checked_nodes": 22,
-                "verified": true
-              },
-              {
-                "id": "glucose_exchange",
-                "shape": "exchange",
-                "checked_nodes": 2,
-                "verified": true
-              },
-              {
-                "id": "pdh",
-                "shape": "horizontal",
-                "checked_nodes": 3,
-                "verified": true
-              },
-              {
-                "id": "tca",
-                "shape": "square",
-                "checked_nodes": 18,
-                "verified": true
-              }
-            ]
-          },
           "routing_boundary": [
             0,
-            13,
+            11,
             0,
             26
           ],
@@ -8670,11 +8213,11 @@
                     7.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     7.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
@@ -8970,11 +8513,11 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
@@ -9062,7 +8605,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.666666666666666,
                     3.0
                   ],
                   [
@@ -9081,11 +8624,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.666666666666666,
                     3.0
                   ],
                   [
-                    12.25,
+                    10.333333333333334,
                     3.0
                   ]
                 ],
@@ -9226,7 +8769,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     12.0
                   ],
                   [
@@ -9245,11 +8788,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     12.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     12.0
                   ]
                 ],
@@ -9604,7 +9147,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     13.0
                   ],
                   [
@@ -9623,11 +9166,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     13.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     13.0
                   ]
                 ],
@@ -9951,11 +9494,11 @@
                     8.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     8.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
@@ -10587,12 +10130,12 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.0,
-                    9.0
+                    10.0,
+                    7.0
                   ],
                   [
                     3.0,
-                    9.0
+                    7.0
                   ],
                   [
                     3.0,
@@ -10609,12 +10152,12 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.0,
-                    9.0
+                    10.0,
+                    7.0
                   ],
                   [
                     4.0,
-                    9.0
+                    7.0
                   ],
                   [
                     4.0,
@@ -10849,7 +10392,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     16.0
                   ],
                   [
@@ -10868,11 +10411,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     16.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     16.0
                   ]
                 ],
@@ -10969,7 +10512,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     14.0
                   ],
                   [
@@ -10988,11 +10531,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     14.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     14.0
                   ]
                 ],
@@ -11584,11 +11127,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     13.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     13.0
                   ]
                 ],
@@ -11603,11 +11146,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     12.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     12.0
                   ]
                 ],
@@ -11622,11 +11165,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     3.0
                   ],
                   [
-                    12.25,
+                    10.333333333333334,
                     3.0
                   ]
                 ],
@@ -11641,11 +11184,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     14.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     14.0
                   ]
                 ],
@@ -11660,11 +11203,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     11.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     11.0
                   ]
                 ],
@@ -11737,11 +11280,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     15.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     15.0
                   ]
                 ],
@@ -11756,11 +11299,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     10.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     10.0
                   ]
                 ],
@@ -11775,11 +11318,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    13.0,
+                    11.0,
                     16.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     16.0
                   ]
                 ],
@@ -11990,11 +11533,11 @@
                     9.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     9.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     11.0
                   ]
                 ]
@@ -12008,7 +11551,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     11.0
                   ],
                   [
@@ -12027,11 +11570,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     11.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     11.0
                   ]
                 ],
@@ -12654,15 +12197,15 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     15.0
                   ],
                   [
-                    11.949827493308394,
+                    9.949827493308394,
                     15.0
                   ],
                   [
-                    11.949827493308394,
+                    9.949827493308394,
                     15.000172506691607
                   ]
                 ]
@@ -12676,15 +12219,15 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     15.0
                   ],
                   [
-                    11.050172506691606,
+                    9.050172506691606,
                     15.0
                   ],
                   [
-                    11.050172506691606,
+                    9.050172506691606,
                     14.999827493308393
                   ]
                 ]
@@ -12698,7 +12241,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     15.0
                   ],
                   [
@@ -12717,11 +12260,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     15.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     15.0
                   ]
                 ],
@@ -12970,7 +12513,7 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     10.0
                   ],
                   [
@@ -12989,11 +12532,11 @@
                 "backbone": false,
                 "points": [
                   [
-                    11.5,
+                    9.5,
                     10.0
                   ],
                   [
-                    12.25,
+                    10.25,
                     10.0
                   ]
                 ],
@@ -13320,11 +12863,11 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
@@ -14056,11 +13599,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -14070,7 +13613,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -14099,11 +13642,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -14122,11 +13665,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           7.0
                         ]
                       ],
@@ -14136,7 +13679,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -14234,11 +13777,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -14248,7 +13791,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -14576,11 +14119,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -14599,11 +14142,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -14613,7 +14156,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -14715,17 +14258,17 @@
                           6.31021866
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -14735,7 +14278,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -14777,11 +14320,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -14800,11 +14343,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -15178,11 +14721,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -15192,7 +14735,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -15472,11 +15015,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -15486,7 +15029,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -15515,11 +15058,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -15538,11 +15081,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           7.0
                         ]
                       ],
@@ -15552,7 +15095,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -15650,11 +15193,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -15664,7 +15207,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -15992,11 +15535,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -16015,11 +15558,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -16029,7 +15572,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ],
@@ -16131,17 +15674,17 @@
                           6.31021866
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -16151,7 +15694,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -16193,11 +15736,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -16216,11 +15759,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           3.0
                         ]
                       ]
@@ -16594,11 +16137,11 @@
                     "contacts": [
                       [
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           6.31021866
                         ]
                       ],
@@ -16608,7 +16151,7 @@
                           0.52204679
                         ],
                         [
-                          9.59982749,
+                          9.5,
                           0.52204679
                         ]
                       ]
@@ -16848,19 +16391,19 @@
               },
               "nodes_moved": false,
               "grid_shape": [
-                94,
+                100,
                 160
               ],
               "boundary": [
                 0,
-                13,
+                11,
                 0,
                 26
               ],
               "boundary_validation": {
                 "boundary": [
                   0,
-                  13,
+                  11,
                   0,
                   26
                 ],
@@ -16871,7 +16414,7 @@
                 "verified": true,
                 "route_extents": [
                   0.0,
-                  13.0,
+                  11.0,
                   0.0,
                   26.0
                 ]
@@ -16883,8 +16426,8 @@
                 "bends"
               ],
               "orange_crossings_optimized": false,
-              "orange_length_grid": 220.38246425999998,
-              "first_feasible_orange_length_grid": 220.38246425999998,
+              "orange_length_grid": 203.58384434,
+              "first_feasible_orange_length_grid": 203.58384434,
               "length_definition": "Union of orange segments within each reaction; different reactions count separately",
               "global_optimality_proven": false,
               "before": {
@@ -18683,7 +18226,194 @@
                 "straight_incidences": 38
               }
             },
-            "signature": "127f5e166cf6284f0dd8b318"
+            "signature": "fff715ea549cfae8a1ff4c98"
+          },
+          "render_frame": [
+            0,
+            11,
+            0,
+            26
+          ],
+          "boundary_compaction": {
+            "enabled": true,
+            "before_boundary": [
+              0,
+              13,
+              0,
+              26
+            ],
+            "after_boundary": [
+              0,
+              11,
+              0,
+              26
+            ],
+            "before_orange_length_grid": 220.38246425999998,
+            "after_orange_length_grid": 203.58384434,
+            "margin_grid": 1.0,
+            "accepted": true,
+            "red_coordinates_preserved": true,
+            "red_routes_preserved": true,
+            "attempted_candidates": 1,
+            "rejected_candidates": [],
+            "global_optimality_proven": false,
+            "protected_red_extents": [
+              0.40017251,
+              9.44982749,
+              0.55017251,
+              26.0
+            ],
+            "lower_margin_removed_grid": 0,
+            "right_margin_removed_grid": 2,
+            "before_area_grid": 338,
+            "after_area_grid": 286
+          },
+          "exchange_alignment": {
+            "verified": true,
+            "checked_triplets": 12,
+            "aligned_triplets": [
+              {
+                "reaction_id": "EX_ac_e",
+                "exchange": "rxn:EX_ac_e",
+                "external": "met:ac_e",
+                "internal": "met:ac_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_acald_e",
+                "exchange": "rxn:EX_acald_e",
+                "external": "met:acald_e",
+                "internal": "met:acald_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_akg_e",
+                "exchange": "rxn:EX_akg_e",
+                "external": "met:akg_e",
+                "internal": "met:akg_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_etoh_e",
+                "exchange": "rxn:EX_etoh_e",
+                "external": "met:etoh_e",
+                "internal": "met:etoh_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_for_e",
+                "exchange": "rxn:EX_for_e",
+                "external": "met:for_e",
+                "internal": "met:for_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_fum_e",
+                "exchange": "rxn:EX_fum_e",
+                "external": "met:fum_e",
+                "internal": "met:fum_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "bottom"
+              },
+              {
+                "reaction_id": "EX_gln__L_e",
+                "exchange": "rxn:EX_gln__L_e",
+                "external": "met:gln__L_e",
+                "internal": "met:gln__L_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_glu__L_e",
+                "exchange": "rxn:EX_glu__L_e",
+                "external": "met:glu__L_e",
+                "internal": "met:glu__L_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_lac__D_e",
+                "exchange": "rxn:EX_lac__D_e",
+                "external": "met:lac__D_e",
+                "internal": "met:lac__D_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "right"
+              },
+              {
+                "reaction_id": "EX_mal__L_e",
+                "exchange": "rxn:EX_mal__L_e",
+                "external": "met:mal__L_e",
+                "internal": "met:mal__L_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "left"
+              },
+              {
+                "reaction_id": "EX_pyr_e",
+                "exchange": "rxn:EX_pyr_e",
+                "external": "met:pyr_e",
+                "internal": "met:pyr_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "bottom"
+              },
+              {
+                "reaction_id": "EX_succ_e",
+                "exchange": "rxn:EX_succ_e",
+                "external": "met:succ_e",
+                "internal": "met:succ_c",
+                "evidence": "Exact chemical identity annotation",
+                "face": "bottom"
+              }
+            ],
+            "ordering": "EX -> extracellular -> cytosolic, from outer boundary inward",
+            "mode": "collinear",
+            "skipped": [
+              {
+                "reaction_id": "EX_fru_e",
+                "external_metabolite_id": "fru_e",
+                "reason": "No unique displayed cytosolic chemical match",
+                "candidates": []
+              },
+              {
+                "reaction_id": "EX_glc__D_e",
+                "external_metabolite_id": "glc__D_e",
+                "reason": "No unique displayed cytosolic chemical match",
+                "candidates": []
+              }
+            ]
+          },
+          "validation": {
+            "all_displayed_backbone_positions_verified": true,
+            "routes": [
+              {
+                "id": "glycolysis",
+                "shape": "vertical",
+                "checked_nodes": 22,
+                "verified": true
+              },
+              {
+                "id": "glucose_exchange",
+                "shape": "exchange",
+                "checked_nodes": 2,
+                "verified": true
+              },
+              {
+                "id": "pdh",
+                "shape": "horizontal",
+                "checked_nodes": 3,
+                "verified": true
+              },
+              {
+                "id": "tca",
+                "shape": "square",
+                "checked_nodes": 18,
+                "verified": true
+              }
+            ]
           }
         },
         "original_reactions": {
@@ -28887,11 +28617,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -28901,7 +28631,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -28930,11 +28660,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -28953,11 +28683,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     7.0
                   ]
                 ],
@@ -28967,7 +28697,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -29065,11 +28795,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -29079,7 +28809,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -29407,11 +29137,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -29430,11 +29160,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -29444,7 +29174,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -29546,17 +29276,17 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -29566,7 +29296,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -29608,11 +29338,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -29631,11 +29361,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -30009,11 +29739,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -30023,7 +29753,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -30303,11 +30033,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -30317,7 +30047,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -30346,11 +30076,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -30369,11 +30099,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     7.0
                   ]
                 ],
@@ -30383,7 +30113,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -30481,11 +30211,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -30495,7 +30225,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -30823,11 +30553,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -30846,11 +30576,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -30860,7 +30590,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ],
@@ -30962,17 +30692,17 @@
                     6.31021866
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -30982,7 +30712,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -31024,11 +30754,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -31047,11 +30777,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     3.0
                   ]
                 ]
@@ -31425,11 +31155,11 @@
               "contacts": [
                 [
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     6.31021866
                   ]
                 ],
@@ -31439,7 +31169,7 @@
                     0.52204679
                   ],
                   [
-                    9.59982749,
+                    9.5,
                     0.52204679
                   ]
                 ]
@@ -31679,19 +31409,19 @@
         },
         "nodes_moved": false,
         "grid_shape": [
-          94,
+          100,
           160
         ],
         "boundary": [
           0,
-          13,
+          11,
           0,
           26
         ],
         "boundary_validation": {
           "boundary": [
             0,
-            13,
+            11,
             0,
             26
           ],
@@ -31702,7 +31432,7 @@
           "verified": true,
           "route_extents": [
             0.0,
-            13.0,
+            11.0,
             0.0,
             26.0
           ]
@@ -31714,8 +31444,8 @@
           "bends"
         ],
         "orange_crossings_optimized": false,
-        "orange_length_grid": 220.38246425999998,
-        "first_feasible_orange_length_grid": 220.38246425999998,
+        "orange_length_grid": 203.58384434,
+        "first_feasible_orange_length_grid": 203.58384434,
         "length_definition": "Union of orange segments within each reaction; different reactions count separately",
         "global_optimality_proven": false,
         "before": {
@@ -33514,7 +33244,7 @@
           "straight_incidences": 38
         }
       },
-      "crossing_routing_signature": "127f5e166cf6284f0dd8b318",
+      "crossing_routing_signature": "fff715ea549cfae8a1ff4c98",
       "overlap_routing": {
         "enabled": true,
         "routing_preference": "important_bends_then_length_gray_yields",
@@ -34129,22 +33859,22 @@
       },
       "35": {
         "node_type": "metabolite",
-        "x": 2230.968948795511,
+        "x": 1870.9689487955109,
         "y": 2059.9689487955106,
         "bigg_id": "adp_c",
         "name": "ADP C10H12N5O10P2",
         "node_is_primary": false,
-        "label_x": 2240.968948795511,
+        "label_x": 1880.9689487955109,
         "label_y": 2049.9689487955106
       },
       "36": {
         "node_type": "metabolite",
-        "x": 2069.031051204489,
+        "x": 1709.0310512044891,
         "y": 2060.0310512044894,
         "bigg_id": "atp_c",
         "name": "ATP C10H12N5O13P3",
         "node_is_primary": false,
-        "label_x": 2014.031051204489,
+        "label_x": 1654.0310512044891,
         "label_y": 2074.0310512044894
       },
       "37": {
@@ -34699,12 +34429,12 @@
       },
       "92": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2420.0,
         "bigg_id": "ac_e",
         "name": "Acetate",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2396.0
       },
       "93": {
@@ -34719,12 +34449,12 @@
       },
       "94": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2600.0,
         "bigg_id": "acald_e",
         "name": "Acetaldehyde",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2576.0
       },
       "95": {
@@ -34769,12 +34499,12 @@
       },
       "99": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1940.0,
         "y": 4220.0,
         "bigg_id": "akg_e",
         "name": "2-Oxoglutarate",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1940.0,
         "label_y": 4196.0
       },
       "100": {
@@ -34819,12 +34549,12 @@
       },
       "104": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2240.0,
         "bigg_id": "etoh_e",
         "name": "Ethanol",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2216.0
       },
       "105": {
@@ -34859,12 +34589,12 @@
       },
       "108": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2780.0,
         "bigg_id": "for_e",
         "name": "Formate",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2756.0
       },
       "109": {
@@ -34939,12 +34669,12 @@
       },
       "116": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2060.0,
         "bigg_id": "gln__L_e",
         "name": "L-Glutamine",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2036.0
       },
       "117": {
@@ -34959,12 +34689,12 @@
       },
       "118": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 2960.0,
         "bigg_id": "glu__L_e",
         "name": "L-Glutamate",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 2936.0
       },
       "119": {
@@ -34999,12 +34729,12 @@
       },
       "122": {
         "node_type": "metabolite",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 1880.0,
         "bigg_id": "lac__D_e",
         "name": "D-Lactate",
         "node_is_primary": true,
-        "label_x": 2285.0,
+        "label_x": 1925.0,
         "label_y": 1856.0
       },
       "123": {
@@ -35144,7 +34874,7 @@
       },
       "137": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2600.0
       },
       "138": {
@@ -35164,7 +34894,7 @@
       },
       "141": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2420.0
       },
       "142": {
@@ -35179,7 +34909,7 @@
       },
       "144": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1820.0,
         "y": 4220.0
       },
       "145": {
@@ -35214,7 +34944,7 @@
       },
       "151": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 1880.0
       },
       "152": {
@@ -35224,32 +34954,32 @@
       },
       "153": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2240.0
       },
       "154": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2420.0
       },
       "155": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2600.0
       },
       "156": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 4220.0
       },
       "157": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2240.0
       },
       "158": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2780.0
       },
       "159": {
@@ -35269,17 +34999,17 @@
       },
       "162": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2060.0
       },
       "163": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 2960.0
       },
       "164": {
         "node_type": "midmarker",
-        "x": 2420.0,
+        "x": 2060.0,
         "y": 1880.0
       },
       "165": {
@@ -35309,7 +35039,7 @@
       },
       "170": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2780.0
       },
       "171": {
@@ -35359,7 +35089,7 @@
       },
       "180": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2060.0
       },
       "181": {
@@ -35379,7 +35109,7 @@
       },
       "184": {
         "node_type": "midmarker",
-        "x": 2150.0,
+        "x": 1790.0,
         "y": 2960.0
       },
       "185": {
@@ -35504,8 +35234,8 @@
       },
       "209": {
         "node_type": "midmarker",
-        "x": 2060.0,
-        "y": 3140.0
+        "x": 1880.0,
+        "y": 3500.0
       },
       "210": {
         "node_type": "midmarker",
@@ -35569,12 +35299,12 @@
       },
       "222": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 3500.0
       },
       "223": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 4666.0315777999995
       },
       "224": {
@@ -35644,12 +35374,12 @@
       },
       "237": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 3624.1606412
       },
       "238": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 4666.0315777999995
       },
       "239": {
@@ -35814,12 +35544,12 @@
       },
       "271": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 3320.0
       },
       "272": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 4666.0315777999995
       },
       "273": {
@@ -35955,12 +35685,12 @@
       "299": {
         "node_type": "multimarker",
         "x": 620.0,
-        "y": 3140.0
+        "y": 3500.0
       },
       "300": {
         "node_type": "multimarker",
         "x": 800.0,
-        "y": 3140.0
+        "y": 3500.0
       },
       "301": {
         "node_type": "multimarker",
@@ -36144,7 +35874,7 @@
       },
       "337": {
         "node_type": "multimarker",
-        "x": 2285.0,
+        "x": 1925.0,
         "y": 3140.0
       },
       "338": {
@@ -36264,12 +35994,12 @@
       },
       "361": {
         "node_type": "multimarker",
-        "x": 2230.968948795511,
+        "x": 1870.9689487955109,
         "y": 2060.0
       },
       "362": {
         "node_type": "multimarker",
-        "x": 2069.031051204489,
+        "x": 1709.0310512044891,
         "y": 2060.0
       },
       "363": {
@@ -36384,12 +36114,12 @@
       },
       "385": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 3624.1606412
       },
       "386": {
         "node_type": "multimarker",
-        "x": 1807.9689481999999,
+        "x": 1790.0,
         "y": 4666.0315777999995
       },
       "387": {
@@ -37017,7 +36747,7 @@
         "name": "2 oxoglutarate reversible transport via symport",
         "bigg_id": "AKGt2r",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1838.0,
         "label_y": 4205.0,
         "gene_reaction_rule": "b2587",
         "genes": [
@@ -37191,7 +36921,7 @@
         "name": "Acetaldehyde reversible transport",
         "bigg_id": "ACALDt",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2585.0,
         "gene_reaction_rule": "s0001",
         "genes": [
@@ -37580,7 +37310,7 @@
         "name": "Acetate reversible transport via proton symport",
         "bigg_id": "ACt2r",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2405.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -38465,8 +38195,8 @@
         "name": "Ribulose 5-phosphate 3-epimerase",
         "bigg_id": "RPE",
         "reversibility": true,
-        "label_x": 2078.0,
-        "label_y": 3125.0,
+        "label_x": 1898.0,
+        "label_y": 3485.0,
         "gene_reaction_rule": "(b3386 or b4301)",
         "genes": [
           {
@@ -38755,7 +38485,7 @@
         "name": "D lactate transport via proton symport",
         "bigg_id": "D_LACt2",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 1865.0,
         "gene_reaction_rule": "(b2975 or b3603)",
         "genes": [
@@ -38880,7 +38610,7 @@
         "name": "Ethanol reversible transport via proton symport",
         "bigg_id": "ETOHt2r",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2225.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39461,7 +39191,7 @@
         "name": "Acetate exchange",
         "bigg_id": "EX_ac_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2405.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39484,7 +39214,7 @@
         "name": "Acetaldehyde exchange",
         "bigg_id": "EX_acald_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2585.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39507,7 +39237,7 @@
         "name": "2-Oxoglutarate exchange",
         "bigg_id": "EX_akg_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 4205.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39530,7 +39260,7 @@
         "name": "Ethanol exchange",
         "bigg_id": "EX_etoh_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2225.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39553,7 +39283,7 @@
         "name": "Formate exchange",
         "bigg_id": "EX_for_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2765.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39645,7 +39375,7 @@
         "name": "L-Glutamine exchange",
         "bigg_id": "EX_gln__L_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2045.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39668,7 +39398,7 @@
         "name": "L-Glutamate exchange",
         "bigg_id": "EX_glu__L_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 2945.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39691,7 +39421,7 @@
         "name": "D-lactate exchange",
         "bigg_id": "EX_lac__D_e",
         "reversibility": false,
-        "label_x": 2438.0,
+        "label_x": 2078.0,
         "label_y": 1865.0,
         "gene_reaction_rule": "",
         "genes": [],
@@ -39965,7 +39695,7 @@
         "name": "Formate transport via diffusion",
         "bigg_id": "FORt",
         "reversibility": false,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2765.0,
         "gene_reaction_rule": "(b0904 or b2492)",
         "genes": [
@@ -40637,7 +40367,7 @@
         "name": "L-glutamine transport via ABC system",
         "bigg_id": "GLNabc",
         "reversibility": false,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2045.0,
         "gene_reaction_rule": "(b0811 and b0810 and b0809)",
         "genes": [
@@ -40945,7 +40675,7 @@
         "name": "L glutamate transport via proton symport  reversible",
         "bigg_id": "GLUt2r",
         "reversibility": true,
-        "label_x": 2168.0,
+        "label_x": 1808.0,
         "label_y": 2945.0,
         "gene_reaction_rule": "b4077",
         "genes": [
@@ -41984,7 +41714,7 @@
     "canvas": {
       "x": 0.0,
       "y": -15.0,
-      "width": 2868.0,
+      "width": 2508.0,
       "height": 4855.0
     }
   }

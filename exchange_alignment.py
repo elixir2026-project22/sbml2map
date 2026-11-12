@@ -75,23 +75,24 @@ def discover_alignment(model, nodes, exchange_nodes):
     return [g for g in groups if g['external'] not in duplicate], skipped
 
 
-def triplet_face(group, xy, cols, rows):
+def triplet_face(group, xy, cols, rows, boundary=None):
+    xmin,xmax,ymin,ymax=boundary if boundary is not None else (0,cols-1,0,rows-1)
     a,b,c = (xy[group[k]] for k in ('exchange','external','internal'))
     if abs(a[1]-b[1]) < EPS and abs(b[1]-c[1]) < EPS:
-        if abs(a[0]) < EPS and a[0]+.16-EPS <= b[0] <= c[0]-.16+EPS:
+        if abs(a[0]-xmin) < EPS and a[0]+.16-EPS <= b[0] <= c[0]-.16+EPS:
             return 'left'
-        if abs(a[0]-(cols-1)) < EPS and c[0]+.16-EPS <= b[0] <= a[0]-.16+EPS:
+        if abs(a[0]-xmax) < EPS and c[0]+.16-EPS <= b[0] <= a[0]-.16+EPS:
             return 'right'
     if abs(a[0]-b[0]) < EPS and abs(b[0]-c[0]) < EPS:
-        if abs(a[1]) < EPS and a[1]+.16-EPS <= b[1] <= c[1]-.16+EPS:
+        if abs(a[1]-ymin) < EPS and a[1]+.16-EPS <= b[1] <= c[1]-.16+EPS:
             return 'bottom'
-        if abs(a[1]-(rows-1)) < EPS and c[1]+.16-EPS <= b[1] <= a[1]-.16+EPS:
+        if abs(a[1]-ymax) < EPS and c[1]+.16-EPS <= b[1] <= a[1]-.16+EPS:
             return 'top'
     return None
 
 
-def validate_alignment(groups, xy, cols, rows):
-    results = [dict(group, face=triplet_face(group, xy, cols, rows)) for group in groups]
+def validate_alignment(groups, xy, cols, rows, boundary=None):
+    results = [dict(group, face=triplet_face(group, xy, cols, rows, boundary)) for group in groups]
     failures = [r for r in results if r['face'] is None]
     if failures:
         raise RuntimeError('Exchange alignment constraints violated: '+str([r['reaction_id'] for r in failures]))

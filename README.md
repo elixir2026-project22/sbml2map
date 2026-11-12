@@ -735,9 +735,9 @@ The examples and final counts are under `docs/test-tca/validation.json`.
 ## Exchange boundary validation
 
 The current e_coli_core test drawings have zero paths outside the actual EX
-node envelope, and zero red/red or red/orange contacts. The circle boundary is
-[0,30] x [0,46]; square is [0,13] x [0,26]. Orange length is 557.85 and 305.35
-grid units respectively under the added constraint. Orange crossings are not
+node envelope, and zero red/red or red/orange contacts. After automatic compaction, the circle boundary is
+[0,18] x [12,46]; square is [0,11] x [0,26]. Orange length is 216.76 and 203.58
+grid units respectively under the active constraints. Orange crossings are not
 optimized. `routing_boundary`, `exchange_boundary_adjustments` and the saved
 geometry's `boundary_validation` record the constraints and verification.
 
@@ -762,3 +762,27 @@ routes are reused by every renderer and checked again after serialization.
 `straight_exchange_validation`, `exchange_corridors`, `red_first` and
 `red_routes_preserved` record these guarantees. The current test drawings use
 4 orange length candidates; the default remains 12.
+
+
+## Automatic lower/right boundary compaction
+
+Enabled by default after red-first layout. The left and top boundaries and all
+red node coordinates/routes remain fixed. The lower edge moves upward and the
+right edge moves left, with a default one-grid-unit margin around red geometry,
+including cubic extrema and local red cofactor endpoints. Remaining nodes and
+straight EX/transport corridors are placed again inside each candidate rectangle.
+Orange length may not increase. A failed candidate is discarded; if none passes,
+the original boundary is retained. Searches are bounded, without a global
+compactness or length optimality guarantee.
+
+`--no-compact-boundary` disables this step. `--boundary-margin 1` controls the
+clearance. Initial `--grid-cols`/`--grid-rows` describe the placement grid; the
+final active `routing_boundary` can have a nonzero lower edge. All validators,
+cofactor placement and renderers use that active boundary.
+
+`boundary_compaction` records before/after boundaries and orange length,
+rejected candidates, unchanged red geometry, and removed margins. The current
+circle example changes [0,30,0,46] to [0,18,12,46] and 340.81 to 216.76 orange
+grid units. The square changes [0,13,0,26] to [0,11,0,26] and 220.38 to 203.58.
+Both retain 38 straight exchange incidences and zero red crossings or outside
+paths. Model stoichiometry and FBA are unchanged.

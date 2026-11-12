@@ -167,13 +167,13 @@ def select_structural_reactions(model, classification, coverage, major_reactions
                                   count_rule='ceil(coverage / 100 * eligible_count); 0 gives empty map')
 
 
-def attach_coenzymes(nodes, xy, radius=.45, grid_shape=None, forbidden_region=None):
+def attach_coenzymes(nodes, xy, radius=.45, grid_shape=None, forbidden_region=None, boundary=None):
     groups = {}
     for key, node in nodes.items():
         if node['kind'] == 'currency':
             groups.setdefault(node['parent_id'], []).append(key)
     for parent, keys in sorted(groups.items()):
-        if grid_shape is None and forbidden_region is None:
+        if grid_shape is None and forbidden_region is None and boundary is None:
             angles = 2 * math.pi * (np.arange(len(keys)) + .25) / len(keys)
         else:
             angles = 2 * math.pi * (np.arange(4096) + .25) / 4096
@@ -187,6 +187,13 @@ def attach_coenzymes(nodes, xy, radius=.45, grid_shape=None, forbidden_region=No
             if len(valid) < len(keys):
                 raise ValueError('Grid cannot contain off-grid coenzyme copies; use at least 2 rows and columns')
             candidates = valid[np.arange(len(keys)) * len(valid) // len(keys)]
+        if boundary is not None:
+            xmin,xmax,ymin,ymax=boundary
+            candidates=np.asarray(xy[parent])+vectors
+            mask=(candidates[:,0]>=xmin)&(candidates[:,0]<=xmax)&(candidates[:,1]>=ymin)&(candidates[:,1]<=ymax)
+            if grid_shape is not None:mask &= (candidates[:,0]>=0)&(candidates[:,0]<=cols-1)&(candidates[:,1]>=0)&(candidates[:,1]<=rows-1)
+            candidates=candidates[mask]
+            if forbidden_region is None and len(candidates)>=len(keys):candidates=candidates[np.arange(len(keys))*len(candidates)//len(keys)]
         if forbidden_region is not None:
             from tca_geometry import allowed_points
             valid = candidates[allowed_points(candidates, forbidden_region)]
@@ -200,10 +207,13 @@ def attach_coenzymes(nodes, xy, radius=.45, grid_shape=None, forbidden_region=No
                 if grid_shape is not None:
                     cols,rows=grid_shape
                     mask &= (valid[:,0]>=0)&(valid[:,0]<=cols-1)&(valid[:,1]>=0)&(valid[:,1]<=rows-1)
+                if boundary is not None:
+                    mask &= (valid[:,0]>=xmin)&(valid[:,0]<=xmax)&(valid[:,1]>=ymin)&(valid[:,1]<=ymax)
                 valid = valid[mask]
             if len(valid) < len(keys):
                 raise ValueError('No cofactor position outside TCA; enlarge the grid')
             candidates = valid[np.arange(len(keys))*len(valid)//len(keys)]
+        if len(candidates)<len(keys):raise ValueError('No cofactor space inside exchange boundary')
         for key, position in zip(sorted(keys), candidates):
             xy[key] = position.tolist()
 
@@ -780,21 +790,33 @@ def run(args):
             if connectors:placement['objective']=connector_cost(connectors,edges,xy)
             placement['global_optimality_proven']=False
             placement.pop('relative_gap',None)
+    if (getattr(args,'compact_boundary',True) and getattr(args,'crossing_policy','legacy')=='red-hard'
+            and backbones.get('exchange_corridors')):
+        from boundary_compaction import compact_boundary
+        compact_boundary(model,nodes,edges,xy,backbones,exchange_nodes,alignment_groups,cols,rows,
+            major_reactions,attach_coenzymes,attempts=getattr(args,'crossing_attempts',12),margin=getattr(args,'boundary_margin',1.))
+        if backbones['boundary_compaction']['accepted']:
+            placement['objective_before_boundary_compaction']=placement['objective']
+            if connectors:placement['objective']=connector_cost(connectors,edges,xy)
+            placement['global_optimality_proven']=False
+            placement.pop('relative_gap',None)
+    routing_boundary=backbones.get('routing_boundary',[0,cols-1,0,rows-1])
+    xmin,xmax,ymin,ymax=routing_boundary
     tca_exclusion = validate_exclusion(nodes,xy,tca_region)
     backbones['tca_exclusion'] = tca_exclusion
     from exchange_alignment import validate_alignment
-    exchange_alignment = validate_alignment(alignment_groups,xy,cols,rows)
+    exchange_alignment = validate_alignment(alignment_groups,xy,cols,rows,routing_boundary)
     exchange_alignment.update(mode=alignment_mode,skipped=alignment_skipped)
     backbones['exchange_alignment'] = exchange_alignment
     backbone_validation = validate_backbones(backbones, xy, rows)
     backbones['validation'] = backbone_validation
     if glucose_node and xy[glucose_node] != placement['position_constraints']['top_left_position']:
         raise RuntimeError('Glucose is not at its required top-left position')
-    if any(xy[key][0] not in (0, cols - 1) and xy[key][1] not in (0, rows - 1) for key in exchange_nodes):
+    if any(xy[key][0] not in (xmin, xmax) and xy[key][1] not in (ymin, ymax) for key in exchange_nodes):
         raise RuntimeError('An EX reaction is not on the grid perimeter')
-    if strategy and any(xy[key][0] in (0, cols - 1) or xy[key][1] in (0, rows - 1) for key in set(grid_ids)-exchange_nodes):
+    if strategy and any(xy[key][0] in (xmin, xmax) or xy[key][1] in (ymin, ymax) for key in set(grid_ids)-exchange_nodes):
         raise RuntimeError('A non-EX grid node occupies the perimeter')
-    if any(not (0 <= p[0] <= cols - 1 and 0 <= p[1] <= rows - 1) for p in xy.values()):
+    if any(not (xmin <= p[0] <= xmax and ymin <= p[1] <= ymax) for p in xy.values()):
         raise RuntimeError('A displayed node lies outside the grid rectangle')
     network = validate_network(projected, nodes, edges, xy)
     fractional_allowed = set(backbones.get('exchange_corridors',{}).get('straight_node_ids',())) | set((tca_region or {}).get('node_ids',())) | {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
@@ -818,10 +840,11 @@ def run(args):
         if reaction['metabolites'] != expected:
             raise RuntimeError('Visible stoichiometry differs from source')
     if getattr(args,'crossing_policy','legacy')=='red-hard':
-        backbones['routing_boundary']=[0,cols-1,0,rows-1]
+        backbones.setdefault('routing_boundary',[0,cols-1,0,rows-1])
         from crossing_routing import plan_routes
-        backbones['crossing_routing']=plan_routes(nodes,edges,xy,backbones,major_reactions,
-            attempts=getattr(args,'crossing_attempts',24))
+        if 'crossing_routing' not in backbones:
+            backbones['crossing_routing']=plan_routes(nodes,edges,xy,backbones,major_reactions,
+                attempts=getattr(args,'crossing_attempts',24))
     metadata = dict(source_model_sha256=digest, coverage=selection, sampling=sampling_report, major_backbones=backbones,
                     original_reactions={r['id']: r for r in model['reactions']}, classification=classification,
                     note='Display projection only: inorganic participants omitted; source_model.json retains the original source model.')
@@ -908,6 +931,8 @@ def run(args):
     report['red_parallel_spacing_grid'] = red_spacing
     report['route_offset_grid'] = route_offset
     report['program_name'] = program_name
+    report['routing_boundary']=routing_boundary
+    if backbones.get('boundary_compaction'):report['boundary_compaction']=backbones['boundary_compaction']
     report['tca_shape'] = getattr(args,'tca_shape','circle')
     report['tca_exclusion'] = tca_exclusion
     report['exchange_alignment'] = exchange_alignment
@@ -972,6 +997,8 @@ def parser():
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
     p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange length')
     p.add_argument('--routing-attempts','--crossing-attempts',dest='crossing_attempts',type=int,default=12,help='Orange length ordering candidates (default: 12)')
+    p.add_argument('--no-compact-boundary',dest='compact_boundary',action='store_false',help='Keep the initial lower and right exchange boundaries')
+    p.add_argument('--boundary-margin',type=float,default=1.,help='Minimum clearance around frozen red geometry during boundary compaction (default: 1 grid unit)')
     p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')
     p.add_argument('--exchange-alignment',choices=('collinear','off'),default='collinear',help='Align EX, extracellular and matching cytosolic nodes from outside inward (default: collinear)')
     p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')

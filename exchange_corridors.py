@@ -48,7 +48,8 @@ def place_corridors(model,nodes,xy,backbones,exchange_nodes,groups,cols,rows):
     reserved=[];reserved_keys=set();assignments=[]
     major={rid for r in backbones['routes'] for rid in r['reaction_ids']}
     ordered=sorted(records,key=lambda g:(g['exchange'] not in fixed,g.get('internal',g['external']) not in fixed,g['reaction_id']))
-    sides=[('left',0,0.,1.),('right',0,float(cols-1),-1.),('bottom',1,0.,1.),('top',1,float(rows-1),-1.)]
+    xmin,xmax,ymin,ymax=backbones.get('routing_boundary',[0,cols-1,0,rows-1])
+    sides=[('left',0,float(xmin),1.),('right',0,float(xmax),-1.),('bottom',1,float(ymin),1.),('top',1,float(ymax),-1.)]
     for group in ordered:
         ex,e=group['exchange'],group['external'];target=group.get('internal',e);base=xy[target]
         primary=min(group['transports'],key=lambda rid:(len(source_reactions[rid]['metabolites']),rid)) if group['transports'] else None
@@ -57,7 +58,7 @@ def place_corridors(model,nodes,xy,backbones,exchange_nodes,groups,cols,rows):
         candidates=[]
         for dx,dy in deltas:
             c=[base[0]+dx,base[1]+dy]
-            if not (.16<c[0]<cols-1-.16 and .16<c[1]<rows-1-.16):continue
+            if not (xmin+.16<c[0]<xmax-.16 and ymin+.16<c[1]<ymax-.16):continue
             if target not in (region or {}).get('node_ids',[]) and not allowed_points([c],region)[0]:continue
             if target not in reserved_keys and any(_on(c,p['points'][0],p['points'][-1]) for p in reserved):continue
             for face,axis,value,sign in sides:
@@ -96,11 +97,25 @@ def place_corridors(model,nodes,xy,backbones,exchange_nodes,groups,cols,rows):
     for key in sorted(xy):
         if key in fixed|reserved_keys or nodes[key]['kind']=='currency':continue
         point=xy[key]
-        conflict=any(_on(point,a,b) for p in [*reserved,*curves] if not p.get('curve_controls') for a,b in zip(p['points'],p['points'][1:])) or any(math.dist(point,q)<.16-EPS for q in occupied)
+        if key in exchange_nodes:
+            on_boundary=(abs(point[0]-xmin)<EPS or abs(point[0]-xmax)<EPS or abs(point[1]-ymin)<EPS or abs(point[1]-ymax)<EPS)
+            inside=xmin-EPS<=point[0]<=xmax+EPS and ymin-EPS<=point[1]<=ymax+EPS
+            if not (inside and on_boundary):
+                choices=[]
+                boundary_points=([(x,float(y)) for x in (xmin,xmax) for y in range(math.floor(ymin)+1,math.ceil(ymax))]+
+                                 [(float(x),y) for y in (ymin,ymax) for x in range(math.floor(xmin)+1,math.ceil(xmax))])
+                for q in boundary_points:
+                    if not allowed_points([q],region)[0] or any(math.dist(q,p)<.16-EPS for p in occupied):continue
+                    if any(_on(q,a,b) for p in [*reserved,*curves] if not p.get('curve_controls') for a,b in zip(p['points'],p['points'][1:])):continue
+                    choices.append((abs(q[0]-point[0])+abs(q[1]-point[1]),q))
+                if not choices:raise ValueError('No boundary position for cytosolic sink: '+key)
+                xy[key]=list(min(choices)[1])
+            occupied.add(tuple(xy[key]));continue
+        conflict=not (xmin+.16<point[0]<xmax-.16 and ymin+.16<point[1]<ymax-.16) or any(_on(point,a,b) for p in [*reserved,*curves] if not p.get('curve_controls') for a,b in zip(p['points'],p['points'][1:])) or any(math.dist(point,q)<.16-EPS for q in occupied)
         if conflict:
             candidates=[]
-            for x in range(1,cols-1):
-                for y in range(1,rows-1):
+            for x in range(math.floor(xmin)+1,math.ceil(xmax)):
+                for y in range(math.floor(ymin)+1,math.ceil(ymax)):
                     q=[float(x),float(y)]
                     if not allowed_points([q],region)[0] or any(math.dist(q,p)<.16-EPS for p in occupied):continue
                     if any(_on(q,a,b) for p in [*reserved,*curves] if not p.get('curve_controls') for a,b in zip(p['points'],p['points'][1:])):continue
