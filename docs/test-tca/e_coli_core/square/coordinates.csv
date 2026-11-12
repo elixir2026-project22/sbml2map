@@ -19,7 +19,7 @@ met:6pgc_c,metabolite,6pgc_c,8.0,13.0,True
 met:6pgl_c,metabolite,6pgl_c,5.0,14.0,True
 met:ac_c,metabolite,ac_c,6.0,13.0,True
 met:pyr_c,metabolite,pyr_c,1.0,5.0,True
-met:pyr_e,metabolite,pyr_e,12.0,5.0,True
+met:pyr_e,metabolite,pyr_e,1.0,1.0,True
 met:r5p_c,metabolite,r5p_c,9.0,13.0,True
 met:ru5p__D_c,metabolite,ru5p__D_c,3.0,13.0,True
 met:ac_e,metabolite,ac_e,12.0,13.0,True
@@ -150,7 +150,7 @@ rxn:EX_gln__L_e,reaction,EX_gln__L_e,13.0,15.0,True
 rxn:EX_glu__L_e,reaction,EX_glu__L_e,13.0,10.0,True
 rxn:EX_lac__D_e,reaction,EX_lac__D_e,13.0,16.0,True
 rxn:EX_mal__L_e,reaction,EX_mal__L_e,0.0,3.0,True
-rxn:EX_pyr_e,reaction,EX_pyr_e,13.0,5.0,True
+rxn:EX_pyr_e,reaction,EX_pyr_e,1.0,0.0,True
 rxn:EX_succ_e,reaction,EX_succ_e,6.0,26.0,True
 rxn:FBA,reaction,FBA,1.0,18.0,True
 rxn:FBP,reaction,FBP,9.0,14.0,True

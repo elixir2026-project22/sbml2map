@@ -46,7 +46,7 @@ met:for_c,metabolite,for_c,17.0,22.0,True
 met:for_e,metabolite,for_e,1.0,22.0,True
 met:fru_e,metabolite,fru_e,2.0,40.0,True
 met:fum_c,metabolite,fum_c,5.5,15.5,False
-met:fum_e,metabolite,fum_e,1.0,15.5,False
+met:fum_e,metabolite,fum_e,5.5,1.0,False
 met:g3p_c,metabolite,g3p_c,1.0,35.0,True
 met:g6p_c,metabolite,g6p_c,1.0,43.0,True
 rxn:PFK,reaction,PFK,1.0,40.0,True
@@ -144,7 +144,7 @@ rxn:EX_akg_e,reaction,EX_akg_e,0.0,17.0,True
 rxn:EX_etoh_e,reaction,EX_etoh_e,0.0,24.0,True
 rxn:EX_for_e,reaction,EX_for_e,0.0,22.0,True
 rxn:EX_fru_e,reaction,EX_fru_e,0.0,40.0,True
-rxn:EX_fum_e,reaction,EX_fum_e,0.0,15.5,False
+rxn:EX_fum_e,reaction,EX_fum_e,5.5,0.0,False
 rxn:EX_glc__D_e,reaction,EX_glc__D_e,1.0,46.0,True
 rxn:EX_gln__L_e,reaction,EX_gln__L_e,30.0,24.0,True
 rxn:EX_glu__L_e,reaction,EX_glu__L_e,30.0,22.0,True

@@ -13,8 +13,27 @@
         "crossing_constraints": {
           "red_red": 0,
           "red_orange": 0,
-          "orange_orange": 154,
-          "hard_verified": true
+          "orange_orange": 202,
+          "hard_verified": true,
+          "boundary_validation": {
+            "boundary": [
+              0,
+              30,
+              0,
+              46
+            ],
+            "outside_path_count": 0,
+            "outside_paths": [],
+            "all_colors_checked": true,
+            "cubic_extrema_checked": true,
+            "verified": true,
+            "route_extents": [
+              0.0,
+              30.0,
+              0.0,
+              46.0
+            ]
+          }
         },
         "schema_valid": true,
         "metadata_embedded": true,
@@ -22,14 +41,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 447,
+        "nodes": 448,
         "source_nodes": 220,
-        "routing_nodes": 227,
+        "routing_nodes": 228,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 480,
+        "segments": 481,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -80,18 +99,91 @@
         "shape": "circle",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 154,
+        "orange_orange": 202,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
-        "orange_length_grid": 472.2695234599998,
+        "boundary_validation": {
+          "boundary": [
+            0,
+            30,
+            0,
+            46
+          ],
+          "outside_path_count": 0,
+          "outside_paths": [],
+          "all_colors_checked": true,
+          "cubic_extrema_checked": true,
+          "verified": true,
+          "route_extents": [
+            0.0,
+            30.0,
+            0.0,
+            46.0
+          ]
+        },
+        "exchange_envelope": [
+          0.0,
+          30.0,
+          0.0,
+          46.0
+        ],
+        "exchange_entry_inward": true,
+        "orange_length_grid": 557.8463722999999,
         "orange_crossings_optimized": false,
         "orange_candidates": 12,
         "global_optimality_proven": false
       },
       "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755.",
-      "orange_length_grid": 472.2695234599998,
-      "previous_orange_length_grid": 738.8116308923055,
-      "orange_length_reduction_fraction": 0.36077140137924923
+      "orange_length_grid": 557.8463722999999,
+      "previous_orange_length_grid": 472.2695234599998,
+      "boundary_validation": {
+        "boundary": [
+          0,
+          30,
+          0,
+          46
+        ],
+        "outside_path_count": 0,
+        "outside_paths": [],
+        "all_colors_checked": true,
+        "cubic_extrema_checked": true,
+        "verified": true,
+        "route_extents": [
+          0.0,
+          30.0,
+          0.0,
+          46.0
+        ]
+      },
+      "exchange_envelope": [
+        0.0,
+        30.0,
+        0.0,
+        46.0
+      ],
+      "exchange_boundary_adjustments": [
+        {
+          "face": "bottom",
+          "exchange": "rxn:EX_fum_e",
+          "external": "met:fum_e",
+          "old_exchange": [
+            0.0,
+            15.5
+          ],
+          "old_external": [
+            1.0,
+            15.5
+          ],
+          "new_exchange": [
+            5.5,
+            0.0
+          ],
+          "new_external": [
+            5.5,
+            1.0
+          ]
+        }
+      ]
     },
     {
       "shape": "square",
@@ -103,8 +195,27 @@
         "crossing_constraints": {
           "red_red": 0,
           "red_orange": 0,
-          "orange_orange": 68,
-          "hard_verified": true
+          "orange_orange": 90,
+          "hard_verified": true,
+          "boundary_validation": {
+            "boundary": [
+              0,
+              13,
+              0,
+              26
+            ],
+            "outside_path_count": 0,
+            "outside_paths": [],
+            "all_colors_checked": true,
+            "cubic_extrema_checked": true,
+            "verified": true,
+            "route_extents": [
+              0.0,
+              13.0,
+              0.0,
+              26.0
+            ]
+          }
         },
         "schema_valid": true,
         "metadata_embedded": true,
@@ -112,14 +223,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 431,
+        "nodes": 435,
         "source_nodes": 220,
-        "routing_nodes": 211,
+        "routing_nodes": 215,
         "orthogonal_segments_verified": true,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 0,
         "reactions": 84,
-        "segments": 464,
+        "segments": 468,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -147,19 +258,92 @@
         "shape": "square",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 68,
+        "orange_orange": 90,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
-        "orange_length_grid": 265.34586786,
+        "boundary_validation": {
+          "boundary": [
+            0,
+            13,
+            0,
+            26
+          ],
+          "outside_path_count": 0,
+          "outside_paths": [],
+          "all_colors_checked": true,
+          "cubic_extrema_checked": true,
+          "verified": true,
+          "route_extents": [
+            0.0,
+            13.0,
+            0.0,
+            26.0
+          ]
+        },
+        "exchange_envelope": [
+          0.0,
+          13.0,
+          0.0,
+          26.0
+        ],
+        "exchange_entry_inward": true,
+        "orange_length_grid": 305.35142926,
         "orange_crossings_optimized": false,
         "orange_candidates": 12,
         "global_optimality_proven": false
       },
-      "orange_length_grid": 265.34586786,
-      "previous_orange_length_grid": 429.5054418199998,
-      "orange_length_reduction_fraction": 0.3822060397288214
+      "orange_length_grid": 305.35142926,
+      "previous_orange_length_grid": 265.34586786,
+      "boundary_validation": {
+        "boundary": [
+          0,
+          13,
+          0,
+          26
+        ],
+        "outside_path_count": 0,
+        "outside_paths": [],
+        "all_colors_checked": true,
+        "cubic_extrema_checked": true,
+        "verified": true,
+        "route_extents": [
+          0.0,
+          13.0,
+          0.0,
+          26.0
+        ]
+      },
+      "exchange_envelope": [
+        0.0,
+        13.0,
+        0.0,
+        26.0
+      ],
+      "exchange_boundary_adjustments": [
+        {
+          "face": "bottom",
+          "exchange": "rxn:EX_pyr_e",
+          "external": "met:pyr_e",
+          "old_exchange": [
+            13.0,
+            5.0
+          ],
+          "old_external": [
+            12.0,
+            5.0
+          ],
+          "new_exchange": [
+            1.0,
+            0.0
+          ],
+          "new_external": [
+            1.0,
+            1.0
+          ]
+        }
+      ]
     }
   ],
-  "crossing_policy": "red crossings forbidden; orange crossings ignored; orange total physical length first",
+  "crossing_policy": "all paths inside actual exchange envelope; red crossings forbidden; orange crossings ignored; orange length first",
   "orange_length_definition": "Sum of orange geometry, merging shared segments within the same reaction; different reactions counted separately."
 }

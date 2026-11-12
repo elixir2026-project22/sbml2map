@@ -717,10 +717,25 @@ The circle example decreased from 738.81 to 472.27 grid units; square decreased
 from 429.51 to 265.35. Global length optimality is not guaranteed.
 A hard red-constraint failure aborts output instead of silently relaxing it.
 
-A coordinate-compressed routing grid provides detour lanes outside the original
-frame. The selected routes are shared by SVG, PNG, Escher and SBML Layout;
+A coordinate-compressed routing grid provides detour lanes strictly inside the
+exchange-node boundary. All red, orange and gray paths, including cubic extrema,
+are verified against this rectangle. Boundary vertices cannot be through routes;
+exchange connections approach from the interior. Missing outer-side EX anchors
+are supplied by moving an EX node and its extracellular partner while preserving
+collinearity and keeping intracellular backbone nodes fixed. Infeasible bounded
+routing fails explicitly; no outside fallback is used. The selected routes are shared by SVG, PNG, Escher and SBML Layout;
 Escher validation reconstructs saved geometry and checks the hard constraints.
 This routing supersedes the legacy parallel-channel display reservations.
 `--crossing-policy legacy` selects the earlier routing behavior. Gray crossings
 are outside this policy. Node positions and biochemical incidence are retained.
 The examples and final counts are under `docs/test-tca/validation.json`.
+
+
+## Exchange boundary validation
+
+The current e_coli_core test drawings have zero paths outside the actual EX
+node envelope, and zero red/red or red/orange contacts. The circle boundary is
+[0,30] x [0,46]; square is [0,13] x [0,26]. Orange length is 557.85 and 305.35
+grid units respectively under the added constraint. Orange crossings are not
+optimized. `routing_boundary`, `exchange_boundary_adjustments` and the saved
+geometry's `boundary_validation` record the constraints and verification.

@@ -37,12 +37,12 @@
     "unresolved": []
   },
   "crossing_constraints": {
-    "policy": "red_crossings_forbidden_orange_length_first",
+    "policy": "exchange_boundary_red_crossings_forbidden_orange_length_first",
     "verified": true,
     "metrics": {
       "red_red": 0,
       "red_orange": 0,
-      "orange_orange": 68,
+      "orange_orange": 90,
       "hard_verified": true,
       "violations": [
         {
@@ -539,6 +539,29 @@
           "category": "orange_orange",
           "reactions": [
             "AKGt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "akg_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                3.0
+              ],
+              [
+                9.59982749,
+                7.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
             "FUMt2_2"
           ],
           "metabolites": [
@@ -669,6 +692,29 @@
               [
                 9.0,
                 14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "akg_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                20.0
+              ],
+              [
+                9.0,
+                20.0
               ]
             ]
           ]
@@ -906,6 +952,29 @@
         {
           "category": "orange_orange",
           "reactions": [
+            "ACALDt",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "acald_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                12.0
+              ],
+              [
+                9.59982749,
+                12.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
             "ACKr",
             "BIOMASS_Ecoli_core_w_GAM"
           ],
@@ -967,6 +1036,29 @@
               ],
               [
                 5.85,
+                13.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "ac_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                13.0
+              ],
+              [
+                9.59982749,
                 13.0
               ]
             ]
@@ -1183,6 +1275,29 @@
           "category": "orange_orange",
           "reactions": [
             "PYRt2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
             "FUMt2_2"
           ],
           "metabolites": [
@@ -1281,6 +1396,108 @@
         {
           "category": "orange_orange",
           "reactions": [
+            "PYRt2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                1.15,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "succ_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                0.65056365
+              ],
+              [
+                9.59982749,
+                6.00017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
             "SUCCt2_2",
             "FUMt2_2"
           ],
@@ -1348,6 +1565,29 @@
           "category": "orange_orange",
           "reactions": [
             "SUCCt2_2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "succ_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                5.85,
+                20.0
+              ],
+              [
+                5.85,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
             "LDH_D"
           ],
           "metabolites": [
@@ -1370,22 +1610,249 @@
         {
           "category": "orange_orange",
           "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
+            "D_LACt2",
+            "EX_fru_e"
           ],
           "metabolites": [
-            "fru_e",
-            "f6p_c"
+            "lac__D_e",
+            "fru_e"
           ],
           "contacts": [
             [
               [
-                1.9853194,
-                21.0
+                9.59982749,
+                16.0
               ],
               [
-                1.9853194,
-                21.0
+                9.59982749,
+                16.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "etoh_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                14.0
+              ],
+              [
+                9.59982749,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "EX_mal__L_e"
+          ],
+          "metabolites": [
+            "fru_e",
+            "mal__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.15,
+                3.0
+              ],
+              [
+                0.15,
+                3.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "EX_pyr_e"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                0.52204679
+              ],
+              [
+                1.0,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FORt"
+          ],
+          "metabolites": [
+            "fru_e",
+            "for_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                11.0
+              ],
+              [
+                9.59982749,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "fru_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                9.59982749,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                6.31021866
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "fru_e",
+            "fum_e"
+          ],
+          "contacts": [
+            [
+              [
+                3.98978134,
+                20.0
+              ],
+              [
+                3.98978134,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "fru_e",
+            "gln__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                15.0
+              ],
+              [
+                9.59982749,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "fru_e",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                10.0
+              ],
+              [
+                9.59982749,
+                10.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                9.59982749,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                6.31021866
               ]
             ]
           ]
@@ -1484,7 +1951,7 @@
     "initial_feasible_metrics": {
       "red_red": 0,
       "red_orange": 0,
-      "orange_orange": 68,
+      "orange_orange": 90,
       "hard_verified": true,
       "violations": [
         {
@@ -1981,6 +2448,29 @@
           "category": "orange_orange",
           "reactions": [
             "AKGt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "akg_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                3.0
+              ],
+              [
+                9.59982749,
+                7.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
             "FUMt2_2"
           ],
           "metabolites": [
@@ -2111,6 +2601,29 @@
               [
                 9.0,
                 14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "akg_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                20.0
+              ],
+              [
+                9.0,
+                20.0
               ]
             ]
           ]
@@ -2348,6 +2861,29 @@
         {
           "category": "orange_orange",
           "reactions": [
+            "ACALDt",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "acald_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                12.0
+              ],
+              [
+                9.59982749,
+                12.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
             "ACKr",
             "BIOMASS_Ecoli_core_w_GAM"
           ],
@@ -2409,6 +2945,29 @@
               ],
               [
                 5.85,
+                13.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "ac_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                13.0
+              ],
+              [
+                9.59982749,
                 13.0
               ]
             ]
@@ -2625,6 +3184,29 @@
           "category": "orange_orange",
           "reactions": [
             "PYRt2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
             "FUMt2_2"
           ],
           "metabolites": [
@@ -2723,6 +3305,108 @@
         {
           "category": "orange_orange",
           "reactions": [
+            "PYRt2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                1.15,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "succ_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                0.65056365
+              ],
+              [
+                9.59982749,
+                6.00017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
             "SUCCt2_2",
             "FUMt2_2"
           ],
@@ -2790,6 +3474,29 @@
           "category": "orange_orange",
           "reactions": [
             "SUCCt2_2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "succ_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                5.85,
+                20.0
+              ],
+              [
+                5.85,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
             "LDH_D"
           ],
           "metabolites": [
@@ -2812,22 +3519,249 @@
         {
           "category": "orange_orange",
           "reactions": [
-            "EX_fru_e",
-            "FRUpts2"
+            "D_LACt2",
+            "EX_fru_e"
           ],
           "metabolites": [
-            "fru_e",
-            "f6p_c"
+            "lac__D_e",
+            "fru_e"
           ],
           "contacts": [
             [
               [
-                1.9853194,
-                21.0
+                9.59982749,
+                16.0
               ],
               [
-                1.9853194,
-                21.0
+                9.59982749,
+                16.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "etoh_e",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                14.0
+              ],
+              [
+                9.59982749,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "EX_mal__L_e"
+          ],
+          "metabolites": [
+            "fru_e",
+            "mal__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.15,
+                3.0
+              ],
+              [
+                0.15,
+                3.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "EX_pyr_e"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                0.52204679
+              ],
+              [
+                1.0,
+                0.52204679
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FORt"
+          ],
+          "metabolites": [
+            "fru_e",
+            "for_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                11.0
+              ],
+              [
+                9.59982749,
+                11.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "fru_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                9.59982749,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                6.31021866
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "fru_e",
+            "fum_e"
+          ],
+          "contacts": [
+            [
+              [
+                3.98978134,
+                20.0
+              ],
+              [
+                3.98978134,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "fru_e",
+            "gln__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                15.0
+              ],
+              [
+                9.59982749,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "fru_e",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.59982749,
+                10.0
+              ],
+              [
+                9.59982749,
+                10.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_fru_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                0.52204679
+              ]
+            ],
+            [
+              [
+                9.59982749,
+                0.52204679
+              ],
+              [
+                9.59982749,
+                6.31021866
               ]
             ]
           ]
@@ -2925,9 +3859,34 @@
     },
     "nodes_moved": false,
     "grid_shape": [
-      92,
-      149
+      88,
+      148
     ],
+    "boundary": [
+      0,
+      13,
+      0,
+      26
+    ],
+    "boundary_validation": {
+      "boundary": [
+        0,
+        13,
+        0,
+        26
+      ],
+      "outside_path_count": 0,
+      "outside_paths": [],
+      "all_colors_checked": true,
+      "cubic_extrema_checked": true,
+      "verified": true,
+      "route_extents": [
+        0.0,
+        13.0,
+        0.0,
+        26.0
+      ]
+    },
     "attempts": 12,
     "objective_order": [
       "red crossings forbidden",
@@ -2935,14 +3894,14 @@
       "bends"
     ],
     "orange_crossings_optimized": false,
-    "orange_length_grid": 265.34586786,
-    "first_feasible_orange_length_grid": 266.19586786,
+    "orange_length_grid": 305.35142926,
+    "first_feasible_orange_length_grid": 306.20142926,
     "length_definition": "Union of orange segments within each reaction; different reactions count separately",
     "global_optimality_proven": false,
     "before": {
       "red_red": 53,
-      "red_orange": 55,
-      "orange_orange": 83,
+      "red_orange": 66,
+      "orange_orange": 92,
       "hard_verified": false,
       "violations": [
         {
@@ -3299,6 +4258,29 @@
           "metabolites": [
             "accoa_c",
             "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                5.0
+              ],
+              [
+                3.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_e"
           ],
           "contacts": [
             [
@@ -4290,6 +5272,29 @@
           ]
         },
         {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                5.0
+              ],
+              [
+                3.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
           "category": "red_orange",
           "reactions": [
             "ACALD",
@@ -4390,6 +5395,29 @@
           "metabolites": [
             "akg_c",
             "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                5.0
+              ],
+              [
+                9.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "pyr_e"
           ],
           "contacts": [
             [
@@ -5187,6 +6215,29 @@
           ]
         },
         {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTb",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "icit_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                5.0
+              ],
+              [
+                9.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
           "category": "orange_orange",
           "reactions": [
             "ACt2r",
@@ -5264,6 +6315,29 @@
           "metabolites": [
             "accoa_c",
             "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                5.0
+              ],
+              [
+                3.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_e"
           ],
           "contacts": [
             [
@@ -5504,6 +6578,29 @@
               [
                 1.0,
                 6.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYK",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                5.0
+              ],
+              [
+                1.0,
+                5.0
               ]
             ]
           ]
@@ -5999,6 +7096,328 @@
           ],
           "metabolites": [
             "pyr_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                5.0
+              ],
+              [
+                2.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "CS"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                5.0
+              ],
+              [
+                3.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.0,
+                5.0
+              ],
+              [
+                6.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "EX_mal__L_e"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "mal__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                3.0
+              ],
+              [
+                1.0,
+                3.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                5.0
+              ],
+              [
+                1.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "icit_c"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                5.0
+              ],
+              [
+                9.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                5.0
+              ],
+              [
+                1.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "mal__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                3.0
+              ],
+              [
+                1.0,
+                3.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "MDH"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                5.0
+              ],
+              [
+                3.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "coa_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                5.0
+              ],
+              [
+                2.4498274933083937,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "nad_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.8353193965216104,
+                5.0
+              ],
+              [
+                2.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "nadh_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.8351344588266256,
+                5.0
+              ],
+              [
+                2.0,
+                5.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_e",
             "pyr_c"
           ],
           "contacts": [
@@ -7654,6 +9073,6 @@
     "copy:PDH:nad_c": 0,
     "copy:PDH:nadh_c": 0
   },
-  "original_route_length": 944.6999999999981,
-  "display_route_length": 1015.84983508
+  "original_route_length": 955.6999999999981,
+  "display_route_length": 1069.6613029
 }

@@ -15,7 +15,7 @@ import numpy as np
 from tca_curves import arc_controls, curved_pairs, sample_curve
 
 EPS=1e-7
-POLICY='red_crossings_forbidden_orange_length_first'
+POLICY='exchange_boundary_red_crossings_forbidden_orange_length_first'
 
 
 def clean(points):
@@ -134,6 +134,30 @@ def orange_length(paths):
     return total
 
 
+def validate_boundary(paths,boundary):
+    """Check all colors; cubic extrema, rather than only endpoints, are tested."""
+    xmin,xmax,ymin,ymax=boundary
+    bad=[];extents=[]
+    for path in paths:
+        points=list(path['points'])
+        if path.get('curve_controls'):
+            controls=[points[0],*path['curve_controls'],points[-1]]
+            for axis in (0,1):
+                p0,p1,p2,p3=[p[axis] for p in controls]
+                polynomial=[3*(-p0+3*p1-3*p2+p3),2*(3*p0-6*p1+3*p2),-3*p0+3*p1]
+                first=next((i for i,v in enumerate(polynomial) if abs(v)>1e-12),len(polynomial))
+                for root in np.roots(polynomial[first:]) if first<len(polynomial) else ():
+                    if abs(root.imag)<EPS and 0<root.real<1:
+                        t=float(root.real);points.append(tuple(sum(w*p[a] for w,p in zip(((1-t)**3,3*(1-t)**2*t,3*(1-t)*t*t,t**3),controls)) for a in (0,1)))
+        extents.extend(points)
+        if any(not (xmin-EPS<=p[0]<=xmax+EPS and ymin-EPS<=p[1]<=ymax+EPS) for p in points):
+            bad.append(dict(reaction_id=path['rid'],metabolite_id=path['mid'],priority=path['priority']))
+    result=dict(boundary=list(boundary),outside_path_count=len(bad),outside_paths=bad,all_colors_checked=True,cubic_extrema_checked=True,verified=not bad)
+    if extents:result['route_extents']=[min(p[0] for p in extents),max(p[0] for p in extents),min(p[1] for p in extents),max(p[1] for p in extents)]
+    if bad:raise ValueError('Paths extend beyond the exchange boundary: '+str(bad))
+    return result
+
+
 def initial_paths(nodes,edges,xy,backbones,major):
     orange=set((backbones.get('exchange_connectors') or {}).get('edge_indices',()))
     curves=curved_pairs(backbones);region=backbones.get('tca_exclusion',{}).get('region')
@@ -151,13 +175,18 @@ def initial_paths(nodes,edges,xy,backbones,major):
 
 
 class RoutingGrid:
-    def __init__(self,paths,xy,margin=3.):
+    def __init__(self,paths,xy,margin=3.,boundary=None):
         self.paths=paths;self.xy=xy
         self.keys={k for p in paths if p['priority'] for k in (p['source'],p['target'])}
         positions=[xy[k] for k in self.keys]
         # Coordinate compression offers local lanes without a huge uniform raster.
         self.x=np.array(sorted({round(p[0]+d,8) for p in positions for d in (-.15,0,.15)}|{min(p[0] for p in positions)-margin,max(p[0] for p in positions)+margin}))
         self.y=np.array(sorted({round(p[1]+d,8) for p in positions for d in (-.15,0,.15)}|{min(p[1] for p in positions)-margin,max(p[1] for p in positions)+margin}))
+        self.boundary=boundary
+        if boundary is not None:
+            xmin,xmax,ymin,ymax=boundary
+            self.x=np.array(sorted({xmin,xmax,xmin+.15,xmax-.15}|{float(v) for v in self.x if xmin-EPS<=v<=xmax+EPS}))
+            self.y=np.array(sorted({ymin,ymax,ymin+.15,ymax-.15}|{float(v) for v in self.y if ymin-EPS<=v<=ymax+EPS}))
         self.nx=len(self.x);self.ny=len(self.y);self.size=self.nx*self.ny
         self.node=np.zeros(self.size,dtype=bool)
         self.lookup={k:self.index(p) for k,p in xy.items() if k in self.keys}
@@ -195,6 +224,13 @@ class RoutingGrid:
 
     def masks(self,path):
         blocked=self.node.copy();start=self.lookup[path['source']];end=self.lookup[path['target']];blocked[[start,end]]=False
+        if self.boundary is not None:
+            # Boundary lanes cannot serve as through routes. EX endpoints only
+            # connect to an inward neighbor; the outer side never exists.
+            blocked[:self.nx]=True;blocked[-self.nx:]=True
+            blocked[::self.nx]=True;blocked[self.nx-1::self.nx]=True
+            blocked[[start,end]]=False
+
         hard_h=self.arc_h.copy();hard_v=self.arc_v.copy()
         for key,events in self.events.items():
             allowed=0
@@ -255,10 +291,12 @@ class RoutingGrid:
         return None
 
 
-def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17):
+def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17,boundary=None):
     important=[p for p in paths if p['priority'] and not p.get('curve_controls')]
-    if not important:return dict(policy=POLICY,verified=True,metrics=measure(paths),nodes_moved=False,attempts=0)
-    grid=RoutingGrid(paths,xy,margin)
+    if boundary is not None:validate_boundary(paths,boundary)
+    if not important:return dict(policy=POLICY,verified=True,metrics=measure(paths),nodes_moved=False,attempts=0,
+        boundary=boundary,boundary_validation=validate_boundary(paths,boundary) if boundary is not None else None,orange_length_grid=orange_length(paths),orange_crossings_optimized=False)
+    grid=RoutingGrid(paths,xy,margin,boundary)
     ordered=sorted(important,key=lambda p:(-p['priority'],not p['backbone'],math.dist(p['points'][0],p['points'][-1]),p['rid'],p['mid']))
     for index,path in enumerate(ordered):
         trace=grid.search(path)
@@ -294,6 +332,7 @@ def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17):
     for path in important:path['points']=best_points[id(path)]
     metrics=measure(paths)
     return dict(policy=POLICY,verified=metrics['hard_verified'],metrics=metrics,initial_feasible_metrics=baseline,nodes_moved=False,grid_shape=[grid.nx,grid.ny],
+                boundary=boundary,boundary_validation=validate_boundary(paths,boundary) if boundary is not None else None,
                 attempts=attempts,objective_order=['red crossings forbidden','orange total physical length','bends'],
                 orange_crossings_optimized=False,orange_length_grid=orange_length(paths),first_feasible_orange_length_grid=first_length,
                 length_definition='Union of orange segments within each reaction; different reactions count separately',global_optimality_proven=False)
@@ -302,7 +341,8 @@ def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17):
 def plan_routes(nodes,edges,xy,backbones,major,attempts=24,progress=print):
     paths=initial_paths(nodes,edges,xy,backbones,major)
     before=measure(paths)
-    report=route(paths,xy,progress=progress,attempts=attempts)
+    boundary=backbones.get('routing_boundary')
+    report=route(paths,xy,progress=progress,attempts=attempts,boundary=boundary)
     report['before']=before
     if not report['verified']:
         raise ValueError('Hard red crossing constraints are infeasible in the current embedding: '+str(report))
@@ -376,5 +416,7 @@ def validate_saved_geometry(data,metadata=None):
                 p['curve_controls']=[inverse(c) for c in controls]
             paths.append(p)
     result=measure(paths)
+    boundary=backbones.get('routing_boundary')
+    if boundary is not None:result['boundary_validation']=validate_boundary(paths,boundary)
     if not result['hard_verified']:raise ValueError('Saved geometry violates hard red crossing constraints: '+str(result['violations']))
     return {k:v for k,v in result.items() if k!='violations'}

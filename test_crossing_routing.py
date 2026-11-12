@@ -1,7 +1,7 @@
 """Crossing constraints include touching, overlaps and circular Beziers."""
 import copy
 import unittest
-from crossing_routing import measure,route,orange_length
+from crossing_routing import measure,route,orange_length,validate_boundary
 from tca_curves import arc_controls
 
 
@@ -77,3 +77,45 @@ class CrossingRoutingTests(unittest.TestCase):
         self.assertAlmostEqual(orange_length(paths),4)
         paths.append(path('OTHER','c','d',(0,0),(2,0),priority=1))
         self.assertAlmostEqual(orange_length(paths),6)
+
+
+    def test_boundary_covers_gray_lines_and_curve_extrema(self):
+        gray=path('G','a','b',(0,.5),(1,.5),priority=0,points=[(0,.5),(-.1,.5),(-.1,.8),(1,.8),(1,.5)])
+        with self.assertRaisesRegex(ValueError,'exchange boundary'):validate_boundary([gray],[0,1,0,1])
+        curve=path('TCA','a','b',(.2,.5),(.8,.5))
+        curve['curve_controls']=[(.2,2),(.8,2)]
+        with self.assertRaisesRegex(ValueError,'exchange boundary'):validate_boundary([curve],[0,1,0,1])
+        # Controls can lie outside while the actual curve stays inside.
+        curve['curve_controls']=[(.2,1.1),(.8,1.1)]
+        self.assertTrue(validate_boundary([curve],[0,1,0,1])['verified'])
+
+    def test_bounded_detour_keeps_red_crossings_zero(self):
+        paths=[path('A','a','b',(.5,1),(1.5,1)),path('B','c','d',(1,.5),(1,1.5),priority=1)]
+        xy={k:p for q in paths for k,p in [(q['source'],q['points'][0]),(q['target'],q['points'][-1])]}
+        result=route(paths,xy,boundary=[0,2,0,2],attempts=1,progress=lambda *a,**k:None)
+        self.assertTrue(result['verified']);self.assertTrue(result['boundary_validation']['verified'])
+        self.assertEqual(result['boundary_validation']['outside_path_count'],0)
+
+    def test_bounded_infeasibility_never_escapes_outside(self):
+        paths=[path('A','a','b',(0,1),(2,1)),path('B','c','d',(1,0),(1,2),priority=1)]
+        xy={k:p for q in paths for k,p in [(q['source'],q['points'][0]),(q['target'],q['points'][-1])]}
+        result=route(paths,xy,boundary=[0,2,0,2],attempts=0,progress=lambda *a,**k:None)
+        self.assertFalse(result['verified'])
+        validate_boundary(paths,[0,2,0,2])
+
+    def test_exchange_boundary_entry_points_inward(self):
+        paths=[path('EX','exchange','external',(1,2),(1,1))]
+        xy=dict(exchange=(1,2),external=(1,1))
+        result=route(paths,xy,boundary=[0,2,0,2],attempts=0,progress=lambda *a,**k:None)
+        self.assertTrue(result['verified']);self.assertEqual(paths[0]['points'][1][0],1)
+        self.assertLess(paths[0]['points'][1][1],2)
+
+    def test_exchange_envelope_matches_routing_rectangle(self):
+        from exchange_alignment import anchor_exchange_boundary,validate_alignment
+        xy={'e0':[0,2],'a0':[1,2],'i0':[2,2], 'e1':[0,4],'a1':[1,4],'i1':[2,4],
+            'e2':[6,3],'a2':[5,3],'i2':[4,3], 'e3':[3,6],'a3':[3,5],'i3':[3,4]}
+        before=copy.deepcopy(xy);groups=[dict(reaction_id=str(i),exchange='e'+str(i),external='a'+str(i),internal='i'+str(i)) for i in range(4)]
+        changes=anchor_exchange_boundary(groups,{'e0','e1','e2','e3'},xy,7,7)
+        self.assertEqual(len(changes),1);self.assertEqual(changes[0]['face'],'bottom')
+        self.assertTrue(validate_alignment(groups,xy,7,7)['verified'])
+        for i in range(4):self.assertEqual(xy['i'+str(i)],before['i'+str(i)])

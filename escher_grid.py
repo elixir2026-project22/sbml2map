@@ -753,6 +753,15 @@ def run(args):
     if args.grid_cols is not None and args.grid_rows is not None:
         backbones['render_frame']=[0,cols-1,0,rows-1]
     attach_coenzymes(nodes, xy, grid_shape=(cols, rows),forbidden_region=tca_region)
+    if getattr(args,'crossing_policy','legacy')=='red-hard':
+        from exchange_alignment import anchor_exchange_boundary
+        adjustments=anchor_exchange_boundary(alignment_groups,exchange_nodes,xy,cols,rows,tca_region)
+        backbones['exchange_boundary_adjustments']=adjustments
+        if adjustments:
+            placement['objective_before_exchange_boundary_adjustment']=placement['objective']
+            if connectors:placement['objective']=connector_cost(connectors,edges,xy)
+            placement['global_optimality_proven']=False
+            placement.pop('relative_gap',None)
     tca_exclusion = validate_exclusion(nodes,xy,tca_region)
     backbones['tca_exclusion'] = tca_exclusion
     from exchange_alignment import validate_alignment
@@ -791,6 +800,7 @@ def run(args):
         if reaction['metabolites'] != expected:
             raise RuntimeError('Visible stoichiometry differs from source')
     if getattr(args,'crossing_policy','legacy')=='red-hard':
+        backbones['routing_boundary']=[0,cols-1,0,rows-1]
         from crossing_routing import plan_routes
         backbones['crossing_routing']=plan_routes(nodes,edges,xy,backbones,major_reactions,
             attempts=getattr(args,'crossing_attempts',24))
