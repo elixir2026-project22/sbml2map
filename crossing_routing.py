@@ -177,11 +177,14 @@ def initial_paths(nodes,edges,xy,backbones,major):
 class RoutingGrid:
     def __init__(self,paths,xy,margin=3.,boundary=None):
         self.paths=paths;self.xy=xy
-        self.keys={k for p in paths if p['priority'] for k in (p['source'],p['target'])}
+        self.keys={k for p in paths if p['priority'] or p.get('straight_locked') for k in (p['source'],p['target'])}
         positions=[xy[k] for k in self.keys]
         # Coordinate compression offers local lanes without a huge uniform raster.
         self.x=np.array(sorted({round(p[0]+d,8) for p in positions for d in (-.15,0,.15)}|{min(p[0] for p in positions)-margin,max(p[0] for p in positions)+margin}))
         self.y=np.array(sorted({round(p[1]+d,8) for p in positions for d in (-.15,0,.15)}|{min(p[1] for p in positions)-margin,max(p[1] for p in positions)+margin}))
+        fixed_points=[point for p in paths if p.get('red_fixed') for point in p['points']]
+        self.x=np.array(sorted(set(self.x)|{float(p[0]) for p in fixed_points}))
+        self.y=np.array(sorted(set(self.y)|{float(p[1]) for p in fixed_points}))
         self.boundary=boundary
         if boundary is not None:
             xmin,xmax,ymin,ymax=boundary
@@ -246,7 +249,7 @@ class RoutingGrid:
             if trace is None:continue
             if other['rid']==path['rid']:
                 oh,ov=own_h,own_v
-            elif other['priority']==2:
+            elif other['priority']==2 or (path['priority']==2 and other.get('straight_locked')):
                 blocked[trace]=True;oh,ov=hard_h,hard_v
             else:
                 soft[trace]+=1;oh,ov=soft_h,soft_v
@@ -292,12 +295,20 @@ class RoutingGrid:
 
 
 def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17,boundary=None):
-    important=[p for p in paths if p['priority'] and not p.get('curve_controls')]
+    important=[p for p in paths if (p['priority'] or p.get('straight_locked')) and not p.get('curve_controls')]
     if boundary is not None:validate_boundary(paths,boundary)
     if not important:return dict(policy=POLICY,verified=True,metrics=measure(paths),nodes_moved=False,attempts=0,
         boundary=boundary,boundary_validation=validate_boundary(paths,boundary) if boundary is not None else None,orange_length_grid=orange_length(paths),orange_crossings_optimized=False)
     grid=RoutingGrid(paths,xy,margin,boundary)
-    ordered=sorted(important,key=lambda p:(-p['priority'],not p['backbone'],math.dist(p['points'][0],p['points'][-1]),p['rid'],p['mid']))
+    locked=[p for p in important if p.get('straight_locked') or p.get('red_fixed')]
+    for p in locked:
+        trace=[]
+        for first,last in zip(p['points'],p['points'][1:]):
+            a,b=grid.index(first),grid.index(last)
+            step=(1 if b>a else -1) if a//grid.nx==b//grid.nx else (grid.nx if b>a else -grid.nx)
+            trace.extend(range(a,b,step))
+        trace.append(grid.index(p['points'][-1]));grid.reserve(p,trace)
+    ordered=sorted([p for p in important if not p.get('straight_locked') and not p.get('red_fixed')],key=lambda p:(-p['priority'],not p['backbone'],math.dist(p['points'][0],p['points'][-1]),p['rid'],p['mid']))
     for index,path in enumerate(ordered):
         trace=grid.search(path)
         if trace is None:
@@ -313,7 +324,7 @@ def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17,boundary=None):
                 sum(len(p['points'])-2 for p in paths if p['priority']==1))
     best_score=score();best_points={id(p):list(p['points']) for p in important}
     orange=[p for p in ordered if p['priority']==1]
-    red_traces={id(p):grid.traces[id(p)] for p in ordered if p['priority']==2}
+    red_traces={id(p):grid.traces[id(p)] for p in important if p['priority']==2 or p.get('straight_locked')}
     generator=random.Random(seed)
     for attempt in range(attempts):
         grid.traces=dict(red_traces)
@@ -340,10 +351,26 @@ def route(paths,xy,margin=3.,progress=print,attempts=24,seed=17,boundary=None):
 
 def plan_routes(nodes,edges,xy,backbones,major,attempts=24,progress=print):
     paths=initial_paths(nodes,edges,xy,backbones,major)
+    red_phase=backbones.get('red_first')
+    if red_phase:
+        saved={(p['rid'],p['mid']):p for p in red_phase['routes']}
+        for path in paths:
+            if path['priority']==2:
+                record=saved[path['rid'],path['mid']]
+                path['points']=list(record['points']);path['red_fixed']=True
+    corridors=backbones.get('exchange_corridors')
+    if corridors:
+        from exchange_corridors import lock_corridor_paths
+        lock_corridor_paths(paths,corridors)
     before=measure(paths)
     boundary=backbones.get('routing_boundary')
     report=route(paths,xy,progress=progress,attempts=attempts,boundary=boundary)
     report['before']=before
+    report['red_first']=bool(red_phase)
+    if red_phase:report['red_routes_preserved']=all(p['points']==saved[p['rid'],p['mid']]['points'] for p in paths if p['priority']==2)
+    if report['verified'] and corridors:
+        from exchange_corridors import validate_corridors
+        report['straight_exchange_validation']=validate_corridors(paths,corridors)
     if not report['verified']:
         raise ValueError('Hard red crossing constraints are infeasible in the current embedding: '+str(report))
     return dict(routes=paths,report=report,signature=hashlib.sha256(json.dumps(paths,sort_keys=True).encode()).hexdigest()[:24])
@@ -418,5 +445,8 @@ def validate_saved_geometry(data,metadata=None):
     result=measure(paths)
     boundary=backbones.get('routing_boundary')
     if boundary is not None:result['boundary_validation']=validate_boundary(paths,boundary)
+    if backbones.get('exchange_corridors'):
+        from exchange_corridors import validate_corridors
+        result['straight_exchange_validation']=validate_corridors(paths,backbones['exchange_corridors'])
     if not result['hard_verified']:raise ValueError('Saved geometry violates hard red crossing constraints: '+str(result['violations']))
     return {k:v for k,v in result.items() if k!='violations'}

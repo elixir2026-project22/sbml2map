@@ -727,7 +727,8 @@ routing fails explicitly; no outside fallback is used. The selected routes are s
 Escher validation reconstructs saved geometry and checks the hard constraints.
 This routing supersedes the legacy parallel-channel display reservations.
 `--crossing-policy legacy` selects the earlier routing behavior. Gray crossings
-are outside this policy. Node positions and biochemical incidence are retained.
+are outside this policy. Red geometry and biochemical incidence are retained;
+other ordinary nodes may move to clear straight exchange corridors.
 The examples and final counts are under `docs/test-tca/validation.json`.
 
 
@@ -739,3 +740,25 @@ node envelope, and zero red/red or red/orange contacts. The circle boundary is
 grid units respectively under the added constraint. Orange crossings are not
 optimized. `routing_boundary`, `exchange_boundary_adjustments` and the saved
 geometry's `boundary_validation` record the constraints and verification.
+
+
+## Red-first layout and mandatory straight exchanges
+
+Red node positions and red routes are computed first, then frozen. Exchange
+corridors are placed on a clear outer face around that saved red geometry.
+The default `--exchange-alignment collinear` now locks geometry, not just node
+coordinates. Existing EX/extracellular/cytosolic triples use a real primary
+transport reaction on the same axis. Alternate source transports are retained.
+If no corresponding cytosolic species exists, only EX/extracellular endpoints
+are aligned; no species or connection is fabricated. Ambiguous correspondence
+and undisplayed existing counterparts fail explicitly. Cytosolic sinks are not
+misclassified as extracellular exchange pairs.
+
+For e_coli_core, 12 triples and 2 pairs give 38 locked straight incidences.
+EX_fru_e is (2,46), fru_e is (2,40), and their saved connection is a straight
+6-grid-unit segment. Other ordinary nodes are moved away from the reserved
+corridors while TCA and all red endpoints are retained. The same saved red
+routes are reused by every renderer and checked again after serialization.
+`straight_exchange_validation`, `exchange_corridors`, `red_first` and
+`red_routes_preserved` record these guarantees. The current test drawings use
+4 orange length candidates; the default remains 12.

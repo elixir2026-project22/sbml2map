@@ -13,7 +13,7 @@
         "crossing_constraints": {
           "red_red": 0,
           "red_orange": 0,
-          "orange_orange": 202,
+          "orange_orange": 59,
           "hard_verified": true,
           "boundary_validation": {
             "boundary": [
@@ -33,6 +33,13 @@
               0.0,
               46.0
             ]
+          },
+          "straight_exchange_validation": {
+            "verified": true,
+            "groups": 14,
+            "triplets": 12,
+            "pairs": 2,
+            "straight_incidences": 38
           }
         },
         "schema_valid": true,
@@ -41,14 +48,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 448,
+        "nodes": 421,
         "source_nodes": 220,
-        "routing_nodes": 228,
+        "routing_nodes": 201,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 481,
+        "segments": 454,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -99,9 +106,17 @@
         "shape": "circle",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 202,
+        "orange_orange": 59,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
+        "straight_exchange_validation": {
+          "verified": true,
+          "groups": 14,
+          "triplets": 12,
+          "pairs": 2,
+          "straight_incidences": 38
+        },
+        "red_routes_preserved": true,
         "boundary_validation": {
           "boundary": [
             0,
@@ -128,14 +143,14 @@
           46.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 557.8463722999999,
+        "orange_length_grid": 340.80877544,
         "orange_crossings_optimized": false,
-        "orange_candidates": 12,
+        "orange_candidates": 4,
         "global_optimality_proven": false
       },
       "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755.",
-      "orange_length_grid": 557.8463722999999,
-      "previous_orange_length_grid": 472.2695234599998,
+      "orange_length_grid": 340.80877544,
+      "previous_orange_length_grid": 557.8463722999999,
       "boundary_validation": {
         "boundary": [
           0,
@@ -161,29 +176,1114 @@
         0.0,
         46.0
       ],
-      "exchange_boundary_adjustments": [
-        {
-          "face": "bottom",
-          "exchange": "rxn:EX_fum_e",
-          "external": "met:fum_e",
-          "old_exchange": [
-            0.0,
-            15.5
-          ],
-          "old_external": [
-            1.0,
-            15.5
-          ],
-          "new_exchange": [
-            5.5,
-            0.0
-          ],
-          "new_external": [
-            5.5,
-            1.0
-          ]
-        }
-      ]
+      "straight_exchange_validation": {
+        "verified": true,
+        "groups": 14,
+        "triplets": 12,
+        "pairs": 2,
+        "straight_incidences": 38
+      },
+      "red_first": true,
+      "red_routes_preserved": true,
+      "exchange_corridors": {
+        "groups": [
+          {
+            "reaction_id": "EX_glc__D_e",
+            "exchange": "rxn:EX_glc__D_e",
+            "external": "met:glc__D_e",
+            "transports": [],
+            "kind": "pair",
+            "reason": "No corresponding cytosolic species exists in the source model",
+            "face": "top",
+            "primary_transport": null,
+            "node_ids": [
+              "rxn:EX_glc__D_e",
+              "met:glc__D_e"
+            ],
+            "corridor": [
+              [
+                1.0,
+                46.0
+              ],
+              [
+                1.0,
+                45.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_akg_e",
+            "exchange": "rxn:EX_akg_e",
+            "external": "met:akg_e",
+            "internal": "met:akg_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "AKGt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "AKGt2r",
+            "node_ids": [
+              "rxn:EX_akg_e",
+              "met:akg_c",
+              "met:akg_e",
+              "rxn:AKGt2r"
+            ],
+            "corridor": [
+              [
+                30.0,
+                17.0
+              ],
+              [
+                16.0,
+                17.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_fum_e",
+            "exchange": "rxn:EX_fum_e",
+            "external": "met:fum_e",
+            "internal": "met:fum_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "FUMt2_2"
+            ],
+            "kind": "triplet",
+            "face": "left",
+            "primary_transport": "FUMt2_2",
+            "node_ids": [
+              "rxn:EX_fum_e",
+              "met:fum_c",
+              "met:fum_e",
+              "rxn:FUMt2_2"
+            ],
+            "corridor": [
+              [
+                0.0,
+                15.5
+              ],
+              [
+                5.5,
+                15.5
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_mal__L_e",
+            "exchange": "rxn:EX_mal__L_e",
+            "external": "met:mal__L_e",
+            "internal": "met:mal__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "MALt2_2"
+            ],
+            "kind": "triplet",
+            "face": "left",
+            "primary_transport": "MALt2_2",
+            "node_ids": [
+              "rxn:EX_mal__L_e",
+              "met:mal__L_c",
+              "met:mal__L_e",
+              "rxn:MALt2_2"
+            ],
+            "corridor": [
+              [
+                0.0,
+                18.5
+              ],
+              [
+                4.0,
+                18.5
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_pyr_e",
+            "exchange": "rxn:EX_pyr_e",
+            "external": "met:pyr_e",
+            "internal": "met:pyr_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "PYRt2"
+            ],
+            "kind": "triplet",
+            "face": "bottom",
+            "primary_transport": "PYRt2",
+            "node_ids": [
+              "rxn:EX_pyr_e",
+              "met:pyr_c",
+              "met:pyr_e",
+              "rxn:PYRt2"
+            ],
+            "corridor": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                25.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_succ_e",
+            "exchange": "rxn:EX_succ_e",
+            "external": "met:succ_e",
+            "internal": "met:succ_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "SUCCt2_2",
+              "SUCCt3"
+            ],
+            "kind": "triplet",
+            "face": "left",
+            "primary_transport": "SUCCt2_2",
+            "node_ids": [
+              "rxn:EX_succ_e",
+              "met:succ_c",
+              "met:succ_e",
+              "rxn:SUCCt2_2"
+            ],
+            "corridor": [
+              [
+                0.0,
+                14.0
+              ],
+              [
+                7.5,
+                14.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_ac_e",
+            "exchange": "rxn:EX_ac_e",
+            "external": "met:ac_e",
+            "internal": "met:ac_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ACt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ACt2r",
+            "node_ids": [
+              "rxn:EX_ac_e",
+              "met:ac_c",
+              "met:ac_e",
+              "rxn:ACt2r"
+            ],
+            "corridor": [
+              [
+                30.0,
+                23.0
+              ],
+              [
+                16.0,
+                23.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_acald_e",
+            "exchange": "rxn:EX_acald_e",
+            "external": "met:acald_e",
+            "internal": "met:acald_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ACALDt"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ACALDt",
+            "node_ids": [
+              "rxn:EX_acald_e",
+              "met:acald_c",
+              "met:acald_e",
+              "rxn:ACALDt"
+            ],
+            "corridor": [
+              [
+                30.0,
+                22.0
+              ],
+              [
+                17.0,
+                22.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_etoh_e",
+            "exchange": "rxn:EX_etoh_e",
+            "external": "met:etoh_e",
+            "internal": "met:etoh_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ETOHt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ETOHt2r",
+            "node_ids": [
+              "rxn:EX_etoh_e",
+              "met:etoh_c",
+              "met:etoh_e",
+              "rxn:ETOHt2r"
+            ],
+            "corridor": [
+              [
+                30.0,
+                24.0
+              ],
+              [
+                16.0,
+                24.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_for_e",
+            "exchange": "rxn:EX_for_e",
+            "external": "met:for_e",
+            "internal": "met:for_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "FORt2",
+              "FORt"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "FORt",
+            "node_ids": [
+              "rxn:EX_for_e",
+              "met:for_c",
+              "met:for_e",
+              "rxn:FORt"
+            ],
+            "corridor": [
+              [
+                30.0,
+                21.0
+              ],
+              [
+                18.0,
+                21.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_fru_e",
+            "exchange": "rxn:EX_fru_e",
+            "external": "met:fru_e",
+            "transports": [],
+            "kind": "pair",
+            "reason": "No corresponding cytosolic species exists in the source model",
+            "face": "top",
+            "primary_transport": null,
+            "node_ids": [
+              "rxn:EX_fru_e",
+              "met:fru_e"
+            ],
+            "corridor": [
+              [
+                2.0,
+                46.0
+              ],
+              [
+                2.0,
+                40.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_gln__L_e",
+            "exchange": "rxn:EX_gln__L_e",
+            "external": "met:gln__L_e",
+            "internal": "met:gln__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "GLNabc"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "GLNabc",
+            "node_ids": [
+              "rxn:EX_gln__L_e",
+              "met:gln__L_c",
+              "met:gln__L_e",
+              "rxn:GLNabc"
+            ],
+            "corridor": [
+              [
+                30.0,
+                25.0
+              ],
+              [
+                17.0,
+                25.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_glu__L_e",
+            "exchange": "rxn:EX_glu__L_e",
+            "external": "met:glu__L_e",
+            "internal": "met:glu__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "GLUt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "GLUt2r",
+            "node_ids": [
+              "rxn:EX_glu__L_e",
+              "met:glu__L_c",
+              "met:glu__L_e",
+              "rxn:GLUt2r"
+            ],
+            "corridor": [
+              [
+                30.0,
+                20.0
+              ],
+              [
+                18.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_lac__D_e",
+            "exchange": "rxn:EX_lac__D_e",
+            "external": "met:lac__D_e",
+            "internal": "met:lac__D_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "D_LACt2"
+            ],
+            "kind": "triplet",
+            "face": "bottom",
+            "primary_transport": "D_LACt2",
+            "node_ids": [
+              "rxn:EX_lac__D_e",
+              "met:lac__D_c",
+              "met:lac__D_e",
+              "rxn:D_LACt2"
+            ],
+            "corridor": [
+              [
+                17.0,
+                0.0
+              ],
+              [
+                17.0,
+                20.0
+              ]
+            ]
+          }
+        ],
+        "changed_nodes": {
+          "met:ac_e": {
+            "before": [
+              1.0,
+              23.0
+            ],
+            "after": [
+              29.25,
+              23.0
+            ]
+          },
+          "met:acald_c": {
+            "before": [
+              17.0,
+              23.0
+            ],
+            "after": [
+              17.0,
+              22.0
+            ]
+          },
+          "met:acald_e": {
+            "before": [
+              29.0,
+              23.0
+            ],
+            "after": [
+              29.25,
+              22.0
+            ]
+          },
+          "met:akg_e": {
+            "before": [
+              1.0,
+              17.0
+            ],
+            "after": [
+              29.25,
+              17.0
+            ]
+          },
+          "met:etoh_e": {
+            "before": [
+              1.0,
+              24.0
+            ],
+            "after": [
+              29.25,
+              24.0
+            ]
+          },
+          "met:for_c": {
+            "before": [
+              17.0,
+              22.0
+            ],
+            "after": [
+              18.0,
+              21.0
+            ]
+          },
+          "met:for_e": {
+            "before": [
+              1.0,
+              22.0
+            ],
+            "after": [
+              29.25,
+              21.0
+            ]
+          },
+          "met:fum_e": {
+            "before": [
+              1.0,
+              15.5
+            ],
+            "after": [
+              0.75,
+              15.5
+            ]
+          },
+          "met:gln__L_c": {
+            "before": [
+              17.0,
+              24.0
+            ],
+            "after": [
+              17.0,
+              25.0
+            ]
+          },
+          "met:gln__L_e": {
+            "before": [
+              29.0,
+              24.0
+            ],
+            "after": [
+              29.25,
+              25.0
+            ]
+          },
+          "met:glu__L_c": {
+            "before": [
+              18.0,
+              22.0
+            ],
+            "after": [
+              18.0,
+              20.0
+            ]
+          },
+          "met:glu__L_e": {
+            "before": [
+              29.0,
+              22.0
+            ],
+            "after": [
+              29.25,
+              20.0
+            ]
+          },
+          "met:glx_c": {
+            "before": [
+              19.0,
+              23.0
+            ],
+            "after": [
+              19.0,
+              26.0
+            ]
+          },
+          "met:lac__D_c": {
+            "before": [
+              17.0,
+              21.0
+            ],
+            "after": [
+              17.0,
+              20.0
+            ]
+          },
+          "met:lac__D_e": {
+            "before": [
+              1.0,
+              21.0
+            ],
+            "after": [
+              17.0,
+              0.75
+            ]
+          },
+          "met:mal__L_e": {
+            "before": [
+              1.0,
+              18.5
+            ],
+            "after": [
+              0.75,
+              18.5
+            ]
+          },
+          "met:pyr_e": {
+            "before": [
+              29.0,
+              25.0
+            ],
+            "after": [
+              1.0,
+              0.75
+            ]
+          },
+          "met:succ_e": {
+            "before": [
+              1.0,
+              14.0
+            ],
+            "after": [
+              0.75,
+              14.0
+            ]
+          },
+          "rxn:ACALDt": {
+            "before": [
+              18.0,
+              23.0
+            ],
+            "after": [
+              28.5,
+              22.0
+            ]
+          },
+          "rxn:ACt2r": {
+            "before": [
+              2.0,
+              23.0
+            ],
+            "after": [
+              28.5,
+              23.0
+            ]
+          },
+          "rxn:ADK1": {
+            "before": [
+              17.0,
+              25.0
+            ],
+            "after": [
+              16.0,
+              25.0
+            ]
+          },
+          "rxn:AKGt2r": {
+            "before": [
+              2.0,
+              17.0
+            ],
+            "after": [
+              28.5,
+              17.0
+            ]
+          },
+          "rxn:ALCD2x": {
+            "before": [
+              16.0,
+              25.0
+            ],
+            "after": [
+              17.0,
+              26.0
+            ]
+          },
+          "rxn:ATPM": {
+            "before": [
+              17.0,
+              26.0
+            ],
+            "after": [
+              17.0,
+              27.0
+            ]
+          },
+          "rxn:ATPS4r": {
+            "before": [
+              18.0,
+              21.0
+            ],
+            "after": [
+              18.0,
+              19.0
+            ]
+          },
+          "rxn:BIOMASS_Ecoli_core_w_GAM": {
+            "before": [
+              17.0,
+              20.0
+            ],
+            "after": [
+              18.0,
+              18.0
+            ]
+          },
+          "rxn:CYTBD": {
+            "before": [
+              18.0,
+              25.0
+            ],
+            "after": [
+              18.0,
+              26.0
+            ]
+          },
+          "rxn:D_LACt2": {
+            "before": [
+              2.0,
+              21.0
+            ],
+            "after": [
+              17.0,
+              1.5
+            ]
+          },
+          "rxn:ETOHt2r": {
+            "before": [
+              2.0,
+              24.0
+            ],
+            "after": [
+              28.5,
+              24.0
+            ]
+          },
+          "rxn:EX_ac_e": {
+            "before": [
+              0.0,
+              23.0
+            ],
+            "after": [
+              30.0,
+              23.0
+            ]
+          },
+          "rxn:EX_acald_e": {
+            "before": [
+              30.0,
+              23.0
+            ],
+            "after": [
+              30.0,
+              22.0
+            ]
+          },
+          "rxn:EX_akg_e": {
+            "before": [
+              0.0,
+              17.0
+            ],
+            "after": [
+              30.0,
+              17.0
+            ]
+          },
+          "rxn:EX_etoh_e": {
+            "before": [
+              0.0,
+              24.0
+            ],
+            "after": [
+              30.0,
+              24.0
+            ]
+          },
+          "rxn:EX_for_e": {
+            "before": [
+              0.0,
+              22.0
+            ],
+            "after": [
+              30.0,
+              21.0
+            ]
+          },
+          "rxn:EX_fru_e": {
+            "before": [
+              0.0,
+              40.0
+            ],
+            "after": [
+              2.0,
+              46.0
+            ]
+          },
+          "rxn:EX_gln__L_e": {
+            "before": [
+              30.0,
+              24.0
+            ],
+            "after": [
+              30.0,
+              25.0
+            ]
+          },
+          "rxn:EX_glu__L_e": {
+            "before": [
+              30.0,
+              22.0
+            ],
+            "after": [
+              30.0,
+              20.0
+            ]
+          },
+          "rxn:EX_lac__D_e": {
+            "before": [
+              0.0,
+              21.0
+            ],
+            "after": [
+              17.0,
+              0.0
+            ]
+          },
+          "rxn:EX_pyr_e": {
+            "before": [
+              30.0,
+              25.0
+            ],
+            "after": [
+              1.0,
+              0.0
+            ]
+          },
+          "rxn:FBP": {
+            "before": [
+              19.0,
+              24.0
+            ],
+            "after": [
+              19.0,
+              27.0
+            ]
+          },
+          "rxn:FORt": {
+            "before": [
+              2.0,
+              22.0
+            ],
+            "after": [
+              28.5,
+              21.0
+            ]
+          },
+          "rxn:FORt2": {
+            "before": [
+              20.0,
+              23.0
+            ],
+            "after": [
+              20.0,
+              26.0
+            ]
+          },
+          "rxn:FRUpts2": {
+            "before": [
+              2.0,
+              41.0
+            ],
+            "after": [
+              3.0,
+              41.0
+            ]
+          },
+          "rxn:FUMt2_2": {
+            "before": [
+              1.0,
+              15.0
+            ],
+            "after": [
+              1.5,
+              15.5
+            ]
+          },
+          "rxn:GLNabc": {
+            "before": [
+              18.0,
+              24.0
+            ],
+            "after": [
+              28.5,
+              25.0
+            ]
+          },
+          "rxn:GLUN": {
+            "before": [
+              17.0,
+              19.0
+            ],
+            "after": [
+              19.0,
+              19.0
+            ]
+          },
+          "rxn:GLUSy": {
+            "before": [
+              17.0,
+              27.0
+            ],
+            "after": [
+              17.0,
+              28.0
+            ]
+          },
+          "rxn:GLUt2r": {
+            "before": [
+              19.0,
+              22.0
+            ],
+            "after": [
+              28.5,
+              20.0
+            ]
+          },
+          "rxn:GND": {
+            "before": [
+              18.0,
+              20.0
+            ],
+            "after": [
+              19.0,
+              18.0
+            ]
+          },
+          "rxn:ICL": {
+            "before": [
+              18.0,
+              26.0
+            ],
+            "after": [
+              18.0,
+              27.0
+            ]
+          },
+          "rxn:MALS": {
+            "before": [
+              19.0,
+              21.0
+            ],
+            "after": [
+              20.0,
+              19.0
+            ]
+          },
+          "rxn:MALt2_2": {
+            "before": [
+              1.0,
+              18.0
+            ],
+            "after": [
+              1.5,
+              18.5
+            ]
+          },
+          "rxn:ME1": {
+            "before": [
+              19.0,
+              25.0
+            ],
+            "after": [
+              19.0,
+              28.0
+            ]
+          },
+          "rxn:ME2": {
+            "before": [
+              20.0,
+              22.0
+            ],
+            "after": [
+              20.0,
+              18.0
+            ]
+          },
+          "rxn:NADH16": {
+            "before": [
+              20.0,
+              24.0
+            ],
+            "after": [
+              20.0,
+              27.0
+            ]
+          },
+          "rxn:NADTRHD": {
+            "before": [
+              21.0,
+              23.0
+            ],
+            "after": [
+              21.0,
+              26.0
+            ]
+          },
+          "rxn:PYRt2": {
+            "before": [
+              4.0,
+              25.0
+            ],
+            "after": [
+              1.0,
+              1.5
+            ]
+          },
+          "rxn:RPI": {
+            "before": [
+              17.0,
+              18.0
+            ],
+            "after": [
+              16.0,
+              16.0
+            ]
+          },
+          "rxn:SUCCt2_2": {
+            "before": [
+              2.0,
+              14.0
+            ],
+            "after": [
+              1.5,
+              14.0
+            ]
+          },
+          "rxn:SUCCt3": {
+            "before": [
+              17.0,
+              28.0
+            ],
+            "after": [
+              17.0,
+              29.0
+            ]
+          },
+          "rxn:TALA": {
+            "before": [
+              18.0,
+              19.0
+            ],
+            "after": [
+              18.0,
+              16.0
+            ]
+          },
+          "rxn:THD2": {
+            "before": [
+              18.0,
+              27.0
+            ],
+            "after": [
+              18.0,
+              28.0
+            ]
+          },
+          "rxn:TKT1": {
+            "before": [
+              19.0,
+              20.0
+            ],
+            "after": [
+              21.0,
+              19.0
+            ]
+          },
+          "rxn:TKT2": {
+            "before": [
+              19.0,
+              26.0
+            ],
+            "after": [
+              19.0,
+              29.0
+            ]
+          }
+        },
+        "straight_node_ids": [
+          "met:ac_c",
+          "met:ac_e",
+          "met:acald_c",
+          "met:acald_e",
+          "met:akg_c",
+          "met:akg_e",
+          "met:etoh_c",
+          "met:etoh_e",
+          "met:for_c",
+          "met:for_e",
+          "met:fru_e",
+          "met:fum_c",
+          "met:fum_e",
+          "met:glc__D_e",
+          "met:gln__L_c",
+          "met:gln__L_e",
+          "met:glu__L_c",
+          "met:glu__L_e",
+          "met:lac__D_c",
+          "met:lac__D_e",
+          "met:mal__L_c",
+          "met:mal__L_e",
+          "met:pyr_c",
+          "met:pyr_e",
+          "met:succ_c",
+          "met:succ_e",
+          "rxn:ACALDt",
+          "rxn:ACt2r",
+          "rxn:AKGt2r",
+          "rxn:D_LACt2",
+          "rxn:ETOHt2r",
+          "rxn:EX_ac_e",
+          "rxn:EX_acald_e",
+          "rxn:EX_akg_e",
+          "rxn:EX_etoh_e",
+          "rxn:EX_for_e",
+          "rxn:EX_fru_e",
+          "rxn:EX_fum_e",
+          "rxn:EX_glc__D_e",
+          "rxn:EX_gln__L_e",
+          "rxn:EX_glu__L_e",
+          "rxn:EX_lac__D_e",
+          "rxn:EX_mal__L_e",
+          "rxn:EX_pyr_e",
+          "rxn:EX_succ_e",
+          "rxn:FORt",
+          "rxn:FUMt2_2",
+          "rxn:GLNabc",
+          "rxn:GLUt2r",
+          "rxn:MALt2_2",
+          "rxn:PYRt2",
+          "rxn:SUCCt2_2"
+        ],
+        "verified": true
+      }
     },
     {
       "shape": "square",
@@ -195,7 +1295,7 @@
         "crossing_constraints": {
           "red_red": 0,
           "red_orange": 0,
-          "orange_orange": 90,
+          "orange_orange": 68,
           "hard_verified": true,
           "boundary_validation": {
             "boundary": [
@@ -215,6 +1315,13 @@
               0.0,
               26.0
             ]
+          },
+          "straight_exchange_validation": {
+            "verified": true,
+            "groups": 14,
+            "triplets": 12,
+            "pairs": 2,
+            "straight_incidences": 38
           }
         },
         "schema_valid": true,
@@ -223,14 +1330,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 435,
+        "nodes": 414,
         "source_nodes": 220,
-        "routing_nodes": 215,
+        "routing_nodes": 194,
         "orthogonal_segments_verified": true,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 0,
         "reactions": 84,
-        "segments": 468,
+        "segments": 447,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -258,9 +1365,17 @@
         "shape": "square",
         "red_red": 0,
         "red_orange": 0,
-        "orange_orange": 90,
+        "orange_orange": 68,
         "hard_verified": true,
         "svg_escher_geometry_verified": true,
+        "straight_exchange_validation": {
+          "verified": true,
+          "groups": 14,
+          "triplets": 12,
+          "pairs": 2,
+          "straight_incidences": 38
+        },
+        "red_routes_preserved": true,
         "boundary_validation": {
           "boundary": [
             0,
@@ -287,13 +1402,13 @@
           26.0
         ],
         "exchange_entry_inward": true,
-        "orange_length_grid": 305.35142926,
+        "orange_length_grid": 220.38246425999998,
         "orange_crossings_optimized": false,
-        "orange_candidates": 12,
+        "orange_candidates": 4,
         "global_optimality_proven": false
       },
-      "orange_length_grid": 305.35142926,
-      "previous_orange_length_grid": 265.34586786,
+      "orange_length_grid": 220.38246425999998,
+      "previous_orange_length_grid": 305.35142926,
       "boundary_validation": {
         "boundary": [
           0,
@@ -319,31 +1434,1043 @@
         0.0,
         26.0
       ],
-      "exchange_boundary_adjustments": [
-        {
-          "face": "bottom",
-          "exchange": "rxn:EX_pyr_e",
-          "external": "met:pyr_e",
-          "old_exchange": [
-            13.0,
-            5.0
-          ],
-          "old_external": [
-            12.0,
-            5.0
-          ],
-          "new_exchange": [
-            1.0,
-            0.0
-          ],
-          "new_external": [
-            1.0,
-            1.0
-          ]
-        }
-      ]
+      "straight_exchange_validation": {
+        "verified": true,
+        "groups": 14,
+        "triplets": 12,
+        "pairs": 2,
+        "straight_incidences": 38
+      },
+      "red_first": true,
+      "red_routes_preserved": true,
+      "exchange_corridors": {
+        "groups": [
+          {
+            "reaction_id": "EX_glc__D_e",
+            "exchange": "rxn:EX_glc__D_e",
+            "external": "met:glc__D_e",
+            "transports": [],
+            "kind": "pair",
+            "reason": "No corresponding cytosolic species exists in the source model",
+            "face": "top",
+            "primary_transport": null,
+            "node_ids": [
+              "rxn:EX_glc__D_e",
+              "met:glc__D_e"
+            ],
+            "corridor": [
+              [
+                1.0,
+                26.0
+              ],
+              [
+                1.0,
+                25.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_akg_e",
+            "exchange": "rxn:EX_akg_e",
+            "external": "met:akg_e",
+            "internal": "met:akg_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "AKGt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "AKGt2r",
+            "node_ids": [
+              "rxn:EX_akg_e",
+              "met:akg_c",
+              "met:akg_e",
+              "rxn:AKGt2r"
+            ],
+            "corridor": [
+              [
+                13.0,
+                3.0
+              ],
+              [
+                9.0,
+                3.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_fum_e",
+            "exchange": "rxn:EX_fum_e",
+            "external": "met:fum_e",
+            "internal": "met:fum_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "FUMt2_2"
+            ],
+            "kind": "triplet",
+            "face": "bottom",
+            "primary_transport": "FUMt2_2",
+            "node_ids": [
+              "rxn:EX_fum_e",
+              "met:fum_c",
+              "met:fum_e",
+              "rxn:FUMt2_2"
+            ],
+            "corridor": [
+              [
+                4.0,
+                0.0
+              ],
+              [
+                4.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_mal__L_e",
+            "exchange": "rxn:EX_mal__L_e",
+            "external": "met:mal__L_e",
+            "internal": "met:mal__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "MALt2_2"
+            ],
+            "kind": "triplet",
+            "face": "left",
+            "primary_transport": "MALt2_2",
+            "node_ids": [
+              "rxn:EX_mal__L_e",
+              "met:mal__L_c",
+              "met:mal__L_e",
+              "rxn:MALt2_2"
+            ],
+            "corridor": [
+              [
+                0.0,
+                3.0
+              ],
+              [
+                4.0,
+                3.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_pyr_e",
+            "exchange": "rxn:EX_pyr_e",
+            "external": "met:pyr_e",
+            "internal": "met:pyr_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "PYRt2"
+            ],
+            "kind": "triplet",
+            "face": "bottom",
+            "primary_transport": "PYRt2",
+            "node_ids": [
+              "rxn:EX_pyr_e",
+              "met:pyr_c",
+              "met:pyr_e",
+              "rxn:PYRt2"
+            ],
+            "corridor": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                5.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_succ_e",
+            "exchange": "rxn:EX_succ_e",
+            "external": "met:succ_e",
+            "internal": "met:succ_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "SUCCt2_2",
+              "SUCCt3"
+            ],
+            "kind": "triplet",
+            "face": "bottom",
+            "primary_transport": "SUCCt2_2",
+            "node_ids": [
+              "rxn:EX_succ_e",
+              "met:succ_c",
+              "met:succ_e",
+              "rxn:SUCCt2_2"
+            ],
+            "corridor": [
+              [
+                6.0,
+                0.0
+              ],
+              [
+                6.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_ac_e",
+            "exchange": "rxn:EX_ac_e",
+            "external": "met:ac_e",
+            "internal": "met:ac_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ACt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ACt2r",
+            "node_ids": [
+              "rxn:EX_ac_e",
+              "met:ac_c",
+              "met:ac_e",
+              "rxn:ACt2r"
+            ],
+            "corridor": [
+              [
+                13.0,
+                13.0
+              ],
+              [
+                6.0,
+                13.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_acald_e",
+            "exchange": "rxn:EX_acald_e",
+            "external": "met:acald_e",
+            "internal": "met:acald_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ACALDt"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ACALDt",
+            "node_ids": [
+              "rxn:EX_acald_e",
+              "met:acald_c",
+              "met:acald_e",
+              "rxn:ACALDt"
+            ],
+            "corridor": [
+              [
+                13.0,
+                12.0
+              ],
+              [
+                6.0,
+                12.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_etoh_e",
+            "exchange": "rxn:EX_etoh_e",
+            "external": "met:etoh_e",
+            "internal": "met:etoh_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "ETOHt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "ETOHt2r",
+            "node_ids": [
+              "rxn:EX_etoh_e",
+              "met:etoh_c",
+              "met:etoh_e",
+              "rxn:ETOHt2r"
+            ],
+            "corridor": [
+              [
+                13.0,
+                14.0
+              ],
+              [
+                6.0,
+                14.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_for_e",
+            "exchange": "rxn:EX_for_e",
+            "external": "met:for_e",
+            "internal": "met:for_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "FORt2",
+              "FORt"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "FORt",
+            "node_ids": [
+              "rxn:EX_for_e",
+              "met:for_c",
+              "met:for_e",
+              "rxn:FORt"
+            ],
+            "corridor": [
+              [
+                13.0,
+                11.0
+              ],
+              [
+                6.0,
+                11.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_fru_e",
+            "exchange": "rxn:EX_fru_e",
+            "external": "met:fru_e",
+            "transports": [],
+            "kind": "pair",
+            "reason": "No corresponding cytosolic species exists in the source model",
+            "face": "top",
+            "primary_transport": null,
+            "node_ids": [
+              "rxn:EX_fru_e",
+              "met:fru_e"
+            ],
+            "corridor": [
+              [
+                2.0,
+                26.0
+              ],
+              [
+                2.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_gln__L_e",
+            "exchange": "rxn:EX_gln__L_e",
+            "external": "met:gln__L_e",
+            "internal": "met:gln__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "GLNabc"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "GLNabc",
+            "node_ids": [
+              "rxn:EX_gln__L_e",
+              "met:gln__L_c",
+              "met:gln__L_e",
+              "rxn:GLNabc"
+            ],
+            "corridor": [
+              [
+                13.0,
+                15.0
+              ],
+              [
+                6.0,
+                15.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_glu__L_e",
+            "exchange": "rxn:EX_glu__L_e",
+            "external": "met:glu__L_e",
+            "internal": "met:glu__L_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "GLUt2r"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "GLUt2r",
+            "node_ids": [
+              "rxn:EX_glu__L_e",
+              "met:glu__L_c",
+              "met:glu__L_e",
+              "rxn:GLUt2r"
+            ],
+            "corridor": [
+              [
+                13.0,
+                10.0
+              ],
+              [
+                6.0,
+                10.0
+              ]
+            ]
+          },
+          {
+            "reaction_id": "EX_lac__D_e",
+            "exchange": "rxn:EX_lac__D_e",
+            "external": "met:lac__D_e",
+            "internal": "met:lac__D_c",
+            "evidence": "Exact chemical identity annotation",
+            "transports": [
+              "D_LACt2"
+            ],
+            "kind": "triplet",
+            "face": "right",
+            "primary_transport": "D_LACt2",
+            "node_ids": [
+              "rxn:EX_lac__D_e",
+              "met:lac__D_c",
+              "met:lac__D_e",
+              "rxn:D_LACt2"
+            ],
+            "corridor": [
+              [
+                13.0,
+                16.0
+              ],
+              [
+                6.0,
+                16.0
+              ]
+            ]
+          }
+        ],
+        "changed_nodes": {
+          "rxn:EX_akg_e": {
+            "before": [
+              9.0,
+              26.0
+            ],
+            "after": [
+              13.0,
+              3.0
+            ]
+          },
+          "met:akg_e": {
+            "before": [
+              9.0,
+              25.0
+            ],
+            "after": [
+              12.25,
+              3.0
+            ]
+          },
+          "rxn:EX_fum_e": {
+            "before": [
+              4.0,
+              26.0
+            ],
+            "after": [
+              4.0,
+              0.0
+            ]
+          },
+          "met:fum_e": {
+            "before": [
+              4.0,
+              25.0
+            ],
+            "after": [
+              4.0,
+              0.3333333333333333
+            ]
+          },
+          "met:mal__L_e": {
+            "before": [
+              1.0,
+              3.0
+            ],
+            "after": [
+              0.75,
+              3.0
+            ]
+          },
+          "rxn:EX_pyr_e": {
+            "before": [
+              13.0,
+              5.0
+            ],
+            "after": [
+              1.0,
+              0.0
+            ]
+          },
+          "met:pyr_e": {
+            "before": [
+              12.0,
+              5.0
+            ],
+            "after": [
+              1.0,
+              0.75
+            ]
+          },
+          "rxn:EX_succ_e": {
+            "before": [
+              6.0,
+              26.0
+            ],
+            "after": [
+              6.0,
+              0.0
+            ]
+          },
+          "met:succ_e": {
+            "before": [
+              6.0,
+              25.0
+            ],
+            "after": [
+              6.0,
+              0.3333333333333333
+            ]
+          },
+          "met:ac_e": {
+            "before": [
+              12.0,
+              13.0
+            ],
+            "after": [
+              12.25,
+              13.0
+            ]
+          },
+          "met:acald_e": {
+            "before": [
+              12.0,
+              12.0
+            ],
+            "after": [
+              12.25,
+              12.0
+            ]
+          },
+          "met:etoh_e": {
+            "before": [
+              12.0,
+              14.0
+            ],
+            "after": [
+              12.25,
+              14.0
+            ]
+          },
+          "met:for_e": {
+            "before": [
+              12.0,
+              11.0
+            ],
+            "after": [
+              12.25,
+              11.0
+            ]
+          },
+          "met:gln__L_e": {
+            "before": [
+              12.0,
+              15.0
+            ],
+            "after": [
+              12.25,
+              15.0
+            ]
+          },
+          "met:glu__L_e": {
+            "before": [
+              12.0,
+              10.0
+            ],
+            "after": [
+              12.25,
+              10.0
+            ]
+          },
+          "met:lac__D_e": {
+            "before": [
+              12.0,
+              16.0
+            ],
+            "after": [
+              12.25,
+              16.0
+            ]
+          },
+          "rxn:BIOMASS_Ecoli_core_w_GAM": {
+            "before": [
+              5.0,
+              11.0
+            ],
+            "after": [
+              4.0,
+              11.0
+            ]
+          },
+          "rxn:ACALD": {
+            "before": [
+              3.0,
+              6.0
+            ],
+            "after": [
+              2.0,
+              6.0
+            ]
+          },
+          "rxn:ACALDt": {
+            "before": [
+              7.0,
+              12.0
+            ],
+            "after": [
+              11.5,
+              12.0
+            ]
+          },
+          "rxn:ACt2r": {
+            "before": [
+              7.0,
+              13.0
+            ],
+            "after": [
+              11.5,
+              13.0
+            ]
+          },
+          "rxn:AKGt2r": {
+            "before": [
+              9.0,
+              7.0
+            ],
+            "after": [
+              11.5,
+              3.0
+            ]
+          },
+          "rxn:ALCD2x": {
+            "before": [
+              5.0,
+              12.0
+            ],
+            "after": [
+              3.0,
+              12.0
+            ]
+          },
+          "rxn:D_LACt2": {
+            "before": [
+              7.0,
+              16.0
+            ],
+            "after": [
+              11.5,
+              16.0
+            ]
+          },
+          "rxn:ETOHt2r": {
+            "before": [
+              7.0,
+              14.0
+            ],
+            "after": [
+              11.5,
+              14.0
+            ]
+          },
+          "rxn:FORt": {
+            "before": [
+              7.0,
+              11.0
+            ],
+            "after": [
+              11.5,
+              11.0
+            ]
+          },
+          "rxn:FUMt2_2": {
+            "before": [
+              4.0,
+              7.0
+            ],
+            "after": [
+              4.0,
+              0.6666666666666666
+            ]
+          },
+          "rxn:GLNabc": {
+            "before": [
+              7.0,
+              15.0
+            ],
+            "after": [
+              11.5,
+              15.0
+            ]
+          },
+          "rxn:GLUt2r": {
+            "before": [
+              7.0,
+              10.0
+            ],
+            "after": [
+              11.5,
+              10.0
+            ]
+          },
+          "rxn:LDH_D": {
+            "before": [
+              2.0,
+              6.0
+            ],
+            "after": [
+              2.0,
+              7.0
+            ]
+          },
+          "rxn:MALt2_2": {
+            "before": [
+              2.0,
+              3.0
+            ],
+            "after": [
+              1.5,
+              3.0
+            ]
+          },
+          "rxn:PYRt2": {
+            "before": [
+              10.0,
+              5.0
+            ],
+            "after": [
+              1.0,
+              1.5
+            ]
+          },
+          "rxn:SUCCt2_2": {
+            "before": [
+              6.0,
+              7.0
+            ],
+            "after": [
+              6.0,
+              0.6666666666666666
+            ]
+          },
+          "rxn:ACKr": {
+            "before": [
+              5.0,
+              13.0
+            ],
+            "after": [
+              5.0,
+              11.0
+            ]
+          },
+          "rxn:FRUpts2": {
+            "before": [
+              2.0,
+              21.0
+            ],
+            "after": [
+              3.0,
+              21.0
+            ]
+          },
+          "rxn:EX_fru_e": {
+            "before": [
+              0.0,
+              20.0
+            ],
+            "after": [
+              2.0,
+              26.0
+            ]
+          },
+          "met:6pgc_c": {
+            "before": [
+              8.0,
+              13.0
+            ],
+            "after": [
+              5.0,
+              13.0
+            ]
+          },
+          "met:e4p_c": {
+            "before": [
+              8.0,
+              12.0
+            ],
+            "after": [
+              5.0,
+              12.0
+            ]
+          },
+          "met:glx_c": {
+            "before": [
+              8.0,
+              14.0
+            ],
+            "after": [
+              8.0,
+              17.0
+            ]
+          },
+          "met:r5p_c": {
+            "before": [
+              9.0,
+              13.0
+            ],
+            "after": [
+              9.0,
+              9.0
+            ]
+          },
+          "rxn:ATPM": {
+            "before": [
+              8.0,
+              11.0
+            ],
+            "after": [
+              8.0,
+              9.0
+            ]
+          },
+          "rxn:ATPS4r": {
+            "before": [
+              8.0,
+              15.0
+            ],
+            "after": [
+              7.0,
+              17.0
+            ]
+          },
+          "rxn:CYTBD": {
+            "before": [
+              9.0,
+              12.0
+            ],
+            "after": [
+              9.0,
+              8.0
+            ]
+          },
+          "rxn:FBP": {
+            "before": [
+              9.0,
+              14.0
+            ],
+            "after": [
+              9.0,
+              17.0
+            ]
+          },
+          "rxn:FORt2": {
+            "before": [
+              10.0,
+              13.0
+            ],
+            "after": [
+              10.0,
+              9.0
+            ]
+          },
+          "rxn:G6PDH2r": {
+            "before": [
+              3.0,
+              12.0
+            ],
+            "after": [
+              2.0,
+              12.0
+            ]
+          },
+          "rxn:GLUDy": {
+            "before": [
+              4.0,
+              11.0
+            ],
+            "after": [
+              3.0,
+              11.0
+            ]
+          },
+          "rxn:ME2": {
+            "before": [
+              7.0,
+              17.0
+            ],
+            "after": [
+              7.0,
+              18.0
+            ]
+          },
+          "rxn:NADH16": {
+            "before": [
+              8.0,
+              10.0
+            ],
+            "after": [
+              8.0,
+              8.0
+            ]
+          },
+          "rxn:NADTRHD": {
+            "before": [
+              8.0,
+              16.0
+            ],
+            "after": [
+              8.0,
+              18.0
+            ]
+          },
+          "rxn:PGL": {
+            "before": [
+              9.0,
+              11.0
+            ],
+            "after": [
+              9.0,
+              7.0
+            ]
+          },
+          "rxn:PPC": {
+            "before": [
+              9.0,
+              15.0
+            ],
+            "after": [
+              9.0,
+              18.0
+            ]
+          },
+          "rxn:PPCK": {
+            "before": [
+              10.0,
+              12.0
+            ],
+            "after": [
+              10.0,
+              8.0
+            ]
+          },
+          "rxn:PPS": {
+            "before": [
+              10.0,
+              14.0
+            ],
+            "after": [
+              10.0,
+              17.0
+            ]
+          },
+          "rxn:RPE": {
+            "before": [
+              11.0,
+              13.0
+            ],
+            "after": [
+              11.0,
+              9.0
+            ]
+          },
+          "rxn:RPI": {
+            "before": [
+              2.0,
+              12.0
+            ],
+            "after": [
+              2.0,
+              11.0
+            ]
+          },
+          "rxn:TALA": {
+            "before": [
+              3.0,
+              11.0
+            ],
+            "after": [
+              3.0,
+              10.0
+            ]
+          }
+        },
+        "straight_node_ids": [
+          "met:ac_c",
+          "met:ac_e",
+          "met:acald_c",
+          "met:acald_e",
+          "met:akg_c",
+          "met:akg_e",
+          "met:etoh_c",
+          "met:etoh_e",
+          "met:for_c",
+          "met:for_e",
+          "met:fru_e",
+          "met:fum_c",
+          "met:fum_e",
+          "met:glc__D_e",
+          "met:gln__L_c",
+          "met:gln__L_e",
+          "met:glu__L_c",
+          "met:glu__L_e",
+          "met:lac__D_c",
+          "met:lac__D_e",
+          "met:mal__L_c",
+          "met:mal__L_e",
+          "met:pyr_c",
+          "met:pyr_e",
+          "met:succ_c",
+          "met:succ_e",
+          "rxn:ACALDt",
+          "rxn:ACt2r",
+          "rxn:AKGt2r",
+          "rxn:D_LACt2",
+          "rxn:ETOHt2r",
+          "rxn:EX_ac_e",
+          "rxn:EX_acald_e",
+          "rxn:EX_akg_e",
+          "rxn:EX_etoh_e",
+          "rxn:EX_for_e",
+          "rxn:EX_fru_e",
+          "rxn:EX_fum_e",
+          "rxn:EX_glc__D_e",
+          "rxn:EX_gln__L_e",
+          "rxn:EX_glu__L_e",
+          "rxn:EX_lac__D_e",
+          "rxn:EX_mal__L_e",
+          "rxn:EX_pyr_e",
+          "rxn:EX_succ_e",
+          "rxn:FORt",
+          "rxn:FUMt2_2",
+          "rxn:GLNabc",
+          "rxn:GLUt2r",
+          "rxn:MALt2_2",
+          "rxn:PYRt2",
+          "rxn:SUCCt2_2"
+        ],
+        "verified": true
+      }
     }
   ],
   "crossing_policy": "all paths inside actual exchange envelope; red crossings forbidden; orange crossings ignored; orange length first",
-  "orange_length_definition": "Sum of orange geometry, merging shared segments within the same reaction; different reactions counted separately."
+  "orange_length_definition": "Sum of orange geometry, merging shared segments within the same reaction; different reactions counted separately.",
+  "placement_order": [
+    "Place red backbone nodes",
+    "Route red and freeze it",
+    "Arrange straight exchange/transport corridors around frozen red",
+    "Place remaining nodes",
+    "Route remaining edges, preferring orange length"
+  ]
 }

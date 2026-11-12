@@ -752,8 +752,26 @@ def run(args):
     tca_region = absolute_region(backbones.get('tca_geometry'),rows)
     if args.grid_cols is not None and args.grid_rows is not None:
         backbones['render_frame']=[0,cols-1,0,rows-1]
+    if getattr(args,'crossing_policy','legacy')=='red-hard' and alignment_mode=='collinear':
+        from exchange_corridors import place_corridors
+        from crossing_routing import initial_paths,route as route_red_first
+        attach_coenzymes(nodes,xy,grid_shape=(cols,rows),forbidden_region=tca_region)
+        backbones['tca_exclusion']={'region':tca_region}
+        red_paths=[p for p in initial_paths(nodes,edges,xy,backbones,major_reactions) if p['priority']==2]
+        red_report=route_red_first(red_paths,xy,boundary=[0,cols-1,0,rows-1],attempts=0)
+        if not red_report['verified']:raise ValueError('Red-first routing failed: '+str(red_report))
+        backbones['red_first']={'routes':red_paths,'report':red_report}
+        backbones['_placement_region']=tca_region
+        specification=place_corridors(model,nodes,xy,backbones,exchange_nodes,alignment_groups,cols,rows)
+        backbones.pop('_placement_region',None)
+        backbones['exchange_corridors']=specification
+        backbones['exchange_boundary_adjustments']=[]
+        placement['objective_before_straight_exchange_adjustment']=placement['objective']
+        if connectors:placement['objective']=connector_cost(connectors,edges,xy)
+        placement['global_optimality_proven']=False
+        placement.pop('relative_gap',None)
     attach_coenzymes(nodes, xy, grid_shape=(cols, rows),forbidden_region=tca_region)
-    if getattr(args,'crossing_policy','legacy')=='red-hard':
+    if getattr(args,'crossing_policy','legacy')=='red-hard' and not backbones.get('exchange_corridors'):
         from exchange_alignment import anchor_exchange_boundary
         adjustments=anchor_exchange_boundary(alignment_groups,exchange_nodes,xy,cols,rows,tca_region)
         backbones['exchange_boundary_adjustments']=adjustments
@@ -779,7 +797,7 @@ def run(args):
     if any(not (0 <= p[0] <= cols - 1 and 0 <= p[1] <= rows - 1) for p in xy.values()):
         raise RuntimeError('A displayed node lies outside the grid rectangle')
     network = validate_network(projected, nodes, edges, xy)
-    fractional_allowed = set((tca_region or {}).get('node_ids',())) | {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
+    fractional_allowed = set(backbones.get('exchange_corridors',{}).get('straight_node_ids',())) | set((tca_region or {}).get('node_ids',())) | {g[k] for g in alignment_groups for k in ('exchange','external','internal')}
     for key in grid_ids:
         if key not in fractional_allowed and not np.allclose(xy[key], np.rint(xy[key]), atol=1e-9, rtol=0):
             raise RuntimeError('A non-coenzyme node is off-grid')
