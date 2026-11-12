@@ -289,7 +289,8 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
             priority=2 if stats[rid].get('is_major_pathway',False) else 1 if j in orange_edges else 0,
             backbone=frozenset((edge['source'],edge['target'])) in backbone_pairs))
     original_route_length=sum(sum(abs(a[k]-b[k]) for k in (0,1)) for p in display_paths for a,b in zip(p['points'],p['points'][1:]))
-    red_plan=(backbones or {}).get('red_parallel_layout')
+    canonical=(backbones or {}).get('crossing_routing')
+    red_plan=None if canonical else (backbones or {}).get('red_parallel_layout')
     if red_plan and red_plan.get('enabled') and red_plan.get('verified'):
         planned={(r['rid'],r['mid']):r for r in red_plan['routes']}
         for edge,path in zip(edges,display_paths):
@@ -298,7 +299,7 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
                 points=[tuple(p) for p in route['points']]
                 if path['points'][0]!=points[0]:points.reverse()
                 path.update(points=points,routing_locked=True)
-    straight_paths=[p for edge,p in zip(edges,display_paths) if frozenset((edge['source'],edge['target'])) not in tca_pairs]
+    straight_paths=[] if canonical else [p for edge,p in zip(edges,display_paths) if frozenset((edge['source'],edge['target'])) not in tca_pairs]
     parallel_report=separate_parallel(straight_paths,obstacles=obstacles)
     parallel_report['node_detours']=avoid_nodes(straight_paths,obstacles=obstacles,route_offset=route_offset)
     parallel_report['routing_preference']=POLICY
@@ -312,6 +313,14 @@ def render(output, nodes, edges, xy, records, selection, model_id, backbones=Non
         parallel_report['red_parallel_spacing']=spacing_report(straight_paths,red_plan['requested_spacing_grid'])
         if red_plan.get('enabled') and red_plan.get('verified') and not parallel_report['red_parallel_spacing']['verified']:
             raise RuntimeError('Preallocated red spacing changed during SVG rendering')
+    if canonical:
+        saved={(p['rid'],p['mid']):p for p in canonical['routes']}
+        for edge,path in zip(edges,display_paths):
+            record=saved[edge['reaction_id'],edge['metabolite_id']]
+            points=list(record['points'])
+            if math.dist(points[0],path['points'][0])>1e-7:points.reverse()
+            path['points']=points
+        parallel_report['crossing_constraints']=canonical['report']
     for edge,path in zip(edges,display_paths):
         if frozenset((edge['source'],edge['target'])) in tca_pairs:
             a,b=path['points'][0],path['points'][-1]
@@ -781,6 +790,10 @@ def run(args):
         expected = {m: c for m, c in original[reaction['id']]['metabolites'].items() if not hidden_metabolite(classification[m])}
         if reaction['metabolites'] != expected:
             raise RuntimeError('Visible stoichiometry differs from source')
+    if getattr(args,'crossing_policy','legacy')=='red-hard':
+        from crossing_routing import plan_routes
+        backbones['crossing_routing']=plan_routes(nodes,edges,xy,backbones,major_reactions,
+            attempts=getattr(args,'crossing_attempts',24))
     metadata = dict(source_model_sha256=digest, coverage=selection, sampling=sampling_report, major_backbones=backbones,
                     original_reactions={r['id']: r for r in model['reactions']}, classification=classification,
                     note='Display projection only: inorganic participants omitted; source_model.json retains the original source model.')
@@ -849,7 +862,7 @@ def run(args):
                                   no_zero_median_reactions=True, visible_stoichiometry_preserved=True,
                                   full_model_used_for_sampling=True, network=network, escher=escher_check),
                   limitations=['Global length optimality is reported, not assumed.',
-                               'Crossings, coincident edge paths, and label overlap are not minimized.',
+                               ('Red crossings are forbidden; orange crossings use a bounded search without a global optimality guarantee.' if backbones.get('crossing_routing') else 'Crossings, coincident edge paths, and label overlap are not minimized.'),
                                'Display model omits inorganic participants and is not suitable for FBA.',
                                'TCA cycle connections may use circular Beziers; other connections use orthogonal routing. Biological coordinates and reaction chemistry are preserved.',
                                'Sampling uses original bounds without a growth floor or loopless constraints; internal cycles may dominate.'])
@@ -929,6 +942,8 @@ def parser():
     p.add_argument('--model', type=Path, default=BASE / 'e_coli_core.xml')
     p.add_argument('--output-dir', type=Path, default=BASE / 'e_coli_core_sbml2map_output')
     p.add_argument('--coverage', type=float, default=100, help='Top percentage of eligible reactions (0..100); --no-sampling uses pathway membership and IDs')
+    p.add_argument('--crossing-policy',choices=('red-hard','legacy'),default='legacy',help='Forbid red/red and red/orange crossings; minimize orange crossings')
+    p.add_argument('--crossing-attempts',type=int,default=24,help='Deterministic orange ordering candidates (default: 24)')
     p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')
     p.add_argument('--exchange-alignment',choices=('collinear','off'),default='collinear',help='Align EX, extracellular and matching cytosolic nodes from outside inward (default: collinear)')
     p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')

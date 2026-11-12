@@ -16,14 +16,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 690,
+        "nodes": 511,
         "source_nodes": 220,
-        "routing_nodes": 470,
+        "routing_nodes": 291,
         "orthogonal_segments_verified": false,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 18,
         "reactions": 84,
-        "segments": 723,
+        "segments": 544,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -67,9 +67,21 @@
       "diameter_grid": 12.747548783981962,
       "previous_diameter_grid": 25.495097567963924,
       "diameter_ratio": 0.5,
-      "svg_diameter_ratio": 0.4999999999528854,
+      "svg_diameter_ratio": null,
       "node_grid_step": 0.5,
-      "all_tca_nodes_on_declared_grid": true
+      "all_tca_nodes_on_declared_grid": true,
+      "crossing_constraints": {
+        "shape": "circle",
+        "red_red": 0,
+        "red_orange": 0,
+        "orange_orange": 92,
+        "hard_verified": true,
+        "svg_escher_geometry_verified": true,
+        "orange_first_feasible": 152,
+        "orange_candidates": 24,
+        "global_optimality_proven": false
+      },
+      "display_frame_note": "Routing detours may extend the frame; the TCA grid diameter remains 12.74755."
     },
     {
       "shape": "square",
@@ -84,14 +96,14 @@
         "stoichiometry_preserved": true,
         "coordinate_transform_verified": true,
         "segment_endpoints_verified": true,
-        "nodes": 740,
+        "nodes": 463,
         "source_nodes": 220,
-        "routing_nodes": 520,
+        "routing_nodes": 243,
         "orthogonal_segments_verified": true,
         "non_tca_orthogonal_segments_verified": true,
         "tca_curved_segments": 0,
         "reactions": 84,
-        "segments": 773,
+        "segments": 496,
         "primary_metabolites": 50,
         "secondary_metabolites": 86,
         "currency_copy_counts": {
@@ -114,7 +126,19 @@
       },
       "grid_cols": 14,
       "grid_rows": 27,
-      "svg_cubic_paths": 0
+      "svg_cubic_paths": 0,
+      "crossing_constraints": {
+        "shape": "square",
+        "red_red": 0,
+        "red_orange": 0,
+        "orange_orange": 33,
+        "hard_verified": true,
+        "svg_escher_geometry_verified": true,
+        "orange_first_feasible": 40,
+        "orange_candidates": 8,
+        "global_optimality_proven": false
+      }
     }
-  ]
+  ],
+  "crossing_policy": "red crossings forbidden; orange crossings minimized over deterministic candidates"
 }

@@ -36,6 +36,11 @@ def separate_routes(data,major_reactions=(),connector_pairs=None,enabled=True,ro
     for simulation views, with no structural priority.
     """
     header,body=data;meta=header['metadata']
+    from tca_curves import backbone_from_metadata
+    canonical=backbone_from_metadata(meta).get('crossing_routing')
+    if enabled and canonical:
+        from crossing_routing import apply_to_escher
+        return apply_to_escher(data,canonical)
     route_offset=meta.get('route_offset_grid',.3) if route_offset is None else route_offset
     validate_route_offset(route_offset)
     meta['route_offset_grid']=route_offset

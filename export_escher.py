@@ -334,7 +334,11 @@ def validate_map_geometry(data, model, source_nodes, source_xy, source_metadata=
     for key, node in source_nodes.items():
         if node['kind'] == 'currency' and counts[key] != 1:
             raise ValueError('Currency copy must have one segment')
-    return dict(schema_valid=None, metadata_embedded='metadata' in header,
+    crossing_check=None
+    if metadata.get('crossing_routing',{}).get('verified'):
+        from crossing_routing import validate_saved_geometry
+        crossing_check=validate_saved_geometry(data,metadata)
+    return dict(crossing_constraints=crossing_check,schema_valid=None, metadata_embedded='metadata' in header,
                 reaction_ids_preserved=True, stoichiometry_preserved=True,
                 coordinate_transform_verified=True, segment_endpoints_verified=True,
                 nodes=len(map_nodes), source_nodes=len(source_nodes), routing_nodes=len(routing_ids),

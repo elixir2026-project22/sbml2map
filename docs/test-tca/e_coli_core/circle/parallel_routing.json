@@ -2,598 +2,7514 @@
   "trunk_grouping": "positive_length_overlap",
   "clearance_grid": 0.3,
   "min_parallel_length_grid": 1.0,
-  "shifted_segments": 12,
+  "shifted_segments": 0,
   "unresolved": [],
-  "max_offset_grid": 0.3000000000000007,
+  "max_offset_grid": 0,
   "fixed_endpoints": true,
   "shared_same_reaction_trunks": true,
   "node_detours": {
     "trunk_grouping": "positive_length_overlap",
     "route_offset_grid": 0.3,
     "enabled": true,
-    "shifted_segments": 6,
-    "unresolved": [
-      {
-        "reaction_id": "ICDHyr",
-        "axis": 0,
-        "level": 21.000172506691605,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            17.0,
-            21.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "ACALD",
-        "axis": 0,
-        "level": 23.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            16.0,
-            23.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "axis": 0,
-        "level": 21.92,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            17.0,
-            22.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "axis": 0,
-        "level": 22.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            17.0,
-            22.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "axis": 1,
-        "level": 17.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            17.0,
-            22.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "D_LACt2",
-        "axis": 0,
-        "level": 21.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            3.0,
-            21.0
-          ],
-          [
-            16.5,
-            21.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "LDH_D",
-        "axis": 0,
-        "level": 21.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            1.0,
-            21.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "LDH_D",
-        "axis": 1,
-        "level": 1.0,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            1.0,
-            21.0
-          ],
-          [
-            1.0,
-            22.0
-          ],
-          [
-            1.0,
-            23.0
-          ],
-          [
-            1.0,
-            24.0
-          ]
-        ]
-      },
-      {
-        "reaction_id": "LDH_D",
-        "axis": 1,
-        "level": 1.08,
-        "reason": "requested U-shaped lanes and endpoint-step fallbacks are obstructed",
-        "nodes": [
-          [
-            1.0,
-            21.0
-          ]
-        ]
-      }
-    ],
+    "shifted_segments": 0,
+    "unresolved": [],
     "shape": "rectangle with optional endpoint steps",
     "endpoint_step_grid": 0.15,
-    "endpoint_step_fallback_segments": 2,
-    "detours": [
-      {
-        "reaction_id": "ACKr",
-        "axis": 1,
-        "offset_grid": 0.3,
-        "inset_start": true,
-        "inset_end": false,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      },
-      {
-        "reaction_id": "AKGt2r",
-        "axis": 0,
-        "offset_grid": -0.3,
-        "inset_start": false,
-        "inset_end": false,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      },
-      {
-        "reaction_id": "ALCD2x",
-        "axis": 1,
-        "offset_grid": -0.3,
-        "inset_start": false,
-        "inset_end": true,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      },
-      {
-        "reaction_id": "EX_fru_e",
-        "axis": 0,
-        "offset_grid": -0.3,
-        "inset_start": false,
-        "inset_end": false,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      },
-      {
-        "reaction_id": "FORt",
-        "axis": 0,
-        "offset_grid": 0.3,
-        "inset_start": false,
-        "inset_end": false,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      },
-      {
-        "reaction_id": "PTAr",
-        "axis": 0,
-        "offset_grid": 0.3,
-        "inset_start": false,
-        "inset_end": false,
-        "segments": 1,
-        "existing_endpoint_stem_overlaps": 0
-      }
-    ],
+    "endpoint_step_fallback_segments": 0,
+    "detours": [],
     "fixed_endpoints": true,
     "shared_same_reaction_trunks": true,
     "backbone_shifted_segments": 0,
-    "max_offset_grid": 0.3,
+    "max_offset_grid": 0,
     "backbone_max_offset_grid": 0
   },
   "routing_preference": "important_bends_then_length_gray_yields",
   "important_simplification": {
     "policy": "important_bends_then_length_gray_yields",
-    "changed_paths": 6,
-    "removed_bends": 10,
-    "details": [
-      {
-        "reaction_id": "ICDHyr",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "ACt2r",
-        "bends_before": 4,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "ETOHt2r",
-        "bends_before": 4,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "LDH_D",
-        "bends_before": 4,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "PFL",
-        "bends_before": 4,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "PYRt2",
-        "bends_before": 4,
-        "bends_after": 2
-      }
-    ],
-    "unresolved": [
-      {
-        "reaction_id": "ICDHyr",
-        "reason": "No simpler feasible important route"
-      },
-      {
-        "reaction_id": "ACALD",
-        "reason": "No simpler feasible important route"
-      },
-      {
-        "reaction_id": "ACKr",
-        "reason": "No simpler feasible important route"
-      },
-      {
-        "reaction_id": "D_LACt2",
-        "reason": "No simpler feasible important route"
-      },
-      {
-        "reaction_id": "LDH_D",
-        "reason": "No simpler feasible important route"
-      }
-    ]
+    "changed_paths": 0,
+    "removed_bends": 0,
+    "details": [],
+    "unresolved": []
   },
   "gray_yield": {
-    "changed_paths": 9,
-    "details": [
-      {
-        "reaction_id": "FRD7",
-        "bends_before": 1,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "FRUpts2",
-        "bends_before": 1,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "GLUN",
-        "bends_before": 0,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "LDH_D",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "MALS",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "PPCK",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "PPS",
-        "bends_before": 1,
-        "bends_after": 1
-      },
-      {
-        "reaction_id": "RPI",
-        "bends_before": 1,
-        "bends_after": 2
-      },
-      {
-        "reaction_id": "SUCCt3",
-        "bends_before": 1,
-        "bends_after": 2
-      }
-    ],
-    "unresolved": [
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "BIOMASS_Ecoli_core_w_GAM",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "FBP",
-        "reason": "No free gray route found"
-      },
-      {
-        "reaction_id": "FORt2",
-        "reason": "No free gray route found"
-      },
-      {
-        "reaction_id": "FORt2",
-        "reason": "No free gray route found"
-      },
-      {
-        "reaction_id": "FRUpts2",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "GLNS",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "GLUDy",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "GLUDy",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "GLUSy",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "GND",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "ICL",
-        "reason": "No free gray route found"
-      },
-      {
-        "reaction_id": "MALS",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "ME1",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "ME2",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "ME2",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "NADH16",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "NADH16",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "NADTRHD",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "NADTRHD",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "PFL",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "PPS",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "SUCCt3",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TALA",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TALA",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TALA",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TKT1",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TKT1",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TKT2",
-        "reason": "Shared gray trunk retained"
-      },
-      {
-        "reaction_id": "TKT2",
-        "reason": "Shared gray trunk retained"
-      }
-    ]
+    "changed_paths": 0,
+    "details": [],
+    "unresolved": []
   },
-  "red_parallel_layout": {
-    "enabled": true,
-    "requested_spacing_grid": 1.0,
-    "min_parallel_length_grid": 1,
-    "stage": "grid layout routing-channel allocation",
-    "obstacle_node_ids": [
-      "met:13dpg_c",
-      "met:2pg_c",
-      "met:3pg_c",
-      "met:ac_c",
-      "met:ac_e",
-      "met:acald_c",
-      "met:acald_e",
-      "met:accoa_c",
-      "met:acon_C_c",
-      "met:actp_c",
-      "met:akg_c",
-      "met:akg_e",
-      "met:cit_c",
-      "met:dhap_c",
-      "met:etoh_c",
-      "met:etoh_e",
-      "met:f6p_c",
-      "met:fdp_c",
-      "met:for_c",
-      "met:for_e",
-      "met:fru_e",
-      "met:fum_c",
-      "met:fum_e",
-      "met:g3p_c",
-      "met:g6p_c",
-      "met:glc__D_e",
-      "met:gln__L_c",
-      "met:gln__L_e",
-      "met:glu__L_c",
-      "met:glu__L_e",
-      "met:icit_c",
-      "met:lac__D_c",
-      "met:lac__D_e",
-      "met:mal__L_c",
-      "met:mal__L_e",
-      "met:oaa_c",
-      "met:pep_c",
-      "met:pyr_c",
-      "met:pyr_e",
-      "met:succ_c",
-      "met:succ_e",
-      "met:succoa_c",
-      "rxn:ACALD",
-      "rxn:ACALDt",
-      "rxn:ACKr",
-      "rxn:ACONTa",
-      "rxn:ACONTb",
-      "rxn:ACt2r",
-      "rxn:AKGDH",
-      "rxn:AKGt2r",
-      "rxn:ALCD2x",
-      "rxn:BIOMASS_Ecoli_core_w_GAM",
-      "rxn:CS",
-      "rxn:D_LACt2",
-      "rxn:ENO",
-      "rxn:ETOHt2r",
-      "rxn:EX_ac_e",
-      "rxn:EX_acald_e",
-      "rxn:EX_akg_e",
-      "rxn:EX_etoh_e",
-      "rxn:EX_for_e",
-      "rxn:EX_fru_e",
-      "rxn:EX_fum_e",
-      "rxn:EX_glc__D_e",
-      "rxn:EX_gln__L_e",
-      "rxn:EX_glu__L_e",
-      "rxn:EX_lac__D_e",
-      "rxn:EX_mal__L_e",
-      "rxn:EX_pyr_e",
-      "rxn:EX_succ_e",
-      "rxn:FBA",
-      "rxn:FORt",
-      "rxn:FRUpts2",
-      "rxn:FUM",
-      "rxn:FUMt2_2",
-      "rxn:GAPD",
-      "rxn:GLCpts",
-      "rxn:GLNabc",
-      "rxn:GLUt2r",
-      "rxn:ICDHyr",
-      "rxn:LDH_D",
-      "rxn:MALt2_2",
-      "rxn:MDH",
-      "rxn:PDH",
-      "rxn:PFK",
-      "rxn:PFL",
-      "rxn:PGI",
-      "rxn:PGK",
-      "rxn:PGM",
-      "rxn:PTAr",
-      "rxn:PYK",
-      "rxn:PYRt2",
-      "rxn:SUCCt2_2",
-      "rxn:SUCDi",
-      "rxn:SUCOAS",
-      "rxn:TPI"
-    ],
-    "unresolved": [],
-    "nodes_moved": false,
-    "global_optimality_proven": false,
-    "minimum_parallel_gap_grid": 1.0,
-    "parallel_pairs": 42,
-    "violations": [],
+  "crossing_constraints": {
+    "policy": "red_crossings_forbidden_orange_crossings_first",
     "verified": true,
-    "method": "Constraint-checked greedy routing channels",
-    "elapsed_seconds": 0.16700150398537517,
-    "signature": "cdc44e9f2225ec6e7e186b9d",
-    "routing_envelope": {
-      "x_min": -1.0,
-      "x_max": 7.5,
-      "y_min": 24.0,
-      "y_max": 46.0
+    "metrics": {
+      "red_red": 0,
+      "red_orange": 0,
+      "orange_orange": 92,
+      "hard_verified": true,
+      "violations": [
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.15,
+                22.91624481
+              ],
+              [
+                3.15,
+                22.91624481
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "for_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                22.0
+              ],
+              [
+                2.59982749,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ALCD2x"
+          ],
+          "metabolites": [
+            "for_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.79982749,
+                25.0
+              ],
+              [
+                16.79982749,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALDt"
+          ],
+          "metabolites": [
+            "for_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.94982749,
+                22.0
+              ],
+              [
+                16.94982749,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "for_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                15.85,
+                41.15
+              ],
+              [
+                15.85,
+                41.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PTAr"
+          ],
+          "metabolites": [
+            "for_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.15,
+                39.99982749
+              ],
+              [
+                0.15,
+                40.00017251
+              ]
+            ],
+            [
+              [
+                2.29982749,
+                24.35
+              ],
+              [
+                2.29982749,
+                24.35
+              ]
+            ],
+            [
+              [
+                0.15,
+                44.15
+              ],
+              [
+                0.15,
+                44.15
+              ]
+            ],
+            [
+              [
+                0.70017251,
+                46.0
+              ],
+              [
+                0.70017251,
+                46.0
+              ]
+            ],
+            [
+              [
+                3.0,
+                41.15
+              ],
+              [
+                3.0,
+                41.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "for_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.85,
+                22.0
+              ],
+              [
+                16.85,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "for_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.29982749,
+                24.5
+              ],
+              [
+                2.29982749,
+                24.5
+              ]
+            ],
+            [
+              [
+                0.85,
+                24.56486554
+              ],
+              [
+                0.85,
+                24.56486554
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "for_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.0
+              ],
+              [
+                0.85,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                1.15,
+                46.0
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.15,
+                45.85
+              ],
+              [
+                0.15,
+                45.85
+              ]
+            ],
+            [
+              [
+                2.15,
+                41.15
+              ],
+              [
+                2.15,
+                41.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.15,
+                24.56486554
+              ],
+              [
+                2.15,
+                24.56486554
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "AKGt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.35,
+                10.100930491923576
+              ],
+              [
+                11.83640307,
+                10.100930491923576
+              ]
+            ],
+            [
+              [
+                17.85,
+                23.06624481
+              ],
+              [
+                17.85,
+                23.06624481
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACALDt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "acald_e"
+          ],
+          "contacts": [
+            [
+              [
+                28.85,
+                23.0
+              ],
+              [
+                28.85,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                22.91624481
+              ],
+              [
+                2.59982749,
+                22.91624481
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                17.15
+              ],
+              [
+                -0.15,
+                17.15
+              ]
+            ],
+            [
+              [
+                11.35,
+                12.95093049
+              ],
+              [
+                11.35,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                12.95093049
+              ],
+              [
+                11.83640307,
+                12.95093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.38375519,
+                14.0
+              ],
+              [
+                4.38375519,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                17.15
+              ],
+              [
+                2.85,
+                17.15
+              ]
+            ],
+            [
+              [
+                11.35,
+                13.08640307
+              ],
+              [
+                11.35,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.08640307
+              ],
+              [
+                11.83640307,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                13.5
+              ],
+              [
+                16.94982749,
+                13.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                21.15173022
+              ],
+              [
+                -0.15,
+                21.15173022
+              ]
+            ],
+            [
+              [
+                3.15,
+                17.15
+              ],
+              [
+                3.15,
+                17.15
+              ]
+            ],
+            [
+              [
+                11.35,
+                13.14394128
+              ],
+              [
+                11.35,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.10093049
+              ],
+              [
+                11.83640307,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                17.09982749,
+                13.5
+              ],
+              [
+                17.09982749,
+                13.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "FORt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.09982749,
+                23.06624481
+              ],
+              [
+                17.09982749,
+                23.06624481
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.38375519,
+                15.0
+              ],
+              [
+                4.38375519,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                28.85,
+                22.0
+              ],
+              [
+                28.85,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "acald_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                17.15
+              ],
+              [
+                3.0,
+                17.15
+              ]
+            ],
+            [
+              [
+                11.35,
+                13.10093049
+              ],
+              [
+                11.35,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.14394128
+              ],
+              [
+                11.83640307,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                16.85,
+                13.5
+              ],
+              [
+                16.85,
+                13.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "acald_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                21.85
+              ],
+              [
+                2.59982749,
+                21.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PTAr"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                24.86486554
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "ACALDt"
+          ],
+          "metabolites": [
+            "akg_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.85,
+                23.0
+              ],
+              [
+                17.85,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                15.65
+              ],
+              [
+                -0.15,
+                15.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.94982749,
+                16.85
+              ],
+              [
+                16.94982749,
+                16.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "akg_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.09982749,
+                16.85
+              ],
+              [
+                17.09982749,
+                16.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "akg_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.85,
+                24.0
+              ],
+              [
+                17.85,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "akg_c",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                19.15,
+                22.0
+              ],
+              [
+                19.15,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.85,
+                16.85
+              ],
+              [
+                16.85,
+                16.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.94982749,
+                24.0
+              ],
+              [
+                16.94982749,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACKr",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "ac_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.85,
+                23.85
+              ],
+              [
+                15.85,
+                23.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "PTAr"
+          ],
+          "metabolites": [
+            "ac_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.29982749,
+                46.15
+              ],
+              [
+                1.29982749,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.70017251,
+                46.15
+              ],
+              [
+                0.70017251,
+                46.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "ac_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                23.85
+              ],
+              [
+                1.15,
+                23.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "ac_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                24.35
+              ],
+              [
+                2.44982749,
+                24.35
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.0,
+                40.00017251
+              ],
+              [
+                0.0,
+                44.15
+              ]
+            ],
+            [
+              [
+                1.29982749,
+                46.0
+              ],
+              [
+                1.29982749,
+                46.0
+              ]
+            ],
+            [
+              [
+                0.70017251,
+                45.85
+              ],
+              [
+                0.70017251,
+                45.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "FORt"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.70017251,
+                49.0
+              ],
+              [
+                1.29982749,
+                49.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.15,
+                24.35
+              ],
+              [
+                2.15,
+                24.35
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.94982749,
+                17.0
+              ],
+              [
+                16.94982749,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.85,
+                17.0
+              ],
+              [
+                16.85,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.09982749,
+                20.0
+              ],
+              [
+                17.09982749,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "glu__L_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.09982749,
+                20.0
+              ],
+              [
+                17.09982749,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                24.86486554
+              ],
+              [
+                1.0,
+                25.0
+              ]
+            ],
+            [
+              [
+                2.15,
+                24.5
+              ],
+              [
+                2.15,
+                24.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                12.95093049
+              ],
+              [
+                11.59906951,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                3.15,
+                21.15
+              ],
+              [
+                3.15,
+                21.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                21.15
+              ],
+              [
+                3.0,
+                21.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "succ_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                14.0
+              ],
+              [
+                2.85,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "succ_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.15,
+                14.0
+              ],
+              [
+                3.15,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "succ_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                14.0
+              ],
+              [
+                3.0,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                11.59906951,
+                13.08640307
+              ],
+              [
+                11.59906951,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                13.10093049
+              ],
+              [
+                16.94982749,
+                13.10093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                15.0
+              ],
+              [
+                2.85,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.53640307,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                20.85017251
+              ],
+              [
+                16.94982749,
+                20.85017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "EX_mal__L_e"
+          ],
+          "metabolites": [
+            "lac__D_e",
+            "mal__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                18.5
+              ],
+              [
+                0.85,
+                18.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "FORt"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                22.91624481
+              ],
+              [
+                -0.15,
+                22.91624481
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.15,
+                15.0
+              ],
+              [
+                3.15,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.10093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                21.15017251
+              ],
+              [
+                3.0,
+                21.15017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.15,
+                21.00017251
+              ],
+              [
+                3.15,
+                21.00017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "for_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.09982749,
+                24.0
+              ],
+              [
+                17.09982749,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FUMt2_2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "fum_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                15.0
+              ],
+              [
+                3.0,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "LDH_D",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                21.00017251
+              ],
+              [
+                3.0,
+                21.00017251
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    "initial_feasible_metrics": {
+      "red_red": 0,
+      "red_orange": 0,
+      "orange_orange": 152,
+      "hard_verified": true,
+      "violations": [
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.15,
+                25.0
+              ],
+              [
+                3.15,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.15,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "for_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                21.30173022
+              ],
+              [
+                3.85,
+                21.30173022
+              ]
+            ],
+            [
+              [
+                11.35,
+                12.95093049
+              ],
+              [
+                11.35,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                12.95093049
+              ],
+              [
+                11.83640307,
+                12.95093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "AKGt2r"
+          ],
+          "metabolites": [
+            "for_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                17.0
+              ],
+              [
+                3.85,
+                17.0
+              ]
+            ],
+            [
+              [
+                4.38375519,
+                13.23640307
+              ],
+              [
+                4.38375519,
+                13.23640307
+              ]
+            ],
+            [
+              [
+                11.35,
+                13.10093049
+              ],
+              [
+                11.35,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.14394128
+              ],
+              [
+                11.83640307,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                16.0,
+                13.5
+              ],
+              [
+                16.0,
+                13.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "for_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.35,
+                10.100930491923576
+              ],
+              [
+                11.83640307,
+                10.100930491923576
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                20.85
+              ],
+              [
+                16.94982749,
+                20.85
+              ]
+            ],
+            [
+              [
+                17.09982749,
+                22.0
+              ],
+              [
+                17.09982749,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PTAr"
+          ],
+          "metabolites": [
+            "for_c",
+            "actp_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.35,
+                13.08640307
+              ],
+              [
+                11.35,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.08640307
+              ],
+              [
+                11.83640307,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "for_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.65,
+                17.0
+              ],
+              [
+                16.65,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "for_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                21.85
+              ],
+              [
+                3.85,
+                21.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "for_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                21.85
+              ],
+              [
+                3.85,
+                21.85
+              ]
+            ],
+            [
+              [
+                3.85,
+                13.29394128
+              ],
+              [
+                3.85,
+                13.29394128
+              ]
+            ],
+            [
+              [
+                11.10605872,
+                13.23640307
+              ],
+              [
+                11.10605872,
+                13.23640307
+              ]
+            ],
+            [
+              [
+                11.35,
+                12.95093049
+              ],
+              [
+                11.35,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                12.95093049
+              ],
+              [
+                11.83640307,
+                12.95093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "for_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                14.0
+              ],
+              [
+                3.85,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "FORt"
+          ],
+          "metabolites": [
+            "for_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                13.25093049
+              ],
+              [
+                3.85,
+                13.25093049
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.10093049
+              ],
+              [
+                11.83640307,
+                13.10093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "for_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                15.0
+              ],
+              [
+                3.85,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.35,
+                13.14394128
+              ],
+              [
+                11.35,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                11.83640307,
+                13.10093049
+              ],
+              [
+                11.83640307,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                16.85,
+                20.85
+              ],
+              [
+                16.85,
+                20.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "for_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.85,
+                18.0
+              ],
+              [
+                3.85,
+                18.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACKr"
+          ],
+          "metabolites": [
+            "acald_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.85,
+                23.85
+              ],
+              [
+                15.85,
+                23.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                18.65
+              ],
+              [
+                2.85,
+                18.65
+              ]
+            ],
+            [
+              [
+                2.85,
+                12.95093049
+              ],
+              [
+                2.85,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                12.95093049
+              ],
+              [
+                16.94982749,
+                12.95093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PTAr"
+          ],
+          "metabolites": [
+            "acald_c",
+            "actp_c"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                13.08640307
+              ],
+              [
+                -0.15,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                11.10605872,
+                12.95093049
+              ],
+              [
+                13.0,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                2.44982749,
+                18.65
+              ],
+              [
+                2.44982749,
+                18.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.79982749,
+                26.00017251
+              ],
+              [
+                16.79982749,
+                26.00017251
+              ]
+            ],
+            [
+              [
+                16.79982749,
+                23.85
+              ],
+              [
+                16.79982749,
+                23.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.15,
+                26.00017251
+              ],
+              [
+                16.15,
+                26.00017251
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "FORt"
+          ],
+          "metabolites": [
+            "acald_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                18.65
+              ],
+              [
+                2.59982749,
+                18.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "acald_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                12.95093049
+              ],
+              [
+                11.59906951,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                3.0,
+                18.65
+              ],
+              [
+                3.0,
+                18.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "akg_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                17.0
+              ],
+              [
+                2.85,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "PTAr"
+          ],
+          "metabolites": [
+            "akg_c",
+            "actp_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.53640307,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                17.0
+              ],
+              [
+                2.44982749,
+                17.0
+              ]
+            ],
+            [
+              [
+                4.38375519,
+                13.29394128
+              ],
+              [
+                4.38375519,
+                13.29394128
+              ]
+            ],
+            [
+              [
+                11.10605872,
+                13.10093049
+              ],
+              [
+                11.10605872,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                13.0,
+                13.14394128
+              ],
+              [
+                13.0,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                16.0,
+                13.38640307
+              ],
+              [
+                16.0,
+                13.38640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.38375519,
+                14.0
+              ],
+              [
+                4.38375519,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "FORt"
+          ],
+          "metabolites": [
+            "akg_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.53640307,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                11.53640307,
+                13.08640307
+              ],
+              [
+                11.53640307,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                2.59982749,
+                17.0
+              ],
+              [
+                2.59982749,
+                17.0
+              ]
+            ],
+            [
+              [
+                4.38375519,
+                13.25093049
+              ],
+              [
+                4.38375519,
+                13.25093049
+              ]
+            ],
+            [
+              [
+                12.85,
+                13.14394128
+              ],
+              [
+                12.85,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                16.0,
+                13.44394128
+              ],
+              [
+                16.0,
+                13.44394128
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "akg_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.38375519,
+                15.0
+              ],
+              [
+                4.38375519,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "AKGt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                3.0,
+                17.0
+              ],
+              [
+                3.0,
+                17.0
+              ]
+            ],
+            [
+              [
+                4.38375519,
+                13.14394128
+              ],
+              [
+                4.38375519,
+                13.14394128
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.79982749,
+                25.0
+              ],
+              [
+                16.79982749,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.15,
+                25.0
+              ],
+              [
+                16.15,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALDt",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_e",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                19.15,
+                23.0
+              ],
+              [
+                19.15,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALDt",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acald_e",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                28.85,
+                23.0
+              ],
+              [
+                28.85,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "PTAr"
+          ],
+          "metabolites": [
+            "ac_c",
+            "actp_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                13.08640307
+              ],
+              [
+                2.85,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                13.08640307
+              ],
+              [
+                16.94982749,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "ac_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.94982749,
+                17.0
+              ],
+              [
+                16.94982749,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                21.00017251
+              ],
+              [
+                2.44982749,
+                21.00017251
+              ]
+            ],
+            [
+              [
+                2.85,
+                13.29394128
+              ],
+              [
+                2.85,
+                13.29394128
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                13.38640307
+              ],
+              [
+                16.94982749,
+                13.38640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                14.0
+              ],
+              [
+                2.85,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.79982749,
+                22.85
+              ],
+              [
+                16.79982749,
+                22.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "FORt"
+          ],
+          "metabolites": [
+            "ac_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                21.00017251
+              ],
+              [
+                2.59982749,
+                21.00017251
+              ]
+            ],
+            [
+              [
+                2.85,
+                13.25093049
+              ],
+              [
+                2.85,
+                13.25093049
+              ]
+            ],
+            [
+              [
+                16.94982749,
+                20.15
+              ],
+              [
+                16.94982749,
+                20.15
+              ]
+            ],
+            [
+              [
+                17.09982749,
+                22.15
+              ],
+              [
+                17.09982749,
+                22.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "FORt"
+          ],
+          "metabolites": [
+            "ac_c",
+            "for_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.9853194,
+                22.0
+              ],
+              [
+                1.9853194,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                15.0
+              ],
+              [
+                2.85,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "ac_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.9853194,
+                21.45173022
+              ],
+              [
+                1.9853194,
+                21.45173022
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.85,
+                18.0
+              ],
+              [
+                2.85,
+                18.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "ac_e",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                23.0
+              ],
+              [
+                1.15,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                24.65
+              ],
+              [
+                1.0,
+                24.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                3.0,
+                46.0
+              ],
+              [
+                3.0,
+                46.0
+              ]
+            ],
+            [
+              [
+                0.15,
+                24.85017251
+              ],
+              [
+                0.15,
+                24.85017251
+              ]
+            ],
+            [
+              [
+                0.15,
+                45.85
+              ],
+              [
+                0.15,
+                45.85
+              ]
+            ],
+            [
+              [
+                0.40017251,
+                24.65
+              ],
+              [
+                0.40017251,
+                24.65
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                0.85,
+                46.15
+              ]
+            ],
+            [
+              [
+                1.15,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.15,
+                46.0
+              ],
+              [
+                0.15,
+                46.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.15,
+                24.86486554
+              ],
+              [
+                0.15,
+                24.86486554
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "actp_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                11.10605872,
+                13.08640307
+              ],
+              [
+                11.10605872,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                13.0,
+                13.08640307
+              ],
+              [
+                13.0,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "actp_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                3.0,
+                46.0
+              ],
+              [
+                3.0,
+                46.0
+              ]
+            ],
+            [
+              [
+                0.15,
+                45.85
+              ],
+              [
+                0.15,
+                45.85
+              ]
+            ],
+            [
+              [
+                -0.15,
+                25.0
+              ],
+              [
+                -0.15,
+                25.0
+              ]
+            ],
+            [
+              [
+                16.79982749,
+                26.0
+              ],
+              [
+                16.79982749,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "actp_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.15
+              ],
+              [
+                0.85,
+                46.15
+              ]
+            ],
+            [
+              [
+                1.15,
+                46.15
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.15,
+                46.0
+              ],
+              [
+                0.15,
+                46.0
+              ]
+            ],
+            [
+              [
+                0.0,
+                25.0
+              ],
+              [
+                0.0,
+                25.0
+              ]
+            ],
+            [
+              [
+                16.15,
+                26.0
+              ],
+              [
+                16.15,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "FORt"
+          ],
+          "metabolites": [
+            "actp_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.53640307,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "actp_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.08640307
+              ]
+            ],
+            [
+              [
+                11.59906951,
+                13.08640307
+              ],
+              [
+                11.59906951,
+                13.08640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "akg_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.79982749,
+                17.0
+              ],
+              [
+                16.79982749,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.85,
+                17.0
+              ],
+              [
+                16.85,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                19.15,
+                22.0
+              ],
+              [
+                19.15,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                24.86486554
+              ],
+              [
+                1.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "SUCCt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                14.0
+              ],
+              [
+                2.44982749,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "FORt"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                21.15
+              ],
+              [
+                2.44982749,
+                21.15
+              ]
+            ],
+            [
+              [
+                2.59982749,
+                13.29394128
+              ],
+              [
+                2.59982749,
+                13.29394128
+              ]
+            ],
+            [
+              [
+                11.10605872,
+                13.25093049
+              ],
+              [
+                11.10605872,
+                13.25093049
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                15.0
+              ],
+              [
+                2.44982749,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "gln__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                28.85,
+                24.0
+              ],
+              [
+                28.85,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "GLUt2r"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "glu__L_e"
+          ],
+          "contacts": [
+            [
+              [
+                28.85,
+                22.0
+              ],
+              [
+                28.85,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                12.95093049
+              ],
+              [
+                11.59906951,
+                12.95093049
+              ]
+            ],
+            [
+              [
+                3.0,
+                13.29394128
+              ],
+              [
+                3.0,
+                13.29394128
+              ]
+            ],
+            [
+              [
+                11.10605872,
+                13.14394128
+              ],
+              [
+                11.10605872,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                13.0,
+                13.10093049
+              ],
+              [
+                13.0,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                16.85,
+                13.38640307
+              ],
+              [
+                16.85,
+                13.38640307
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                21.45173022
+              ],
+              [
+                2.44982749,
+                21.45173022
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PYRt2",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.44982749,
+                18.0
+              ],
+              [
+                2.44982749,
+                18.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "FORt"
+          ],
+          "metabolites": [
+            "succ_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                14.0
+              ],
+              [
+                2.59982749,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "SUCCt2_2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "succ_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                14.0
+              ],
+              [
+                3.0,
+                14.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                46.0
+              ],
+              [
+                0.85,
+                46.15
+              ]
+            ],
+            [
+              [
+                1.15,
+                46.0
+              ],
+              [
+                1.15,
+                46.15
+              ]
+            ],
+            [
+              [
+                0.40017251,
+                24.5
+              ],
+              [
+                0.40017251,
+                24.5
+              ]
+            ],
+            [
+              [
+                0.0,
+                24.85017251
+              ],
+              [
+                0.0,
+                24.85017251
+              ]
+            ],
+            [
+              [
+                -0.15,
+                45.85
+              ],
+              [
+                -0.15,
+                45.85
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "etoh_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                24.0
+              ],
+              [
+                1.15,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.0,
+                45.85
+              ],
+              [
+                0.0,
+                45.85
+              ]
+            ],
+            [
+              [
+                3.15,
+                46.0
+              ],
+              [
+                3.15,
+                46.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "FORt"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "for_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.15,
+                22.0
+              ],
+              [
+                1.15,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                -0.15,
+                24.85017251
+              ],
+              [
+                -0.15,
+                24.86486554
+              ]
+            ],
+            [
+              [
+                1.15,
+                21.45173022
+              ],
+              [
+                1.15,
+                21.45173022
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.85,
+                49.0
+              ],
+              [
+                1.15,
+                49.0
+              ]
+            ],
+            [
+              [
+                0.0,
+                46.0
+              ],
+              [
+                0.0,
+                46.0
+              ]
+            ],
+            [
+              [
+                2.85,
+                25.99982749
+              ],
+              [
+                2.85,
+                25.99982749
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                0.0,
+                24.86486554
+              ],
+              [
+                0.0,
+                24.86486554
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "FUMt2_2"
+          ],
+          "metabolites": [
+            "for_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                15.0
+              ],
+              [
+                2.59982749,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.40605872,
+                13.08640307
+              ],
+              [
+                11.40605872,
+                13.14394128
+              ]
+            ],
+            [
+              [
+                11.59906951,
+                13.10093049
+              ],
+              [
+                12.85,
+                13.10093049
+              ]
+            ],
+            [
+              [
+                3.0,
+                13.25093049
+              ],
+              [
+                3.0,
+                13.25093049
+              ]
+            ],
+            [
+              [
+                16.85,
+                20.15
+              ],
+              [
+                16.85,
+                20.15
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                21.45173022
+              ],
+              [
+                2.0,
+                21.45173022
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "for_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.59982749,
+                18.0
+              ],
+              [
+                2.59982749,
+                18.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FUMt2_2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "fum_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                15.0
+              ],
+              [
+                3.0,
+                15.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "LDH_D",
+            "MALt2_2"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                18.0
+              ],
+              [
+                3.0,
+                18.0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    "nodes_moved": false,
+    "grid_shape": [
+      119,
+      185
+    ],
+    "attempts": 24,
+    "objective_order": [
+      "red crossings forbidden",
+      "orange crossings",
+      "bends",
+      "length"
+    ],
+    "global_optimality_proven": false,
+    "before": {
+      "red_red": 56,
+      "red_orange": 44,
+      "orange_orange": 38,
+      "hard_verified": false,
+      "violations": [
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFK",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "adp_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.4498274933083939,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "adp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "adp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFK",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "atp_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                0.5501725066916061,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "atp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "atp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFK",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                41.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                41.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFK",
+            "EX_fru_e"
+          ],
+          "metabolites": [
+            "fdp_c",
+            "fru_e"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fdp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                39.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PFK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fdp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                39.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "acald_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                3.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACALD"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                3.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                24.0
+              ],
+              [
+                3.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "FORt"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                22.0
+              ],
+              [
+                3.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "for_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                22.0
+              ],
+              [
+                17.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PFL",
+            "FORt"
+          ],
+          "metabolites": [
+            "for_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                22.0
+              ],
+              [
+                17.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFL",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "for_c",
+            "icit_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.213430236712107,
+                22.0
+              ],
+              [
+                16.213430236712107,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PFL",
+            "MDH"
+          ],
+          "metabolites": [
+            "for_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.286563066847089,
+                22.000000000000004
+              ],
+              [
+                4.286563066847089,
+                22.000000000000004
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                41.0
+              ],
+              [
+                1.0,
+                42.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                41.0
+              ],
+              [
+                1.0,
+                42.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g6p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                42.0
+              ],
+              [
+                1.0,
+                43.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g6p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                42.0
+              ],
+              [
+                1.0,
+                43.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "13dpg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                33.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "13dpg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                33.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                31.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                31.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "adp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "adp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "atp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "atp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                32.0
+              ],
+              [
+                1.0,
+                32.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACKr"
+          ],
+          "metabolites": [
+            "acald_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                23.0
+              ],
+              [
+                16.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACALD",
+            "ACONTb"
+          ],
+          "metabolites": [
+            "acald_c",
+            "icit_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.732928098637949,
+                23.0
+              ],
+              [
+                15.732928098637949,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "acald_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                16.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                23.0
+              ],
+              [
+                17.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACALD",
+            "MDH"
+          ],
+          "metabolites": [
+            "acald_c",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.767071446171606,
+                23.0
+              ],
+              [
+                4.767071446171606,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                3.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALD",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                24.0
+              ],
+              [
+                3.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "AKGt2r",
+            "FUM"
+          ],
+          "metabolites": [
+            "akg_c",
+            "fum_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.5,
+                17.0
+              ],
+              [
+                4.5,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "AKGt2r",
+            "FUM"
+          ],
+          "metabolites": [
+            "akg_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.5,
+                17.0
+              ],
+              [
+                4.5,
+                17.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGM",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "2pg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                29.0
+              ],
+              [
+                1.0,
+                30.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGM",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "2pg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                29.0
+              ],
+              [
+                1.0,
+                30.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGM",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                30.0
+              ],
+              [
+                1.0,
+                31.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PGM",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "3pg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                30.0
+              ],
+              [
+                1.0,
+                31.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "ACKr"
+          ],
+          "metabolites": [
+            "acald_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                25.0
+              ],
+              [
+                16.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                23.0
+              ],
+              [
+                17.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acald_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                25.0
+              ],
+              [
+                17.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "GLNabc"
+          ],
+          "metabolites": [
+            "acald_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                24.0
+              ],
+              [
+                17.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "ACKr"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                24.0
+              ],
+              [
+                16.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ALCD2x",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                25.0
+              ],
+              [
+                16.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACALDt",
+            "BIOMASS_Ecoli_core_w_GAM"
+          ],
+          "metabolites": [
+            "acald_c",
+            "gln__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                23.0
+              ],
+              [
+                17.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACKr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "ac_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                15.0,
+                25.0
+              ],
+              [
+                16.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACKr",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "ac_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.0,
+                24.0
+              ],
+              [
+                16.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACKr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "actp_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                15.0,
+                25.0
+              ],
+              [
+                15.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTa",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "acon_C_c",
+            "pyr_e"
+          ],
+          "contacts": [
+            [
+              [
+                13.864208081452995,
+                25.0
+              ],
+              [
+                13.864208081452995,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTa",
+            "PTAr"
+          ],
+          "metabolites": [
+            "cit_c",
+            "actp_c"
+          ],
+          "contacts": [
+            [
+              [
+                9.000000000000002,
+                26.0
+              ],
+              [
+                9.000000000000002,
+                26.0
+              ]
+            ],
+            [
+              [
+                11.500013155009098,
+                26.0
+              ],
+              [
+                11.500013155009098,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTb",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "acon_C_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.0,
+                24.0
+              ],
+              [
+                15.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTb",
+            "ACt2r"
+          ],
+          "metabolites": [
+            "icit_c",
+            "ac_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.732928098637949,
+                23.0
+              ],
+              [
+                15.732928098637949,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACONTb",
+            "ETOHt2r"
+          ],
+          "metabolites": [
+            "icit_c",
+            "etoh_c"
+          ],
+          "contacts": [
+            [
+              [
+                15.0,
+                24.0
+              ],
+              [
+                15.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ACt2r",
+            "MDH"
+          ],
+          "metabolites": [
+            "ac_c",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.767071446171606,
+                23.0
+              ],
+              [
+                4.767071446171606,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ACt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "ac_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                23.0
+              ],
+              [
+                1.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "PTAr",
+            "PYRt2"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PTAr",
+            "CS"
+          ],
+          "metabolites": [
+            "accoa_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.5
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PTAr",
+            "CS"
+          ],
+          "metabolites": [
+            "actp_c",
+            "cit_c"
+          ],
+          "contacts": [
+            [
+              [
+                9.0,
+                26.0
+              ],
+              [
+                9.0,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PYK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "adp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                26.0
+              ],
+              [
+                1.0,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PYK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "atp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                26.0
+              ],
+              [
+                1.0,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PYK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "pep_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                26.0
+              ],
+              [
+                1.0,
+                27.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "PYK",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                25.0
+              ],
+              [
+                1.0,
+                26.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "akg_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.618877475183908,
+                20.0
+              ],
+              [
+                16.618877475183908,
+                20.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "D_LACt2"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                21.0
+              ],
+              [
+                17.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "FORt"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "for_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                22.0
+              ],
+              [
+                17.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "BIOMASS_Ecoli_core_w_GAM",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "gln__L_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                17.0,
+                21.0
+              ],
+              [
+                17.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "CS"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "accoa_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                25.0
+              ],
+              [
+                3.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "coa_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                25.0
+              ],
+              [
+                2.4498274933083937,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "nad_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.8353193965216104,
+                25.0
+              ],
+              [
+                2.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "nadh_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.8351344588266256,
+                25.0
+              ],
+              [
+                2.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "PDH"
+          ],
+          "metabolites": [
+            "pyr_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                25.0
+              ],
+              [
+                2.0,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "PYRt2",
+            "CS"
+          ],
+          "metabolites": [
+            "pyr_e",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                6.635791918547005,
+                25.0
+              ],
+              [
+                6.635791918547005,
+                25.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "CS",
+            "CS"
+          ],
+          "metabolites": [
+            "cit_c",
+            "coa_c"
+          ],
+          "contacts": [
+            [
+              [
+                7.6887086676712855,
+                25.58650468823079
+              ],
+              [
+                7.6887086676712855,
+                25.58650468823079
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "D_LACt2",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "akg_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.5,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "D_LACt2",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "icit_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.5,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "D_LACt2",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "nadp_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.949827493308394,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "D_LACt2",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "nadph_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.648269782866237,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.0,
+                21.0
+              ],
+              [
+                17.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                2.0,
+                21.0
+              ],
+              [
+                3.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "D_LACt2",
+            "MDH"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.9999973691198423,
+                21.0
+              ],
+              [
+                3.9999973691198423,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "D_LACt2",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                21.0
+              ],
+              [
+                2.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "ENO",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "2pg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                28.0
+              ],
+              [
+                1.0,
+                29.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "ENO",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "2pg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                28.0
+              ],
+              [
+                1.0,
+                29.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "ENO",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "pep_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                27.0
+              ],
+              [
+                1.0,
+                28.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "ENO",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "pep_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                27.0
+              ],
+              [
+                1.0,
+                28.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ETOHt2r",
+            "MDH"
+          ],
+          "metabolites": [
+            "etoh_c",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                5.499999504398312,
+                24.0
+              ],
+              [
+                5.499999504398312,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "ETOHt2r",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "etoh_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                24.0
+              ],
+              [
+                1.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "SUCOAS",
+            "SUCOAS"
+          ],
+          "metabolites": [
+            "adp_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.25605871875391,
+                13.456124118081283
+              ],
+              [
+                11.25605871875391,
+                13.456124118081283
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "SUCOAS",
+            "SUCOAS"
+          ],
+          "metabolites": [
+            "atp_c",
+            "succ_c"
+          ],
+          "contacts": [
+            [
+              [
+                11.449069508076423,
+                13.490029236557158
+              ],
+              [
+                11.449069508076423,
+                13.490029236557158
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "FBA"
+          ],
+          "metabolites": [
+            "dhap_c",
+            "g3p_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                36.0
+              ],
+              [
+                1.0,
+                37.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "dhap_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                36.0
+              ],
+              [
+                1.0,
+                37.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "dhap_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                36.0
+              ],
+              [
+                1.0,
+                37.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "FBA"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "g3p_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                35.0
+              ],
+              [
+                1.0,
+                36.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                35.0
+              ],
+              [
+                1.0,
+                36.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "TPI",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                35.0
+              ],
+              [
+                1.0,
+                36.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_ac_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "ac_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                23.0
+              ],
+              [
+                1.0,
+                23.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_etoh_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "etoh_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                24.0
+              ],
+              [
+                1.0,
+                24.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_for_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                22.0
+              ],
+              [
+                1.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "EX_fru_e",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fru_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                40.0
+              ],
+              [
+                1.0,
+                40.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "EX_lac__D_e",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "lac__D_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                21.0
+              ],
+              [
+                1.0,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "dhap_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                37.0
+              ],
+              [
+                1.0,
+                38.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "dhap_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                37.0
+              ],
+              [
+                1.0,
+                38.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fdp_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                38.0
+              ],
+              [
+                1.0,
+                39.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "fdp_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                38.0
+              ],
+              [
+                1.0,
+                39.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                35.0
+              ],
+              [
+                1.0,
+                38.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "FBA",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                35.0
+              ],
+              [
+                1.0,
+                38.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "FORt",
+            "ICDHyr"
+          ],
+          "metabolites": [
+            "for_c",
+            "icit_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.213430236712107,
+                22.0
+              ],
+              [
+                16.213430236712107,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "FORt",
+            "MDH"
+          ],
+          "metabolites": [
+            "for_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.286563066847089,
+                22.000000000000004
+              ],
+              [
+                4.286563066847089,
+                22.000000000000004
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "orange_orange",
+          "reactions": [
+            "FORt",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "for_e",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                22.0
+              ],
+              [
+                1.0,
+                22.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "FRUpts2",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                41.0
+              ],
+              [
+                1.0,
+                41.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "FRUpts2",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "f6p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                41.0
+              ],
+              [
+                1.0,
+                41.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "13dpg_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                33.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "13dpg_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                33.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                35.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "g3p_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                35.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "nad_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "nad_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "nadh_c",
+            "pep_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "GAPD",
+            "GLCpts"
+          ],
+          "metabolites": [
+            "nadh_c",
+            "pyr_c"
+          ],
+          "contacts": [
+            [
+              [
+                1.0,
+                34.0
+              ],
+              [
+                1.0,
+                34.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ICDHyr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "akg_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.5,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ICDHyr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "icit_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.5,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ICDHyr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "nadp_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.949827493308394,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "ICDHyr",
+            "LDH_D"
+          ],
+          "metabolites": [
+            "nadph_c",
+            "lac__D_c"
+          ],
+          "contacts": [
+            [
+              [
+                16.5,
+                21.0
+              ],
+              [
+                16.648269782866237,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_orange",
+          "reactions": [
+            "LDH_D",
+            "MDH"
+          ],
+          "metabolites": [
+            "lac__D_c",
+            "mal__L_c"
+          ],
+          "contacts": [
+            [
+              [
+                3.9999973691198423,
+                21.0
+              ],
+              [
+                3.9999973691198423,
+                21.0
+              ]
+            ]
+          ]
+        },
+        {
+          "category": "red_red",
+          "reactions": [
+            "MDH",
+            "MDH"
+          ],
+          "metabolites": [
+            "nad_c",
+            "oaa_c"
+          ],
+          "contacts": [
+            [
+              [
+                4.5337551883973966,
+                22.569493876591807
+              ],
+              [
+                4.5337551883973966,
+                22.569493876591807
+              ]
+            ]
+          ]
+        }
+      ]
     }
-  },
-  "red_parallel_spacing": {
-    "requested_spacing_grid": 1.0,
-    "min_parallel_length_grid": 1,
-    "minimum_parallel_gap_grid": 1.0,
-    "parallel_pairs": 42,
-    "violations": [],
-    "verified": true
   },
   "tca_curves": {
     "style": "circular_bezier",
@@ -922,5 +7838,5 @@
     "copy:PDH:nadh_c": 0
   },
   "original_route_length": 1480.7000000000012,
-  "display_route_length": 1499.8472560918121
+  "display_route_length": 1964.7935098441178
 }

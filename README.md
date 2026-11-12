@@ -698,3 +698,25 @@ preserves saved coordinates and applies the same exclusion/alignment rules to
 added nodes; an insufficient saved frame requires regenerating a larger layout.
 Incomplete source cycles retain their supported components and angular gaps.
 No missing cycle reaction or closing connection is synthesized.
+
+
+## Hard red crossing constraints
+
+`sbml2map.py` now defaults to `--crossing-policy red-hard`. Red/red and
+red/orange crossing, unrelated touching and overlap are forbidden. Valid shared
+biological endpoints and connected trunks of one reaction are allowed. Cubic
+TCA arcs are checked by solving their line-intersection polynomials.
+
+Orange/orange contacts are minimized over deterministic ordering candidates
+(`--crossing-attempts 24` by default), then bends and route length. Zero orange
+contacts and global optimality are not guaranteed. The first feasible circle
+routing had 152 orange contacts; the selected candidate has 92. Square has 33.
+A hard constraint failure aborts output instead of silently relaxing it.
+
+A coordinate-compressed routing grid provides detour lanes outside the original
+frame. The selected routes are shared by SVG, PNG, Escher and SBML Layout;
+Escher validation reconstructs saved geometry and checks the hard constraints.
+This routing supersedes the legacy parallel-channel display reservations.
+`--crossing-policy legacy` selects the earlier routing behavior. Gray crossings
+are outside this policy. Node positions and biochemical incidence are retained.
+The examples and final counts are under `docs/test-tca/validation.json`.
