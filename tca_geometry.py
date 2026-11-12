@@ -33,7 +33,9 @@ def lattice_circle(required_slots, minimum_radius=2.):
         limit *= 2
 
 
-def configure_plan(fixed, plan, shape='circle'):
+def configure_plan(fixed, plan, shape='circle', interior_policy='forbid'):
+    if interior_policy not in ('allow','forbid'):
+        raise ValueError('tca-interior must be allow or forbid')
     if shape not in ('circle', 'square'):
         raise ValueError('tca-shape must be circle or square')
     route = next((r for r in plan['routes'] if r['id'] == 'tca'), None)
@@ -47,7 +49,7 @@ def configure_plan(fixed, plan, shape='circle'):
     side = square['side_length']
     left, top = square['left'], square['top_offset']
     node_ids = list(route['displayed_node_ids'])
-    region = dict(shape=shape, node_ids=node_ids, clearance_grid=NODE_CLEARANCE,
+    region = dict(shape=shape, node_ids=node_ids, clearance_grid=NODE_CLEARANCE, interior_policy=interior_policy,
                   orientation='clockwise', closed=route.get('closed', True))
     if shape == 'circle':
         # A genuine circle through integer grid intersections, rather than
@@ -108,10 +110,18 @@ def allowed_points(points, region, clearance=None):
         return np.ones(len(points), dtype=bool)
     margin = region.get('clearance_grid', NODE_CLEARANCE) if clearance is None else clearance
     if region['shape'] == 'circle':
-        return np.linalg.norm(points-np.asarray(region['center']), axis=1) >= region['radius']+margin-EPS
+        distance=np.linalg.norm(points-np.asarray(region['center']), axis=1)
+        if region.get('interior_policy')=='allow':
+            return np.abs(distance-region['radius']) >= margin-EPS
+        return distance >= region['radius']+margin-EPS
     left, top, side = region['left'], region['top'], region['side_length']
-    return ((points[:,0] <= left-margin+EPS) | (points[:,0] >= left+side+margin-EPS) |
+    outside = ((points[:,0] <= left-margin+EPS) | (points[:,0] >= left+side+margin-EPS) |
             (points[:,1] <= top-side-margin+EPS) | (points[:,1] >= top+margin-EPS))
+    if region.get('interior_policy')=='allow':
+        inside=((points[:,0]>=left+margin-EPS)&(points[:,0]<=left+side-margin+EPS)&
+                (points[:,1]>=top-side+margin-EPS)&(points[:,1]<=top-margin+EPS))
+        return outside|inside
+    return outside
 
 
 def on_perimeter(point, region):
@@ -127,22 +137,25 @@ def validate_exclusion(nodes, xy, region):
     if region is None:
         return dict(enabled=False, interior_node_count=0, clearance_violation_count=0, verified=True)
     ring = set(region['node_ids'])
+    permit=region.get('interior_policy')=='allow'
+    outside_region=dict(region,interior_policy='forbid')
     interior, clearance, misplaced = [], [], []
     for key, point in xy.items():
         if key in ring:
             if not on_perimeter(point, region):
                 misplaced.append(key)
         else:
-            if not allowed_points([point], region, 0)[0]:
+            if not allowed_points([point], outside_region, 0)[0]:
                 interior.append(key)
             if not allowed_points([point], region)[0]:
                 clearance.append(key)
-    report = dict(enabled=True, shape=region['shape'], region=region,
+    report = dict(enabled=True, shape=region['shape'], region=region, interior_policy='allow' if permit else 'forbid',
+                  interior_placement_allowed=permit,
                   interior_node_count=len(interior), interior_node_ids=interior,
                   clearance_violation_count=len(clearance), clearance_violation_node_ids=clearance,
                   misplaced_tca_node_ids=misplaced, checked_nodes=len(xy),
                   applies_to='all metabolites, reactions and reaction-local cofactor copies',
-                  verified=not interior and not clearance and not misplaced)
+                  verified=(permit or not interior) and not clearance and not misplaced)
     if not report['verified']:
         raise RuntimeError('TCA perimeter/interior exclusion violated: '+str(interior+clearance+misplaced))
     return report

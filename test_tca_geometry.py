@@ -52,6 +52,20 @@ class TCAGeometryTests(unittest.TestCase):
             self.assertTrue(allowed_points([[5.2,3]],region)[0])
             with self.assertRaisesRegex(RuntimeError,'TCA'):validate_exclusion({}, {'other':[3,3]},region)
 
+    def test_allow_interior_preserves_ring_and_clearance_for_both_shapes(self):
+        for region in [dict(shape='circle',center=[3,3],radius=2,node_ids=['ring']),
+                       dict(shape='square',left=1,top=5,side_length=4,node_ids=['ring'])]:
+            region['interior_policy']='allow'
+            self.assertTrue(allowed_points([[3,3]],region)[0])
+            self.assertFalse(allowed_points([[4.9,3]],region)[0])
+            self.assertFalse(allowed_points([[5.1,3]],region)[0])
+            report=validate_exclusion({}, {'ring':[5,3],'inside':[3,3]},region)
+            self.assertTrue(report['verified']);self.assertEqual(report['interior_node_count'],1)
+            with self.assertRaisesRegex(RuntimeError,'TCA'):
+                validate_exclusion({}, {'ring':[4,3]},region)
+        self.assertEqual(parser().parse_args([]).tca_interior,'allow')
+        self.assertEqual(parser().parse_args(['--tca-interior','forbid']).tca_interior,'forbid')
+
     def test_tca_local_cofactors_are_outside_the_ring(self):
         region={'shape':'circle','center':[3,3],'radius':2,'node_ids':['rxn:tca']}
         nodes={'rxn:tca':dict(kind='reaction')}

@@ -530,7 +530,8 @@ document.getElementById('coverage').oninput=update;document.getElementById('coen
     exclusion=(backbones or {}).get('tca_exclusion',{})
     alignment=(backbones or {}).get('exchange_alignment',{})
     if exclusion.get('enabled'):
-        description=f"TCA shape: {exclusion['shape']}. No nodes are placed inside the TCA perimeter."
+        interior_text='Interior node placement is allowed; the TCA perimeter remains fixed.' if exclusion.get('interior_placement_allowed') else 'No nodes are placed inside the TCA perimeter.'
+        description=f"TCA shape: {exclusion['shape']}. {interior_text}"
         if exclusion['shape']=='circle':
             region=exclusion['region']
             description+=f" Circle through {region.get('lattice_point_count',0)} grid intersections; TCA nodes use a {region.get('node_grid_step',1):g}-step auxiliary grid and cycle connections use curved Beziers."
@@ -674,11 +675,13 @@ def run(args):
     fixed_offsets, backbones = strategy.plan(routes, grid_ids) if strategy else backbone_plan(routes, grid_ids)
     backbones['skipped_routes'] = skipped_routes
     from tca_geometry import configure_plan
-    fixed_offsets, backbones = configure_plan(fixed_offsets,backbones,getattr(args,'tca_shape','circle'))
+    fixed_offsets, backbones = configure_plan(fixed_offsets,backbones,getattr(args,'tca_shape','circle'),getattr(args,'tca_interior','allow'))
     for route in routes:
         if route['id']=='tca':route['shape']=getattr(args,'tca_shape','circle')
     grid_options = strategy.grid_options(nodes, backbones) if strategy else {}
-    grid_options['reserved_region'] = backbones.get('tca_geometry')
+    # Seed a feasible exterior embedding before testing inward relocations.
+    seed_region=backbones.get('tca_geometry')
+    grid_options['reserved_region'] = dict(seed_region,interior_policy='forbid') if seed_region else None
     from exchange_alignment import discover_alignment
     alignment_mode = getattr(args,'exchange_alignment','collinear')
     alignment_groups, alignment_skipped = discover_alignment(model,nodes,exchange_nodes) if alignment_mode == 'collinear' else ([],[])
@@ -761,7 +764,8 @@ def run(args):
         placement['red_parallel_layout']={k:v for k,v in red_plan.items() if k not in ('routes','allocations')}
     cols, rows = placement['grid_cols'], placement['grid_rows']
     from tca_geometry import absolute_region,validate_exclusion
-    tca_region = absolute_region(backbones.get('tca_geometry'),rows)
+    requested_tca_region = absolute_region(backbones.get('tca_geometry'),rows)
+    tca_region = dict(requested_tca_region,interior_policy='forbid') if requested_tca_region else None
     if args.grid_cols is not None and args.grid_rows is not None:
         backbones['render_frame']=[0,cols-1,0,rows-1]
     if getattr(args,'crossing_policy','legacy')=='red-hard' and alignment_mode=='collinear':
@@ -802,6 +806,12 @@ def run(args):
             if connectors:placement['objective']=connector_cost(connectors,edges,xy)
             placement['global_optimality_proven']=False
             placement.pop('relative_gap',None)
+    tca_region=requested_tca_region
+    backbones['tca_exclusion']={'region':tca_region}
+    backbones.setdefault('routing_boundary',[0,cols-1,0,rows-1])
+    if tca_region and tca_region.get('interior_policy')=='allow':
+        from orange_reposition import place_gray_inside_tca
+        backbones['tca_interior_placement']=place_gray_inside_tca(nodes,edges,xy,backbones)
     if (getattr(args,'reposition_orange',True) and getattr(args,'crossing_policy','legacy')=='red-hard'
             and backbones.get('exchange_corridors')):
         from orange_reposition import reposition_orange
@@ -946,6 +956,7 @@ def run(args):
     report['routing_boundary']=routing_boundary
     if backbones.get('boundary_compaction'):report['boundary_compaction']=backbones['boundary_compaction']
     if backbones.get('orange_reposition'):report['orange_reposition']=backbones['orange_reposition']
+    if backbones.get('tca_interior_placement'):report['tca_interior_placement']=backbones['tca_interior_placement']
     report['tca_shape'] = getattr(args,'tca_shape','circle')
     report['tca_exclusion'] = tca_exclusion
     report['exchange_alignment'] = exchange_alignment
@@ -1013,6 +1024,7 @@ def parser():
     p.add_argument('--no-reposition-orange',dest='reposition_orange',action='store_false',help='Disable local node relocation to reduce orange line overlap')
     p.add_argument('--no-compact-boundary',dest='compact_boundary',action='store_false',help='Keep the initial lower and right exchange boundaries')
     p.add_argument('--boundary-margin',type=float,default=1.,help='Minimum clearance around frozen red geometry during boundary compaction (default: 1 grid unit)')
+    p.add_argument('--tca-interior',choices=('allow','forbid'),default='allow',help='Allow ordinary nodes and cofactor copies inside the fixed TCA perimeter (default: allow)')
     p.add_argument('--tca-shape',choices=('circle','square'),default='circle',help='TCA perimeter: grid-intersection circle with curved cycle connections (default), or orthogonal square')
     p.add_argument('--exchange-alignment',choices=('collinear','off'),default='collinear',help='Align EX, extracellular and matching cytosolic nodes from outside inward (default: collinear)')
     p.add_argument('--red-parallel-spacing',type=validate_red_spacing_arg,default=1.0,help='Minimum red/red channel spacing for parallel runs of at least one grid unit (default: 1; 0 disables layout channel allocation)')

@@ -673,11 +673,10 @@ python sbml2map.py --model models/e_coli_core.xml --no-sampling \
   --exchange-alignment off --output-dir results/runs/e_coli_core_unaligned
 ```
 
-For both shapes the TCA interior is forbidden to every compound, reaction and
-reaction-local cofactor copy. Non-TCA nodes also keep a 0.16-grid clearance from
-the perimeter. TCA nodes themselves stay on that perimeter. The forbidden
-region applies during initialization, heuristic moves, finite-cell MILP and
-FBA completion. The grid expands automatically when its size is unspecified;
+For both shapes TCA interior placement is allowed by default. Use
+`--tca-interior forbid` for the previous exclusion policy. Non-TCA nodes keep
+a 0.16-grid clearance from the perimeter; TCA nodes remain on the perimeter.
+FBA completion follows the saved interior policy. The grid expands automatically when its size is unspecified;
 an insufficient explicit grid fails without dropping constraints.
 
 Straight alignment orders each confidently matched triplet from outside inward:
@@ -692,7 +691,7 @@ The crossing-first experiment has been reverted. Existing published examples
 are unchanged; new shape/alignment examples are under `docs/tca-layout/`.
 The e_coli_core grid-circle/curve comparison is at `docs/test-tca/`.
 `report.json` records `tca_shape`, `tca_exclusion` and `exchange_alignment`,
-including matched/skipped triplets and verified empty-interior counts. The CSV
+including matched/skipped triplets, interior policy and actual interior counts. The CSV
 `on_grid` field describes actual integer coordinates. Full FBA completion
 preserves saved coordinates and applies the same exclusion/alignment rules to
 added nodes; an insufficient saved frame requires regenerating a larger layout.
@@ -790,20 +789,37 @@ paths. Model stoichiometry and FBA are unchanged.
 
 ## Relocate nodes to reduce orange line overlap
 
-After boundary compaction, `orange_reposition.py` detects positive-length
-collinear overlaps between different orange reactions. Connected trunks within
-one reaction and point crossings are allowed. A bounded local search moves
-affected non-red nodes by at most three grid units, with up to 24 fully routed
-candidates. External nodes in two-point exchange pairs are considered first;
-they move only along the existing straight inward corridor. Red endpoints,
-red paths and the other straight exchange groups remain fixed. Local currency
-copies follow their parent. Every candidate is rerouted and checked for red
-crossings, straight exchange geometry, TCA exclusion and the active boundary.
+`orange_reposition.py` detects positive-length collinear overlaps between
+orange incidences, including two different incidences of the same reaction.
+Point crossings cost zero. Different reaction pairs use union overlap length;
+same-reaction pairs are measured by biological incidence. Shared physical
+length within one reaction is still counted once in the separate length metric.
 
-For each affected node, overlapping length comes first, then orange length,
-then displacement. The total orange length may increase to reduce overlap.
-This does not minimize point crossings or prove a global optimum; overlaps may
-remain when fixed groups or the bounded search prevent a solution. Candidates
-that break a hard constraint are discarded. Disable with
-`--no-reposition-orange`. The `orange_reposition` report records moves,
-rejections, before/after lengths and remaining overlap segments.
+Each overlapping incidence/reaction pair receives its own search budget.
+Affected nodes are tried in round-robin order, with same-reaction junctions
+considered first. Neighborhood radii expand from 1 to 3 to 6 grid units; each
+radius receives up to four new candidate evaluations, for at most two sweeps.
+There is no 24-candidate global cutoff. Candidates must reduce both the targeted
+pair's overlap and total overlap. Scores compare total overlap, orange length,
+then displacement. Total orange length may increase to improve overlap.
+
+Red endpoints and routes, and straight exchange triplets remain fixed. External
+nodes in two-point exchange pairs move along their existing corridor. Currency
+copies follow their parent. Each candidate is rerouted and validated for red
+crossings, straight exchange geometry, TCA clearance and the active boundary.
+Invalid candidates are discarded without changing the accepted embedding.
+
+`--tca-interior allow` is now the default for both TCA shapes. Ordinary nodes
+and cofactor copies may occupy the interior while TCA anchors remain fixed.
+A 0.16-grid clearance from the perimeter remains on both sides. A feasible
+exterior seed is retained through red-first planning and boundary compaction;
+gray nodes then use shorter interior placements, and orange inward relocations
+are accepted only after full routing checks. This avoids trapping orange nodes
+behind the closed red cycle. Interior permission does not permit red crossings.
+`--tca-interior forbid` restores the previous exclusion policy.
+
+Disable overlap relocation with `--no-reposition-orange`. The `orange_reposition`
+report records moves, per-pair searches, rejections and remaining overlaps.
+The source also distinguishes infeasible tested candidates from tested candidates
+that do not improve the objective. The bounded search does not prove global
+optimality or prove a remaining overlap impossible to avoid.

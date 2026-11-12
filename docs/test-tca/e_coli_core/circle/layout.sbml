@@ -9898,19 +9898,19 @@
         <layout:listOfSpeciesGlyphs>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_0" layout:species="M_coa_c">
             <layout:boundingBox>
-              <layout:position layout:x="357.968948795511" layout:y="4431.96894879551" layout:z="0"/>
+              <layout:position layout:x="717.968948795511" layout:y="4251.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_1" layout:species="M_nad_c">
             <layout:boundingBox>
-              <layout:position layout:x="247.35749137389" layout:y="4380.64250862611" layout:z="0"/>
+              <layout:position layout:x="607.35749137389" layout:y="4200.64250862611" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_2" layout:species="M_nadh_c">
             <layout:boundingBox>
-              <layout:position layout:x="247.324202588793" layout:y="4483.32420258879" layout:z="0"/>
+              <layout:position layout:x="607.324202588793" layout:y="4303.32420258879" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -9964,13 +9964,13 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_11" layout:species="M_nad_c">
             <layout:boundingBox>
-              <layout:position layout:x="3237.96894879551" layout:y="4071.96894879551" layout:z="0"/>
+              <layout:position layout:x="3237.96894879551" layout:y="4251.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_12" layout:species="M_nadh_c">
             <layout:boundingBox>
-              <layout:position layout:x="3076.03105120449" layout:y="4072.03105120449" layout:z="0"/>
+              <layout:position layout:x="3076.03105120449" layout:y="4252.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10060,13 +10060,13 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_27" layout:species="M_q8_c">
             <layout:boundingBox>
-              <layout:position layout:x="2517.96894879551" layout:y="3531.96894879551" layout:z="0"/>
+              <layout:position layout:x="1437.96894879551" layout:y="5691.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_28" layout:species="M_q8h2_c">
             <layout:boundingBox>
-              <layout:position layout:x="2356.03105120449" layout:y="3532.03105120449" layout:z="0"/>
+              <layout:position layout:x="1276.03105120449" layout:y="5692.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10096,13 +10096,13 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_33" layout:species="M_adp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2877.96894879551" layout:y="3171.96894879551" layout:z="0"/>
+              <layout:position layout:x="3057.96894879551" layout:y="4431.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_34" layout:species="M_atp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2716.03105120449" layout:y="3172.03105120449" layout:z="0"/>
+              <layout:position layout:x="2896.03105120449" layout:y="4432.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10120,37 +10120,37 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_37" layout:species="M_nadp_c">
             <layout:boundingBox>
-              <layout:position layout:x="3057.96894879551" layout:y="2991.96894879551" layout:z="0"/>
+              <layout:position layout:x="2877.96894879551" layout:y="4971.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_38" layout:species="M_nadph_c">
             <layout:boundingBox>
-              <layout:position layout:x="2896.03105120449" layout:y="2992.03105120449" layout:z="0"/>
+              <layout:position layout:x="2716.03105120449" layout:y="4972.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_39" layout:species="M_nadp_c">
             <layout:boundingBox>
-              <layout:position layout:x="3237.96894879551" layout:y="2991.96894879551" layout:z="0"/>
+              <layout:position layout:x="2877.96894879551" layout:y="4791.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_40" layout:species="M_nadph_c">
             <layout:boundingBox>
-              <layout:position layout:x="3076.03105120449" layout:y="2992.03105120449" layout:z="0"/>
+              <layout:position layout:x="2716.03105120449" layout:y="4792.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_41" layout:species="M_nadp_c">
             <layout:boundingBox>
-              <layout:position layout:x="3057.96894879551" layout:y="5691.96894879551" layout:z="0"/>
+              <layout:position layout:x="2877.96894879551" layout:y="5151.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_42" layout:species="M_nadph_c">
             <layout:boundingBox>
-              <layout:position layout:x="2896.03105120449" layout:y="5692.03105120449" layout:z="0"/>
+              <layout:position layout:x="2716.03105120449" layout:y="5152.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10168,19 +10168,19 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_45" layout:species="M_nad_c">
             <layout:boundingBox>
-              <layout:position layout:x="717.968948795511" layout:y="4611.96894879551" layout:z="0"/>
+              <layout:position layout:x="537.968948795511" layout:y="4071.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_46" layout:species="M_nadh_c">
             <layout:boundingBox>
-              <layout:position layout:x="556.031051204489" layout:y="4612.03105120449" layout:z="0"/>
+              <layout:position layout:x="376.031051204489" layout:y="4072.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_47" layout:species="M_coa_c">
             <layout:boundingBox>
-              <layout:position layout:x="3237.96894879551" layout:y="5871.96894879551" layout:z="0"/>
+              <layout:position layout:x="1257.96894879551" layout:y="4071.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10198,25 +10198,25 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_50" layout:species="M_nad_c">
             <layout:boundingBox>
-              <layout:position layout:x="2517.96894879551" layout:y="3351.96894879551" layout:z="0"/>
+              <layout:position layout:x="1077.96894879551" layout:y="4431.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_51" layout:species="M_nadh_c">
             <layout:boundingBox>
-              <layout:position layout:x="2356.03105120449" layout:y="3352.03105120449" layout:z="0"/>
+              <layout:position layout:x="916.031051204489" layout:y="4432.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_52" layout:species="M_nadp_c">
             <layout:boundingBox>
-              <layout:position layout:x="3057.96894879551" layout:y="5871.96894879551" layout:z="0"/>
+              <layout:position layout:x="1077.96894879551" layout:y="4971.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_53" layout:species="M_nadph_c">
             <layout:boundingBox>
-              <layout:position layout:x="2896.03105120449" layout:y="5872.03105120449" layout:z="0"/>
+              <layout:position layout:x="916.031051204489" layout:y="4972.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10300,7 +10300,7 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_67" layout:species="M_coa_c">
             <layout:boundingBox>
-              <layout:position layout:x="717.968948795511" layout:y="4431.96894879551" layout:z="0"/>
+              <layout:position layout:x="537.968948795511" layout:y="4431.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10318,31 +10318,31 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_70" layout:species="M_adp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2517.96894879551" layout:y="3171.96894879551" layout:z="0"/>
+              <layout:position layout:x="1257.96894879551" layout:y="4251.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_71" layout:species="M_atp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2356.03105120449" layout:y="3172.03105120449" layout:z="0"/>
+              <layout:position layout:x="1096.03105120449" layout:y="4252.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_72" layout:species="M_amp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2877.96894879551" layout:y="2991.96894879551" layout:z="0"/>
+              <layout:position layout:x="1617.96894879551" layout:y="3891.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_73" layout:species="M_atp_c">
             <layout:boundingBox>
-              <layout:position layout:x="2716.03105120449" layout:y="2992.03105120449" layout:z="0"/>
+              <layout:position layout:x="1456.03105120449" layout:y="3892.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_74" layout:species="M_coa_c">
             <layout:boundingBox>
-              <layout:position layout:x="717.968948795511" layout:y="3711.96894879551" layout:z="0"/>
+              <layout:position layout:x="897.968948795511" layout:y="3711.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="6" layout:height="6" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10510,7 +10510,7 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_102" layout:species="M_e4p_c">
             <layout:boundingBox>
-              <layout:position layout:x="2970" layout:y="3705" layout:z="0"/>
+              <layout:position layout:x="2790" layout:y="5505" layout:z="0"/>
               <layout:dimensions layout:width="20" layout:height="20" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10672,19 +10672,19 @@
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_129" layout:species="M_r5p_c">
             <layout:boundingBox>
-              <layout:position layout:x="2430" layout:y="3705" layout:z="0"/>
+              <layout:position layout:x="2610" layout:y="5685" layout:z="0"/>
               <layout:dimensions layout:width="20" layout:height="20" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_130" layout:species="M_ru5p__D_c">
             <layout:boundingBox>
-              <layout:position layout:x="2610" layout:y="3525" layout:z="0"/>
+              <layout:position layout:x="2970" layout:y="5145" layout:z="0"/>
               <layout:dimensions layout:width="20" layout:height="20" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
           <layout:speciesGlyph layout:id="sbml2map_layout_species_131" layout:species="M_s7p_c">
             <layout:boundingBox>
-              <layout:position layout:x="2790" layout:y="3345" layout:z="0"/>
+              <layout:position layout:x="2790" layout:y="5325" layout:z="0"/>
               <layout:dimensions layout:width="20" layout:height="20" layout:depth="0"/>
             </layout:boundingBox>
           </layout:speciesGlyph>
@@ -10772,7 +10772,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_221" layout:reaction="R_PFL">
             <layout:boundingBox>
-              <layout:position layout:x="636" layout:y="4431" layout:z="0"/>
+              <layout:position layout:x="456" layout:y="4431" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -10780,7 +10780,15 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="4102" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="460" layout:y="4102" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="4102" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="640" layout:y="4102" layout:z="0"/>
                       <layout:end layout:x="640" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -10790,12 +10798,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="720.968948795511" layout:y="4434.96894879551" layout:z="0"/>
-                      <layout:end layout:x="720.968948795511" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="540.968948795511" layout:y="4434.96894879551" layout:z="0"/>
+                      <layout:end layout:x="540.968948795511" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="720.968948795511" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="540.968948795511" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -10804,15 +10812,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="793" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="6039.4474474" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="793" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="793" layout:y="6039.4474474" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="793" layout:y="6039.4474474" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="6039.4474474" layout:z="0"/>
                       <layout:end layout:x="3150.9689482" layout:y="6039.4474474" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
@@ -10835,7 +10839,7 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -10928,7 +10932,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_224" layout:reaction="R_PGL">
             <layout:boundingBox>
-              <layout:position layout:x="2076" layout:y="3531" layout:z="0"/>
+              <layout:position layout:x="2436" layout:y="3891" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -10936,11 +10940,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2080" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="2440" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="3895" layout:z="0"/>
                       <layout:end layout:x="2620" layout:y="3715" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -10951,7 +10955,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2800" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2080" layout:y="3535" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="3895" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="2800" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="2440" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -10960,7 +10968,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_225" layout:reaction="R_ACALD">
             <layout:boundingBox>
-              <layout:position layout:x="276" layout:y="4431" layout:z="0"/>
+              <layout:position layout:x="636" layout:y="4251" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -10981,15 +10989,11 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3150.9689482" layout:y="6039.4474474" layout:z="0"/>
-                      <layout:end layout:x="613" layout:y="6039.4474474" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="6039.4474474" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="613" layout:y="6039.4474474" layout:z="0"/>
-                      <layout:end layout:x="613" layout:y="4435" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="613" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="640" layout:y="6039.4474474" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -10998,19 +11002,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="613" layout:y="4435" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="613" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="613" layout:y="3919.3242028" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="613" layout:y="3919.3242028" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="3919.3242028" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="3919.3242028" layout:z="0"/>
+                      <layout:start layout:x="640" layout:y="4255" layout:z="0"/>
                       <layout:end layout:x="640" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -11020,12 +11012,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="360.968948795511" layout:y="4434.96894879551" layout:z="0"/>
-                      <layout:end layout:x="360.968948795511" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="720.968948795511" layout:y="4254.96894879551" layout:z="0"/>
+                      <layout:end layout:x="720.968948795511" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="360.968948795511" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="720.968948795511" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11034,12 +11026,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="250.35749137389" layout:y="4383.64250862611" layout:z="0"/>
-                      <layout:end layout:x="250.35749137389" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="610.35749137389" layout:y="4203.64250862611" layout:z="0"/>
+                      <layout:end layout:x="610.35749137389" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="250.35749137389" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="610.35749137389" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11048,12 +11040,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="250.324202588793" layout:y="4435" layout:z="0"/>
+                      <layout:start layout:x="640" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="610.324202588793" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="250.324202588793" layout:y="4435" layout:z="0"/>
-                      <layout:end layout:x="250.324202588793" layout:y="4486.32420258879" layout:z="0"/>
+                      <layout:start layout:x="610.324202588793" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="610.324202588793" layout:y="4306.32420258879" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11118,7 +11110,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_228" layout:reaction="R_ALCD2x">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="4071" layout:z="0"/>
+              <layout:position layout:x="3156" layout:y="4251" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -11126,7 +11118,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="4075" layout:z="0"/>
+                      <layout:start layout:x="3160" layout:y="4255" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -11145,7 +11137,7 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="4102" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11154,12 +11146,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3240.96894879551" layout:y="4074.96894879551" layout:z="0"/>
-                      <layout:end layout:x="3240.96894879551" layout:y="4075" layout:z="0"/>
+                      <layout:start layout:x="3240.96894879551" layout:y="4254.96894879551" layout:z="0"/>
+                      <layout:end layout:x="3240.96894879551" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3240.96894879551" layout:y="4075" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="4075" layout:z="0"/>
+                      <layout:start layout:x="3240.96894879551" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11168,12 +11160,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="4075" layout:z="0"/>
-                      <layout:end layout:x="3079.03105120449" layout:y="4075" layout:z="0"/>
+                      <layout:start layout:x="3160" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="3079.03105120449" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3079.03105120449" layout:y="4075" layout:z="0"/>
-                      <layout:end layout:x="3079.03105120449" layout:y="4075.03105120449" layout:z="0"/>
+                      <layout:start layout:x="3079.03105120449" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="3079.03105120449" layout:y="4255.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11274,7 +11266,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_231" layout:reaction="R_PPC">
             <layout:boundingBox>
-              <layout:position layout:x="2256" layout:y="3351" layout:z="0"/>
+              <layout:position layout:x="1356" layout:y="4071" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -11282,11 +11274,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2260" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="1180" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1360" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1180" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1180" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1180" layout:y="4075" layout:z="0"/>
                       <layout:end layout:x="1180" layout:y="3985" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -11297,11 +11289,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3355" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2260" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1360" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11410,7 +11402,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_235" layout:reaction="R_PPCK">
             <layout:boundingBox>
-              <layout:position layout:x="2436" layout:y="3171" layout:z="0"/>
+              <layout:position layout:x="1176" layout:y="4251" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -11418,12 +11410,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2520.96894879551" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="1180" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="1260.96894879551" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2520.96894879551" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2520.96894879551" layout:y="3174.96894879551" layout:z="0"/>
+                      <layout:start layout:x="1260.96894879551" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="1260.96894879551" layout:y="4254.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11432,12 +11424,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2359.03105120449" layout:y="3175.03105120449" layout:z="0"/>
-                      <layout:end layout:x="2359.03105120449" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="1099.03105120449" layout:y="4255.03105120449" layout:z="0"/>
+                      <layout:end layout:x="1099.03105120449" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2359.03105120449" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="1099.03105120449" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="1180" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11447,11 +11439,7 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="1180" layout:y="3985" layout:z="0"/>
-                      <layout:end layout:x="1180" layout:y="3175" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1180" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3175" layout:z="0"/>
+                      <layout:end layout:x="1180" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11460,11 +11448,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="1180" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="4255" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="3535" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -11502,7 +11490,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_237" layout:reaction="R_PPS">
             <layout:boundingBox>
-              <layout:position layout:x="2796" layout:y="2991" layout:z="0"/>
+              <layout:position layout:x="1536" layout:y="3891" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -11510,12 +11498,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2880.96894879551" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="1540" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="1620.96894879551" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2880.96894879551" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2880.96894879551" layout:y="2994.96894879551" layout:z="0"/>
+                      <layout:start layout:x="1620.96894879551" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="1620.96894879551" layout:y="3894.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11524,12 +11512,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2719.03105120449" layout:y="2995.03105120449" layout:z="0"/>
-                      <layout:end layout:x="2719.03105120449" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="1459.03105120449" layout:y="3895.03105120449" layout:z="0"/>
+                      <layout:end layout:x="1459.03105120449" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2719.03105120449" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="1459.03105120449" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="1540" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11538,11 +11526,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="1540" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="3895" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="3535" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -11553,11 +11541,7 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="3895" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="2995" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="2995" layout:z="0"/>
+                      <layout:end layout:x="1540" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11730,7 +11714,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_241" layout:reaction="R_PTAr">
             <layout:boundingBox>
-              <layout:position layout:x="636" layout:y="3711" layout:z="0"/>
+              <layout:position layout:x="816" layout:y="3711" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -11779,11 +11763,11 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2800" layout:y="3688.0310518" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="3688.0310518" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="3688.0310518" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="3688.0310518" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="3715" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="3688.0310518" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="3715" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11792,11 +11776,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="3688.0310518" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="3715" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="3688.0310518" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="3688.0310518" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="3688.0310518" layout:z="0"/>
                       <layout:end layout:x="2800" layout:y="3688.0310518" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
@@ -11810,12 +11794,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="720.968948795511" layout:y="3715" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="3715" layout:z="0"/>
+                      <layout:end layout:x="900.968948795511" layout:y="3715" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="720.968948795511" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="720.968948795511" layout:y="3714.96894879551" layout:z="0"/>
+                      <layout:start layout:x="900.968948795511" layout:y="3715" layout:z="0"/>
+                      <layout:end layout:x="900.968948795511" layout:y="3714.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -11984,11 +11968,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="5335" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5515" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="5335" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5335" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12174,11 +12158,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="5335" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="5335" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5335" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12216,7 +12200,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_245" layout:reaction="R_RPE">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="2811" layout:z="0"/>
+              <layout:position layout:x="2976" layout:y="4611" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -12224,12 +12208,8 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="2815" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="2815" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4615" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12238,7 +12218,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4615" layout:z="0"/>
                       <layout:end layout:x="2980" layout:y="3535" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12308,7 +12288,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_247" layout:reaction="R_RPI">
             <layout:boundingBox>
-              <layout:position layout:x="2796" layout:y="5871" layout:z="0"/>
+              <layout:position layout:x="2616" layout:y="5511" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -12316,12 +12296,8 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="5875" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5515" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12330,12 +12306,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5515" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="5515" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="5515" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12464,7 +12440,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_252" layout:reaction="R_SUCCt3">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="2631" layout:z="0"/>
+              <layout:position layout:x="1536" layout:y="5871" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -12473,11 +12449,7 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="1450" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="1450" layout:y="2635" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1450" layout:y="2635" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2635" layout:z="0"/>
+                      <layout:end layout:x="1540" layout:y="5875" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12486,11 +12458,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2635" layout:z="0"/>
-                      <layout:end layout:x="1450" layout:y="2635" layout:z="0"/>
+                      <layout:start layout:x="1540" layout:y="5875" layout:z="0"/>
+                      <layout:end layout:x="1450" layout:y="5875" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1450" layout:y="2635" layout:z="0"/>
+                      <layout:start layout:x="1450" layout:y="5875" layout:z="0"/>
                       <layout:end layout:x="1450" layout:y="6115" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12662,7 +12634,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_256" layout:reaction="R_TALA">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="6051" layout:z="0"/>
+              <layout:position layout:x="2616" layout:y="5331" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -12670,12 +12642,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5335" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="3715" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5335" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5515" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12684,11 +12656,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5335" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="5335" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12699,11 +12671,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="2095" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="6055" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="5335" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12712,12 +12684,8 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="6055" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5335" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12790,7 +12758,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_258" layout:reaction="R_TKT1">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="6051" layout:z="0"/>
+              <layout:position layout:x="2616" layout:y="5151" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -12798,11 +12766,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="5155" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="2095" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -12812,12 +12780,8 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="6055" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12826,12 +12790,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="6055" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="6055" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12841,7 +12805,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2980" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="6055" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="5155" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="2980" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -12858,11 +12826,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2815" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5515" layout:z="0"/>
                       <layout:end layout:x="2800" layout:y="2815" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13244,7 +13208,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_276" layout:reaction="R_FBP">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="3171" layout:z="0"/>
+              <layout:position layout:x="1356" layout:y="3891" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13252,11 +13216,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="1360" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="3895" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13267,11 +13231,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="1375" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3175" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="3895" layout:z="0"/>
+                      <layout:end layout:x="1360" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13280,7 +13244,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_277" layout:reaction="R_FORt2">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="3171" layout:z="0"/>
+              <layout:position layout:x="2976" layout:y="4791" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13288,11 +13252,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="3175" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4795" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13303,11 +13263,7 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3280" layout:y="4795" layout:z="0"/>
-                      <layout:end layout:x="3280" layout:y="3175" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3280" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="3175" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13344,7 +13300,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_279" layout:reaction="R_FRD7">
             <layout:boundingBox>
-              <layout:position layout:x="2436" layout:y="3531" layout:z="0"/>
+              <layout:position layout:x="1356" layout:y="5691" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13353,11 +13309,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="1090" layout:y="5605" layout:z="0"/>
-                      <layout:end layout:x="1090" layout:y="3535" layout:z="0"/>
+                      <layout:end layout:x="1090" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1090" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1090" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="1360" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13366,12 +13322,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2520.96894879551" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1360" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="1440.96894879551" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2520.96894879551" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2520.96894879551" layout:y="3534.96894879551" layout:z="0"/>
+                      <layout:start layout:x="1440.96894879551" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="1440.96894879551" layout:y="5694.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13380,12 +13336,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2359.03105120449" layout:y="3535.03105120449" layout:z="0"/>
-                      <layout:end layout:x="2359.03105120449" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1279.03105120449" layout:y="5695.03105120449" layout:z="0"/>
+                      <layout:end layout:x="1279.03105120449" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2359.03105120449" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1279.03105120449" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="1360" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13394,11 +13350,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3535" layout:z="0"/>
-                      <layout:end layout:x="1450" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1360" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="1450" layout:y="5695" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1450" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="1450" layout:y="5695" layout:z="0"/>
                       <layout:end layout:x="1450" layout:y="5875" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13408,7 +13364,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_280" layout:reaction="R_FRUpts2">
             <layout:boundingBox>
-              <layout:position layout:x="636" layout:y="1011" layout:z="0"/>
+              <layout:position layout:x="456" layout:y="1011" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13416,7 +13372,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="1015" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="1015" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13428,10 +13384,6 @@
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="460" layout:y="835" layout:z="0"/>
                       <layout:end layout:x="460" layout:y="1015" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="460" layout:y="1015" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13445,7 +13397,7 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="280" layout:y="1015" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="1015" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13454,7 +13406,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="1015" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="1015" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="1015" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
@@ -13720,7 +13672,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_286" layout:reaction="R_GLNS">
             <layout:boundingBox>
-              <layout:position layout:x="2796" layout:y="3171" layout:z="0"/>
+              <layout:position layout:x="2976" layout:y="4431" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13728,12 +13680,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2880.96894879551" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="3060.96894879551" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2880.96894879551" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2880.96894879551" layout:y="3174.96894879551" layout:z="0"/>
+                      <layout:start layout:x="3060.96894879551" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="3060.96894879551" layout:y="4434.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13742,12 +13694,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2719.03105120449" layout:y="3175.03105120449" layout:z="0"/>
-                      <layout:end layout:x="2719.03105120449" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="2899.03105120449" layout:y="4435.03105120449" layout:z="0"/>
+                      <layout:end layout:x="2899.03105120449" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2719.03105120449" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="2899.03105120449" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13756,11 +13708,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2800" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="3160" layout:y="4435" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13771,11 +13723,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="4975" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="3175" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="3175" layout:z="0"/>
-                      <layout:end layout:x="2800" layout:y="3175" layout:z="0"/>
+                      <layout:start layout:x="3160" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13840,7 +13792,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_288" layout:reaction="R_GLUDy">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="2991" layout:z="0"/>
+              <layout:position layout:x="2796" layout:y="4971" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13848,7 +13800,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4975" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="2980" layout:y="4975" layout:z="0"/>
                       <layout:end layout:x="2980" layout:y="5335" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13859,11 +13815,7 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="4975" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2995" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2995" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13872,12 +13824,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="2994.96894879551" layout:z="0"/>
-                      <layout:end layout:x="3060.96894879551" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2880.96894879551" layout:y="4974.96894879551" layout:z="0"/>
+                      <layout:end layout:x="2880.96894879551" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2880.96894879551" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13886,12 +13838,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="2719.03105120449" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2899.03105120449" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="2995.03105120449" layout:z="0"/>
+                      <layout:start layout:x="2719.03105120449" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="2719.03105120449" layout:y="4975.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13900,7 +13852,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_289" layout:reaction="R_GLUN">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="5691" layout:z="0"/>
+              <layout:position layout:x="2976" layout:y="4971" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13909,7 +13861,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="3895" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4975" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="3160" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13918,7 +13874,7 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="5695" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4975" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13928,7 +13884,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_290" layout:reaction="R_GLUSy">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="2991" layout:z="0"/>
+              <layout:position layout:x="2796" layout:y="4791" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -13937,11 +13893,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2980" layout:y="5335" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2995" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13951,7 +13907,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="3895" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2995" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4795" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="3160" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13960,7 +13920,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4795" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="3160" layout:y="4795" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -13970,12 +13934,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="3240.96894879551" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="2880.96894879551" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3240.96894879551" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="3240.96894879551" layout:y="2994.96894879551" layout:z="0"/>
+                      <layout:start layout:x="2880.96894879551" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="2880.96894879551" layout:y="4794.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -13984,12 +13948,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3079.03105120449" layout:y="2995.03105120449" layout:z="0"/>
-                      <layout:end layout:x="3079.03105120449" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2719.03105120449" layout:y="4795.03105120449" layout:z="0"/>
+                      <layout:end layout:x="2719.03105120449" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3079.03105120449" layout:y="2995" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2995" layout:z="0"/>
+                      <layout:start layout:x="2719.03105120449" layout:y="4795" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4795" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14026,7 +13990,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_292" layout:reaction="R_GND">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="5691" layout:z="0"/>
+              <layout:position layout:x="2796" layout:y="5151" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14035,11 +13999,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2620" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="5695" layout:z="0"/>
+                      <layout:end layout:x="2620" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="5695" layout:z="0"/>
+                      <layout:start layout:x="2620" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14048,12 +14012,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="5694.96894879551" layout:z="0"/>
-                      <layout:end layout:x="3060.96894879551" layout:y="5695" layout:z="0"/>
+                      <layout:start layout:x="2880.96894879551" layout:y="5154.96894879551" layout:z="0"/>
+                      <layout:end layout:x="2880.96894879551" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="5695" layout:z="0"/>
+                      <layout:start layout:x="2880.96894879551" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14062,12 +14026,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="5695" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2719.03105120449" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2899.03105120449" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="5695.03105120449" layout:z="0"/>
+                      <layout:start layout:x="2719.03105120449" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2719.03105120449" layout:y="5155.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14076,12 +14040,8 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="5695" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2620" layout:y="5695" layout:z="0"/>
-                      <layout:end layout:x="2620" layout:y="3535" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="5155" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="5155" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14150,7 +14110,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_294" layout:reaction="R_ICL">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="2811" layout:z="0"/>
+              <layout:position layout:x="2796" layout:y="4251" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14158,7 +14118,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4255" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="3160" layout:y="4255" layout:z="0"/>
                       <layout:end layout:x="3160" layout:y="3715" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14169,11 +14133,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="2980" layout:y="4345" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="2815" layout:z="0"/>
+                      <layout:end layout:x="2980" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="2815" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2980" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="2800" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14182,11 +14146,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="2815" layout:z="0"/>
-                      <layout:end layout:x="1450" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="2800" layout:y="4255" layout:z="0"/>
+                      <layout:end layout:x="1450" layout:y="4255" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="1450" layout:y="2815" layout:z="0"/>
+                      <layout:start layout:x="1450" layout:y="4255" layout:z="0"/>
                       <layout:end layout:x="1450" layout:y="5875" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14196,7 +14160,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_295" layout:reaction="R_LDH_D">
             <layout:boundingBox>
-              <layout:position layout:x="636" layout:y="4611" layout:z="0"/>
+              <layout:position layout:x="456" layout:y="4071" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14213,11 +14177,15 @@
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3150.9689482" layout:y="6039.4474474" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="6039.4474474" layout:z="0"/>
+                      <layout:end layout:x="793" layout:y="6039.4474474" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="6039.4474474" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="4615" layout:z="0"/>
+                      <layout:start layout:x="793" layout:y="6039.4474474" layout:z="0"/>
+                      <layout:end layout:x="793" layout:y="4075" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="793" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14226,12 +14194,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="720.968948795511" layout:y="4614.96894879551" layout:z="0"/>
-                      <layout:end layout:x="720.968948795511" layout:y="4615" layout:z="0"/>
+                      <layout:start layout:x="540.968948795511" layout:y="4074.96894879551" layout:z="0"/>
+                      <layout:end layout:x="540.968948795511" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="720.968948795511" layout:y="4615" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="4615" layout:z="0"/>
+                      <layout:start layout:x="540.968948795511" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="460" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14240,12 +14208,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="4615" layout:z="0"/>
-                      <layout:end layout:x="559.031051204489" layout:y="4615" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="379.031051204489" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="559.031051204489" layout:y="4615" layout:z="0"/>
-                      <layout:end layout:x="559.031051204489" layout:y="4615.03105120449" layout:z="0"/>
+                      <layout:start layout:x="379.031051204489" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="379.031051204489" layout:y="4075.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14254,19 +14222,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="4615" layout:z="0"/>
-                      <layout:end layout:x="307" layout:y="4615" layout:z="0"/>
+                      <layout:start layout:x="460" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="307" layout:y="4615" layout:z="0"/>
-                      <layout:end layout:x="307" layout:y="3919.3242028" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="307" layout:y="3919.3242028" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3919.3242028" layout:z="0"/>
-                    </layout:curveSegment>
-                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3919.3242028" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="4075" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14276,7 +14236,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_296" layout:reaction="R_MALS">
             <layout:boundingBox>
-              <layout:position layout:x="3156" layout:y="5871" layout:z="0"/>
+              <layout:position layout:x="1176" layout:y="4071" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14285,11 +14245,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="640" layout:y="3895" layout:z="0"/>
-                      <layout:end layout:x="640" layout:y="5875" layout:z="0"/>
+                      <layout:end layout:x="640" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="640" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="640" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1180" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14298,12 +14258,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="3240.96894879551" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1180" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1260.96894879551" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3240.96894879551" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="3240.96894879551" layout:y="5874.96894879551" layout:z="0"/>
+                      <layout:start layout:x="1260.96894879551" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1260.96894879551" layout:y="4074.96894879551" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14313,7 +14273,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="3160" layout:y="3715" layout:z="0"/>
-                      <layout:end layout:x="3160" layout:y="5875" layout:z="0"/>
+                      <layout:end layout:x="3160" layout:y="4075" layout:z="0"/>
+                    </layout:curveSegment>
+                    <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
+                      <layout:start layout:x="3160" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="1180" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14322,11 +14286,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3160" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="820" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1180" layout:y="4075" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="4075" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="820" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="4075" layout:z="0"/>
                       <layout:end layout:x="820" layout:y="5065" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14424,7 +14388,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_299" layout:reaction="R_ME1">
             <layout:boundingBox>
-              <layout:position layout:x="2436" layout:y="3351" layout:z="0"/>
+              <layout:position layout:x="996" layout:y="4431" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14433,11 +14397,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="820" layout:y="5065" layout:z="0"/>
-                      <layout:end layout:x="820" layout:y="3355" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="820" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="1000" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14446,12 +14410,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2520.96894879551" layout:y="3354.96894879551" layout:z="0"/>
-                      <layout:end layout:x="2520.96894879551" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1080.96894879551" layout:y="4434.96894879551" layout:z="0"/>
+                      <layout:end layout:x="1080.96894879551" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2520.96894879551" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2440" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1080.96894879551" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="1000" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14460,12 +14424,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2359.03105120449" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1000" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="919.031051204489" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2359.03105120449" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="2359.03105120449" layout:y="3355.03105120449" layout:z="0"/>
+                      <layout:start layout:x="919.031051204489" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="919.031051204489" layout:y="4435.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14474,11 +14438,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2440" layout:y="3355" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="1000" layout:y="4435" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="4435" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="3355" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="4435" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14488,7 +14452,7 @@
           </layout:reactionGlyph>
           <layout:reactionGlyph layout:id="sbml2map_layout_reaction_300" layout:reaction="R_ME2">
             <layout:boundingBox>
-              <layout:position layout:x="2976" layout:y="5871" layout:z="0"/>
+              <layout:position layout:x="996" layout:y="4971" layout:z="0"/>
               <layout:dimensions layout:width="8" layout:height="8" layout:depth="0"/>
             </layout:boundingBox>
             <layout:listOfSpeciesReferenceGlyphs>
@@ -14497,11 +14461,11 @@
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
                       <layout:start layout:x="820" layout:y="5065" layout:z="0"/>
-                      <layout:end layout:x="820" layout:y="5875" layout:z="0"/>
+                      <layout:end layout:x="820" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="820" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="820" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="1000" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14510,12 +14474,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="5874.96894879551" layout:z="0"/>
-                      <layout:end layout:x="3060.96894879551" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1080.96894879551" layout:y="4974.96894879551" layout:z="0"/>
+                      <layout:end layout:x="1080.96894879551" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="3060.96894879551" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2980" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1080.96894879551" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="1000" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14524,12 +14488,12 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1000" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="919.031051204489" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2899.03105120449" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="2899.03105120449" layout:y="5875.03105120449" layout:z="0"/>
+                      <layout:start layout:x="919.031051204489" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="919.031051204489" layout:y="4975.03105120449" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
                 </layout:curve>
@@ -14538,11 +14502,11 @@
                 <layout:curve>
                   <layout:listOfCurveSegments>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="2980" layout:y="5875" layout:z="0"/>
-                      <layout:end layout:x="280" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="1000" layout:y="4975" layout:z="0"/>
+                      <layout:end layout:x="280" layout:y="4975" layout:z="0"/>
                     </layout:curveSegment>
                     <layout:curveSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LineSegment">
-                      <layout:start layout:x="280" layout:y="5875" layout:z="0"/>
+                      <layout:start layout:x="280" layout:y="4975" layout:z="0"/>
                       <layout:end layout:x="280" layout:y="3895" layout:z="0"/>
                     </layout:curveSegment>
                   </layout:listOfCurveSegments>
@@ -14752,19 +14716,19 @@
         <layout:listOfTextGlyphs>
           <layout:textGlyph layout:id="sbml2map_layout_text_0" layout:text="coa_c" layout:graphicalObject="sbml2map_layout_species_0">
             <layout:boundingBox>
-              <layout:position layout:x="370.968948795511" layout:y="4412.96894879551" layout:z="0"/>
+              <layout:position layout:x="730.968948795511" layout:y="4232.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_1" layout:text="nad_c" layout:graphicalObject="sbml2map_layout_species_1">
             <layout:boundingBox>
-              <layout:position layout:x="195.35749137389" layout:y="4361.64250862611" layout:z="0"/>
+              <layout:position layout:x="555.35749137389" layout:y="4181.64250862611" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_2" layout:text="nadh_c" layout:graphicalObject="sbml2map_layout_species_2">
             <layout:boundingBox>
-              <layout:position layout:x="195.324202588793" layout:y="4488.32420258879" layout:z="0"/>
+              <layout:position layout:x="555.324202588793" layout:y="4308.32420258879" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -14818,13 +14782,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_11" layout:text="nad_c" layout:graphicalObject="sbml2map_layout_species_11">
             <layout:boundingBox>
-              <layout:position layout:x="3250.96894879551" layout:y="4052.96894879551" layout:z="0"/>
+              <layout:position layout:x="3250.96894879551" layout:y="4232.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_12" layout:text="nadh_c" layout:graphicalObject="sbml2map_layout_species_12">
             <layout:boundingBox>
-              <layout:position layout:x="3024.03105120449" layout:y="4077.03105120449" layout:z="0"/>
+              <layout:position layout:x="3024.03105120449" layout:y="4257.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -14914,13 +14878,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_27" layout:text="q8_c" layout:graphicalObject="sbml2map_layout_species_27">
             <layout:boundingBox>
-              <layout:position layout:x="2530.96894879551" layout:y="3512.96894879551" layout:z="0"/>
+              <layout:position layout:x="1450.96894879551" layout:y="5672.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_28" layout:text="q8h2_c" layout:graphicalObject="sbml2map_layout_species_28">
             <layout:boundingBox>
-              <layout:position layout:x="2304.03105120449" layout:y="3537.03105120449" layout:z="0"/>
+              <layout:position layout:x="1224.03105120449" layout:y="5697.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -14950,13 +14914,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_33" layout:text="adp_c" layout:graphicalObject="sbml2map_layout_species_33">
             <layout:boundingBox>
-              <layout:position layout:x="2890.96894879551" layout:y="3152.96894879551" layout:z="0"/>
+              <layout:position layout:x="3070.96894879551" layout:y="4412.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_34" layout:text="atp_c" layout:graphicalObject="sbml2map_layout_species_34">
             <layout:boundingBox>
-              <layout:position layout:x="2664.03105120449" layout:y="3177.03105120449" layout:z="0"/>
+              <layout:position layout:x="2844.03105120449" layout:y="4437.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -14974,37 +14938,37 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_37" layout:text="nadp_c" layout:graphicalObject="sbml2map_layout_species_37">
             <layout:boundingBox>
-              <layout:position layout:x="3070.96894879551" layout:y="2972.96894879551" layout:z="0"/>
+              <layout:position layout:x="2890.96894879551" layout:y="4952.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_38" layout:text="nadph_c" layout:graphicalObject="sbml2map_layout_species_38">
             <layout:boundingBox>
-              <layout:position layout:x="2844.03105120449" layout:y="2997.03105120449" layout:z="0"/>
+              <layout:position layout:x="2664.03105120449" layout:y="4977.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="49" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_39" layout:text="nadp_c" layout:graphicalObject="sbml2map_layout_species_39">
             <layout:boundingBox>
-              <layout:position layout:x="3250.96894879551" layout:y="2972.96894879551" layout:z="0"/>
+              <layout:position layout:x="2890.96894879551" layout:y="4772.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_40" layout:text="nadph_c" layout:graphicalObject="sbml2map_layout_species_40">
             <layout:boundingBox>
-              <layout:position layout:x="3024.03105120449" layout:y="2997.03105120449" layout:z="0"/>
+              <layout:position layout:x="2664.03105120449" layout:y="4797.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="49" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_41" layout:text="nadp_c" layout:graphicalObject="sbml2map_layout_species_41">
             <layout:boundingBox>
-              <layout:position layout:x="3070.96894879551" layout:y="5672.96894879551" layout:z="0"/>
+              <layout:position layout:x="2890.96894879551" layout:y="5132.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_42" layout:text="nadph_c" layout:graphicalObject="sbml2map_layout_species_42">
             <layout:boundingBox>
-              <layout:position layout:x="2844.03105120449" layout:y="5697.03105120449" layout:z="0"/>
+              <layout:position layout:x="2664.03105120449" layout:y="5157.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="49" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15022,19 +14986,19 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_45" layout:text="nad_c" layout:graphicalObject="sbml2map_layout_species_45">
             <layout:boundingBox>
-              <layout:position layout:x="730.968948795511" layout:y="4592.96894879551" layout:z="0"/>
+              <layout:position layout:x="550.968948795511" layout:y="4052.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_46" layout:text="nadh_c" layout:graphicalObject="sbml2map_layout_species_46">
             <layout:boundingBox>
-              <layout:position layout:x="504.031051204489" layout:y="4617.03105120449" layout:z="0"/>
+              <layout:position layout:x="324.031051204489" layout:y="4077.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_47" layout:text="coa_c" layout:graphicalObject="sbml2map_layout_species_47">
             <layout:boundingBox>
-              <layout:position layout:x="3250.96894879551" layout:y="5852.96894879551" layout:z="0"/>
+              <layout:position layout:x="1270.96894879551" layout:y="4052.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15052,25 +15016,25 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_50" layout:text="nad_c" layout:graphicalObject="sbml2map_layout_species_50">
             <layout:boundingBox>
-              <layout:position layout:x="2530.96894879551" layout:y="3332.96894879551" layout:z="0"/>
+              <layout:position layout:x="1090.96894879551" layout:y="4412.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_51" layout:text="nadh_c" layout:graphicalObject="sbml2map_layout_species_51">
             <layout:boundingBox>
-              <layout:position layout:x="2304.03105120449" layout:y="3357.03105120449" layout:z="0"/>
+              <layout:position layout:x="864.031051204489" layout:y="4437.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_52" layout:text="nadp_c" layout:graphicalObject="sbml2map_layout_species_52">
             <layout:boundingBox>
-              <layout:position layout:x="3070.96894879551" layout:y="5852.96894879551" layout:z="0"/>
+              <layout:position layout:x="1090.96894879551" layout:y="4952.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_53" layout:text="nadph_c" layout:graphicalObject="sbml2map_layout_species_53">
             <layout:boundingBox>
-              <layout:position layout:x="2844.03105120449" layout:y="5877.03105120449" layout:z="0"/>
+              <layout:position layout:x="864.031051204489" layout:y="4977.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="49" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15154,7 +15118,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_67" layout:text="coa_c" layout:graphicalObject="sbml2map_layout_species_67">
             <layout:boundingBox>
-              <layout:position layout:x="730.968948795511" layout:y="4412.96894879551" layout:z="0"/>
+              <layout:position layout:x="550.968948795511" layout:y="4412.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15172,31 +15136,31 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_70" layout:text="adp_c" layout:graphicalObject="sbml2map_layout_species_70">
             <layout:boundingBox>
-              <layout:position layout:x="2530.96894879551" layout:y="3152.96894879551" layout:z="0"/>
+              <layout:position layout:x="1270.96894879551" layout:y="4232.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_71" layout:text="atp_c" layout:graphicalObject="sbml2map_layout_species_71">
             <layout:boundingBox>
-              <layout:position layout:x="2304.03105120449" layout:y="3177.03105120449" layout:z="0"/>
+              <layout:position layout:x="1044.03105120449" layout:y="4257.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_72" layout:text="amp_c" layout:graphicalObject="sbml2map_layout_species_72">
             <layout:boundingBox>
-              <layout:position layout:x="2890.96894879551" layout:y="2972.96894879551" layout:z="0"/>
+              <layout:position layout:x="1630.96894879551" layout:y="3872.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_73" layout:text="atp_c" layout:graphicalObject="sbml2map_layout_species_73">
             <layout:boundingBox>
-              <layout:position layout:x="2664.03105120449" layout:y="2997.03105120449" layout:z="0"/>
+              <layout:position layout:x="1404.03105120449" layout:y="3897.03105120449" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_74" layout:text="coa_c" layout:graphicalObject="sbml2map_layout_species_74">
             <layout:boundingBox>
-              <layout:position layout:x="730.968948795511" layout:y="3692.96894879551" layout:z="0"/>
+              <layout:position layout:x="910.968948795511" layout:y="3692.96894879551" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15364,7 +15328,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_102" layout:text="e4p_c" layout:graphicalObject="sbml2map_layout_species_102">
             <layout:boundingBox>
-              <layout:position layout:x="2980" layout:y="3679" layout:z="0"/>
+              <layout:position layout:x="2800" layout:y="5479" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15526,19 +15490,19 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_129" layout:text="r5p_c" layout:graphicalObject="sbml2map_layout_species_129">
             <layout:boundingBox>
-              <layout:position layout:x="2440" layout:y="3679" layout:z="0"/>
+              <layout:position layout:x="2620" layout:y="5659" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_130" layout:text="ru5p__D_c" layout:graphicalObject="sbml2map_layout_species_130">
             <layout:boundingBox>
-              <layout:position layout:x="2620" layout:y="3499" layout:z="0"/>
+              <layout:position layout:x="2980" layout:y="5119" layout:z="0"/>
               <layout:dimensions layout:width="63" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_131" layout:text="s7p_c" layout:graphicalObject="sbml2map_layout_species_131">
             <layout:boundingBox>
-              <layout:position layout:x="2800" layout:y="3319" layout:z="0"/>
+              <layout:position layout:x="2800" layout:y="5299" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15574,7 +15538,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_137" layout:text="PFL" layout:graphicalObject="sbml2map_layout_reaction_221">
             <layout:boundingBox>
-              <layout:position layout:x="658" layout:y="4408" layout:z="0"/>
+              <layout:position layout:x="478" layout:y="4408" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15592,13 +15556,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_140" layout:text="PGL" layout:graphicalObject="sbml2map_layout_reaction_224">
             <layout:boundingBox>
-              <layout:position layout:x="2098" layout:y="3508" layout:z="0"/>
+              <layout:position layout:x="2458" layout:y="3868" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_141" layout:text="ACALD" layout:graphicalObject="sbml2map_layout_reaction_225">
             <layout:boundingBox>
-              <layout:position layout:x="298" layout:y="4408" layout:z="0"/>
+              <layout:position layout:x="658" layout:y="4228" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15616,7 +15580,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_144" layout:text="ALCD2x" layout:graphicalObject="sbml2map_layout_reaction_228">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="4048" layout:z="0"/>
+              <layout:position layout:x="3178" layout:y="4228" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15634,7 +15598,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_147" layout:text="PPC" layout:graphicalObject="sbml2map_layout_reaction_231">
             <layout:boundingBox>
-              <layout:position layout:x="2278" layout:y="3328" layout:z="0"/>
+              <layout:position layout:x="1378" layout:y="4048" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15658,7 +15622,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_151" layout:text="PPCK" layout:graphicalObject="sbml2map_layout_reaction_235">
             <layout:boundingBox>
-              <layout:position layout:x="2458" layout:y="3148" layout:z="0"/>
+              <layout:position layout:x="1198" layout:y="4228" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15670,7 +15634,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_153" layout:text="PPS" layout:graphicalObject="sbml2map_layout_reaction_237">
             <layout:boundingBox>
-              <layout:position layout:x="2818" layout:y="2968" layout:z="0"/>
+              <layout:position layout:x="1558" layout:y="3868" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15694,7 +15658,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_157" layout:text="PTAr" layout:graphicalObject="sbml2map_layout_reaction_241">
             <layout:boundingBox>
-              <layout:position layout:x="658" layout:y="3688" layout:z="0"/>
+              <layout:position layout:x="838" layout:y="3688" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15718,7 +15682,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_161" layout:text="RPE" layout:graphicalObject="sbml2map_layout_reaction_245">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="2788" layout:z="0"/>
+              <layout:position layout:x="2998" layout:y="4588" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15730,7 +15694,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_163" layout:text="RPI" layout:graphicalObject="sbml2map_layout_reaction_247">
             <layout:boundingBox>
-              <layout:position layout:x="2818" layout:y="5848" layout:z="0"/>
+              <layout:position layout:x="2638" layout:y="5488" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15760,7 +15724,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_168" layout:text="SUCCt3" layout:graphicalObject="sbml2map_layout_reaction_252">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="2608" layout:z="0"/>
+              <layout:position layout:x="1558" layout:y="5848" layout:z="0"/>
               <layout:dimensions layout:width="42" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15784,7 +15748,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_172" layout:text="TALA" layout:graphicalObject="sbml2map_layout_reaction_256">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="6028" layout:z="0"/>
+              <layout:position layout:x="2638" layout:y="5308" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15796,7 +15760,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_174" layout:text="TKT1" layout:graphicalObject="sbml2map_layout_reaction_258">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="6028" layout:z="0"/>
+              <layout:position layout:x="2638" layout:y="5128" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15904,13 +15868,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_192" layout:text="FBP" layout:graphicalObject="sbml2map_layout_reaction_276">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="3148" layout:z="0"/>
+              <layout:position layout:x="1378" layout:y="3868" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_193" layout:text="FORt2" layout:graphicalObject="sbml2map_layout_reaction_277">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="3148" layout:z="0"/>
+              <layout:position layout:x="2998" layout:y="4768" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15922,13 +15886,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_195" layout:text="FRD7" layout:graphicalObject="sbml2map_layout_reaction_279">
             <layout:boundingBox>
-              <layout:position layout:x="2458" layout:y="3508" layout:z="0"/>
+              <layout:position layout:x="1378" layout:y="5668" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_196" layout:text="FRUpts2" layout:graphicalObject="sbml2map_layout_reaction_280">
             <layout:boundingBox>
-              <layout:position layout:x="658" layout:y="988" layout:z="0"/>
+              <layout:position layout:x="478" layout:y="988" layout:z="0"/>
               <layout:dimensions layout:width="49" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15964,7 +15928,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_202" layout:text="GLNS" layout:graphicalObject="sbml2map_layout_reaction_286">
             <layout:boundingBox>
-              <layout:position layout:x="2818" layout:y="3148" layout:z="0"/>
+              <layout:position layout:x="2998" layout:y="4408" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -15976,19 +15940,19 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_204" layout:text="GLUDy" layout:graphicalObject="sbml2map_layout_reaction_288">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="2968" layout:z="0"/>
+              <layout:position layout:x="2818" layout:y="4948" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_205" layout:text="GLUN" layout:graphicalObject="sbml2map_layout_reaction_289">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="5668" layout:z="0"/>
+              <layout:position layout:x="2998" layout:y="4948" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_206" layout:text="GLUSy" layout:graphicalObject="sbml2map_layout_reaction_290">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="2968" layout:z="0"/>
+              <layout:position layout:x="2818" layout:y="4768" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -16000,7 +15964,7 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_208" layout:text="GND" layout:graphicalObject="sbml2map_layout_reaction_292">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="5668" layout:z="0"/>
+              <layout:position layout:x="2818" layout:y="5128" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -16012,19 +15976,19 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_210" layout:text="ICL" layout:graphicalObject="sbml2map_layout_reaction_294">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="2788" layout:z="0"/>
+              <layout:position layout:x="2818" layout:y="4228" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_211" layout:text="LDH_D" layout:graphicalObject="sbml2map_layout_reaction_295">
             <layout:boundingBox>
-              <layout:position layout:x="658" layout:y="4588" layout:z="0"/>
+              <layout:position layout:x="478" layout:y="4048" layout:z="0"/>
               <layout:dimensions layout:width="35" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_212" layout:text="MALS" layout:graphicalObject="sbml2map_layout_reaction_296">
             <layout:boundingBox>
-              <layout:position layout:x="3178" layout:y="5848" layout:z="0"/>
+              <layout:position layout:x="1198" layout:y="4048" layout:z="0"/>
               <layout:dimensions layout:width="28" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
@@ -16042,13 +16006,13 @@
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_215" layout:text="ME1" layout:graphicalObject="sbml2map_layout_reaction_299">
             <layout:boundingBox>
-              <layout:position layout:x="2458" layout:y="3328" layout:z="0"/>
+              <layout:position layout:x="1018" layout:y="4408" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
           <layout:textGlyph layout:id="sbml2map_layout_text_216" layout:text="ME2" layout:graphicalObject="sbml2map_layout_reaction_300">
             <layout:boundingBox>
-              <layout:position layout:x="2998" layout:y="5848" layout:z="0"/>
+              <layout:position layout:x="1018" layout:y="4948" layout:z="0"/>
               <layout:dimensions layout:width="21" layout:height="14" layout:depth="0"/>
             </layout:boundingBox>
           </layout:textGlyph>
